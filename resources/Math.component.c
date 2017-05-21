@@ -20,19 +20,19 @@ component math2000
          out = a / (b * 10);
       }
       else if (op == 1) {
-         out = copysign(1.0, a + b);
+         out = copysign(1.0, a);
       }
       else if (op == 2) {
          out = pow(a, b * 10);
       }
       else if (op == 3) {
-         out = log(a + b);
+         out = log(a);
       }
       else if (op == 4) {
-         out = sin(a * b * 20 * 3.14159265);
+         out = sin(a * 3.14159265);
       }
       else if (op == 5) {
-         rate = 0.0001 * fabs(b);
+         rate = 0.0005 * fabs(b);
          out = a * rate + prev_value * (1-rate);
          prev_value = out;
       }
