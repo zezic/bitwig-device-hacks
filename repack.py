@@ -4,7 +4,7 @@ import os.path
 import sys
 
 MOD_SRC_FILE = 'resources/Math.bwmodulator'
-MOD_SRC_COMP = 'resources/Math.component.c'
+MOD_SRC_COMP = 'resources/Math.nitro.c'
 MOD_SRC_MAPPING = 'resources/Math.mapping.txt'
 MOD_TARGET_FILE = 'resources/MathX.bwmodulator'
 
