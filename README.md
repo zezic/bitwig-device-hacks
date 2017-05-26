@@ -14,6 +14,16 @@ quite easy to hack yourself in?
 [Sample code in Nitro](https://p.smx.lt/CKtksmU)
 
 
+## DISCLAIMER
+
+We do not take any responsibility and we are not liable for any damage caused
+through use of this code. Devices which you build using this tool are not
+guaranteed to work after a major update of Bitwig Studio and can break at any
+moment. Custom devices are currently disallowed in Bitwig Studio as it uses
+a device whitelist, so you will not be able to save your projects with custom
+devices.
+
+
 ## Description
 
 Currently, this project is undergoing massive rewrite. Stay tuned.

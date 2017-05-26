@@ -1,0 +1,902 @@
+BtWg00010001008d000016a90000000000000000{
+	class : "meta",
+	object_id : 1,
+	data :
+	{
+		"application_version_name" : "none",
+		"branch" : "alex/fixes",
+		"comment" : "",
+		"creator" : "Bitwig",
+		"device_category" : "Note FX",
+		"device_description" : "Holds notes. Useful for drones.",
+		"device_id" : "93c9d566-4cc9-4895-bf5b-475cab44eba9",
+		"device_name" : "Note Latch",
+		"device_type" : "note_to_note",
+		"device_uuid" : "93c9d566-4cc9-4895-bf5b-475cab44eba9",
+		"has_audio_input" : false,
+		"has_audio_output" : false,
+		"has_note_input" : false,
+		"has_note_output" : false,
+		"revision_id" : "683e3cb5ca553fb5e0bfd78fbca1c3972700a27a",
+		"revision_no" : 52075,
+		"suggest_for_audio_input" : false,
+		"suggest_for_note_input" : true,
+		"tags" : "",
+		"type" : "application/bitwig-device"
+	}
+}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
+{
+	class : "float_core.device_contents(151)",
+	object_id : 1,
+	data :
+	{
+		"settings(6194)" : null,
+		"child_components(173)" : 
+		[
+			{
+				class : "float_common_atoms.nitro_atom(1721)",
+				object_id : 2,
+				data :
+				{
+					"settings(6194)" : 
+					{
+						class : "float_core.component_settings(236)",
+						object_id : 3,
+						data :
+						{
+							"desktop_settings(612)" : 
+							{
+								class : "float_core.desktop_settings(17)",
+								object_id : 4,
+								data :
+								{
+									"x(17)" : 0,
+									"y(18)" : 448,
+									"color(19)" : 
+									{
+										type : "color",
+										data : [0.5, 0.5, 0.5]
+									}
+								}
+							},
+							"inport_connections(614)" : 
+							[
+								{
+									class : "float_core.inport_connection(105)",
+									object_id : 5,
+									data :
+									{
+										"source_component(248)" : 
+										{
+											class : "float_core.boolean_value_atom(87)",
+											object_id : 6,
+											data :
+											{
+												"settings(6194)" : 
+												{
+													class : "float_core.component_settings(236)",
+													object_id : 7,
+													data :
+													{
+														"desktop_settings(612)" : 
+														{
+															class : "float_core.desktop_settings(17)",
+															object_id : 8,
+															data :
+															{
+																"x(17)" : 0,
+																"y(18)" : 48,
+																"color(19)" : 
+																{
+																	type : "color",
+																	data : [0.5, 0.5, 0.5]
+																}
+															}
+														},
+														"inport_connections(614)" : 
+														[
+														],
+														"is_polyphonic(615)" : false
+													}
+												},
+												"channel_count(607)" : 0,
+												"oversampling(608)" : 0,
+												"name(374)" : "Mono",
+												"label(821)" : "",
+												"tooltip_text(823)" : "",
+												"preset_identifier(701)" : "MONO",
+												"modulations_to_ignore(3826)" : "",
+												"value_type(702)" : 
+												{
+													class : "float_core.boolean_value_type(198)",
+													object_id : 9,
+													data :
+													{
+														"icon_name(4755)" : "",
+														"default_value(6957)" : false
+													}
+												},
+												"value(210)" : false
+											}
+										},
+										"outport_index(249)" : 0,
+										"high_quality(1943)" : true,
+										"unconnected_value(6443)" : 0.0
+									}
+								},
+								{
+									class : "float_core.inport_connection(105)",
+									object_id : 10,
+									data :
+									{
+										"source_component(248)" : 
+										{
+											class : "float_core.integer_value_atom(394)",
+											object_id : 11,
+											data :
+											{
+												"settings(6194)" : 
+												{
+													class : "float_core.component_settings(236)",
+													object_id : 12,
+													data :
+													{
+														"desktop_settings(612)" : 
+														{
+															class : "float_core.desktop_settings(17)",
+															object_id : 13,
+															data :
+															{
+																"x(17)" : 16,
+																"y(18)" : 100,
+																"color(19)" : 
+																{
+																	type : "color",
+																	data : [0.5, 0.5, 0.5]
+																}
+															}
+														},
+														"inport_connections(614)" : 
+														[
+														],
+														"is_polyphonic(615)" : false
+													}
+												},
+												"channel_count(607)" : 0,
+												"oversampling(608)" : 0,
+												"name(374)" : "Velocity Threshold",
+												"label(821)" : "Velocity threshold",
+												"tooltip_text(823)" : "",
+												"preset_identifier(701)" : "VELOCITY_THRESHOLD",
+												"modulations_to_ignore(3826)" : "",
+												"value_type(702)" : 
+												{
+													class : "float_core.integer_value_type(143)",
+													object_id : 14,
+													data :
+													{
+														"min(345)" : 0,
+														"max(346)" : 127,
+														"default_value(6956)" : 64,
+														"edit_style(818)" : 0,
+														"value_prefix(819)" : "\u2265 ",
+														"value_postfix(820)" : "",
+														"value_origin(4723)" : 3,
+														"pixel_step_size(4724)" : -1.0
+													}
+												},
+												"value(828)" : 64
+											}
+										},
+										"outport_index(249)" : 0,
+										"high_quality(1943)" : true,
+										"unconnected_value(6443)" : 0.0
+									}
+								},
+								{
+									class : "float_core.inport_connection(105)",
+									object_id : 15,
+									data :
+									{
+										"source_component(248)" : 
+										{
+											class : "float_core.indexed_value_atom(180)",
+											object_id : 16,
+											data :
+											{
+												"settings(6194)" : 
+												{
+													class : "float_core.component_settings(236)",
+													object_id : 17,
+													data :
+													{
+														"desktop_settings(612)" : 
+														{
+															class : "float_core.desktop_settings(17)",
+															object_id : 18,
+															data :
+															{
+																"x(17)" : 104,
+																"y(18)" : 172,
+																"color(19)" : 
+																{
+																	type : "color",
+																	data : [0.5, 0.5, 0.5]
+																}
+															}
+														},
+														"inport_connections(614)" : 
+														[
+														],
+														"is_polyphonic(615)" : false
+													}
+												},
+												"channel_count(607)" : 0,
+												"oversampling(608)" : 0,
+												"name(374)" : "Trigger",
+												"label(821)" : "",
+												"tooltip_text(823)" : "Choose the latch mode",
+												"preset_identifier(701)" : "TRIGGER",
+												"modulations_to_ignore(3826)" : "",
+												"value_type(702)" : 
+												{
+													class : "float_core.indexed_value_type(155)",
+													object_id : 19,
+													data :
+													{
+														"items(393)" : 
+														[
+															{
+																class : "float_core.indexed_value_item(258)",
+																object_id : 20,
+																data :
+																{
+																	"id(650)" : 0,
+																	"name(651)" : "Simple"
+																}
+															},
+															{
+																class : "float_core.indexed_value_item(258)",
+																object_id : 21,
+																data :
+																{
+																	"id(650)" : 1,
+																	"name(651)" : "Toggle"
+																}
+															},
+															{
+																class : "float_core.indexed_value_item(258)",
+																object_id : 22,
+																data :
+																{
+																	"id(650)" : 2,
+																	"name(651)" : "Velocity"
+																}
+															}
+														],
+														"edit_style(394)" : 0,
+														"columns(824)" : 0,
+														"default_value(6958)" : 0
+													}
+												},
+												"value(457)" : 0
+											}
+										},
+										"outport_index(249)" : 0,
+										"high_quality(1943)" : true,
+										"unconnected_value(6443)" : 0.0
+									}
+								},
+								{
+									class : "float_core.inport_connection(105)",
+									object_id : 23,
+									data :
+									{
+										"source_component(248)" : 
+										{
+											class : "float_core.proxy_in_port_component(154)",
+											object_id : 24,
+											data :
+											{
+												"settings(6194)" : 
+												{
+													class : "float_core.component_settings(236)",
+													object_id : 25,
+													data :
+													{
+														"desktop_settings(612)" : 
+														{
+															class : "float_core.desktop_settings(17)",
+															object_id : 26,
+															data :
+															{
+																"x(17)" : 204,
+																"y(18)" : 268,
+																"color(19)" : 
+																{
+																	type : "color",
+																	data : [0.5, 0.5, 0.5]
+																}
+															}
+														},
+														"inport_connections(614)" : 
+														[
+														],
+														"is_polyphonic(615)" : false
+													}
+												},
+												"port(301)" : 
+												{
+													class : "float_core.note_port(61)",
+													object_id : 27,
+													data :
+													{
+														"name(498)" : "",
+														"description(4741)" : "",
+														"decorated_name(499)" : " Note out",
+														"is_inport(500)" : false,
+														"is_optional(1384)" : false,
+														"exclude_from_graph(7174)" : false
+													}
+												}
+											}
+										},
+										"outport_index(249)" : 0,
+										"high_quality(1943)" : true,
+										"unconnected_value(6443)" : 0.0
+									}
+								},
+								{
+									class : "float_core.inport_connection(105)",
+									object_id : 28,
+									data :
+									{
+										"source_component(248)" : 
+										{
+											class : "float_core.trigger_atom(239)",
+											object_id : 29,
+											data :
+											{
+												"settings(6194)" : 
+												{
+													class : "float_core.component_settings(236)",
+													object_id : 30,
+													data :
+													{
+														"desktop_settings(612)" : 
+														{
+															class : "float_core.desktop_settings(17)",
+															object_id : 31,
+															data :
+															{
+																"x(17)" : 48,
+																"y(18)" : 308,
+																"color(19)" : 
+																{
+																	type : "color",
+																	data : [0.5, 0.5, 0.5]
+																}
+															}
+														},
+														"inport_connections(614)" : 
+														[
+														],
+														"is_polyphonic(615)" : false
+													}
+												},
+												"channel_count(607)" : 0,
+												"oversampling(608)" : 0,
+												"name(374)" : "Panic",
+												"label(821)" : "Stop ALL",
+												"tooltip_text(823)" : "Stops all the notes"
+											}
+										},
+										"outport_index(249)" : 0,
+										"high_quality(1943)" : true,
+										"unconnected_value(6443)" : 0.0
+									}
+								}
+							],
+							"is_polyphonic(615)" : false
+						}
+					},
+					"channel_count(607)" : 0,
+					"oversampling(608)" : 0,
+					"code(6264)" : "component note_latch\n{\n   i8[128] notes;\n   i32     note_count = 0;\n   bool    gate_open = false;\n   bool    gate_reopen = false;\n   i8      gate_key = -1;\n\n   const i32 GATE_TYPE_SIMPLE = 0;\n   const i32 GATE_TYPE_TOGGLE = 1;\n   const i32 GATE_TYPE_VELOCITY = 2;\n\n   @name \"Mono\"\n   value_inport bool is_mono\n   {\n      // kill all the notes but the last one\n      if (is_mono && note_count > 1)\n      {\n         NoteEvent off;\n         off.type = off.NOTE_OFF;\n         off.v = 0;\n         off.midi = 0;\n         off.ramptime = 0;\n\n         for (i32 i = 0; i < note_count - 1; ++i)\n         {\n            off.key = notes[i].i32;\n            send out off;\n         }\n         notes[0] = notes[note_count - 1];\n         note_count = 1;\n      }\n\n      if (is_mono)\n      {\n         gate_open = false;\n         gate_key = -1;\n         gate_reopen = false;\n      }\n\n      send note_count_out note_count;\n   }\n\n   @name \"Velocity Threshold\"\n   value_inport i32 velocity_threshold;\n\n   @name \"Gate Type\"\n   @desc \"0 Simple, 1 Toggle, 2 Velocity\"\n   value_inport i32 gate_type;\n\n   @name \"Note\"\n   event_inport NoteEvent in\n   {\n      if (in.type == in.NOTE_ON && gate_type == GATE_TYPE_VELOCITY)\n      {\n         if (in.v * 127.0 >= velocity_threshold.f32)\n         {\n            // note on\n            if (is_mono)\n            {\n               if (note_count > 0 && notes[0] == in.key.i8)\n               {\n                  /* nothing to do */\n               }\n               else if (note_count > 0 && notes[0] != in.key.i8)\n               {\n                  /* kill the playing note */\n                  NoteEvent off;\n                  off.key = notes[0].i32;\n                  off.type = off.NOTE_OFF;\n                  off.v = 0;\n                  off.midi = 0;\n                  off.ramptime = 0;\n                  send out off;\n\n                  /* start the new note */\n                  note_count = 1;\n                  notes[0] = in.key.i8;\n                  send out in;\n               }\n               else\n               {\n                  /* start the new note */\n                  note_count = 1;\n                  notes[0] = in.key.i8;\n                  send out in;\n               }\n            }\n            else\n            {\n               i32 index = -1;\n               for (i32 i = 0; i < note_count; ++i)\n               {\n                  if (notes[i] == in.key.i8)\n                  {\n                     index = i;\n                     break;\n                  }\n               }\n\n               if (index == -1)\n               {\n                  // start note\n                  notes[note_count] = in.key.i8;\n                  ++note_count;\n                  send out in;\n               }\n            }\n         }\n         else\n         {\n            // note off\n            if (is_mono)\n            {\n               if (note_count == 1 && notes[0] == in.key.i8)\n               {\n                  NoteEvent off;\n                  off.key = notes[0].i32;\n                  off.type = off.NOTE_OFF;\n                  off.v = 0;\n                  off.midi = 0;\n                  off.ramptime = 0;\n\n                  send out off;\n                  note_count = 0;\n               }\n            }\n            else\n            {\n               for (i32 i = 0; i < note_count; ++i)\n               {\n                  if (notes[i] == in.key.i8)\n                  {\n                     // stop note\n                     NoteEvent off;\n                     off.key = notes[i].i32;\n                     off.type = off.NOTE_OFF;\n                     off.v = 0;\n                     off.midi = 0;\n                     off.ramptime = 0;\n                     send out off;\n                     if (i + 1 < note_count)\n                        notes[i] = notes[note_count - 1];\n                     --note_count;\n                     break;\n                  }\n               }\n            }\n         }\n      }\n      else if (in.type == in.NOTE_OFF && gate_type == GATE_TYPE_VELOCITY)\n      {\n         /* nothing to do */\n      }\n      else if (in.type == in.NOTE_ON && gate_type == GATE_TYPE_TOGGLE)\n      {\n         if (is_mono)\n         {\n            if (note_count == 0)\n            {\n               note_count = 1;\n               notes[0] = in.key.i8;\n               send out in;\n            }\n            else\n            {\n               /* always kill the playing note */\n               NoteEvent off;\n               off.key = notes[0].i32;\n               off.type = off.NOTE_OFF;\n               off.v = 0;\n               off.midi = 0;\n               off.ramptime = 0;\n\n               send out off;\n\n               if (notes[0] != in.key.i8)\n               {\n                  notes[0] = in.key.i8;\n                  send out in;\n               }\n               else\n               {\n                  note_count = 0;\n               }\n            }\n         }\n         else\n         {\n            i32 index = -1;\n            for (i32 i = 0; i < note_count; ++i)\n            {\n               if (notes[i] == in.key.i8)\n               {\n                  index = i;\n                  break;\n               }\n            }\n\n            if (index >= 0)\n            {\n               // stop note\n               NoteEvent off;\n               off.key = notes[index].i32;\n               off.type = off.NOTE_OFF;\n               off.v = 0;\n               off.midi = 0;\n               off.ramptime = 0;\n               send out off;\n               if (index + 1 < note_count)\n                  notes[index] = notes[note_count - 1];\n               --note_count;\n            }\n            else\n            {\n               // start note\n               notes[note_count] = in.key.i8;\n               ++note_count;\n               send out in;\n            }\n         }\n      }\n      else if (in.type == in.NOTE_OFF && gate_type == GATE_TYPE_TOGGLE)\n      {\n         /* nothing to do */\n      }\n      else if (gate_type == GATE_TYPE_SIMPLE && in.type == in.NOTE_ON)\n      {\n         if (!is_mono)\n         {\n            if (!gate_open)\n            {\n               /* stop all the notes */\n               NoteEvent off;\n               off.type = off.NOTE_OFF;\n               off.v = 0;\n               off.midi = 0;\n               off.ramptime = 0;\n\n               for (i32 i = 0; i < note_count; ++i)\n               {\n                  off.key = notes[i].i32;\n                  send out off;\n               }\n               note_count = 0;\n\n               /* start the current note */\n               send out in;\n               notes[note_count] = in.key.i8;\n               ++note_count;\n\n               /* gate is now opened */\n               gate_open = true;\n               gate_reopen = gate_key == in.key.i8;\n               gate_key = in.key.i8;\n            }\n            else if (gate_open && in.type == in.NOTE_ON)\n            {\n               send out in;\n               notes[note_count] = in.key.i8;\n               ++note_count;\n            }\n         }\n         else\n         {\n            if (note_count > 0 && notes[0].i32 != in.key)\n            {\n               /* stop playing note */\n               NoteEvent off;\n               off.type = off.NOTE_OFF;\n               off.v = 0;\n               off.midi = 0;\n               off.ramptime = 0;\n               off.key = notes[0].i32;\n               send out off;\n\n               note_count = 0;\n            }\n\n            if (note_count == 0)\n            {\n               send out in;\n               note_count = 1;\n               notes[0] = in.key.i8;\n            }\n         }\n      }\n      else if (gate_type == GATE_TYPE_SIMPLE && in.type == in.NOTE_OFF)\n      {\n         if (gate_open && in.key.i8 == gate_key && !is_mono)\n         {\n            /* close the gate */\n            gate_open = false;\n\n            /* an alternative implementation was able to stop the notes in simple mode\n             * but it turned out that it was not intuitive or fun, so simple mode always latch. */\n            if (false /* remove me to re-enable this functionality */ &&\n                gate_reopen && note_count == 1)\n            {\n               /* stop the note */\n               NoteEvent off;\n               off.type = off.NOTE_OFF;\n               off.v = 0;\n               off.midi = 0;\n               off.ramptime = 0;\n               off.key = gate_key.i32;\n               send out off;\n\n               gate_open = false;\n               gate_reopen = false;\n               gate_key = -1;\n               note_count = 0;\n            }\n         }\n      }\n      else\n      {\n         send out in;\n      }\n\n      send note_count_out note_count;\n   }\n\n   @name \"Panic\"\n   event_inport void panic\n   {\n      NoteEvent off;\n      off.type = off.NOTE_OFF;\n      off.v = 0;\n      off.midi = 0;\n      off.ramptime = 0;\n\n      for (i32 i = 0; i < note_count; ++i)\n      {\n         off.key = notes[i].i32;\n         send out off;\n      }\n\n      note_count = 0;\n      gate_open = false;\n      gate_reopen = false;\n      gate_key = -1;\n\n      send note_count_out note_count;\n   }\n\n   @name \"Note\"\n   event_outport NoteEvent out;\n\n   @name \"Note Count\"\n   value_outport i32 note_count_out = 0;\n}\n",
+					"fft_order(6567)" : 0
+				}
+			},{ object_ref : 6 },{ object_ref : 29 },{ object_ref : 16 },{ object_ref : 11 },
+			{
+				class : "float_core.int_observer_atom(1234)",
+				object_id : 32,
+				data :
+				{
+					"settings(6194)" : 
+					{
+						class : "float_core.component_settings(236)",
+						object_id : 33,
+						data :
+						{
+							"desktop_settings(612)" : 
+							{
+								class : "float_core.desktop_settings(17)",
+								object_id : 34,
+								data :
+								{
+									"x(17)" : 172,
+									"y(18)" : 596,
+									"color(19)" : 
+									{
+										type : "color",
+										data : [0.5, 0.5, 0.5]
+									}
+								}
+							},
+							"inport_connections(614)" : 
+							[
+								{
+									class : "float_core.inport_connection(105)",
+									object_id : 35,
+									data :
+									{
+										"source_component(248)" : 
+										{
+											class : "float_common_atoms.nitro_atom(1721)",
+											object_id : 36,
+											data :
+											{
+												"settings(6194)" : 
+												{
+													class : "float_core.component_settings(236)",
+													object_id : 37,
+													data :
+													{
+														"desktop_settings(612)" : 
+														{
+															class : "float_core.desktop_settings(17)",
+															object_id : 38,
+															data :
+															{
+																"x(17)" : 88,
+																"y(18)" : 540,
+																"color(19)" : 
+																{
+																	type : "color",
+																	data : [0.5, 0.5, 0.5]
+																}
+															}
+														},
+														"inport_connections(614)" : 
+														[
+															{
+																class : "float_core.inport_connection(105)",
+																object_id : 39,
+																data :
+																{
+																	"source_component(248)" : { object_ref : 2 },
+																	"outport_index(249)" : 1,
+																	"high_quality(1943)" : true,
+																	"unconnected_value(6443)" : 0.0
+																}
+															}
+														],
+														"is_polyphonic(615)" : false
+													}
+												},
+												"channel_count(607)" : 0,
+												"oversampling(608)" : 0,
+												"code(6264)" : "@name \"-1\"\ncomponent minus_one\n{\n   event_inport i32 in { send out in - 1; }\n   value_outport i32 out = -1;\n}",
+												"fft_order(6567)" : 0
+											}
+										},
+										"outport_index(249)" : 0,
+										"high_quality(1943)" : true,
+										"unconnected_value(6443)" : 0.0
+									}
+								}
+							],
+							"is_polyphonic(615)" : false
+						}
+					},
+					"channel_count(607)" : 0,
+					"value(4828)" : -1,
+					"value_count(4826)" : 4
+				}
+			},{ object_ref : 36 }
+		],
+		"panels(6213)" : 
+		[
+			{
+				class : "float_core.panel(1680)",
+				object_id : 40,
+				data :
+				{
+					"layout_settings(6226)" : null,
+					"is_visible(6309)" : true,
+					"is_enabled(6310)" : true,
+					"tooltip_text(6867)" : "",
+					"name(6211)" : "Main",
+					"root_item(6212)" : 
+					{
+						class : "float_core.grid_panel_item(1681)",
+						object_id : 41,
+						data :
+						{
+							"layout_settings(6226)" : null,
+							"is_visible(6309)" : true,
+							"is_enabled(6310)" : true,
+							"tooltip_text(6867)" : "",
+							"items(6221)" : 
+							[
+								{
+									class : "float_core.toggle_button_panel_item(1702)",
+									object_id : 42,
+									data :
+									{
+										"layout_settings(6226)" : 
+										{
+											class : "float_core.grid_panel_item_layout_settings(1694)",
+											object_id : 43,
+											data :
+											{
+												"width(6217)" : 15,
+												"height(6218)" : 7,
+												"x(6215)" : 1,
+												"y(6216)" : 37
+											}
+										},
+										"is_visible(6309)" : true,
+										"is_enabled(6310)" : true,
+										"tooltip_text(6867)" : "Only hold one note a time.",
+										"data_model(6220)" : { object_ref : 6 },
+										"title(6241)" : "Mono",
+										"icon_name(6239)" : "",
+										"style(6240)" : 0,
+										"label_style(6267)" : 0,
+										"invert_value(6552)" : false,
+										"is_selected(6719)" : false
+									}
+								},
+								{
+									class : "float_core.label_panel_item(1683)",
+									object_id : 44,
+									data :
+									{
+										"layout_settings(6226)" : 
+										{
+											class : "float_core.grid_panel_item_layout_settings(1694)",
+											object_id : 45,
+											data :
+											{
+												"width(6217)" : 8,
+												"height(6218)" : 4,
+												"x(6215)" : 5,
+												"y(6216)" : 1
+											}
+										},
+										"is_visible(6309)" : true,
+										"is_enabled(6310)" : true,
+										"tooltip_text(6867)" : "",
+										"horizontal_alignment(6400)" : 0,
+										"vertical_alignment(6401)" : 1,
+										"text(6219)" : "Mode",
+										"color(6520)" : 6,
+										"font(7188)" : 0
+									}
+								},
+								{
+									class : "float_core.button_group_chooser_panel_item(1712)",
+									object_id : 46,
+									data :
+									{
+										"layout_settings(6226)" : 
+										{
+											class : "float_core.grid_panel_item_layout_settings(1694)",
+											object_id : 47,
+											data :
+											{
+												"width(6217)" : 15,
+												"height(6218)" : 15,
+												"x(6215)" : 1,
+												"y(6216)" : 6
+											}
+										},
+										"is_visible(6309)" : true,
+										"is_enabled(6310)" : true,
+										"tooltip_text(6867)" : "Choose the latch mode.\n\nSimple: latch key played together.\n\nToggle: press a key to toggle the latch on/off.\n\nVelocity: latch is on when the velocity is above the threshold, off otherwise.",
+										"data_model(6220)" : { object_ref : 16 },
+										"is_horizontal(6255)" : true,
+										"break_count(6256)" : 1,
+										"label_style(6257)" : 0
+									}
+								},
+								{
+									class : "float_core.label_panel_item(1683)",
+									object_id : 48,
+									data :
+									{
+										"layout_settings(6226)" : 
+										{
+											class : "float_core.grid_panel_item_layout_settings(1694)",
+											object_id : 49,
+											data :
+											{
+												"width(6217)" : 13,
+												"height(6218)" : 5,
+												"x(6215)" : 2,
+												"y(6216)" : 21
+											}
+										},
+										"is_visible(6309)" : true,
+										"is_enabled(6310)" : true,
+										"tooltip_text(6867)" : "",
+										"horizontal_alignment(6400)" : 0,
+										"vertical_alignment(6401)" : 1,
+										"text(6219)" : "Threshold",
+										"color(6520)" : 6,
+										"font(7188)" : 0
+									}
+								},
+								{
+									class : "float_core.number_field_panel_item(1713)",
+									object_id : 50,
+									data :
+									{
+										"layout_settings(6226)" : 
+										{
+											class : "float_core.grid_panel_item_layout_settings(1694)",
+											object_id : 51,
+											data :
+											{
+												"width(6217)" : 15,
+												"height(6218)" : 5,
+												"x(6215)" : 1,
+												"y(6216)" : 26
+											}
+										},
+										"is_visible(6309)" : true,
+										"is_enabled(6310)" : true,
+										"tooltip_text(6867)" : "Threshold for the velocity mode.",
+										"data_model(6220)" : { object_ref : 11 },
+										"style(6540)" : 2,
+										"show_value_bar(6581)" : true
+									}
+								},
+								{
+									class : "float_core.trigger_panel_item(1880)",
+									object_id : 52,
+									data :
+									{
+										"layout_settings(6226)" : 
+										{
+											class : "float_core.grid_panel_item_layout_settings(1694)",
+											object_id : 53,
+											data :
+											{
+												"width(6217)" : 15,
+												"height(6218)" : 7,
+												"x(6215)" : 1,
+												"y(6216)" : 45
+											}
+										},
+										"is_visible(6309)" : true,
+										"is_enabled(6310)" : true,
+										"tooltip_text(6867)" : "Stops every latched notes.",
+										"data_model(6220)" : { object_ref : 29 },
+										"title(6241)" : "Stop",
+										"style(6694)" : 0
+									}
+								},
+								{
+									class : "float_core.grid_panel_item(1681)",
+									object_id : 54,
+									data :
+									{
+										"layout_settings(6226)" : 
+										{
+											class : "float_core.grid_panel_item_layout_settings(1694)",
+											object_id : 55,
+											data :
+											{
+												"width(6217)" : 15,
+												"height(6218)" : 4,
+												"x(6215)" : 1,
+												"y(6216)" : 32
+											}
+										},
+										"is_visible(6309)" : true,
+										"is_enabled(6310)" : true,
+										"tooltip_text(6867)" : "",
+										"items(6221)" : 
+										[
+											{
+												class : "float_core.component_display_panel_item(1704)",
+												object_id : 56,
+												data :
+												{
+													"layout_settings(6226)" : 
+													{
+														class : "float_core.grid_panel_item_layout_settings(1694)",
+														object_id : 57,
+														data :
+														{
+															"width(6217)" : 13,
+															"height(6218)" : 2,
+															"x(6215)" : 1,
+															"y(6216)" : 1
+														}
+													},
+													"is_visible(6309)" : true,
+													"is_enabled(6310)" : true,
+													"tooltip_text(6867)" : "",
+													"data_model(6220)" : { object_ref : 32 }
+												}
+											}
+										],
+										"border_style(6228)" : 1,
+										"title(6242)" : "",
+										"show_title(6243)" : false,
+										"title_color(6522)" : 6,
+										"brightness(6245)" : 3
+									}
+								}
+							],
+							"border_style(6228)" : 1,
+							"title(6242)" : "",
+							"show_title(6243)" : false,
+							"title_color(6522)" : 6,
+							"brightness(6245)" : 0
+						}
+					},
+					"width(6232)" : 17,
+					"height(6233)" : 53,
+					"expressions(6277)" : 
+					[
+						{
+							class : "float_core.panel_expression(1728)",
+							object_id : 58,
+							data :
+							{
+								"expression(6274)" : "TRIGGER == 2",
+								"panel_item(6275)" : { object_ref : 50 },
+								"attribute_id(6316)" : 6310
+							}
+						}
+					]
+				}
+			}
+		],
+		"proxy_in_ports(177)" : 
+		[
+			{
+				class : "float_core.proxy_in_port_component(154)",
+				object_id : 59,
+				data :
+				{
+					"settings(6194)" : 
+					{
+						class : "float_core.component_settings(236)",
+						object_id : 60,
+						data :
+						{
+							"desktop_settings(612)" : 
+							{
+								class : "float_core.desktop_settings(17)",
+								object_id : 61,
+								data :
+								{
+									"x(17)" : 0,
+									"y(18)" : 0,
+									"color(19)" : 
+									{
+										type : "color",
+										data : [0.5, 0.5, 0.5]
+									}
+								}
+							},
+							"inport_connections(614)" : 
+							[
+							],
+							"is_polyphonic(615)" : false
+						}
+					},
+					"port(301)" : 
+					{
+						class : "float_core.audio_port(242)",
+						object_id : 62,
+						data :
+						{
+							"name(498)" : "",
+							"description(4741)" : "",
+							"decorated_name(499)" : " Audio out (PARENT)",
+							"is_inport(500)" : false,
+							"is_optional(1384)" : false,
+							"exclude_from_graph(7174)" : false,
+							"channel_count(372)" : 3
+						}
+					}
+				}
+			},{ object_ref : 24 }
+		],
+		"proxy_out_ports(178)" : 
+		[
+			{
+				class : "float_core.proxy_out_port_component(50)",
+				object_id : 63,
+				data :
+				{
+					"settings(6194)" : 
+					{
+						class : "float_core.component_settings(236)",
+						object_id : 64,
+						data :
+						{
+							"desktop_settings(612)" : 
+							{
+								class : "float_core.desktop_settings(17)",
+								object_id : 65,
+								data :
+								{
+									"x(17)" : 620,
+									"y(18)" : 362,
+									"color(19)" : 
+									{
+										type : "color",
+										data : [0.5, 0.5, 0.5]
+									}
+								}
+							},
+							"inport_connections(614)" : 
+							[
+								{
+									class : "float_core.inport_connection(105)",
+									object_id : 66,
+									data :
+									{
+										"source_component(248)" : { object_ref : 2 },
+										"outport_index(249)" : 0,
+										"high_quality(1943)" : true,
+										"unconnected_value(6443)" : 0.0
+									}
+								}
+							],
+							"is_polyphonic(615)" : false
+						}
+					},
+					"port(301)" : 
+					{
+						class : "float_core.note_port(61)",
+						object_id : 67,
+						data :
+						{
+							"name(498)" : "",
+							"description(4741)" : "",
+							"decorated_name(499)" : " Note in",
+							"is_inport(500)" : true,
+							"is_optional(1384)" : false,
+							"exclude_from_graph(7174)" : false
+						}
+					}
+				}
+			}
+		],
+		"fft_order(6566)" : 0,
+		"context_menu_panel(6834)" : null,
+		"polyphony(179)" : 1,
+		"sleep_level_threshold(1977)" : -96.0,
+		"sleep_level_timeout(1978)" : 0.05,
+		"device_UUID(385)" : "93c9d566-4cc9-4895-bf5b-475cab44eba9",
+		"device_name(386)" : "Note Latch",
+		"description(2057)" : "Holds notes. Useful for drones.",
+		"creator(387)" : "Bitwig",
+		"comment(388)" : "",
+		"keywords(389)" : "",
+		"category(390)" : "Note FX",
+		"device_type(391)" : 1,
+		"suggest_for_note_input(4846)" : true,
+		"suggest_for_audio_input(4847)" : false,
+		"has_been_modified(392)" : true,
+		"color_tint(6384)" : 0,
+		"header_area_panel(6417)" : null
+	}
+}

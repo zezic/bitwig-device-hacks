@@ -1,0 +1,539 @@
+BtWg000100010087000015dd0000000000000000{
+	class : "meta",
+	object_id : 1,
+	data :
+	{
+		"application_version_name" : "none",
+		"branch" : "alex/future",
+		"comment" : "",
+		"creator" : "Bitwig",
+		"device_category" : "Control",
+		"device_description" : "Macro control",
+		"device_id" : "modulator:fe2f9584-cc26-4aef-bb4c-c52299b5b77e",
+		"device_name" : "Macro",
+		"device_uuid" : "fe2f9584-cc26-4aef-bb4c-c52299b5b77e",
+		"is_polyphonic" : false,
+		"revision_id" : "2922f513d1dfed1d9e29bf1e9c696849bd7cb34d",
+		"revision_no" : 50651,
+		"tags" : "",
+		"type" : "application/bitwig-modulator"
+	}
+}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
+{
+	class : "float_core.modulator_contents(1735)",
+	object_id : 1,
+	data :
+	{
+		"settings(6194)" : null,
+		"child_components(173)" : 
+		[
+			{
+				class : "float_common_atoms.boolean_panel_value(1751)",
+				object_id : 2,
+				data :
+				{
+					"settings(6194)" : 
+					{
+						class : "float_core.component_settings(236)",
+						object_id : 3,
+						data :
+						{
+							"desktop_settings(612)" : 
+							{
+								class : "float_core.desktop_settings(17)",
+								object_id : 4,
+								data :
+								{
+									"x(17)" : 156,
+									"y(18)" : 76,
+									"color(19)" : 
+									{
+										type : "color",
+										data : [0.5, 0.5, 0.5]
+									}
+								}
+							},
+							"inport_connections(614)" : 
+							[
+							],
+							"is_polyphonic(615)" : false
+						}
+					},
+					"preset_identifier(6387)" : "BIPOLAR",
+					"value(6386)" : false
+				}
+			},
+			{
+				class : "float_common_atoms.string_panel_value(1754)",
+				object_id : 5,
+				data :
+				{
+					"settings(6194)" : 
+					{
+						class : "float_core.component_settings(236)",
+						object_id : 6,
+						data :
+						{
+							"desktop_settings(612)" : 
+							{
+								class : "float_core.desktop_settings(17)",
+								object_id : 7,
+								data :
+								{
+									"x(17)" : 156,
+									"y(18)" : 52,
+									"color(19)" : 
+									{
+										type : "color",
+										data : [0.5, 0.5, 0.5]
+									}
+								}
+							},
+							"inport_connections(614)" : 
+							[
+							],
+							"is_polyphonic(615)" : false
+						}
+					},
+					"preset_identifier(6387)" : "LABEL",
+					"value(6391)" : ""
+				}
+			},
+			{
+				class : "float_common_atoms.bipolar_toggleable_decimal_value_atom(1763)",
+				object_id : 8,
+				data :
+				{
+					"settings(6194)" : 
+					{
+						class : "float_core.component_settings(236)",
+						object_id : 9,
+						data :
+						{
+							"desktop_settings(612)" : 
+							{
+								class : "float_core.desktop_settings(17)",
+								object_id : 10,
+								data :
+								{
+									"x(17)" : 136,
+									"y(18)" : 172,
+									"color(19)" : 
+									{
+										type : "color",
+										data : [0.5, 0.5, 0.5]
+									}
+								}
+							},
+							"inport_connections(614)" : 
+							[
+							],
+							"is_polyphonic(615)" : false
+						}
+					},
+					"channel_count(607)" : 0,
+					"oversampling(608)" : 0,
+					"name(374)" : "",
+					"label(821)" : "",
+					"tooltip_text(823)" : "",
+					"preset_identifier(701)" : "VALUE",
+					"modulations_to_ignore(3826)" : "SOURCE",
+					"value(712)" : 0.0,
+					"bipolar_panel_value(6411)" : { object_ref : 2 },
+					"name_panel_value(6841)" : { object_ref : 5 },
+					"associated_modulation_source(6846)" : 
+					{
+						class : "float_common_atoms.nameable_modulation_source_atom(1929)",
+						object_id : 11,
+						data :
+						{
+							"settings(6194)" : 
+							{
+								class : "float_core.component_settings(236)",
+								object_id : 12,
+								data :
+								{
+									"desktop_settings(612)" : 
+									{
+										class : "float_core.desktop_settings(17)",
+										object_id : 13,
+										data :
+										{
+											"x(17)" : 136,
+											"y(18)" : 268,
+											"color(19)" : 
+											{
+												type : "color",
+												data : [0.5, 0.5, 0.5]
+											}
+										}
+									},
+									"inport_connections(614)" : 
+									[
+										{
+											class : "float_core.inport_connection(105)",
+											object_id : 14,
+											data :
+											{
+												"source_component(248)" : { object_ref : 8 },
+												"outport_index(249)" : 0,
+												"high_quality(1943)" : true,
+												"unconnected_value(6443)" : 0.0
+											}
+										}
+									],
+									"is_polyphonic(615)" : false
+								}
+							},
+							"channel_count(607)" : 0,
+							"oversampling(608)" : 0,
+							"name(3639)" : "",
+							"preset_identifier(3640)" : "SOURCE",
+							"display_settings(5452)" : 
+							{
+								type : "map<string,object>",
+								data : 
+								{
+									"abique" : 
+									{
+										class : "float_core.modulation_source_atom_display_settings(1488)",
+										object_id : 15,
+										data :
+										{
+											"is_source_expanded_in_inspector(5455)" : false
+										}
+									}
+								}
+							}
+							,
+							"name_panel_value(6842)" : { object_ref : 5 }
+						}
+					}
+				}
+			},{ object_ref : 11 }
+		],
+		"panels(6213)" : 
+		[
+			{
+				class : "float_core.panel(1680)",
+				object_id : 16,
+				data :
+				{
+					"layout_settings(6226)" : null,
+					"is_visible(6309)" : true,
+					"is_enabled(6310)" : true,
+					"tooltip_text(6867)" : "",
+					"name(6211)" : "Main",
+					"root_item(6212)" : 
+					{
+						class : "float_core.grid_panel_item(1681)",
+						object_id : 17,
+						data :
+						{
+							"layout_settings(6226)" : null,
+							"is_visible(6309)" : true,
+							"is_enabled(6310)" : true,
+							"tooltip_text(6867)" : "",
+							"items(6221)" : 
+							[
+								{
+									class : "float_core.mapping_source_panel_item(1717)",
+									object_id : 18,
+									data :
+									{
+										"layout_settings(6226)" : 
+										{
+											class : "float_core.grid_panel_item_layout_settings(1694)",
+											object_id : 19,
+											data :
+											{
+												"width(6217)" : 17,
+												"height(6218)" : 4,
+												"x(6215)" : 0,
+												"y(6216)" : 13
+											}
+										},
+										"is_visible(6309)" : true,
+										"is_enabled(6310)" : true,
+										"tooltip_text(6867)" : "",
+										"data_model(6220)" : { object_ref : 11 },
+										"title(6241)" : "",
+										"filename(6258)" : ""
+									}
+								},
+								{
+									class : "float_core.knob_panel_item(1687)",
+									object_id : 20,
+									data :
+									{
+										"layout_settings(6226)" : 
+										{
+											class : "float_core.grid_panel_item_layout_settings(1694)",
+											object_id : 21,
+											data :
+											{
+												"width(6217)" : 9,
+												"height(6218)" : 8,
+												"x(6215)" : 4,
+												"y(6216)" : 4
+											}
+										},
+										"is_visible(6309)" : true,
+										"is_enabled(6310)" : true,
+										"tooltip_text(6867)" : "",
+										"data_model(6220)" : { object_ref : 8 },
+										"title(6241)" : "",
+										"knob_size(6223)" : 0,
+										"knob_style(7055)" : 0,
+										"label_color(7056)" : 999,
+										"pie_color(7057)" : 999
+									}
+								},
+								{
+									class : "float_core.text_field_panel_item(1762)",
+									object_id : 22,
+									data :
+									{
+										"layout_settings(6226)" : 
+										{
+											class : "float_core.grid_panel_item_layout_settings(1694)",
+											object_id : 23,
+											data :
+											{
+												"width(6217)" : 17,
+												"height(6218)" : 4,
+												"x(6215)" : 0,
+												"y(6216)" : 0
+											}
+										},
+										"is_visible(6309)" : true,
+										"is_enabled(6310)" : true,
+										"tooltip_text(6867)" : "",
+										"data_model(6220)" : { object_ref : 5 },
+										"multiline(6402)" : false,
+										"horizontal_alignment(6684)" : 1,
+										"style(6685)" : 1
+									}
+								},
+								{
+									class : "float_core.toggle_button_panel_item(1702)",
+									object_id : 24,
+									data :
+									{
+										"layout_settings(6226)" : 
+										{
+											class : "float_core.grid_panel_item_layout_settings(1694)",
+											object_id : 25,
+											data :
+											{
+												"width(6217)" : 4,
+												"height(6218)" : 4,
+												"x(6215)" : 12,
+												"y(6216)" : 1
+											}
+										},
+										"is_visible(6309)" : true,
+										"is_enabled(6310)" : true,
+										"tooltip_text(6867)" : "",
+										"data_model(6220)" : { object_ref : 2 },
+										"title(6241)" : "",
+										"icon_name(6239)" : "bipolar.svg",
+										"style(6240)" : 2,
+										"label_style(6267)" : 1,
+										"invert_value(6552)" : false,
+										"is_selected(6719)" : false
+									}
+								}
+							],
+							"border_style(6228)" : 1,
+							"title(6242)" : "",
+							"show_title(6243)" : false,
+							"title_color(6522)" : 6,
+							"brightness(6245)" : 0
+						}
+					},
+					"width(6232)" : 17,
+					"height(6233)" : 17,
+					"expressions(6277)" : 
+					[
+					]
+				}
+			},
+			{
+				class : "float_core.panel(1680)",
+				object_id : 26,
+				data :
+				{
+					"layout_settings(6226)" : null,
+					"is_visible(6309)" : true,
+					"is_enabled(6310)" : true,
+					"tooltip_text(6867)" : "",
+					"name(6211)" : "Menu",
+					"root_item(6212)" : 
+					{
+						class : "float_core.menu_container_panel_item(1923)",
+						object_id : 27,
+						data :
+						{
+							"layout_settings(6226)" : null,
+							"is_visible(6309)" : true,
+							"is_enabled(6310)" : true,
+							"tooltip_text(6867)" : "",
+							"items(6221)" : 
+							[
+								{
+									class : "float_core.menu_toggle_panel_item(1924)",
+									object_id : 28,
+									data :
+									{
+										"layout_settings(6226)" : 
+										{
+											class : "float_core.menu_container_panel_item_layout_settings(1928)",
+											object_id : 29,
+											data :
+											{
+												"width(6217)" : 1,
+												"height(6218)" : 1
+											}
+										},
+										"is_visible(6309)" : true,
+										"is_enabled(6310)" : true,
+										"tooltip_text(6867)" : "",
+										"title(6839)" : "Bipolar",
+										"icon_name(6840)" : "",
+										"data_model(6835)" : { object_ref : 2 },
+										"invert_value(6837)" : false,
+										"is_selected(6838)" : false
+									}
+								}
+							],
+							"title(6836)" : ""
+						}
+					},
+					"width(6232)" : 17,
+					"height(6233)" : 53,
+					"expressions(6277)" : 
+					[
+					]
+				}
+			}
+		],
+		"proxy_in_ports(177)" : 
+		[
+			{
+				class : "float_core.proxy_in_port_component(154)",
+				object_id : 30,
+				data :
+				{
+					"settings(6194)" : 
+					{
+						class : "float_core.component_settings(236)",
+						object_id : 31,
+						data :
+						{
+							"desktop_settings(612)" : 
+							{
+								class : "float_core.desktop_settings(17)",
+								object_id : 32,
+								data :
+								{
+									"x(17)" : 0,
+									"y(18)" : 0,
+									"color(19)" : 
+									{
+										type : "color",
+										data : [0.5, 0.5, 0.5]
+									}
+								}
+							},
+							"inport_connections(614)" : 
+							[
+							],
+							"is_polyphonic(615)" : false
+						}
+					},
+					"port(301)" : 
+					{
+						class : "float_core.audio_port(242)",
+						object_id : 33,
+						data :
+						{
+							"name(498)" : "",
+							"description(4741)" : "",
+							"decorated_name(499)" : " Audio out (PARENT)",
+							"is_inport(500)" : false,
+							"is_optional(1384)" : false,
+							"exclude_from_graph(7174)" : false,
+							"channel_count(372)" : 3
+						}
+					}
+				}
+			},
+			{
+				class : "float_core.proxy_in_port_component(154)",
+				object_id : 34,
+				data :
+				{
+					"settings(6194)" : 
+					{
+						class : "float_core.component_settings(236)",
+						object_id : 35,
+						data :
+						{
+							"desktop_settings(612)" : 
+							{
+								class : "float_core.desktop_settings(17)",
+								object_id : 36,
+								data :
+								{
+									"x(17)" : 0,
+									"y(18)" : 0,
+									"color(19)" : 
+									{
+										type : "color",
+										data : [0.5, 0.5, 0.5]
+									}
+								}
+							},
+							"inport_connections(614)" : 
+							[
+							],
+							"is_polyphonic(615)" : false
+						}
+					},
+					"port(301)" : 
+					{
+						class : "float_core.note_port(61)",
+						object_id : 37,
+						data :
+						{
+							"name(498)" : "",
+							"description(4741)" : "",
+							"decorated_name(499)" : " Note out",
+							"is_inport(500)" : false,
+							"is_optional(1384)" : false,
+							"exclude_from_graph(7174)" : false
+						}
+					}
+				}
+			}
+		],
+		"proxy_out_ports(178)" : 
+		[
+		],
+		"fft_order(6566)" : 0,
+		"context_menu_panel(6834)" : { object_ref : 26 },
+		"device_UUID(6369)" : "fe2f9584-cc26-4aef-bb4c-c52299b5b77e",
+		"device_name(6370)" : "Macro",
+		"description(6371)" : "Macro control",
+		"creator(6372)" : "Bitwig",
+		"comment(6373)" : "",
+		"keywords(6374)" : "",
+		"category(6375)" : "Control",
+		"has_been_modified(6376)" : true,
+		"detail_panel(6695)" : null,
+		"can_be_polyphonic(6707)" : false,
+		"should_be_polyphonic_by_default(6724)" : false,
+		"should_enable_perform_mode_by_default(6725)" : false
+	}
+}

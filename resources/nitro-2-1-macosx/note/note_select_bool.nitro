@@ -1,0 +1,8 @@
+component note_select
+{
+   value_inport bool select;
+   event_inport NoteEvent inFalse { if (!select) send out inFalse; }
+   event_inport NoteEvent inTrue { if (select) send out inTrue; }
+
+   event_outport NoteEvent out;
+}

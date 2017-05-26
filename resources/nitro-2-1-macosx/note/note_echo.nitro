@@ -1,0 +1,333 @@
+struct DelayLine
+{
+   /* velocity of the next note */
+   f32 vel = 0;
+
+   /* the number of time the delay sent notes */
+   i32 count = 0;
+
+   /* the time at which we started the delay line */
+   i64 start_time = 0;
+
+   /* initial note length */
+   i64 len = 0;
+
+   /* original note length */
+   i64 original_len = 0;
+
+   /* true when the initial length is known, either at the first
+    * note off or at the first iteration of the delay */
+   bool len_known = false;
+
+   /* initial delay length */
+   i64 delay = 0;
+
+   /* time of the next note on/off, calculated after the note off/on */
+   i64 time_on = 0;
+   i64 time_off = 0;
+
+   /* true when a note is playing */
+   bool is_note_on = false;
+
+   /* true when the delay line is active */
+   bool is_active = false;
+
+   /* played note */
+   i32 key = 0;
+
+   /* the key which started the delay */
+   i32 original_key = 0;
+
+   /* the velocity which started the delay */
+   f32 original_vel = 0;
+}
+
+component note_echo
+{
+   i32 num_active = 0;
+   u8[128] active_lines;
+   DelayLine[128] lines;
+   i64 sample_time = 0;
+
+   // max 128 notes per seconds
+   const i64 MIN_DELAY_LEN = EC.samplerate / 128;
+   const i64 MIN_NOTE_LEN = MIN_DELAY_LEN / 4;
+
+   audio_inport f32 delay_time;
+   audio_inport f32 delay_level;
+   value_inport i32 repeat_times;
+   value_inport i32 feedback_velocity;
+   value_inport i32 feedback_transpose;
+   audio_inport f32 feedback_gatetime;
+   audio_inport f32 feedback_clock;
+   value_inport bool is_mono;
+   value_inport i32 key_wrap_ceiling;
+   value_inport i32 key_wrap_floor;
+   audio_inport f32 random_amount;
+
+   init
+   {
+      for (i32 i = 0; i < 128; ++i)
+      {
+         lines[i].is_active = false;
+         active_lines[i] = 0;
+      }
+   }
+
+   event_outport NoteEvent note_out;
+   value_outport i32 num_active_out = 0;
+   event_inport NoteEvent note_in
+   {
+      i32 key = note_in.key;
+      if (note_in.type == note_in.NOTE_ON)
+      {
+         /* if mono kill other delay lines */
+         if (is_mono)
+         {
+            for (i32 i = 0; i < num_active; ++i)
+            {
+               u8 line_key = active_lines[i];
+               assert lines[line_key].is_active;
+
+               // send note off
+               if (lines[line_key].is_note_on)
+               {
+                  NoteEvent note;
+                  note.type = note.NOTE_OFF;
+                  note.key = lines[line_key].key;
+                  note.v = 0;
+                  send note_out note;
+
+                  lines[line_key].is_note_on = false;
+               }
+
+               // toggle is_active
+               lines[line_key].is_active = false;
+            }
+            num_active = 0;
+            send num_active_out 0;
+         }
+
+         if (lines[key].is_active && lines[key].is_note_on)
+         {
+            NoteEvent note;
+            note.type = note.NOTE_OFF;
+            note.key = lines[key].key;
+            note.v = 0;
+            send note_out note;
+
+            lines[key].is_note_on = false;
+         }
+
+         // Send note on if...
+         if (!mute_initial_note)
+            send note_out note_in;
+
+         // Register the current line as being active
+         if (!lines[note_in.key].is_active)
+         {
+            lines[key].is_active = true;
+            active_lines[num_active] = key.u8;
+            ++num_active;
+
+            send num_active_out num_active;
+         }
+
+         // init the delay line
+         lines[key].vel = note_in.v + feedback_velocity.f32 / 127.0;
+         if (lines[key].vel < 0)
+            lines[key].vel = 0;
+         else if (lines[key].vel > 1)
+            lines[key].vel = 1;
+         lines[key].count = 0;
+         lines[key].start_time = sample_time;
+         lines[key].len = 0;
+         lines[key].len_known = false;
+         lines[key].delay = (delay_time * EC.samplerate).i64;
+         lines[key].is_note_on = true;
+         lines[key].time_on = sample_time + lines[key].delay;
+         lines[key].time_off = sample_time + lines[key].delay - 1;
+         lines[key].key = key;
+         lines[key].original_key = key;
+         lines[key].original_vel = note_in.v;
+      }
+      else if (note_in.type == note_in.NOTE_OFF)
+      {
+         // check if len is known
+         if (lines[key].is_active && !lines[key].len_known)
+         {
+            assert lines[key].is_note_on;
+
+            // Send the note off
+            send note_out note_in;
+
+            lines[key].len = sample_time - lines[key].start_time;
+            lines[key].original_len = lines[key].len;
+            lines[key].len_known = true;
+            lines[key].is_note_on = false;
+         }
+      }
+      else
+      {
+         send note_out note_in;
+      }
+   }
+
+   event_inport void panic
+   {
+      NoteEvent note;
+      note.type = note.NOTE_OFF;
+      note.v = 0;
+
+      for (i32 i = 0; i < num_active; ++i)
+      {
+         u8 key = active_lines[i];
+         if (lines[key].is_note_on)
+         {
+            note.key = lines[key].key;
+            send note_out note;
+            lines[key].is_note_on = false;
+         }
+         lines[key].is_active = false;
+      }
+      num_active = 0;
+      send num_active_out 0;
+   }
+
+   value_inport bool mute_initial_note;
+   value_inport bool infinite_repeat;
+
+   // 0: mul, 1: add
+   value_inport i32 repeat_mod;
+
+   process
+   {
+      for (i32 i = 0; i < num_active; ++i)
+      {
+         u8 key = active_lines[i];
+         assert lines[key].is_active;
+
+         if (lines[key].time_on == sample_time)
+         {
+            /* check if a note is playing */
+            if (lines[key].is_note_on)
+            {
+               /* send a note off event */
+               NoteEvent note;
+               note.type = note.NOTE_OFF;
+               note.key = lines[key].key;
+               note.v = 0;
+               send note_out note;
+
+               lines[key].is_note_on = false;
+            }
+
+            assert lines[key].is_note_on == false;
+
+            /* transpose the key */
+            lines[key].key = lines[key].key + feedback_transpose;
+            if (lines[key].key > key_wrap_ceiling)
+               lines[key].key = lines[key].original_key;
+            else if (lines[key].key < key_wrap_floor)
+               lines[key].key = lines[key].original_key;
+
+            /* send a note off event first */
+            NoteEvent note;
+            note.type = note.NOTE_OFF;
+            note.key = lines[key].key;
+            note.v = 0;
+            send note_out note;
+
+            /* send a note on event */
+            note.type = note.NOTE_ON;
+            note.key = lines[key].key;
+            note.v = lines[key].vel * delay_level;
+            send note_out note;
+
+            lines[key].is_note_on = true;
+
+            /* calculate the next velocity */
+            lines[key].vel += feedback_velocity.f32 / 127.0;
+            if (lines[key].vel < 0)
+               lines[key].vel = 0;
+            else if (lines[key].vel > 1)
+               lines[key].vel = 1;
+
+            /* calculate a random delay */
+            f32 ranged_random = ((rand() % 257) - 128).f32 / 128.0 / 4.0;
+            i64 random_delay = (lines[key].delay.f32 * random_amount * ranged_random).i64;
+
+            /* calculate next delay time */
+            if (repeat_mod == 0)
+               lines[key].delay = ((1 + feedback_clock) * lines[key].delay.f32).i64 + random_delay;
+            else
+               lines[key].delay += (feedback_clock * delay_time * EC.samplerate).i64 + random_delay;
+            if (lines[key].delay < MIN_DELAY_LEN)
+               lines[key].delay = MIN_DELAY_LEN;
+
+            /* calculate the next gate time */
+            if (repeat_mod == 0)
+               lines[key].len = ((1 + feedback_gatetime) * lines[key].len.f32).i64 + random_delay;
+            else
+               lines[key].len += (feedback_gatetime * delay_time * EC.samplerate).i64 + random_delay;
+            if (lines[key].len < MIN_NOTE_LEN)
+               lines[key].len = MIN_NOTE_LEN;
+
+            if (lines[key].len >= lines[key].delay)
+               lines[key].len = lines[key].delay - 1;
+
+            /* calculate the time of the note off */
+            lines[key].time_on = sample_time + lines[key].delay;
+            lines[key].time_off = sample_time + lines[key].len;
+
+            assert lines[key].delay > 0;
+            assert lines[key].len > 0;
+            assert lines[key].time_off < lines[key].time_on;
+
+            /* increase the repeat count */
+            ++lines[key].count;
+         }
+         else if (lines[key].time_off == sample_time)
+         {
+            if (lines[key].is_note_on)
+            {
+               /* send a note event */
+               NoteEvent note;
+               note.type = note.NOTE_OFF;
+               note.key = lines[key].key;
+               note.v = 0;
+               send note_out note;
+
+               lines[key].is_note_on = false;
+            }
+
+            if (!lines[key].len_known)
+            {
+               lines[key].len = sample_time - lines[key].start_time - 1;
+               lines[key].original_len = lines[key].len;
+               lines[key].len_known = true;
+
+               assert lines[key].len >= 0;
+            }
+
+            if ((lines[key].count >= repeat_times && !infinite_repeat) || lines[key].len < (0.001 * EC.samplerate).i64)
+            {
+               // swap current active key with the last one
+               if (i + 1 < num_active)
+                  active_lines[i] = active_lines[num_active - 1];
+
+               assert !lines[key].is_note_on;
+               lines[key].is_active = false;
+
+               --num_active;
+               --i;
+               send num_active_out num_active;
+
+               assert num_active >= 0;
+            }
+         }
+      }
+
+      ++sample_time; // internal clock
+   }
+}

@@ -1,0 +1,2031 @@
+BtWg00010001008d000016a30000000000000000{
+	class : "meta",
+	object_id : 1,
+	data :
+	{
+		"application_version_name" : "none",
+		"branch" : "alex/fixes",
+		"comment" : "",
+		"creator" : "Bitwig",
+		"device_category" : "MIDI",
+		"device_description" : "Loads a MIDI program",
+		"device_id" : "429c7dcb-6863-48bc-becc-508463841e3b",
+		"device_name" : "MIDI Program Change",
+		"device_type" : "note_to_note",
+		"device_uuid" : "429c7dcb-6863-48bc-becc-508463841e3b",
+		"has_audio_input" : false,
+		"has_audio_output" : false,
+		"has_note_input" : false,
+		"has_note_output" : false,
+		"revision_id" : "08466c016acbe25710e4f308d18df13df96fe2b0",
+		"revision_no" : 53059,
+		"suggest_for_audio_input" : true,
+		"suggest_for_note_input" : true,
+		"tags" : "",
+		"type" : "application/bitwig-device"
+	}
+}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
+{
+	class : "float_core.device_contents(151)",
+	object_id : 1,
+	data :
+	{
+		"settings(6194)" : null,
+		"child_components(173)" : 
+		[
+			{
+				class : "float_common_atoms.nitro_atom(1721)",
+				object_id : 2,
+				data :
+				{
+					"settings(6194)" : 
+					{
+						class : "float_core.component_settings(236)",
+						object_id : 3,
+						data :
+						{
+							"desktop_settings(612)" : 
+							{
+								class : "float_core.desktop_settings(17)",
+								object_id : 4,
+								data :
+								{
+									"x(17)" : 52,
+									"y(18)" : 440,
+									"color(19)" : 
+									{
+										type : "color",
+										data : [0.5, 0.5, 0.5]
+									}
+								}
+							},
+							"inport_connections(614)" : 
+							[
+								{
+									class : "float_core.inport_connection(105)",
+									object_id : 5,
+									data :
+									{
+										"source_component(248)" : 
+										{
+											class : "float_core.integer_value_atom(394)",
+											object_id : 6,
+											data :
+											{
+												"settings(6194)" : 
+												{
+													class : "float_core.component_settings(236)",
+													object_id : 7,
+													data :
+													{
+														"desktop_settings(612)" : 
+														{
+															class : "float_core.desktop_settings(17)",
+															object_id : 8,
+															data :
+															{
+																"x(17)" : 124,
+																"y(18)" : 8,
+																"color(19)" : 
+																{
+																	type : "color",
+																	data : [0.5, 0.5, 0.5]
+																}
+															}
+														},
+														"inport_connections(614)" : 
+														[
+														],
+														"is_polyphonic(615)" : false
+													}
+												},
+												"channel_count(607)" : 0,
+												"oversampling(608)" : 0,
+												"name(374)" : "Channel",
+												"label(821)" : "",
+												"tooltip_text(823)" : "MIDI Channel",
+												"preset_identifier(701)" : "CHANNEL",
+												"modulations_to_ignore(3826)" : "",
+												"value_type(702)" : 
+												{
+													class : "float_core.integer_value_type(143)",
+													object_id : 9,
+													data :
+													{
+														"min(345)" : 1,
+														"max(346)" : 16,
+														"default_value(6956)" : 1,
+														"edit_style(818)" : 4,
+														"value_prefix(819)" : "",
+														"value_postfix(820)" : "",
+														"value_origin(4723)" : 0,
+														"pixel_step_size(4724)" : -1.0
+													}
+												},
+												"value(828)" : 1
+											}
+										},
+										"outport_index(249)" : 0,
+										"high_quality(1943)" : true,
+										"unconnected_value(6443)" : 0.0
+									}
+								},
+								{
+									class : "float_core.inport_connection(105)",
+									object_id : 10,
+									data :
+									{
+										"source_component(248)" : 
+										{
+											class : "float_core.integer_value_atom(394)",
+											object_id : 11,
+											data :
+											{
+												"settings(6194)" : 
+												{
+													class : "float_core.component_settings(236)",
+													object_id : 12,
+													data :
+													{
+														"desktop_settings(612)" : 
+														{
+															class : "float_core.desktop_settings(17)",
+															object_id : 13,
+															data :
+															{
+																"x(17)" : 144,
+																"y(18)" : 68,
+																"color(19)" : 
+																{
+																	type : "color",
+																	data : [0.5, 0.5, 0.5]
+																}
+															}
+														},
+														"inport_connections(614)" : 
+														[
+														],
+														"is_polyphonic(615)" : false
+													}
+												},
+												"channel_count(607)" : 0,
+												"oversampling(608)" : 0,
+												"name(374)" : "Bank MSB",
+												"label(821)" : "",
+												"tooltip_text(823)" : "Select the bank",
+												"preset_identifier(701)" : "BANK_MSB",
+												"modulations_to_ignore(3826)" : "",
+												"value_type(702)" : 
+												{
+													class : "float_core.integer_value_type(143)",
+													object_id : 14,
+													data :
+													{
+														"min(345)" : 1,
+														"max(346)" : 128,
+														"default_value(6956)" : 1,
+														"edit_style(818)" : 4,
+														"value_prefix(819)" : "MSB: ",
+														"value_postfix(820)" : "",
+														"value_origin(4723)" : 0,
+														"pixel_step_size(4724)" : -1.0
+													}
+												},
+												"value(828)" : 1
+											}
+										},
+										"outport_index(249)" : 0,
+										"high_quality(1943)" : true,
+										"unconnected_value(6443)" : 0.0
+									}
+								},
+								{
+									class : "float_core.inport_connection(105)",
+									object_id : 15,
+									data :
+									{
+										"source_component(248)" : 
+										{
+											class : "float_core.integer_value_atom(394)",
+											object_id : 16,
+											data :
+											{
+												"settings(6194)" : 
+												{
+													class : "float_core.component_settings(236)",
+													object_id : 17,
+													data :
+													{
+														"desktop_settings(612)" : 
+														{
+															class : "float_core.desktop_settings(17)",
+															object_id : 18,
+															data :
+															{
+																"x(17)" : 164,
+																"y(18)" : 128,
+																"color(19)" : 
+																{
+																	type : "color",
+																	data : [0.5, 0.5, 0.5]
+																}
+															}
+														},
+														"inport_connections(614)" : 
+														[
+														],
+														"is_polyphonic(615)" : false
+													}
+												},
+												"channel_count(607)" : 0,
+												"oversampling(608)" : 0,
+												"name(374)" : "Bank LSB",
+												"label(821)" : "",
+												"tooltip_text(823)" : "Select the bank",
+												"preset_identifier(701)" : "BANK_LSB",
+												"modulations_to_ignore(3826)" : "",
+												"value_type(702)" : 
+												{
+													class : "float_core.integer_value_type(143)",
+													object_id : 19,
+													data :
+													{
+														"min(345)" : 1,
+														"max(346)" : 128,
+														"default_value(6956)" : 1,
+														"edit_style(818)" : 4,
+														"value_prefix(819)" : "LSB: ",
+														"value_postfix(820)" : "",
+														"value_origin(4723)" : 0,
+														"pixel_step_size(4724)" : -1.0
+													}
+												},
+												"value(828)" : 1
+											}
+										},
+										"outport_index(249)" : 0,
+										"high_quality(1943)" : true,
+										"unconnected_value(6443)" : 0.0
+									}
+								},
+								{
+									class : "float_core.inport_connection(105)",
+									object_id : 20,
+									data :
+									{
+										"source_component(248)" : 
+										{
+											class : "float_core.boolean_value_atom(87)",
+											object_id : 21,
+											data :
+											{
+												"settings(6194)" : 
+												{
+													class : "float_core.component_settings(236)",
+													object_id : 22,
+													data :
+													{
+														"desktop_settings(612)" : 
+														{
+															class : "float_core.desktop_settings(17)",
+															object_id : 23,
+															data :
+															{
+																"x(17)" : 184,
+																"y(18)" : 180,
+																"color(19)" : 
+																{
+																	type : "color",
+																	data : [0.5, 0.5, 0.5]
+																}
+															}
+														},
+														"inport_connections(614)" : 
+														[
+														],
+														"is_polyphonic(615)" : false
+													}
+												},
+												"channel_count(607)" : 0,
+												"oversampling(608)" : 0,
+												"name(374)" : "Auto Load",
+												"label(821)" : "",
+												"tooltip_text(823)" : "",
+												"preset_identifier(701)" : "AUTO_LOAD",
+												"modulations_to_ignore(3826)" : "",
+												"value_type(702)" : 
+												{
+													class : "float_core.boolean_value_type(198)",
+													object_id : 24,
+													data :
+													{
+														"icon_name(4755)" : "",
+														"default_value(6957)" : true
+													}
+												},
+												"value(210)" : true
+											}
+										},
+										"outport_index(249)" : 0,
+										"high_quality(1943)" : true,
+										"unconnected_value(6443)" : 0.0
+									}
+								},
+								{
+									class : "float_core.inport_connection(105)",
+									object_id : 25,
+									data :
+									{
+										"source_component(248)" : 
+										{
+											class : "float_core.boolean_value_atom(87)",
+											object_id : 26,
+											data :
+											{
+												"settings(6194)" : 
+												{
+													class : "float_core.component_settings(236)",
+													object_id : 27,
+													data :
+													{
+														"desktop_settings(612)" : 
+														{
+															class : "float_core.desktop_settings(17)",
+															object_id : 28,
+															data :
+															{
+																"x(17)" : 344,
+																"y(18)" : 116,
+																"color(19)" : 
+																{
+																	type : "color",
+																	data : [0.5, 0.5, 0.5]
+																}
+															}
+														},
+														"inport_connections(614)" : 
+														[
+														],
+														"is_polyphonic(615)" : false
+													}
+												},
+												"channel_count(607)" : 0,
+												"oversampling(608)" : 0,
+												"name(374)" : "Send MSB",
+												"label(821)" : "",
+												"tooltip_text(823)" : "",
+												"preset_identifier(701)" : "SEND_MSB",
+												"modulations_to_ignore(3826)" : "",
+												"value_type(702)" : 
+												{
+													class : "float_core.boolean_value_type(198)",
+													object_id : 29,
+													data :
+													{
+														"icon_name(4755)" : "",
+														"default_value(6957)" : false
+													}
+												},
+												"value(210)" : false
+											}
+										},
+										"outport_index(249)" : 0,
+										"high_quality(1943)" : true,
+										"unconnected_value(6443)" : 0.0
+									}
+								},
+								{
+									class : "float_core.inport_connection(105)",
+									object_id : 30,
+									data :
+									{
+										"source_component(248)" : 
+										{
+											class : "float_core.boolean_value_atom(87)",
+											object_id : 31,
+											data :
+											{
+												"settings(6194)" : 
+												{
+													class : "float_core.component_settings(236)",
+													object_id : 32,
+													data :
+													{
+														"desktop_settings(612)" : 
+														{
+															class : "float_core.desktop_settings(17)",
+															object_id : 33,
+															data :
+															{
+																"x(17)" : 428,
+																"y(18)" : 116,
+																"color(19)" : 
+																{
+																	type : "color",
+																	data : [0.5, 0.5, 0.5]
+																}
+															}
+														},
+														"inport_connections(614)" : 
+														[
+														],
+														"is_polyphonic(615)" : false
+													}
+												},
+												"channel_count(607)" : 0,
+												"oversampling(608)" : 0,
+												"name(374)" : "Send LSB",
+												"label(821)" : "",
+												"tooltip_text(823)" : "",
+												"preset_identifier(701)" : "SEND_LSB",
+												"modulations_to_ignore(3826)" : "",
+												"value_type(702)" : 
+												{
+													class : "float_core.boolean_value_type(198)",
+													object_id : 34,
+													data :
+													{
+														"icon_name(4755)" : "",
+														"default_value(6957)" : false
+													}
+												},
+												"value(210)" : false
+											}
+										},
+										"outport_index(249)" : 0,
+										"high_quality(1943)" : true,
+										"unconnected_value(6443)" : 0.0
+									}
+								},
+								{
+									class : "float_core.inport_connection(105)",
+									object_id : 35,
+									data :
+									{
+										"source_component(248)" : 
+										{
+											class : "float_core.integer_value_atom(394)",
+											object_id : 36,
+											data :
+											{
+												"settings(6194)" : 
+												{
+													class : "float_core.component_settings(236)",
+													object_id : 37,
+													data :
+													{
+														"desktop_settings(612)" : 
+														{
+															class : "float_core.desktop_settings(17)",
+															object_id : 38,
+															data :
+															{
+																"x(17)" : 200,
+																"y(18)" : 232,
+																"color(19)" : 
+																{
+																	type : "color",
+																	data : [0.5, 0.5, 0.5]
+																}
+															}
+														},
+														"inport_connections(614)" : 
+														[
+														],
+														"is_polyphonic(615)" : false
+													}
+												},
+												"channel_count(607)" : 0,
+												"oversampling(608)" : 0,
+												"name(374)" : "Program",
+												"label(821)" : "",
+												"tooltip_text(823)" : "Select the program",
+												"preset_identifier(701)" : "PROGRAM",
+												"modulations_to_ignore(3826)" : "",
+												"value_type(702)" : 
+												{
+													class : "float_core.integer_value_type(143)",
+													object_id : 39,
+													data :
+													{
+														"min(345)" : 1,
+														"max(346)" : 128,
+														"default_value(6956)" : 1,
+														"edit_style(818)" : 4,
+														"value_prefix(819)" : "",
+														"value_postfix(820)" : "",
+														"value_origin(4723)" : 0,
+														"pixel_step_size(4724)" : -1.0
+													}
+												},
+												"value(828)" : 1
+											}
+										},
+										"outport_index(249)" : 0,
+										"high_quality(1943)" : true,
+										"unconnected_value(6443)" : 0.0
+									}
+								},
+								{
+									class : "float_core.inport_connection(105)",
+									object_id : 40,
+									data :
+									{
+										"source_component(248)" : 
+										{
+											class : "float_core.trigger_atom(239)",
+											object_id : 41,
+											data :
+											{
+												"settings(6194)" : 
+												{
+													class : "float_core.component_settings(236)",
+													object_id : 42,
+													data :
+													{
+														"desktop_settings(612)" : 
+														{
+															class : "float_core.desktop_settings(17)",
+															object_id : 43,
+															data :
+															{
+																"x(17)" : 216,
+																"y(18)" : 284,
+																"color(19)" : 
+																{
+																	type : "color",
+																	data : [0.5, 0.5, 0.5]
+																}
+															}
+														},
+														"inport_connections(614)" : 
+														[
+														],
+														"is_polyphonic(615)" : false
+													}
+												},
+												"channel_count(607)" : 0,
+												"oversampling(608)" : 0,
+												"name(374)" : "Load",
+												"label(821)" : "Load",
+												"tooltip_text(823)" : "Sends the program change again"
+											}
+										},
+										"outport_index(249)" : 0,
+										"high_quality(1943)" : true,
+										"unconnected_value(6443)" : 0.0
+									}
+								},
+								{
+									class : "float_core.inport_connection(105)",
+									object_id : 44,
+									data :
+									{
+										"source_component(248)" : 
+										{
+											class : "float_core.boolean_value_atom(87)",
+											object_id : 45,
+											data :
+											{
+												"settings(6194)" : 
+												{
+													class : "float_core.component_settings(236)",
+													object_id : 46,
+													data :
+													{
+														"desktop_settings(612)" : 
+														{
+															class : "float_core.desktop_settings(17)",
+															object_id : 47,
+															data :
+															{
+																"x(17)" : 312,
+																"y(18)" : 312,
+																"color(19)" : 
+																{
+																	type : "color",
+																	data : [0.5, 0.5, 0.5]
+																}
+															}
+														},
+														"inport_connections(614)" : 
+														[
+														],
+														"is_polyphonic(615)" : false
+													}
+												},
+												"channel_count(607)" : 0,
+												"oversampling(608)" : 0,
+												"name(374)" : "Anti Click",
+												"label(821)" : "",
+												"tooltip_text(823)" : "",
+												"preset_identifier(701)" : "ANTI_CLICK",
+												"modulations_to_ignore(3826)" : "",
+												"value_type(702)" : 
+												{
+													class : "float_core.boolean_value_type(198)",
+													object_id : 48,
+													data :
+													{
+														"icon_name(4755)" : "",
+														"default_value(6957)" : false
+													}
+												},
+												"value(210)" : false
+											}
+										},
+										"outport_index(249)" : 0,
+										"high_quality(1943)" : true,
+										"unconnected_value(6443)" : 0.0
+									}
+								},
+								{
+									class : "float_core.inport_connection(105)",
+									object_id : 49,
+									data :
+									{
+										"source_component(248)" : 
+										{
+											class : "float_core.decimal_value_atom(289)",
+											object_id : 50,
+											data :
+											{
+												"settings(6194)" : 
+												{
+													class : "float_core.component_settings(236)",
+													object_id : 51,
+													data :
+													{
+														"desktop_settings(612)" : 
+														{
+															class : "float_core.desktop_settings(17)",
+															object_id : 52,
+															data :
+															{
+																"x(17)" : 232,
+																"y(18)" : 328,
+																"color(19)" : 
+																{
+																	type : "color",
+																	data : [0.5, 0.5, 0.5]
+																}
+															}
+														},
+														"inport_connections(614)" : 
+														[
+														],
+														"is_polyphonic(615)" : false
+													}
+												},
+												"channel_count(607)" : 0,
+												"oversampling(608)" : 0,
+												"name(374)" : "Decay Duration",
+												"label(821)" : "",
+												"tooltip_text(823)" : "",
+												"preset_identifier(701)" : "DECAY_DURATION",
+												"modulations_to_ignore(3826)" : "",
+												"value_type(702)" : 
+												{
+													class : "float_core.decimal_value_type(123)",
+													object_id : 53,
+													data :
+													{
+														"min(292)" : 1.0E-4,
+														"max(293)" : 0.25,
+														"default_value(891)" : 0.12,
+														"domain(294)" : 0,
+														"engine_domain(295)" : 0,
+														"value_origin(3014)" : 0,
+														"pixel_step_size(1988)" : -1.0,
+														"unit(296)" : 3,
+														"decimal_digit_count(297)" : -1,
+														"edit_style(298)" : 0,
+														"parameter_smoothing(4433)" : true,
+														"allow_automation_curves(4434)" : true
+													}
+												},
+												"value(712)" : 0.12
+											}
+										},
+										"outport_index(249)" : 0,
+										"high_quality(1943)" : true,
+										"unconnected_value(6443)" : 0.0
+									}
+								},
+								{
+									class : "float_core.inport_connection(105)",
+									object_id : 54,
+									data :
+									{
+										"source_component(248)" : 
+										{
+											class : "float_core.proxy_in_port_component(154)",
+											object_id : 55,
+											data :
+											{
+												"settings(6194)" : 
+												{
+													class : "float_core.component_settings(236)",
+													object_id : 56,
+													data :
+													{
+														"desktop_settings(612)" : 
+														{
+															class : "float_core.desktop_settings(17)",
+															object_id : 57,
+															data :
+															{
+																"x(17)" : 150,
+																"y(18)" : 0,
+																"color(19)" : 
+																{
+																	type : "color",
+																	data : [0.5, 0.5, 0.5]
+																}
+															}
+														},
+														"inport_connections(614)" : 
+														[
+														],
+														"is_polyphonic(615)" : false
+													}
+												},
+												"port(301)" : 
+												{
+													class : "float_core.note_port(61)",
+													object_id : 58,
+													data :
+													{
+														"name(498)" : "",
+														"description(4741)" : "",
+														"decorated_name(499)" : " Note out",
+														"is_inport(500)" : false,
+														"is_optional(1384)" : false,
+														"exclude_from_graph(7174)" : false
+													}
+												}
+											}
+										},
+										"outport_index(249)" : 0,
+										"high_quality(1943)" : false,
+										"unconnected_value(6443)" : 0.0
+									}
+								}
+							],
+							"is_polyphonic(615)" : false
+						}
+					},
+					"channel_count(607)" : 0,
+					"oversampling(608)" : 0,
+					"code(6264)" : "@desc \"Sends MIDI events to change the current program\"\ncomponent midi_program_change\n{\n   const i32 MAX_EVENT = 64;\n   const i32 SLEEP_SAMPLES = (0.0015 * EC.samplerate).i32;\n   i32  sleep_samples = 0;\n   bool schedule_send = false;\n   i32 decay_samples = 0;\n   f32 decay_ramp = 0;\n   f32 decay_val = 1;\n   NoteEvent[MAX_EVENT] event_buffer;\n   i32                  event_count = 0;\n\n   @name \"Note\"\n   event_outport NoteEvent midi_out;\n\n   @name \"Enveloppe\"\n   audio_outport f32 env_out;\n\n   i32 cached_program  = 0;\n\n   @name \"Channel\"\n   value_inport i32 channel;\n\n   @name \"Bank MSB\"\n   value_inport i32 bank_msb;\n\n   @name \"Bank LSB\"\n   value_inport i32 bank_lsb;\n\n   @name \"Auto Load\"\n   value_inport bool auto_load;\n\n   @name \"Send Bank MSB\"\n   value_inport bool send_bank_msb;\n\n   @name \"Send Bank LSB\"\n   value_inport bool send_bank_lsb;\n\n   @name \"Program\"\n   value_inport i32 program\n   {\n      if ((program - 1) != cached_program)\n      {\n         cached_program = (program - 1) & 0x7f;\n\n         if (auto_load)\n         {\n            schedule_send = true;\n            decay_samples = (decaySecs * EC.samplerate).i32;\n            decay_ramp = exp(- 5 * log(10.f32) / decay_samples.f32);\n            decay_val = 1;\n         }\n      }\n   }\n\n   @name \"Load\"\n   event_inport void load\n   {\n      schedule_send = true;\n      decay_samples = (decaySecs * EC.samplerate).i32;\n      decay_ramp = exp(- 5 * log(10.f32) / decay_samples.f32);\n      decay_val = 1;\n   }\n\n   value_inport bool antiClick\n   {\n      if (!antiClick && event_count > 0 && !schedule_send)\n      {\n         // send buffered events\n         for (i32 i = 0; i < event_count; ++i)\n         {\n            send midi_out event_buffer[i];\n         }\n         event_count = 0;\n      }\n   }\n\n   audio_inport f32  decaySecs;\n\n   /* The note has to be last because we want it to start with the new program */\n   @name \"Note In\"\n   event_inport NoteEvent in\n   {\n      if (schedule_send && antiClick && decay_samples > 0)\n      {\n         if (event_count < MAX_EVENT)\n         {\n            event_buffer[event_count] = in;\n            ++event_count;\n         }\n      }\n      else\n      {\n         send midi_out in;\n      }\n   }\n\n   init\n   {\n      sleep_samples = 0;\n      schedule_send = false;\n   }\n\n   process\n   {\n      env_out = 1;\n\n      if (sleep_samples > 0)\n      {\n         --sleep_samples;\n      }\n      else if (schedule_send)\n      {\n         if (antiClick && decay_samples > 0)\n         {\n            decay_val *= decay_ramp;\n            env_out = decay_val;\n            --decay_samples;\n         }\n         else\n         {\n            schedule_send = false;\n            sleep_samples = SLEEP_SAMPLES;\n\n            cached_program = (program - 1) & 0x7f;\n            i32 cached_channel = (channel -  1) & 0xf;\n            i32 cached_bank_msb = (bank_msb -  1) & 0x7f;\n            i32 cached_bank_lsb = (bank_lsb -  1) & 0x7f;\n\n            NoteEvent ev;\n            ev.type = ev.MIDI;\n            ev.forcedChannel = cached_channel;\n\n            // send the msb\n            if (send_bank_msb)\n            {\n               ev.midi = 0x00B0 | cached_channel | (cached_bank_msb << 16);\n               send midi_out ev;\n            }\n\n            // send the lsb\n            if (send_bank_lsb)\n            {\n               ev.midi = 0x20B0 | cached_channel | (cached_bank_lsb << 16);\n               send midi_out ev;\n            }\n\n            // send the program\n            ev.midi = 0xC0 | cached_channel | (cached_program << 8);\n            send midi_out ev;\n\n            // send buffered events\n            for (i32 i = 0; i < event_count; ++i)\n            {\n               send midi_out event_buffer[i];\n            }\n            event_count = 0;\n         }\n      }\n   }\n}\n",
+					"fft_order(6567)" : 0
+				}
+			},{ object_ref : 6 },{ object_ref : 11 },{ object_ref : 16 },{ object_ref : 36 },{ object_ref : 41 },{ object_ref : 21 },{ object_ref : 26 },{ object_ref : 31 },
+			{
+				class : "float_core.nested_device_chain_slot(587)",
+				object_id : 59,
+				data :
+				{
+					"settings(6194)" : 
+					{
+						class : "float_core.component_settings(236)",
+						object_id : 60,
+						data :
+						{
+							"desktop_settings(612)" : 
+							{
+								class : "float_core.desktop_settings(17)",
+								object_id : 61,
+								data :
+								{
+									"x(17)" : 28,
+									"y(18)" : 540,
+									"color(19)" : 
+									{
+										type : "color",
+										data : [0.5, 0.5, 0.5]
+									}
+								}
+							},
+							"inport_connections(614)" : 
+							[
+								{
+									class : "float_core.inport_connection(105)",
+									object_id : 62,
+									data :
+									{
+										"source_component(248)" : 
+										{
+											class : "float_core.proxy_in_port_component(154)",
+											object_id : 63,
+											data :
+											{
+												"settings(6194)" : 
+												{
+													class : "float_core.component_settings(236)",
+													object_id : 64,
+													data :
+													{
+														"desktop_settings(612)" : 
+														{
+															class : "float_core.desktop_settings(17)",
+															object_id : 65,
+															data :
+															{
+																"x(17)" : 0,
+																"y(18)" : 0,
+																"color(19)" : 
+																{
+																	type : "color",
+																	data : [0.5, 0.5, 0.5]
+																}
+															}
+														},
+														"inport_connections(614)" : 
+														[
+														],
+														"is_polyphonic(615)" : false
+													}
+												},
+												"port(301)" : 
+												{
+													class : "float_core.audio_port(242)",
+													object_id : 66,
+													data :
+													{
+														"name(498)" : "",
+														"description(4741)" : "",
+														"decorated_name(499)" : " Audio out (PARENT)",
+														"is_inport(500)" : false,
+														"is_optional(1384)" : false,
+														"exclude_from_graph(7174)" : false,
+														"channel_count(372)" : 3
+													}
+												}
+											}
+										},
+										"outport_index(249)" : 0,
+										"high_quality(1943)" : true,
+										"unconnected_value(6443)" : 0.0
+									}
+								},
+								{
+									class : "float_core.inport_connection(105)",
+									object_id : 67,
+									data :
+									{
+										"source_component(248)" : { object_ref : 2 },
+										"outport_index(249)" : 0,
+										"high_quality(1943)" : true,
+										"unconnected_value(6443)" : 0.0
+									}
+								}
+							],
+							"is_polyphonic(615)" : false
+						}
+					},
+					"preset_identifier(836)" : "DEVICE_CHAIN",
+					"suggest_note_input_devices(2434)" : true,
+					"suggest_audio_input_devices(2435)" : true,
+					"suggest_note_output_devices(5768)" : true,
+					"suggest_audio_output_devices(5769)" : true,
+					"show_mixer_as_subtrack(1373)" : false,
+					"show_mixer_at_end_of_chain(2076)" : false,
+					"subtrack_sends_count(1374)" : 0,
+					"has_volume_and_pan(2079)" : false,
+					"has_mute(2077)" : false,
+					"has_solo(2220)" : false,
+					"name(835)" : "CHAIN",
+					"tooltip_text(2315)" : "",
+					"must_have_device_chain(2270)" : true,
+					"should_devices_in_slot_determine_device_type(5361)" : false
+				}
+			},{ object_ref : 45 },{ object_ref : 50 },
+			{
+				class : "float_common_atoms.audio_switcher_atom(401)",
+				object_id : 68,
+				data :
+				{
+					"settings(6194)" : 
+					{
+						class : "float_core.component_settings(236)",
+						object_id : 69,
+						data :
+						{
+							"desktop_settings(612)" : 
+							{
+								class : "float_core.desktop_settings(17)",
+								object_id : 70,
+								data :
+								{
+									"x(17)" : 8,
+									"y(18)" : 688,
+									"color(19)" : 
+									{
+										type : "color",
+										data : [0.5, 0.5, 0.5]
+									}
+								}
+							},
+							"inport_connections(614)" : 
+							[
+								{
+									class : "float_core.inport_connection(105)",
+									object_id : 71,
+									data :
+									{
+										"source_component(248)" : { object_ref : 59 },
+										"outport_index(249)" : 0,
+										"high_quality(1943)" : true,
+										"unconnected_value(6443)" : 0.0
+									}
+								},
+								{
+									class : "float_core.inport_connection(105)",
+									object_id : 72,
+									data :
+									{
+										"source_component(248)" : 
+										{
+											class : "float_common_atoms.nitro_atom(1721)",
+											object_id : 73,
+											data :
+											{
+												"settings(6194)" : 
+												{
+													class : "float_core.component_settings(236)",
+													object_id : 74,
+													data :
+													{
+														"desktop_settings(612)" : 
+														{
+															class : "float_core.desktop_settings(17)",
+															object_id : 75,
+															data :
+															{
+																"x(17)" : 68,
+																"y(18)" : 612,
+																"color(19)" : 
+																{
+																	type : "color",
+																	data : [0.5, 0.5, 0.5]
+																}
+															}
+														},
+														"inport_connections(614)" : 
+														[
+															{
+																class : "float_core.inport_connection(105)",
+																object_id : 76,
+																data :
+																{
+																	"source_component(248)" : { object_ref : 59 },
+																	"outport_index(249)" : 0,
+																	"high_quality(1943)" : true,
+																	"unconnected_value(6443)" : 0.0
+																}
+															},
+															{
+																class : "float_core.inport_connection(105)",
+																object_id : 77,
+																data :
+																{
+																	"source_component(248)" : 
+																	{
+																		class : "float_common_atoms.delay_compensation_atom(1371)",
+																		object_id : 78,
+																		data :
+																		{
+																			"settings(6194)" : 
+																			{
+																				class : "float_core.component_settings(236)",
+																				object_id : 79,
+																				data :
+																				{
+																					"desktop_settings(612)" : 
+																					{
+																						class : "float_core.desktop_settings(17)",
+																						object_id : 80,
+																						data :
+																						{
+																							"x(17)" : 84,
+																							"y(18)" : 524,
+																							"color(19)" : 
+																							{
+																								type : "color",
+																								data : [0.5, 0.5, 0.5]
+																							}
+																						}
+																					},
+																					"inport_connections(614)" : 
+																					[
+																						{
+																							class : "float_core.inport_connection(105)",
+																							object_id : 81,
+																							data :
+																							{
+																								"source_component(248)" : { object_ref : 2 },
+																								"outport_index(249)" : 1,
+																								"high_quality(1943)" : true,
+																								"unconnected_value(6443)" : 0.0
+																							}
+																						}
+																					],
+																					"is_polyphonic(615)" : false
+																				}
+																			},
+																			"channel_count(607)" : 2,
+																			"oversampling(608)" : 0
+																		}
+																	},
+																	"outport_index(249)" : 0,
+																	"high_quality(1943)" : true,
+																	"unconnected_value(6443)" : 0.0
+																}
+															}
+														],
+														"is_polyphonic(615)" : false
+													}
+												},
+												"channel_count(607)" : 0,
+												"oversampling(608)" : 0,
+												"code(6264)" : "@icon \"multiply.svg\"\ncomponent multiply\n{\n   audio_inport in0;\n   audio_inport f32 in1;\n   audio_outport out;\n\n   process\n   {\n      out = in0 * in1;\n   }\n}",
+												"fft_order(6567)" : 0
+											}
+										},
+										"outport_index(249)" : 0,
+										"high_quality(1943)" : true,
+										"unconnected_value(6443)" : 0.0
+									}
+								},
+								{
+									class : "float_core.inport_connection(105)",
+									object_id : 82,
+									data :
+									{
+										"source_component(248)" : 
+										{
+											class : "float_common_atoms.bool_delay_compensation_atom(2017)",
+											object_id : 83,
+											data :
+											{
+												"settings(6194)" : 
+												{
+													class : "float_core.component_settings(236)",
+													object_id : 84,
+													data :
+													{
+														"desktop_settings(612)" : 
+														{
+															class : "float_core.desktop_settings(17)",
+															object_id : 85,
+															data :
+															{
+																"x(17)" : 172,
+																"y(18)" : 532,
+																"color(19)" : 
+																{
+																	type : "color",
+																	data : [0.5, 0.5, 0.5]
+																}
+															}
+														},
+														"inport_connections(614)" : 
+														[
+															{
+																class : "float_core.inport_connection(105)",
+																object_id : 86,
+																data :
+																{
+																	"source_component(248)" : { object_ref : 45 },
+																	"outport_index(249)" : 0,
+																	"high_quality(1943)" : true,
+																	"unconnected_value(6443)" : 0.0
+																}
+															}
+														],
+														"is_polyphonic(615)" : false
+													}
+												},
+												"channel_count(607)" : 0,
+												"oversampling(608)" : 0
+											}
+										},
+										"outport_index(249)" : 0,
+										"high_quality(1943)" : true,
+										"unconnected_value(6443)" : 0.0
+									}
+								}
+							],
+							"is_polyphonic(615)" : false
+						}
+					},
+					"channel_count(607)" : 0,
+					"oversampling(608)" : 0
+				}
+			},{ object_ref : 73 },{ object_ref : 83 },{ object_ref : 78 },
+			{
+				class : "float_common_atoms.nitro_atom(1721)",
+				object_id : 87,
+				data :
+				{
+					"settings(6194)" : 
+					{
+						class : "float_core.component_settings(236)",
+						object_id : 88,
+						data :
+						{
+							"desktop_settings(612)" : 
+							{
+								class : "float_core.desktop_settings(17)",
+								object_id : 89,
+								data :
+								{
+									"x(17)" : 220,
+									"y(18)" : 708,
+									"color(19)" : 
+									{
+										type : "color",
+										data : [0.5, 0.5, 0.5]
+									}
+								}
+							},
+							"inport_connections(614)" : 
+							[
+								{
+									class : "float_core.inport_connection(105)",
+									object_id : 90,
+									data :
+									{
+										"source_component(248)" : 
+										{
+											class : "float_core.boolean_value_atom(87)",
+											object_id : 91,
+											data :
+											{
+												"settings(6194)" : 
+												{
+													class : "float_core.component_settings(236)",
+													object_id : 92,
+													data :
+													{
+														"desktop_settings(612)" : 
+														{
+															class : "float_core.desktop_settings(17)",
+															object_id : 93,
+															data :
+															{
+																"x(17)" : 116,
+																"y(18)" : 644,
+																"color(19)" : 
+																{
+																	type : "color",
+																	data : [0.5, 0.5, 0.5]
+																}
+															}
+														},
+														"inport_connections(614)" : 
+														[
+														],
+														"is_polyphonic(615)" : false
+													}
+												},
+												"channel_count(607)" : 0,
+												"oversampling(608)" : 0,
+												"name(374)" : "Scoped",
+												"label(821)" : "",
+												"tooltip_text(823)" : "",
+												"preset_identifier(701)" : "SCOPED",
+												"modulations_to_ignore(3826)" : "",
+												"value_type(702)" : 
+												{
+													class : "float_core.boolean_value_type(198)",
+													object_id : 94,
+													data :
+													{
+														"icon_name(4755)" : "",
+														"default_value(6957)" : false
+													}
+												},
+												"value(210)" : true
+											}
+										},
+										"outport_index(249)" : 0,
+										"high_quality(1943)" : true,
+										"unconnected_value(6443)" : 0.0
+									}
+								},
+								{
+									class : "float_core.inport_connection(105)",
+									object_id : 95,
+									data :
+									{
+										"source_component(248)" : { object_ref : 2 },
+										"outport_index(249)" : 0,
+										"high_quality(1943)" : true,
+										"unconnected_value(6443)" : 0.0
+									}
+								},
+								{
+									class : "float_core.inport_connection(105)",
+									object_id : 96,
+									data :
+									{
+										"source_component(248)" : { object_ref : 55 },
+										"outport_index(249)" : 0,
+										"high_quality(1943)" : true,
+										"unconnected_value(6443)" : 0.0
+									}
+								}
+							],
+							"is_polyphonic(615)" : false
+						}
+					},
+					"channel_count(607)" : 0,
+					"oversampling(608)" : 0,
+					"code(6264)" : "component note_select\n{\n   value_inport bool select;\n   event_inport NoteEvent inFalse { if (!select) send out inFalse; }\n   event_inport NoteEvent inTrue { if (select) send out inTrue; }\n\n   event_outport NoteEvent out;\n}",
+					"fft_order(6567)" : 0
+				}
+			},{ object_ref : 91 },
+			{
+				class : "float_common_atoms.note_delay_compensation_atom(1435)",
+				object_id : 97,
+				data :
+				{
+					"settings(6194)" : 
+					{
+						class : "float_core.component_settings(236)",
+						object_id : 98,
+						data :
+						{
+							"desktop_settings(612)" : 
+							{
+								class : "float_core.desktop_settings(17)",
+								object_id : 99,
+								data :
+								{
+									"x(17)" : 100,
+									"y(18)" : 784,
+									"color(19)" : 
+									{
+										type : "color",
+										data : [0.5, 0.5, 0.5]
+									}
+								}
+							},
+							"inport_connections(614)" : 
+							[
+								{
+									class : "float_core.inport_connection(105)",
+									object_id : 100,
+									data :
+									{
+										"source_component(248)" : { object_ref : 87 },
+										"outport_index(249)" : 0,
+										"high_quality(1943)" : true,
+										"unconnected_value(6443)" : 0.0
+									}
+								}
+							],
+							"is_polyphonic(615)" : false
+						}
+					},
+					"channel_count(607)" : 0,
+					"oversampling(608)" : 0
+				}
+			}
+		],
+		"panels(6213)" : 
+		[
+			{
+				class : "float_core.panel(1680)",
+				object_id : 101,
+				data :
+				{
+					"layout_settings(6226)" : null,
+					"is_visible(6309)" : true,
+					"is_enabled(6310)" : true,
+					"tooltip_text(6867)" : "",
+					"name(6211)" : "Main",
+					"root_item(6212)" : 
+					{
+						class : "float_core.grid_panel_item(1681)",
+						object_id : 102,
+						data :
+						{
+							"layout_settings(6226)" : null,
+							"is_visible(6309)" : true,
+							"is_enabled(6310)" : true,
+							"tooltip_text(6867)" : "",
+							"items(6221)" : 
+							[
+								{
+									class : "float_core.grid_panel_item(1681)",
+									object_id : 103,
+									data :
+									{
+										"layout_settings(6226)" : 
+										{
+											class : "float_core.grid_panel_item_layout_settings(1694)",
+											object_id : 104,
+											data :
+											{
+												"width(6217)" : 19,
+												"height(6218)" : 53,
+												"x(6215)" : 0,
+												"y(6216)" : 0
+											}
+										},
+										"is_visible(6309)" : true,
+										"is_enabled(6310)" : true,
+										"tooltip_text(6867)" : "",
+										"items(6221)" : 
+										[
+											{
+												class : "float_core.number_field_panel_item(1713)",
+												object_id : 105,
+												data :
+												{
+													"layout_settings(6226)" : 
+													{
+														class : "float_core.grid_panel_item_layout_settings(1694)",
+														object_id : 106,
+														data :
+														{
+															"width(6217)" : 12,
+															"height(6218)" : 5,
+															"x(6215)" : 6,
+															"y(6216)" : 18
+														}
+													},
+													"is_visible(6309)" : true,
+													"is_enabled(6310)" : true,
+													"tooltip_text(6867)" : "Select the bank",
+													"data_model(6220)" : { object_ref : 11 },
+													"style(6540)" : 2,
+													"show_value_bar(6581)" : true
+												}
+											},
+											{
+												class : "float_core.trigger_panel_item(1880)",
+												object_id : 107,
+												data :
+												{
+													"layout_settings(6226)" : 
+													{
+														class : "float_core.grid_panel_item_layout_settings(1694)",
+														object_id : 108,
+														data :
+														{
+															"width(6217)" : 17,
+															"height(6218)" : 5,
+															"x(6215)" : 1,
+															"y(6216)" : 47
+														}
+													},
+													"is_visible(6309)" : true,
+													"is_enabled(6310)" : true,
+													"tooltip_text(6867)" : "Sends the MIDI Program Change message NOW!",
+													"data_model(6220)" : { object_ref : 41 },
+													"title(6241)" : "Send",
+													"style(6694)" : 0
+												}
+											},
+											{
+												class : "float_core.toggle_button_panel_item(1702)",
+												object_id : 109,
+												data :
+												{
+													"layout_settings(6226)" : 
+													{
+														class : "float_core.grid_panel_item_layout_settings(1694)",
+														object_id : 110,
+														data :
+														{
+															"width(6217)" : 4,
+															"height(6218)" : 5,
+															"x(6215)" : 1,
+															"y(6216)" : 18
+														}
+													},
+													"is_visible(6309)" : true,
+													"is_enabled(6310)" : true,
+													"tooltip_text(6867)" : "Send MSB",
+													"data_model(6220)" : { object_ref : 26 },
+													"title(6241)" : "",
+													"icon_name(6239)" : "midi.svg",
+													"style(6240)" : 1,
+													"label_style(6267)" : 1,
+													"invert_value(6552)" : false,
+													"is_selected(6719)" : false
+												}
+											},
+											{
+												class : "float_core.gap_panel_item(1686)",
+												object_id : 111,
+												data :
+												{
+													"layout_settings(6226)" : 
+													{
+														class : "float_core.grid_panel_item_layout_settings(1694)",
+														object_id : 112,
+														data :
+														{
+															"width(6217)" : 1,
+															"height(6218)" : 1,
+															"x(6215)" : 0,
+															"y(6216)" : 0
+														}
+													},
+													"is_visible(6309)" : true,
+													"is_enabled(6310)" : true,
+													"tooltip_text(6867)" : ""
+												}
+											},
+											{
+												class : "float_core.number_field_panel_item(1713)",
+												object_id : 113,
+												data :
+												{
+													"layout_settings(6226)" : 
+													{
+														class : "float_core.grid_panel_item_layout_settings(1694)",
+														object_id : 114,
+														data :
+														{
+															"width(6217)" : 17,
+															"height(6218)" : 5,
+															"x(6215)" : 1,
+															"y(6216)" : 6
+														}
+													},
+													"is_visible(6309)" : true,
+													"is_enabled(6310)" : true,
+													"tooltip_text(6867)" : "MIDI Channel",
+													"data_model(6220)" : { object_ref : 6 },
+													"style(6540)" : 2,
+													"show_value_bar(6581)" : true
+												}
+											},
+											{
+												class : "float_core.label_panel_item(1683)",
+												object_id : 115,
+												data :
+												{
+													"layout_settings(6226)" : 
+													{
+														class : "float_core.grid_panel_item_layout_settings(1694)",
+														object_id : 116,
+														data :
+														{
+															"width(6217)" : 15,
+															"height(6218)" : 5,
+															"x(6215)" : 2,
+															"y(6216)" : 1
+														}
+													},
+													"is_visible(6309)" : true,
+													"is_enabled(6310)" : true,
+													"tooltip_text(6867)" : "",
+													"horizontal_alignment(6400)" : 1,
+													"vertical_alignment(6401)" : 1,
+													"text(6219)" : "Channel",
+													"color(6520)" : 6,
+													"font(7188)" : 0
+												}
+											},
+											{
+												class : "float_core.number_field_panel_item(1713)",
+												object_id : 117,
+												data :
+												{
+													"layout_settings(6226)" : 
+													{
+														class : "float_core.grid_panel_item_layout_settings(1694)",
+														object_id : 118,
+														data :
+														{
+															"width(6217)" : 12,
+															"height(6218)" : 5,
+															"x(6215)" : 6,
+															"y(6216)" : 24
+														}
+													},
+													"is_visible(6309)" : true,
+													"is_enabled(6310)" : true,
+													"tooltip_text(6867)" : "Select the bank",
+													"data_model(6220)" : { object_ref : 16 },
+													"style(6540)" : 2,
+													"show_value_bar(6581)" : true
+												}
+											},
+											{
+												class : "float_core.label_panel_item(1683)",
+												object_id : 119,
+												data :
+												{
+													"layout_settings(6226)" : 
+													{
+														class : "float_core.grid_panel_item_layout_settings(1694)",
+														object_id : 120,
+														data :
+														{
+															"width(6217)" : 15,
+															"height(6218)" : 5,
+															"x(6215)" : 2,
+															"y(6216)" : 13
+														}
+													},
+													"is_visible(6309)" : true,
+													"is_enabled(6310)" : true,
+													"tooltip_text(6867)" : "",
+													"horizontal_alignment(6400)" : 1,
+													"vertical_alignment(6401)" : 1,
+													"text(6219)" : "Bank",
+													"color(6520)" : 6,
+													"font(7188)" : 0
+												}
+											},
+											{
+												class : "float_core.number_field_panel_item(1713)",
+												object_id : 121,
+												data :
+												{
+													"layout_settings(6226)" : 
+													{
+														class : "float_core.grid_panel_item_layout_settings(1694)",
+														object_id : 122,
+														data :
+														{
+															"width(6217)" : 17,
+															"height(6218)" : 5,
+															"x(6215)" : 1,
+															"y(6216)" : 36
+														}
+													},
+													"is_visible(6309)" : true,
+													"is_enabled(6310)" : true,
+													"tooltip_text(6867)" : "Select the program",
+													"data_model(6220)" : { object_ref : 36 },
+													"style(6540)" : 2,
+													"show_value_bar(6581)" : true
+												}
+											},
+											{
+												class : "float_core.label_panel_item(1683)",
+												object_id : 123,
+												data :
+												{
+													"layout_settings(6226)" : 
+													{
+														class : "float_core.grid_panel_item_layout_settings(1694)",
+														object_id : 124,
+														data :
+														{
+															"width(6217)" : 15,
+															"height(6218)" : 5,
+															"x(6215)" : 2,
+															"y(6216)" : 31
+														}
+													},
+													"is_visible(6309)" : true,
+													"is_enabled(6310)" : true,
+													"tooltip_text(6867)" : "",
+													"horizontal_alignment(6400)" : 1,
+													"vertical_alignment(6401)" : 1,
+													"text(6219)" : "Program",
+													"color(6520)" : 6,
+													"font(7188)" : 0
+												}
+											},
+											{
+												class : "float_core.toggle_button_panel_item(1702)",
+												object_id : 125,
+												data :
+												{
+													"layout_settings(6226)" : 
+													{
+														class : "float_core.grid_panel_item_layout_settings(1694)",
+														object_id : 126,
+														data :
+														{
+															"width(6217)" : 17,
+															"height(6218)" : 5,
+															"x(6215)" : 1,
+															"y(6216)" : 42
+														}
+													},
+													"is_visible(6309)" : true,
+													"is_enabled(6310)" : true,
+													"tooltip_text(6867)" : "When auto load is on, MIDI Program Change will be sent for every new value of Program.",
+													"data_model(6220)" : { object_ref : 21 },
+													"title(6241)" : "Auto Load",
+													"icon_name(6239)" : "",
+													"style(6240)" : 0,
+													"label_style(6267)" : 0,
+													"invert_value(6552)" : false,
+													"is_selected(6719)" : false
+												}
+											},
+											{
+												class : "float_core.toggle_button_panel_item(1702)",
+												object_id : 127,
+												data :
+												{
+													"layout_settings(6226)" : 
+													{
+														class : "float_core.grid_panel_item_layout_settings(1694)",
+														object_id : 128,
+														data :
+														{
+															"width(6217)" : 4,
+															"height(6218)" : 5,
+															"x(6215)" : 1,
+															"y(6216)" : 24
+														}
+													},
+													"is_visible(6309)" : true,
+													"is_enabled(6310)" : true,
+													"tooltip_text(6867)" : "Send LSB",
+													"data_model(6220)" : { object_ref : 31 },
+													"title(6241)" : "",
+													"icon_name(6239)" : "midi.svg",
+													"style(6240)" : 1,
+													"label_style(6267)" : 1,
+													"invert_value(6552)" : false,
+													"is_selected(6719)" : false
+												}
+											}
+										],
+										"border_style(6228)" : 1,
+										"title(6242)" : "",
+										"show_title(6243)" : false,
+										"title_color(6522)" : 6,
+										"brightness(6245)" : 0
+									}
+								},
+								{
+									class : "float_core.grid_panel_item(1681)",
+									object_id : 129,
+									data :
+									{
+										"layout_settings(6226)" : 
+										{
+											class : "float_core.grid_panel_item_layout_settings(1694)",
+											object_id : 130,
+											data :
+											{
+												"width(6217)" : 18,
+												"height(6218)" : 53,
+												"x(6215)" : 20,
+												"y(6216)" : 0
+											}
+										},
+										"is_visible(6309)" : true,
+										"is_enabled(6310)" : true,
+										"tooltip_text(6867)" : "",
+										"items(6221)" : 
+										[
+											{
+												class : "float_core.toggle_button_panel_item(1702)",
+												object_id : 131,
+												data :
+												{
+													"layout_settings(6226)" : 
+													{
+														class : "float_core.grid_panel_item_layout_settings(1694)",
+														object_id : 132,
+														data :
+														{
+															"width(6217)" : 16,
+															"height(6218)" : 5,
+															"x(6215)" : 1,
+															"y(6216)" : 19
+														}
+													},
+													"is_visible(6309)" : true,
+													"is_enabled(6310)" : true,
+													"tooltip_text(6867)" : "Anti Click will do a decay enveloppe on the chain's output and delay the program change and following events so the program change can happen gracefuly without clicks.",
+													"data_model(6220)" : { object_ref : 45 },
+													"title(6241)" : "Anti Click",
+													"icon_name(6239)" : "",
+													"style(6240)" : 0,
+													"label_style(6267)" : 0,
+													"invert_value(6552)" : false,
+													"is_selected(6719)" : false
+												}
+											},
+											{
+												class : "float_core.component_display_panel_item(1704)",
+												object_id : 133,
+												data :
+												{
+													"layout_settings(6226)" : 
+													{
+														class : "float_core.grid_panel_item_layout_settings(1694)",
+														object_id : 134,
+														data :
+														{
+															"width(6217)" : 16,
+															"height(6218)" : 11,
+															"x(6215)" : 1,
+															"y(6216)" : 1
+														}
+													},
+													"is_visible(6309)" : true,
+													"is_enabled(6310)" : true,
+													"tooltip_text(6867)" : "The Anti Click will be applied to the device on that chain.",
+													"data_model(6220)" : { object_ref : 59 }
+												}
+											},
+											{
+												class : "float_core.label_panel_item(1683)",
+												object_id : 135,
+												data :
+												{
+													"layout_settings(6226)" : 
+													{
+														class : "float_core.grid_panel_item_layout_settings(1694)",
+														object_id : 136,
+														data :
+														{
+															"width(6217)" : 16,
+															"height(6218)" : 1,
+															"x(6215)" : 1,
+															"y(6216)" : 25
+														}
+													},
+													"is_visible(6309)" : true,
+													"is_enabled(6310)" : true,
+													"tooltip_text(6867)" : "",
+													"horizontal_alignment(6400)" : 1,
+													"vertical_alignment(6401)" : 1,
+													"text(6219)" : "Decay",
+													"color(6520)" : 6,
+													"font(7188)" : 0
+												}
+											},
+											{
+												class : "float_core.number_field_panel_item(1713)",
+												object_id : 137,
+												data :
+												{
+													"layout_settings(6226)" : 
+													{
+														class : "float_core.grid_panel_item_layout_settings(1694)",
+														object_id : 138,
+														data :
+														{
+															"width(6217)" : 16,
+															"height(6218)" : 5,
+															"x(6215)" : 1,
+															"y(6216)" : 30
+														}
+													},
+													"is_visible(6309)" : true,
+													"is_enabled(6310)" : true,
+													"tooltip_text(6867)" : "Decay time of the Anti Click",
+													"data_model(6220)" : { object_ref : 50 },
+													"style(6540)" : 0,
+													"show_value_bar(6581)" : true
+												}
+											},
+											{
+												class : "float_core.toggle_button_panel_item(1702)",
+												object_id : 139,
+												data :
+												{
+													"layout_settings(6226)" : 
+													{
+														class : "float_core.grid_panel_item_layout_settings(1694)",
+														object_id : 140,
+														data :
+														{
+															"width(6217)" : 16,
+															"height(6218)" : 5,
+															"x(6215)" : 1,
+															"y(6216)" : 13
+														}
+													},
+													"is_visible(6309)" : true,
+													"is_enabled(6310)" : true,
+													"tooltip_text(6867)" : "If Scoped is enabled, then the MIDI Program Change event will only be sent to the inner chain.",
+													"data_model(6220)" : { object_ref : 91 },
+													"title(6241)" : "Scoped",
+													"icon_name(6239)" : "",
+													"style(6240)" : 0,
+													"label_style(6267)" : 0,
+													"invert_value(6552)" : false,
+													"is_selected(6719)" : false
+												}
+											}
+										],
+										"border_style(6228)" : 1,
+										"title(6242)" : "",
+										"show_title(6243)" : false,
+										"title_color(6522)" : 6,
+										"brightness(6245)" : 0
+									}
+								}
+							],
+							"border_style(6228)" : 0,
+							"title(6242)" : "",
+							"show_title(6243)" : false,
+							"title_color(6522)" : 6,
+							"brightness(6245)" : 1
+						}
+					},
+					"width(6232)" : 38,
+					"height(6233)" : 53,
+					"expressions(6277)" : 
+					[
+						{
+							class : "float_core.panel_expression(1728)",
+							object_id : 141,
+							data :
+							{
+								"expression(6274)" : "SEND_MSB",
+								"panel_item(6275)" : { object_ref : 105 },
+								"attribute_id(6316)" : 6310
+							}
+						},
+						{
+							class : "float_core.panel_expression(1728)",
+							object_id : 142,
+							data :
+							{
+								"expression(6274)" : "SEND_LSB",
+								"panel_item(6275)" : { object_ref : 117 },
+								"attribute_id(6316)" : 6310
+							}
+						},
+						{
+							class : "float_core.panel_expression(1728)",
+							object_id : 143,
+							data :
+							{
+								"expression(6274)" : "ANTI_CLICK",
+								"panel_item(6275)" : { object_ref : 135 },
+								"attribute_id(6316)" : 6310
+							}
+						},
+						{
+							class : "float_core.panel_expression(1728)",
+							object_id : 144,
+							data :
+							{
+								"expression(6274)" : "ANTI_CLICK",
+								"panel_item(6275)" : { object_ref : 137 },
+								"attribute_id(6316)" : 6310
+							}
+						}
+					]
+				}
+			}
+		],
+		"proxy_in_ports(177)" : 
+		[
+			{ object_ref : 63 },{ object_ref : 55 }
+		],
+		"proxy_out_ports(178)" : 
+		[
+			{
+				class : "float_core.proxy_out_port_component(50)",
+				object_id : 145,
+				data :
+				{
+					"settings(6194)" : 
+					{
+						class : "float_core.component_settings(236)",
+						object_id : 146,
+						data :
+						{
+							"desktop_settings(612)" : 
+							{
+								class : "float_core.desktop_settings(17)",
+								object_id : 147,
+								data :
+								{
+									"x(17)" : 0,
+									"y(18)" : 500,
+									"color(19)" : 
+									{
+										type : "color",
+										data : [0.5, 0.5, 0.5]
+									}
+								}
+							},
+							"inport_connections(614)" : 
+							[
+								{
+									class : "float_core.inport_connection(105)",
+									object_id : 148,
+									data :
+									{
+										"source_component(248)" : { object_ref : 68 },
+										"outport_index(249)" : 0,
+										"high_quality(1943)" : true,
+										"unconnected_value(6443)" : 0.0
+									}
+								}
+							],
+							"is_polyphonic(615)" : true
+						}
+					},
+					"port(301)" : 
+					{
+						class : "float_core.audio_port(242)",
+						object_id : 149,
+						data :
+						{
+							"name(498)" : "",
+							"description(4741)" : "",
+							"decorated_name(499)" : " Audio in (PARENT)",
+							"is_inport(500)" : true,
+							"is_optional(1384)" : false,
+							"exclude_from_graph(7174)" : false,
+							"channel_count(372)" : 3
+						}
+					}
+				}
+			},
+			{
+				class : "float_core.proxy_out_port_component(50)",
+				object_id : 150,
+				data :
+				{
+					"settings(6194)" : 
+					{
+						class : "float_core.component_settings(236)",
+						object_id : 151,
+						data :
+						{
+							"desktop_settings(612)" : 
+							{
+								class : "float_core.desktop_settings(17)",
+								object_id : 152,
+								data :
+								{
+									"x(17)" : 752,
+									"y(18)" : 364,
+									"color(19)" : 
+									{
+										type : "color",
+										data : [0.5, 0.5, 0.5]
+									}
+								}
+							},
+							"inport_connections(614)" : 
+							[
+								{
+									class : "float_core.inport_connection(105)",
+									object_id : 153,
+									data :
+									{
+										"source_component(248)" : { object_ref : 97 },
+										"outport_index(249)" : 0,
+										"high_quality(1943)" : true,
+										"unconnected_value(6443)" : 0.0
+									}
+								}
+							],
+							"is_polyphonic(615)" : false
+						}
+					},
+					"port(301)" : 
+					{
+						class : "float_core.note_port(61)",
+						object_id : 154,
+						data :
+						{
+							"name(498)" : "",
+							"description(4741)" : "",
+							"decorated_name(499)" : " Note in",
+							"is_inport(500)" : true,
+							"is_optional(1384)" : false,
+							"exclude_from_graph(7174)" : false
+						}
+					}
+				}
+			}
+		],
+		"fft_order(6566)" : 0,
+		"context_menu_panel(6834)" : null,
+		"polyphony(179)" : 1,
+		"sleep_level_threshold(1977)" : -96.0,
+		"sleep_level_timeout(1978)" : 0.05,
+		"device_UUID(385)" : "429c7dcb-6863-48bc-becc-508463841e3b",
+		"device_name(386)" : "MIDI Program Change",
+		"description(2057)" : "Loads a MIDI program",
+		"creator(387)" : "Bitwig",
+		"comment(388)" : "",
+		"keywords(389)" : "",
+		"category(390)" : "MIDI",
+		"device_type(391)" : 1,
+		"suggest_for_note_input(4846)" : true,
+		"suggest_for_audio_input(4847)" : true,
+		"has_been_modified(392)" : true,
+		"color_tint(6384)" : 0,
+		"header_area_panel(6417)" : null
+	}
+}

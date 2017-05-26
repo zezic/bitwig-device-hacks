@@ -1,0 +1,74 @@
+component perlin_noise
+{
+   audio_inport f32 falloff;
+   audio_outport out;
+
+   i32<> seed = 0;
+   f32<>[16] states;
+   f32<>[16] diff;
+   f32[16] stepScale;
+   i32 pos = 0;
+   i32 octaves = 8;
+
+   init
+   {
+      for(i32 c=0; c<EC.channels; c++)
+      {
+         seed[c] = rand();
+         if (seed[c] == 0) seed[c] = -1;
+      }
+
+      for(i32 c=0; c<16; c++)
+      {
+         states[c] = 0;
+         diff[c] = 0;
+         stepScale[c] = 1 / (1 << (octaves - c - 1)).f32;
+      }
+   }
+
+   i32<> rando(i32<> i)
+   {
+      i32<> a = i;
+      a ^= i << 13; 
+      a ^= a >> 17; 
+      a ^= a << 5; 
+      return a;
+   }
+
+   process
+   {
+      f32<> n = 0;
+      i32 lastPos = pos;
+      f32 gain = 1;
+      ++pos;
+
+      for(i32 i=0; i<octaves; i++)
+      {
+         i32 shift = octaves - i - 1;
+         i32 mask = 1 << shift;
+
+         if ((pos & mask) != (lastPos & mask))
+         {
+            f32<> next = 0;
+            seed = rando(seed);
+
+            for(i32 c=0; c<EC.channels; c++)
+            {
+               next[c] = gain * seed[c].f32 * (1.0 / 2147483648.0).f32;
+            }
+
+            diff[i] = stepScale[i] * (next - states[i]);
+         }
+         else
+         {
+            states[i] += diff[i];
+         }
+
+         n += states[i];
+
+         gain *= falloff;
+      }
+
+      out = n;
+   }
+}

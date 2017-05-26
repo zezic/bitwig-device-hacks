@@ -1,0 +1,97 @@
+component midi_clock
+{
+   @name "Enables/Disables the component"
+   value_inport bool enabled;
+
+   @name "Is Within Pre-Roll"
+   value_inport bool is_within_pre_roll
+   {
+      if (!is_within_pre_roll && is_playing && !is_clock_running && enabled)
+      {
+         NoteEvent note;
+         note.type = note.MIDI;
+
+         // calculate the current position
+         f32 qn = floor(transport_beats * 24);
+         f32 delta = fabs(qn - stopped_qn);
+
+         // choose between continue or start
+         note.midi = delta < 0.4 ? 0xFB : 0xFA;
+         send note_out note;
+
+         is_clock_running = true;
+      }
+   }
+
+   @name "Start/Stop"
+   value_inport bool is_playing
+   {
+      if (enabled && !is_within_pre_roll)
+      {
+         NoteEvent note;
+         note.type = note.MIDI;
+
+         if (is_playing && !is_clock_running)
+         {
+            // calculate the current position
+            f32 qn = floor(transport_beats * 24);
+            f32 delta = fabs(qn - stopped_qn);
+
+            // choose between continue or start
+            note.midi = delta < 0.4 ? 0xFB : 0xFA;
+            send note_out note;
+
+            is_clock_running = true;
+         }
+         else if (!is_playing)
+         {
+            note.midi = 0xFC;
+            send note_out note;
+
+            // remember where we stopped
+            stopped_qn = floor(beats * 24);
+            is_clock_running = false;
+         }
+      }
+   }
+
+   @name "Beats"
+   audio_inport f32 transport_beats;
+
+   @name "Beats per frame"
+   audio_inport f32 beats_per_frame;
+
+   @name "Note Out"
+   event_outport NoteEvent note_out;
+
+   f32 beats = 0;
+   f32 prev_qn = -1;
+   f32 stopped_qn = 0;
+   bool is_clock_running = false;
+
+   init
+   {
+      is_clock_running = false;
+   }
+
+   process
+   {
+      if (enabled)
+      {
+         beats = is_playing ? transport_beats : (beats_per_frame + beats);
+         f32 qn = floor(beats * 24);
+         f32 delta = fabs(qn - prev_qn);
+
+         if (delta > 0.7)
+         {
+            prev_qn = qn;
+
+            // send midi clock
+            NoteEvent note;
+            note.type = note.MIDI;
+            note.midi = 0xF8;
+            send note_out note;
+         }
+      }
+   }
+}

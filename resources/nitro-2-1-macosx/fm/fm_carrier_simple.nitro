@@ -1,0 +1,20 @@
+component fm_carrier_simple
+{
+   audio_inport f32 freq;
+   audio_inport f32 pm;
+   audio_outport f32 out;
+
+   event_inport void reset
+   {
+      phase = 0;
+   }
+
+   f64 phase = 0;
+
+   process
+   {
+      out = sin(phase.f32 + pm);
+      phase += freq.f64 * 2 * PI / EC.samplerate;
+      phase = phase % (2 * PI);
+   }
+}

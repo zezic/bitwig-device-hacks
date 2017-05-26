@@ -1,0 +1,36 @@
+component level_gate
+{
+   audio_inport in;
+   value_outport i8 out = 0;
+   i32 numSilentFrames = 0;
+   bool lastGate = false;
+
+   process
+   {
+      f32<> insquare = fabs(in); // 
+      f32 level = fmax(insquare[0], insquare[1]);
+      f32 THRESHOLD = 0.0004;
+      if (level > THRESHOLD)
+      {
+         if (!lastGate)
+         {
+            send out 1;
+            lastGate = true;
+         }
+         numSilentFrames = 0;
+      }
+      else
+      {
+         numSilentFrames++;
+
+         if (numSilentFrames > 1000)
+         {
+            if (lastGate)
+            {
+               send out 0;
+               lastGate = false;
+            }
+         }
+      }
+   }
+}

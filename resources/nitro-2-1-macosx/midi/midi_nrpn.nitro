@@ -1,0 +1,69 @@
+component midi_nrpn
+{
+   value_inport i32 channel;
+   value_inport i32 nrpn_msb;
+   value_inport i32 nrpn_lsb;
+   audio_inport f32 valF;
+   event_inport void flush
+   {
+      schedule_send = true;
+   }
+
+   event_outport NoteEvent out;
+
+   i32 last_nrpn_msb;
+   i32 last_nrpn_lsb;
+   i32 last_val;
+   i32 sleep_samples;
+   bool schedule_send;
+
+   const i32 SLEEP_SAMPLES = (0.0015 * EC.samplerate).i32;
+
+   init
+   {
+      schedule_send = true;
+      last_nrpn_msb = -1;
+      last_nrpn_lsb = -1;
+      last_val = -1;
+      sleep_samples = 0;
+   }
+
+   process
+   {
+      if (sleep_samples > 0)
+      {
+         --sleep_samples;
+      }
+      else
+      {
+         i32 val = valF.i32 & 0x3fff;
+
+         if (schedule_send || last_val != val)
+         {
+            schedule_send = false;
+            last_nrpn_msb = nrpn_msb;
+            last_nrpn_lsb = nrpn_lsb;
+            last_val = val;
+            sleep_samples = 3 * SLEEP_SAMPLES;
+
+            NoteEvent e;
+            e.type = e.MIDI;
+            e.midi = 0xB0 | (channel - 1) | (99 << 8) | (nrpn_msb << 16);
+            e.forcedChannel = (channel - 1);
+            send out e;
+
+            NoteEvent e;
+            e.type = e.MIDI;
+            e.midi = 0xB0 | (channel - 1) | (98 << 8) | (nrpn_lsb << 16);
+            e.forcedChannel = (channel - 1);
+            send out e;
+
+            NoteEvent e;
+            e.type = e.MIDI;
+            e.midi = 0xB0 | (channel - 1) | (6 << 8) | (val << 16);
+            e.forcedChannel = (channel - 1);
+            send out e;
+         }
+      }
+   }
+}

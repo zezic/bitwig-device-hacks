@@ -1,0 +1,361 @@
+component note_latch
+{
+   i8[128] notes;
+   i32     note_count = 0;
+   bool    gate_open = false;
+   bool    gate_reopen = false;
+   i8      gate_key = -1;
+
+   const i32 GATE_TYPE_SIMPLE = 0;
+   const i32 GATE_TYPE_TOGGLE = 1;
+   const i32 GATE_TYPE_VELOCITY = 2;
+
+   @name "Mono"
+   value_inport bool is_mono
+   {
+      // kill all the notes but the last one
+      if (is_mono && note_count > 1)
+      {
+         NoteEvent off;
+         off.type = off.NOTE_OFF;
+         off.v = 0;
+         off.midi = 0;
+         off.ramptime = 0;
+
+         for (i32 i = 0; i < note_count - 1; ++i)
+         {
+            off.key = notes[i].i32;
+            send out off;
+         }
+         notes[0] = notes[note_count - 1];
+         note_count = 1;
+      }
+
+      if (is_mono)
+      {
+         gate_open = false;
+         gate_key = -1;
+         gate_reopen = false;
+      }
+
+      if (is_mono)
+         assert note_count <= 1;
+      assert note_count >= 0;
+
+      send note_count_out note_count;
+   }
+
+   @name "Velocity Threshold"
+   value_inport i32 velocity_threshold;
+
+   @name "Gate Type"
+   @desc "0 Simple, 1 Toggle, 2 Velocity"
+   value_inport i32 gate_type;
+
+   @name "Note"
+   event_inport NoteEvent in
+   {
+      assert false;
+
+      if (in.type == in.NOTE_ON && gate_type == GATE_TYPE_VELOCITY)
+      {
+         if (in.v * 127.0 >= velocity_threshold.f32)
+         {
+            // note on
+            if (is_mono)
+            {
+               if (note_count > 0 && notes[0] == in.key.i8)
+               {
+                  /* nothing to do */
+               }
+               else if (note_count > 0 && notes[0] != in.key.i8)
+               {
+                  /* kill the playing note */
+                  NoteEvent off;
+                  off.key = notes[0].i32;
+                  off.type = off.NOTE_OFF;
+                  off.v = 0;
+                  off.midi = 0;
+                  off.ramptime = 0;
+                  send out off;
+
+                  /* start the new note */
+                  note_count = 1;
+                  notes[0] = in.key.i8;
+                  send out in;
+               }
+               else
+               {
+                  /* start the new note */
+                  note_count = 1;
+                  notes[0] = in.key.i8;
+                  send out in;
+               }
+            }
+            else
+            {
+               i32 index = -1;
+               for (i32 i = 0; i < note_count; ++i)
+               {
+                  if (notes[i] == in.key.i8)
+                  {
+                     index = i;
+                     break;
+                  }
+               }
+
+               if (index == -1)
+               {
+                  // start note
+                  notes[note_count] = in.key.i8;
+                  ++note_count;
+                  send out in;
+               }
+            }
+         }
+         else
+         {
+            // note off
+            if (is_mono)
+            {
+               if (note_count == 1 && notes[0] == in.key.i8)
+               {
+                  NoteEvent off;
+                  off.key = notes[0].i32;
+                  off.type = off.NOTE_OFF;
+                  off.v = 0;
+                  off.midi = 0;
+                  off.ramptime = 0;
+
+                  send out off;
+                  note_count = 0;
+               }
+            }
+            else
+            {
+               for (i32 i = 0; i < note_count; ++i)
+               {
+                  if (notes[i] == in.key.i8)
+                  {
+                     // stop note
+                     NoteEvent off;
+                     off.key = notes[i].i32;
+                     off.type = off.NOTE_OFF;
+                     off.v = 0;
+                     off.midi = 0;
+                     off.ramptime = 0;
+                     send out off;
+                     if (i + 1 < note_count)
+                        notes[i] = notes[note_count - 1];
+                     --note_count;
+                     break;
+                  }
+               }
+            }
+         }
+      }
+      else if (in.type == in.NOTE_OFF && gate_type == GATE_TYPE_VELOCITY)
+      {
+         /* nothing to do */
+      }
+      else if (in.type == in.NOTE_ON && gate_type == GATE_TYPE_TOGGLE)
+      {
+         if (is_mono)
+         {
+            if (note_count == 0)
+            {
+               note_count = 1;
+               notes[0] = in.key.i8;
+               send out in;
+            }
+            else
+            {
+               /* always kill the playing note */
+               NoteEvent off;
+               off.key = notes[0].i32;
+               off.type = off.NOTE_OFF;
+               off.v = 0;
+               off.midi = 0;
+               off.ramptime = 0;
+
+               send out off;
+
+               if (notes[0] != in.key.i8)
+               {
+                  notes[0] = in.key.i8;
+                  send out in;
+               }
+               else
+               {
+                  note_count = 0;
+               }
+            }
+         }
+         else
+         {
+            i32 index = -1;
+            for (i32 i = 0; i < note_count; ++i)
+            {
+               if (notes[i] == in.key.i8)
+               {
+                  index = i;
+                  break;
+               }
+            }
+
+            if (index >= 0)
+            {
+               // stop note
+               NoteEvent off;
+               off.key = notes[index].i32;
+               off.type = off.NOTE_OFF;
+               off.v = 0;
+               off.midi = 0;
+               off.ramptime = 0;
+               send out off;
+               if (index + 1 < note_count)
+                  notes[index] = notes[note_count - 1];
+               --note_count;
+            }
+            else
+            {
+               // start note
+               notes[note_count] = in.key.i8;
+               ++note_count;
+               send out in;
+            }
+         }
+      }
+      else if (in.type == in.NOTE_OFF && gate_type == GATE_TYPE_TOGGLE)
+      {
+         /* nothing to do */
+      }
+      else if (gate_type == GATE_TYPE_SIMPLE && in.type == in.NOTE_ON)
+      {
+         if (!is_mono)
+         {
+            if (!gate_open)
+            {
+               /* stop all the notes */
+               NoteEvent off;
+               off.type = off.NOTE_OFF;
+               off.v = 0;
+               off.midi = 0;
+               off.ramptime = 0;
+
+               for (i32 i = 0; i < note_count; ++i)
+               {
+                  off.key = notes[i].i32;
+                  send out off;
+               }
+               note_count = 0;
+
+               /* start the current note */
+               send out in;
+               notes[note_count] = in.key.i8;
+               ++note_count;
+
+               /* gate is now opened */
+               gate_open = true;
+               gate_reopen = gate_key == in.key.i8;
+               gate_key = in.key.i8;
+            }
+            else if (gate_open && in.type == in.NOTE_ON)
+            {
+               send out in;
+               notes[note_count] = in.key.i8;
+               ++note_count;
+            }
+         }
+         else
+         {
+            if (note_count > 0 && notes[0].i32 != in.key)
+            {
+               /* stop playing note */
+               NoteEvent off;
+               off.type = off.NOTE_OFF;
+               off.v = 0;
+               off.midi = 0;
+               off.ramptime = 0;
+               off.key = notes[0].i32;
+               send out off;
+
+               note_count = 0;
+            }
+
+            if (note_count == 0)
+            {
+               send out in;
+               note_count = 1;
+               notes[0] = in.key.i8;
+            }
+         }
+      }
+      else if (gate_type == GATE_TYPE_SIMPLE && in.type == in.NOTE_OFF)
+      {
+         if (gate_open && in.key.i8 == gate_key && !is_mono)
+         {
+            /* close the gate */
+            gate_open = false;
+
+            /* an alternative implementation was able to stop the notes in simple mode
+             * but it turned out that it was not intuitive or fun, so simple mode always latch. */
+            if (false /* remove me to re-enable this functionality */ &&
+                gate_reopen && note_count == 1)
+            {
+               /* stop the note */
+               NoteEvent off;
+               off.type = off.NOTE_OFF;
+               off.v = 0;
+               off.midi = 0;
+               off.ramptime = 0;
+               off.key = gate_key.i32;
+               send out off;
+
+               gate_open = false;
+               gate_reopen = false;
+               gate_key = -1;
+               note_count = 0;
+            }
+         }
+      }
+      else
+      {
+         send out in;
+      }
+
+      assert note_count >= 0;
+      if (is_mono)
+         assert note_count <= 1;
+      send note_count_out note_count;
+   }
+
+   @name "Panic"
+   event_inport void panic
+   {
+      NoteEvent off;
+      off.type = off.NOTE_OFF;
+      off.v = 0;
+      off.midi = 0;
+      off.ramptime = 0;
+
+      for (i32 i = 0; i < note_count; ++i)
+      {
+         off.key = notes[i].i32;
+         send out off;
+      }
+
+      note_count = 0;
+      gate_open = false;
+      gate_reopen = false;
+      gate_key = -1;
+
+      send note_count_out note_count;
+   }
+
+   @name "Note"
+   event_outport NoteEvent out;
+
+   @name "Note Count"
+   value_outport i32 note_count_out = 0;
+}

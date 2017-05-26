@@ -1,0 +1,26 @@
+component audio_select
+{
+   const i32 NUM_INPUTS = 2;
+
+   i32 select_cache = 0;
+   value_inport i32 select
+   {
+      select_cache = select;
+      if (select_cache < 0)
+      {
+         select_cache = 0;
+      }
+      else if (select_cache >= NUM_INPUTS)
+      {
+         select_cache = NUM_INPUTS - 1;
+      }
+   }
+
+   audio_inport [NUM_INPUTS] f32 in;
+   audio_outport f32 out;
+
+   process
+   {
+      out = in[select_cache];
+   }
+}

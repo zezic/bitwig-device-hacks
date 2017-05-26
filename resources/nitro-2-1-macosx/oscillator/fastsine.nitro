@@ -1,0 +1,32 @@
+component fastersine
+{
+   audio_inport f32 freq;
+   audio_outport f32 out;
+
+   f32 phase = 0;
+
+   f32 fastsine(f32 x)
+   {
+      f32 y1 = 4.0 * x * (1 - fabs(x));
+      f32 y2 = y1 + 0.225 * y1 * (fabs(y1) - 1);
+      return y2;
+   }
+
+   f32 fastersine(f32 x)
+   {
+      f32 y = 4.0 * x * (1 - fabs(x));
+      return y;
+   }
+
+   process
+   {
+      out = fastersine(2 * phase - 1);
+
+      phase += freq * (1.0 / EC.samplerate);
+
+      while (phase > 1)
+      {
+         phase -= 1;
+      }
+   }
+}

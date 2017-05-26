@@ -1,0 +1,112 @@
+@name "MIDI Channel Mapper"
+component midi_channel_mapper
+{
+   @name "Channel 1 Dest"
+   value_inport i32 ch1;
+
+   @name "Channel 2 Dest"
+   value_inport i32 ch2;
+
+   @name "Channel 3 Dest"
+   value_inport i32 ch3;
+
+   @name "Channel 4 Dest"
+   value_inport i32 ch4;
+
+   @name "Channel 5 Dest"
+   value_inport i32 ch5;
+
+   @name "Channel 6 Dest"
+   value_inport i32 ch6;
+
+   @name "Channel 7 Dest"
+   value_inport i32 ch7;
+
+   @name "Channel 8 Dest"
+   value_inport i32 ch8;
+
+   @name "Channel 9 Dest"
+   value_inport i32 ch9;
+
+   @name "Channel 10 Dest"
+   value_inport i32 ch10;
+
+   @name "Channel 11 Dest"
+   value_inport i32 ch11;
+
+   @name "Channel 12 Dest"
+   value_inport i32 ch12;
+
+   @name "Channel 13 Dest"
+   value_inport i32 ch13;
+
+   @name "Channel 14 Dest"
+   value_inport i32 ch14;
+
+   @name "Channel 15 Dest"
+   value_inport i32 ch15;
+
+   @name "Channel 16 Dest"
+   value_inport i32 ch16;
+
+   @name "Note Output"
+   event_outport NoteEvent out;
+
+   @name "Note Input"
+   event_inport NoteEvent in
+   {
+      NoteEvent ev = in;
+
+      switch (ev.forcedChannel)
+      {
+      case -1, 0: ev.forcedChannel = ch1 - 1;
+      case 1: ev.forcedChannel = ch2 - 1;
+      case 2: ev.forcedChannel = ch3 - 1;
+      case 3: ev.forcedChannel = ch4 - 1;
+      case 4: ev.forcedChannel = ch5 - 1;
+      case 5: ev.forcedChannel = ch6 - 1;
+      case 6: ev.forcedChannel = ch7 - 1;
+      case 7: ev.forcedChannel = ch8 - 1;
+      case 8: ev.forcedChannel = ch9 - 1;
+      case 9: ev.forcedChannel = ch10 - 1;
+      case 10: ev.forcedChannel = ch11 - 1;
+      case 11: ev.forcedChannel = ch12 - 1;
+      case 12: ev.forcedChannel = ch13 - 1;
+      case 13: ev.forcedChannel = ch14 - 1;
+      case 14: ev.forcedChannel = ch15 - 1;
+      case 15: ev.forcedChannel = ch16 - 1;
+      }
+
+      if (ev.type == ev.MIDI)
+      {
+         i32 status = (ev.midi & 0xF0) >> 4;
+
+         if (8 <= status && status <= 14)
+         {
+            i32 channel = ev.midi & 0xF;
+            switch (channel)
+            {
+            case 0: channel = ch1 - 1;
+            case 1: channel = ch2 - 1;
+            case 2: channel = ch3 - 1;
+            case 3: channel = ch4 - 1;
+            case 4: channel = ch5 - 1;
+            case 5: channel = ch6 - 1;
+            case 6: channel = ch7 - 1;
+            case 7: channel = ch8 - 1;
+            case 8: channel = ch9 - 1;
+            case 9: channel = ch10 - 1;
+            case 10: channel = ch11 - 1;
+            case 11: channel = ch12 - 1;
+            case 12: channel = ch13 - 1;
+            case 13: channel = ch14 - 1;
+            case 14: channel = ch15 - 1;
+            case 15: channel = ch16 - 1;
+            }
+            ev.midi = (ev.midi & ~0xF) | channel;
+         }
+      }
+
+      send out ev;
+   }
+}

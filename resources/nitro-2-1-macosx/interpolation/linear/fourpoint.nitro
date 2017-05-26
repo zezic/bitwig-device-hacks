@@ -1,0 +1,40 @@
+component fourpoint
+{
+
+   audio_inport f32 in;
+
+   audio_inport f32 x1;
+   audio_inport f32 x2;
+
+   audio_inport f32 y0;
+   audio_inport f32 y1;
+   audio_inport f32 y2;
+   audio_inport f32 y3;
+
+
+   audio_outport f32 out;
+
+   process
+   {
+         if (in >= 1)
+         {
+            out = y3;
+         }
+         else if (in <= 0)
+         {
+            out = y0;
+         }
+         else if (in >= x2)
+         {
+            out = y2 + (y3 - y2) * (in - x2) / (1 - x2);
+         }
+         else if (in >= x1)
+         {
+            out = y1 + (y2 - y1) * (in - x1) / (x2 - x1);
+         }
+         else
+         {
+            out = y0 + (y1 - y0) * in / x1;
+         }
+   }
+}

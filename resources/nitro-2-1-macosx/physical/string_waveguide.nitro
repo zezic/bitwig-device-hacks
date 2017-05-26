@@ -1,0 +1,41 @@
+component string_waveguide
+{
+   audio_inport in;
+   audio_outport out;
+
+   audio_inport f32 freq;
+   audio_inport f32 decay;
+   audio_inport f32 damping;
+
+   f32<>[EC.samplerate/5] data;
+   i32 index = 0;
+
+   init
+   {  
+      for (i32 i = 0; i < data.length; ++i)
+         this.data[i] = 0;
+   }
+
+   process
+   {
+      f32 cycleTime = 1.0 / freq;
+      f32 delayTime = cycleTime * EC.samplerate;
+      i32 delayTimeInt = delayTime.i32;
+      f32 delayTimeFrac = delayTime - delayTimeInt.f32;
+      i32 readPos1 = index - delayTimeInt;
+      i32 readPos2 = index - delayTimeInt - 1;
+      f32 fb = 1 - decay * cycleTime;
+      f32<> delayRead;
+      
+      if (readPos1 < 0) readPos1 = readPos1 + data.length;
+      if (readPos2 < 0) readPos2 = readPos2 + data.length;
+
+      delayRead = data[readPos1] * (1-delayTimeFrac)
+                  + data[readPos2] * delayTimeFrac;
+
+      out = in + delayRead;
+
+      data[index] = in + fb * delayRead;
+      index = (index + 1) % data.length;
+   }
+}

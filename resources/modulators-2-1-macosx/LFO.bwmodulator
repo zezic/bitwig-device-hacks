@@ -1,0 +1,2318 @@
+BtWg000100010085000015e30000000000000000{
+	class : "meta",
+	object_id : 1,
+	data :
+	{
+		"application_version_name" : "none",
+		"branch" : "claes/future",
+		"comment" : "",
+		"creator" : "Bitwig",
+		"device_category" : "LFO",
+		"device_description" : "Low Frequency Oscillator",
+		"device_id" : "modulator:ad947004-f1d3-40a1-bd15-3ec721ee7c65",
+		"device_name" : "LFO",
+		"device_uuid" : "ad947004-f1d3-40a1-bd15-3ec721ee7c65",
+		"is_polyphonic" : false,
+		"revision_id" : "7babc0e1063f1d652038e01a6af747e8f3df440a",
+		"revision_no" : 49847,
+		"tags" : "",
+		"type" : "application/bitwig-modulator"
+	}
+}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
+{
+	class : "float_core.modulator_contents(1735)",
+	object_id : 1,
+	data :
+	{
+		"settings(6194)" : null,
+		"child_components(173)" : 
+		[
+			{
+				class : "float_core.decimal_value_atom(289)",
+				object_id : 2,
+				data :
+				{
+					"settings(6194)" : 
+					{
+						class : "float_core.component_settings(236)",
+						object_id : 3,
+						data :
+						{
+							"desktop_settings(612)" : 
+							{
+								class : "float_core.desktop_settings(17)",
+								object_id : 4,
+								data :
+								{
+									"x(17)" : 112,
+									"y(18)" : 20,
+									"color(19)" : 
+									{
+										type : "color",
+										data : [0.5, 0.5, 0.5]
+									}
+								}
+							},
+							"inport_connections(614)" : 
+							[
+							],
+							"is_polyphonic(615)" : true
+						}
+					},
+					"channel_count(607)" : 0,
+					"oversampling(608)" : 0,
+					"name(374)" : "Rate",
+					"label(821)" : "",
+					"tooltip_text(823)" : "",
+					"preset_identifier(701)" : "RATE",
+					"modulations_to_ignore(3826)" : "LFO",
+					"value_type(702)" : 
+					{
+						class : "float_core.decimal_value_type(123)",
+						object_id : 5,
+						data :
+						{
+							"min(292)" : -1.7,
+							"max(293)" : 1.699,
+							"default_value(891)" : 0.0,
+							"domain(294)" : 3,
+							"engine_domain(295)" : 0,
+							"value_origin(3014)" : 0,
+							"pixel_step_size(1988)" : -1.0,
+							"unit(296)" : 0,
+							"decimal_digit_count(297)" : -1,
+							"edit_style(298)" : 4,
+							"parameter_smoothing(4433)" : true,
+							"allow_automation_curves(4434)" : true
+						}
+					},
+					"value(712)" : 0.0
+				}
+			},
+			{
+				class : "float_core.decimal_value_atom(289)",
+				object_id : 6,
+				data :
+				{
+					"settings(6194)" : 
+					{
+						class : "float_core.component_settings(236)",
+						object_id : 7,
+						data :
+						{
+							"desktop_settings(612)" : 
+							{
+								class : "float_core.desktop_settings(17)",
+								object_id : 8,
+								data :
+								{
+									"x(17)" : 188,
+									"y(18)" : 20,
+									"color(19)" : 
+									{
+										type : "color",
+										data : [0.5, 0.5, 0.5]
+									}
+								}
+							},
+							"inport_connections(614)" : 
+							[
+							],
+							"is_polyphonic(615)" : true
+						}
+					},
+					"channel_count(607)" : 0,
+					"oversampling(608)" : 0,
+					"name(374)" : "Depth",
+					"label(821)" : "",
+					"tooltip_text(823)" : "",
+					"preset_identifier(701)" : "DEPTH",
+					"modulations_to_ignore(3826)" : "LFO",
+					"value_type(702)" : 
+					{
+						class : "float_core.decimal_value_type(123)",
+						object_id : 9,
+						data :
+						{
+							"min(292)" : 0.0,
+							"max(293)" : 1.0,
+							"default_value(891)" : 1.0,
+							"domain(294)" : 0,
+							"engine_domain(295)" : 0,
+							"value_origin(3014)" : 0,
+							"pixel_step_size(1988)" : -1.0,
+							"unit(296)" : 1,
+							"decimal_digit_count(297)" : -1,
+							"edit_style(298)" : 1,
+							"parameter_smoothing(4433)" : true,
+							"allow_automation_curves(4434)" : true
+						}
+					},
+					"value(712)" : 1.0
+				}
+			},
+			{
+				class : "float_core.boolean_value_atom(87)",
+				object_id : 10,
+				data :
+				{
+					"settings(6194)" : 
+					{
+						class : "float_core.component_settings(236)",
+						object_id : 11,
+						data :
+						{
+							"desktop_settings(612)" : 
+							{
+								class : "float_core.desktop_settings(17)",
+								object_id : 12,
+								data :
+								{
+									"x(17)" : 260,
+									"y(18)" : 20,
+									"color(19)" : 
+									{
+										type : "color",
+										data : [0.5, 0.5, 0.5]
+									}
+								}
+							},
+							"inport_connections(614)" : 
+							[
+							],
+							"is_polyphonic(615)" : false
+						}
+					},
+					"channel_count(607)" : 0,
+					"oversampling(608)" : 0,
+					"name(374)" : "Bipolar",
+					"label(821)" : "",
+					"tooltip_text(823)" : "",
+					"preset_identifier(701)" : "BIPOLAR",
+					"modulations_to_ignore(3826)" : "LFO",
+					"value_type(702)" : 
+					{
+						class : "float_core.boolean_value_type(198)",
+						object_id : 13,
+						data :
+						{
+							"icon_name(4755)" : "bipolar",
+							"default_value(6957)" : false
+						}
+					},
+					"value(210)" : true
+				}
+			},
+			{
+				class : "float_core.modulation_source_atom(766)",
+				object_id : 14,
+				data :
+				{
+					"settings(6194)" : 
+					{
+						class : "float_core.component_settings(236)",
+						object_id : 15,
+						data :
+						{
+							"desktop_settings(612)" : 
+							{
+								class : "float_core.desktop_settings(17)",
+								object_id : 16,
+								data :
+								{
+									"x(17)" : 284,
+									"y(18)" : 400,
+									"color(19)" : 
+									{
+										type : "color",
+										data : [0.5, 0.5, 0.5]
+									}
+								}
+							},
+							"inport_connections(614)" : 
+							[
+								{
+									class : "float_core.inport_connection(105)",
+									object_id : 17,
+									data :
+									{
+										"source_component(248)" : 
+										{
+											class : "float_common_atoms.nitro_atom(1721)",
+											object_id : 18,
+											data :
+											{
+												"settings(6194)" : 
+												{
+													class : "float_core.component_settings(236)",
+													object_id : 19,
+													data :
+													{
+														"desktop_settings(612)" : 
+														{
+															class : "float_core.desktop_settings(17)",
+															object_id : 20,
+															data :
+															{
+																"x(17)" : 136,
+																"y(18)" : 256,
+																"color(19)" : 
+																{
+																	type : "color",
+																	data : [0.5, 0.5, 0.5]
+																}
+															}
+														},
+														"inport_connections(614)" : 
+														[
+															{
+																class : "float_core.inport_connection(105)",
+																object_id : 21,
+																data :
+																{
+																	"source_component(248)" : 
+																	{
+																		class : "float_core.proxy_in_port_component(154)",
+																		object_id : 22,
+																		data :
+																		{
+																			"settings(6194)" : 
+																			{
+																				class : "float_core.component_settings(236)",
+																				object_id : 23,
+																				data :
+																				{
+																					"desktop_settings(612)" : 
+																					{
+																						class : "float_core.desktop_settings(17)",
+																						object_id : 24,
+																						data :
+																						{
+																							"x(17)" : 0,
+																							"y(18)" : 0,
+																							"color(19)" : 
+																							{
+																								type : "color",
+																								data : [0.5, 0.5, 0.5]
+																							}
+																						}
+																					},
+																					"inport_connections(614)" : 
+																					[
+																					],
+																					"is_polyphonic(615)" : true
+																				}
+																			},
+																			"port(301)" : 
+																			{
+																				class : "float_core.note_port(61)",
+																				object_id : 25,
+																				data :
+																				{
+																					"name(498)" : "",
+																					"description(4741)" : "",
+																					"decorated_name(499)" : " Note out",
+																					"is_inport(500)" : false,
+																					"is_optional(1384)" : false
+																				}
+																			}
+																		}
+																	},
+																	"outport_index(249)" : 0,
+																	"high_quality(1943)" : true,
+																	"unconnected_value(6443)" : 0.0
+																}
+															},
+															{
+																class : "float_core.inport_connection(105)",
+																object_id : 26,
+																data :
+																{
+																	"source_component(248)" : { object_ref : 2 },
+																	"outport_index(249)" : 0,
+																	"high_quality(1943)" : true,
+																	"unconnected_value(6443)" : 0.0
+																}
+															},
+															{
+																class : "float_core.inport_connection(105)",
+																object_id : 27,
+																data :
+																{
+																	"source_component(248)" : { object_ref : 6 },
+																	"outport_index(249)" : 0,
+																	"high_quality(1943)" : true,
+																	"unconnected_value(6443)" : 0.0
+																}
+															},
+															{
+																class : "float_core.inport_connection(105)",
+																object_id : 28,
+																data :
+																{
+																	"source_component(248)" : 
+																	{
+																		class : "float_core.decimal_value_atom(289)",
+																		object_id : 29,
+																		data :
+																		{
+																			"settings(6194)" : 
+																			{
+																				class : "float_core.component_settings(236)",
+																				object_id : 30,
+																				data :
+																				{
+																					"desktop_settings(612)" : 
+																					{
+																						class : "float_core.desktop_settings(17)",
+																						object_id : 31,
+																						data :
+																						{
+																							"x(17)" : 160,
+																							"y(18)" : 120,
+																							"color(19)" : 
+																							{
+																								type : "color",
+																								data : [0.5, 0.5, 0.5]
+																							}
+																						}
+																					},
+																					"inport_connections(614)" : 
+																					[
+																					],
+																					"is_polyphonic(615)" : true
+																				}
+																			},
+																			"channel_count(607)" : 0,
+																			"oversampling(608)" : 0,
+																			"name(374)" : "Shape",
+																			"label(821)" : "",
+																			"tooltip_text(823)" : "",
+																			"preset_identifier(701)" : "SHAPE",
+																			"modulations_to_ignore(3826)" : "LFO",
+																			"value_type(702)" : 
+																			{
+																				class : "float_core.decimal_value_type(123)",
+																				object_id : 32,
+																				data :
+																				{
+																					"min(292)" : -1.0,
+																					"max(293)" : 1.0,
+																					"default_value(891)" : 0.0,
+																					"domain(294)" : 0,
+																					"engine_domain(295)" : 0,
+																					"value_origin(3014)" : 0,
+																					"pixel_step_size(1988)" : -1.0,
+																					"unit(296)" : 1,
+																					"decimal_digit_count(297)" : -1,
+																					"edit_style(298)" : 0,
+																					"parameter_smoothing(4433)" : true,
+																					"allow_automation_curves(4434)" : true
+																				}
+																			},
+																			"value(712)" : 0.0
+																		}
+																	},
+																	"outport_index(249)" : 0,
+																	"high_quality(1943)" : true,
+																	"unconnected_value(6443)" : 0.0
+																}
+															},
+															{
+																class : "float_core.inport_connection(105)",
+																object_id : 33,
+																data :
+																{
+																	"source_component(248)" : 
+																	{
+																		class : "float_core.decimal_value_atom(289)",
+																		object_id : 34,
+																		data :
+																		{
+																			"settings(6194)" : 
+																			{
+																				class : "float_core.component_settings(236)",
+																				object_id : 35,
+																				data :
+																				{
+																					"desktop_settings(612)" : 
+																					{
+																						class : "float_core.desktop_settings(17)",
+																						object_id : 36,
+																						data :
+																						{
+																							"x(17)" : 236,
+																							"y(18)" : 120,
+																							"color(19)" : 
+																							{
+																								type : "color",
+																								data : [0.5, 0.5, 0.5]
+																							}
+																						}
+																					},
+																					"inport_connections(614)" : 
+																					[
+																					],
+																					"is_polyphonic(615)" : true
+																				}
+																			},
+																			"channel_count(607)" : 0,
+																			"oversampling(608)" : 0,
+																			"name(374)" : "Form",
+																			"label(821)" : "",
+																			"tooltip_text(823)" : "",
+																			"preset_identifier(701)" : "FORM",
+																			"modulations_to_ignore(3826)" : "LFO",
+																			"value_type(702)" : 
+																			{
+																				class : "float_core.decimal_value_type(123)",
+																				object_id : 37,
+																				data :
+																				{
+																					"min(292)" : -1.0,
+																					"max(293)" : 1.0,
+																					"default_value(891)" : 0.0,
+																					"domain(294)" : 0,
+																					"engine_domain(295)" : 0,
+																					"value_origin(3014)" : 0,
+																					"pixel_step_size(1988)" : -1.0,
+																					"unit(296)" : 1,
+																					"decimal_digit_count(297)" : -1,
+																					"edit_style(298)" : 0,
+																					"parameter_smoothing(4433)" : true,
+																					"allow_automation_curves(4434)" : true
+																				}
+																			},
+																			"value(712)" : 0.0
+																		}
+																	},
+																	"outport_index(249)" : 0,
+																	"high_quality(1943)" : true,
+																	"unconnected_value(6443)" : 0.0
+																}
+															},
+															{
+																class : "float_core.inport_connection(105)",
+																object_id : 38,
+																data :
+																{
+																	"source_component(248)" : 
+																	{
+																		class : "float_core.decimal_value_atom(289)",
+																		object_id : 39,
+																		data :
+																		{
+																			"settings(6194)" : 
+																			{
+																				class : "float_core.component_settings(236)",
+																				object_id : 40,
+																				data :
+																				{
+																					"desktop_settings(612)" : 
+																					{
+																						class : "float_core.desktop_settings(17)",
+																						object_id : 41,
+																						data :
+																						{
+																							"x(17)" : 312,
+																							"y(18)" : 120,
+																							"color(19)" : 
+																							{
+																								type : "color",
+																								data : [0.5, 0.5, 0.5]
+																							}
+																						}
+																					},
+																					"inport_connections(614)" : 
+																					[
+																					],
+																					"is_polyphonic(615)" : true
+																				}
+																			},
+																			"channel_count(607)" : 0,
+																			"oversampling(608)" : 0,
+																			"name(374)" : "Phase",
+																			"label(821)" : "",
+																			"tooltip_text(823)" : "",
+																			"preset_identifier(701)" : "PHASE",
+																			"modulations_to_ignore(3826)" : "LFO",
+																			"value_type(702)" : 
+																			{
+																				class : "float_core.decimal_value_type(123)",
+																				object_id : 42,
+																				data :
+																				{
+																					"min(292)" : 0.0,
+																					"max(293)" : 360.0,
+																					"default_value(891)" : 0.0,
+																					"domain(294)" : 0,
+																					"engine_domain(295)" : 0,
+																					"value_origin(3014)" : 0,
+																					"pixel_step_size(1988)" : 1.0,
+																					"unit(296)" : 15,
+																					"decimal_digit_count(297)" : -1,
+																					"edit_style(298)" : 0,
+																					"parameter_smoothing(4433)" : true,
+																					"allow_automation_curves(4434)" : true
+																				}
+																			},
+																			"value(712)" : 0.0
+																		}
+																	},
+																	"outport_index(249)" : 0,
+																	"high_quality(1943)" : true,
+																	"unconnected_value(6443)" : 0.0
+																}
+															},
+															{
+																class : "float_core.inport_connection(105)",
+																object_id : 43,
+																data :
+																{
+																	"source_component(248)" : { object_ref : 10 },
+																	"outport_index(249)" : 0,
+																	"high_quality(1943)" : true,
+																	"unconnected_value(6443)" : 0.0
+																}
+															},
+															{
+																class : "float_core.inport_connection(105)",
+																object_id : 44,
+																data :
+																{
+																	"source_component(248)" : 
+																	{
+																		class : "float_core.indexed_value_atom(180)",
+																		object_id : 45,
+																		data :
+																		{
+																			"settings(6194)" : 
+																			{
+																				class : "float_core.component_settings(236)",
+																				object_id : 46,
+																				data :
+																				{
+																					"desktop_settings(612)" : 
+																					{
+																						class : "float_core.desktop_settings(17)",
+																						object_id : 47,
+																						data :
+																						{
+																							"x(17)" : 336,
+																							"y(18)" : 20,
+																							"color(19)" : 
+																							{
+																								type : "color",
+																								data : [0.5, 0.5, 0.5]
+																							}
+																						}
+																					},
+																					"inport_connections(614)" : 
+																					[
+																					],
+																					"is_polyphonic(615)" : false
+																				}
+																			},
+																			"channel_count(607)" : 0,
+																			"oversampling(608)" : 0,
+																			"name(374)" : "Timebase",
+																			"label(821)" : "",
+																			"tooltip_text(823)" : "",
+																			"preset_identifier(701)" : "TIMEBASE",
+																			"modulations_to_ignore(3826)" : "",
+																			"value_type(702)" : 
+																			{
+																				class : "float_core.indexed_value_type(155)",
+																				object_id : 48,
+																				data :
+																				{
+																					"items(393)" : 
+																					[
+																						{
+																							class : "float_core.indexed_value_item(258)",
+																							object_id : 49,
+																							data :
+																							{
+																								"id(650)" : 0,
+																								"name(651)" : "Hz"
+																							}
+																						},
+																						{
+																							class : "float_core.indexed_value_item(258)",
+																							object_id : 50,
+																							data :
+																							{
+																								"id(650)" : 1,
+																								"name(651)" : "kHz"
+																							}
+																						},
+																						{
+																							class : "float_core.indexed_value_item(258)",
+																							object_id : 51,
+																							data :
+																							{
+																								"id(650)" : 2,
+																								"name(651)" : "bar"
+																							}
+																						},
+																						{
+																							class : "float_core.indexed_value_item(258)",
+																							object_id : 52,
+																							data :
+																							{
+																								"id(650)" : 3,
+																								"name(651)" : "2nd"
+																							}
+																						},
+																						{
+																							class : "float_core.indexed_value_item(258)",
+																							object_id : 53,
+																							data :
+																							{
+																								"id(650)" : 4,
+																								"name(651)" : "4th"
+																							}
+																						},
+																						{
+																							class : "float_core.indexed_value_item(258)",
+																							object_id : 54,
+																							data :
+																							{
+																								"id(650)" : 5,
+																								"name(651)" : "8th"
+																							}
+																						},
+																						{
+																							class : "float_core.indexed_value_item(258)",
+																							object_id : 55,
+																							data :
+																							{
+																								"id(650)" : 6,
+																								"name(651)" : "16th"
+																							}
+																						},
+																						{
+																							class : "float_core.indexed_value_item(258)",
+																							object_id : 56,
+																							data :
+																							{
+																								"id(650)" : 7,
+																								"name(651)" : "32nd"
+																							}
+																						}
+																					],
+																					"edit_style(394)" : 0,
+																					"columns(824)" : 0,
+																					"default_value(6958)" : 0
+																				}
+																			},
+																			"value(457)" : 0
+																		}
+																	},
+																	"outport_index(249)" : 0,
+																	"high_quality(1943)" : true,
+																	"unconnected_value(6443)" : 0.0
+																}
+															},
+															{
+																class : "float_core.inport_connection(105)",
+																object_id : 57,
+																data :
+																{
+																	"source_component(248)" : 
+																	{
+																		class : "float_core.indexed_value_atom(180)",
+																		object_id : 58,
+																		data :
+																		{
+																			"settings(6194)" : 
+																			{
+																				class : "float_core.component_settings(236)",
+																				object_id : 59,
+																				data :
+																				{
+																					"desktop_settings(612)" : 
+																					{
+																						class : "float_core.desktop_settings(17)",
+																						object_id : 60,
+																						data :
+																						{
+																							"x(17)" : 408,
+																							"y(18)" : 20,
+																							"color(19)" : 
+																							{
+																								type : "color",
+																								data : [0.5, 0.5, 0.5]
+																							}
+																						}
+																					},
+																					"inport_connections(614)" : 
+																					[
+																					],
+																					"is_polyphonic(615)" : false
+																				}
+																			},
+																			"channel_count(607)" : 0,
+																			"oversampling(608)" : 0,
+																			"name(374)" : "Trigger",
+																			"label(821)" : "",
+																			"tooltip_text(823)" : "",
+																			"preset_identifier(701)" : "TRIGGER",
+																			"modulations_to_ignore(3826)" : "",
+																			"value_type(702)" : 
+																			{
+																				class : "float_core.indexed_value_type(155)",
+																				object_id : 61,
+																				data :
+																				{
+																					"items(393)" : 
+																					[
+																						{
+																							class : "float_core.indexed_value_item(258)",
+																							object_id : 62,
+																							data :
+																							{
+																								"id(650)" : 0,
+																								"name(651)" : "Free"
+																							}
+																						},
+																						{
+																							class : "float_core.indexed_value_item(258)",
+																							object_id : 63,
+																							data :
+																							{
+																								"id(650)" : 1,
+																								"name(651)" : "Note"
+																							}
+																						},
+																						{
+																							class : "float_core.indexed_value_item(258)",
+																							object_id : 64,
+																							data :
+																							{
+																								"id(650)" : 2,
+																								"name(651)" : "Sync"
+																							}
+																						},
+																						{
+																							class : "float_core.indexed_value_item(258)",
+																							object_id : 65,
+																							data :
+																							{
+																								"id(650)" : 3,
+																								"name(651)" : "Rand"
+																							}
+																						}
+																					],
+																					"edit_style(394)" : 0,
+																					"columns(824)" : 0,
+																					"default_value(6958)" : 0
+																				}
+																			},
+																			"value(457)" : 1
+																		}
+																	},
+																	"outport_index(249)" : 0,
+																	"high_quality(1943)" : true,
+																	"unconnected_value(6443)" : 0.0
+																}
+															},
+															{
+																class : "float_core.inport_connection(105)",
+																object_id : 66,
+																data :
+																{
+																	"source_component(248)" : 
+																	{
+																		class : "float_common_atoms.transport_component(1839)",
+																		object_id : 67,
+																		data :
+																		{
+																			"settings(6194)" : 
+																			{
+																				class : "float_core.component_settings(236)",
+																				object_id : 68,
+																				data :
+																				{
+																					"desktop_settings(612)" : 
+																					{
+																						class : "float_core.desktop_settings(17)",
+																						object_id : 69,
+																						data :
+																						{
+																							"x(17)" : 388,
+																							"y(18)" : 120,
+																							"color(19)" : 
+																							{
+																								type : "color",
+																								data : [0.5, 0.5, 0.5]
+																							}
+																						}
+																					},
+																					"inport_connections(614)" : 
+																					[
+																					],
+																					"is_polyphonic(615)" : false
+																				}
+																			}
+																		}
+																	},
+																	"outport_index(249)" : 2,
+																	"high_quality(1943)" : true,
+																	"unconnected_value(6443)" : 0.0
+																}
+															},
+															{
+																class : "float_core.inport_connection(105)",
+																object_id : 70,
+																data :
+																{
+																	"source_component(248)" : { object_ref : 67 },
+																	"outport_index(249)" : 5,
+																	"high_quality(1943)" : true,
+																	"unconnected_value(6443)" : 0.0
+																}
+															},
+															{
+																class : "float_core.inport_connection(105)",
+																object_id : 71,
+																data :
+																{
+																	"source_component(248)" : 
+																	{
+																		class : "float_core.decimal_value_atom(289)",
+																		object_id : 72,
+																		data :
+																		{
+																			"settings(6194)" : 
+																			{
+																				class : "float_core.component_settings(236)",
+																				object_id : 73,
+																				data :
+																				{
+																					"desktop_settings(612)" : 
+																					{
+																						class : "float_core.desktop_settings(17)",
+																						object_id : 74,
+																						data :
+																						{
+																							"x(17)" : 324,
+																							"y(18)" : 228,
+																							"color(19)" : 
+																							{
+																								type : "color",
+																								data : [0.5, 0.5, 0.5]
+																							}
+																						}
+																					},
+																					"inport_connections(614)" : 
+																					[
+																					],
+																					"is_polyphonic(615)" : true
+																				}
+																			},
+																			"channel_count(607)" : 0,
+																			"oversampling(608)" : 0,
+																			"name(374)" : "Delay",
+																			"label(821)" : "",
+																			"tooltip_text(823)" : "",
+																			"preset_identifier(701)" : "DELAY",
+																			"modulations_to_ignore(3826)" : "",
+																			"value_type(702)" : 
+																			{
+																				class : "float_core.decimal_value_type(123)",
+																				object_id : 75,
+																				data :
+																				{
+																					"min(292)" : 0.0,
+																					"max(293)" : 2.0,
+																					"default_value(891)" : 0.0,
+																					"domain(294)" : 5,
+																					"engine_domain(295)" : 4,
+																					"value_origin(3014)" : 0,
+																					"pixel_step_size(1988)" : -1.0,
+																					"unit(296)" : 3,
+																					"decimal_digit_count(297)" : -1,
+																					"edit_style(298)" : 0,
+																					"parameter_smoothing(4433)" : true,
+																					"allow_automation_curves(4434)" : true
+																				}
+																			},
+																			"value(712)" : 0.0
+																		}
+																	},
+																	"outport_index(249)" : 0,
+																	"high_quality(1943)" : true,
+																	"unconnected_value(6443)" : 0.0
+																}
+															},
+															{
+																class : "float_core.inport_connection(105)",
+																object_id : 76,
+																data :
+																{
+																	"source_component(248)" : 
+																	{
+																		class : "float_core.decimal_value_atom(289)",
+																		object_id : 77,
+																		data :
+																		{
+																			"settings(6194)" : 
+																			{
+																				class : "float_core.component_settings(236)",
+																				object_id : 78,
+																				data :
+																				{
+																					"desktop_settings(612)" : 
+																					{
+																						class : "float_core.desktop_settings(17)",
+																						object_id : 79,
+																						data :
+																						{
+																							"x(17)" : 396,
+																							"y(18)" : 228,
+																							"color(19)" : 
+																							{
+																								type : "color",
+																								data : [0.5, 0.5, 0.5]
+																							}
+																						}
+																					},
+																					"inport_connections(614)" : 
+																					[
+																					],
+																					"is_polyphonic(615)" : true
+																				}
+																			},
+																			"channel_count(607)" : 0,
+																			"oversampling(608)" : 0,
+																			"name(374)" : "Fade-in",
+																			"label(821)" : "",
+																			"tooltip_text(823)" : "",
+																			"preset_identifier(701)" : "FADE_IN",
+																			"modulations_to_ignore(3826)" : "",
+																			"value_type(702)" : 
+																			{
+																				class : "float_core.decimal_value_type(123)",
+																				object_id : 80,
+																				data :
+																				{
+																					"min(292)" : 0.0,
+																					"max(293)" : 2.0,
+																					"default_value(891)" : 0.0,
+																					"domain(294)" : 5,
+																					"engine_domain(295)" : 4,
+																					"value_origin(3014)" : 0,
+																					"pixel_step_size(1988)" : -1.0,
+																					"unit(296)" : 3,
+																					"decimal_digit_count(297)" : -1,
+																					"edit_style(298)" : 0,
+																					"parameter_smoothing(4433)" : true,
+																					"allow_automation_curves(4434)" : true
+																				}
+																			},
+																			"value(712)" : 0.0
+																		}
+																	},
+																	"outport_index(249)" : 0,
+																	"high_quality(1943)" : true,
+																	"unconnected_value(6443)" : 0.0
+																}
+															}
+														],
+														"is_polyphonic(615)" : true
+													}
+												},
+												"channel_count(607)" : 0,
+												"oversampling(608)" : 0,
+												"code(6264)" : "component lfo\n{\n   event_inport NoteEvent noteIn\n   {\n      if (noteIn.type == noteIn.NOTE_ON)\n      {\n         if (triggerMode == 1) // NOTE\n         {\n            phase = phaseIn / 360;\n         }\n         else if (triggerMode == 3) // RAND\n         {\n            phase = rng(false);\n         }\n\n         if (delay < 100000 || fadeIn < 100000)\n         {\n            fadeState = -1;\n         }\n      }\n   }\n   audio_inport f32 rate;\n   audio_inport f32 depth;\n   audio_inport f32 shape;\n   audio_inport f32 slope;\n   audio_inport f32 phaseIn;\n   value_inport bool bipolar;\n   value_inport i32 timebase;\n   value_inport i32 triggerMode;\n   audio_inport f32 beatsPerFrame;\n\n   audio_outport f32 out;\n   audio_outport f32 phaseOut;\n   event_inport f32 tick\n   {\n      if (timebase >= 2 && triggerMode == 2)\n      {\n         f32 ts = tick * rate * unitToLength(timebase) + phaseIn * (1.0 / 360.0);\n         phase = ts - floor(ts);\n      }\n   }\n\n   audio_inport f32 delay;\n   audio_inport f32 fadeIn;\n\n   i32 seed = rand();\n\n   i32 random(i32 i)\n   {\n      i ^= i << 13;\n      i ^= i >> 17;\n      i ^= i << 5;\n      return i;\n   }\n\n   f32 rng(bool bipolar)\n   {\n      seed = random(seed);\n      return (bipolar ? seed : (seed & 0x7fffffff)).f32 * (1.0 / 2147483648.0);\n   }\n\n   f32 phase = 0;\n   f32 fadeState = -1;\n\n   f32 sawify(f32 p, f32 m)\n   {\n      f32 scale = (1 + m);\n      f32 a = 0.5 * scale;\n\n      if (p > a)\n      {\n         return 1 + (1 - p) * 0.5 / (1 - a);\n      }\n\n      return p / scale;\n   }\n\n   f32 calc(f32 p, f32 s)\n   {\n      f32 p4 = 4 * p;\n      f32 p4f = floor(p4);\n      i32 quadrant = p4f.i32 & 3;\n      f32 f = p4 - p4f;\n\n      f32 x = (((quadrant+1) & 1) == 0) ? f : (1-f);\n      f32 pl = (((quadrant+1) & 2) == 0) ? 1 : -1;\n\n      return pl * (x * (1 + s) - x*x * s);\n   }\n\n   f32 fastExp2(i32 exp)\n   {\n      return (1.0 / 65536.0) * (exp > 0 ? 65536 << exp : 65536 >> -exp).f32;\n   }\n\n   f32 unitToLength(i32 timebase)\n   {\n      return fastExp2((timebase - 2) - 2);\n   }\n\n   process\n   {\n\n      out = calc(sawify(phase, shape), slope);\n      phaseOut = 2 * phase - 1;\n\n      if (!bipolar)\n      {\n         out = 0.5 + 0.5*out;\n      }\n\n      if (fadeState < 0)\n      {\n         if (delay > EC.samplerate)\n         {\n            fadeState = 0;\n\n         }\n         else\n         {\n            fadeState += delay * (1.0 / EC.samplerate);\n         }\n      }\n      else  if (fadeState < 1)\n      {\n         if (fadeIn > EC.samplerate)\n         {\n            fadeState = 1;\n         }\n         else\n         {\n            fadeState = fmin(1, fadeState + fadeIn * (1.0 / EC.samplerate));\n         }\n      }\n\n      out *= depth * fmax(0, fadeState);\n\n      if (timebase >=2)\n      {\n         phase += rate * beatsPerFrame * unitToLength(timebase);\n      }\n      else if (timebase == 1)\n      {\n         phase += 1000.0 * rate * (1.0 / EC.samplerate);\n      }\n      else\n      {\n         phase += rate * (1.0 / EC.samplerate);\n      }\n\n      while (phase >= 1)\n      {\n         phase -= 1;\n      }\n   }\n}\n",
+												"fft_order(6567)" : 0
+											}
+										},
+										"outport_index(249)" : 0,
+										"high_quality(1943)" : true,
+										"unconnected_value(6443)" : 0.0
+									}
+								}
+							],
+							"is_polyphonic(615)" : true
+						}
+					},
+					"channel_count(607)" : 0,
+					"oversampling(608)" : 0,
+					"name(3639)" : "",
+					"preset_identifier(3640)" : "LFO",
+					"display_settings(5452)" : 
+					{
+						type : "map<string,object>",
+						data : 
+						{
+							"Claes" : 
+							{
+								class : "float_core.modulation_source_atom_display_settings(1488)",
+								object_id : 81,
+								data :
+								{
+									"is_source_expanded_in_inspector(5455)" : false
+								}
+							}
+						}
+					}
+				}
+			},{ object_ref : 18 },{ object_ref : 29 },{ object_ref : 34 },{ object_ref : 39 },
+			{
+				class : "float_core.polyphonic_observer_atom(1815)",
+				object_id : 82,
+				data :
+				{
+					"settings(6194)" : 
+					{
+						class : "float_core.component_settings(236)",
+						object_id : 83,
+						data :
+						{
+							"desktop_settings(612)" : 
+							{
+								class : "float_core.desktop_settings(17)",
+								object_id : 84,
+								data :
+								{
+									"x(17)" : 140,
+									"y(18)" : 340,
+									"color(19)" : 
+									{
+										type : "color",
+										data : [0.5, 0.5, 0.5]
+									}
+								}
+							},
+							"inport_connections(614)" : 
+							[
+								{
+									class : "float_core.inport_connection(105)",
+									object_id : 85,
+									data :
+									{
+										"source_component(248)" : { object_ref : 18 },
+										"outport_index(249)" : 1,
+										"high_quality(1943)" : true,
+										"unconnected_value(6443)" : 0.0
+									}
+								},
+								{
+									class : "float_core.inport_connection(105)",
+									object_id : 86,
+									data :
+									{
+										"source_component(248)" : { object_ref : 18 },
+										"outport_index(249)" : 0,
+										"high_quality(1943)" : true,
+										"unconnected_value(6443)" : 0.0
+									}
+								}
+							],
+							"is_polyphonic(615)" : true
+						}
+					},
+					"channel_count(607)" : 0,
+					"oversampling(608)" : 0,
+					"dimensions(6533)" : 2
+				}
+			},{ object_ref : 67 },{ object_ref : 45 },{ object_ref : 58 },{ object_ref : 72 },{ object_ref : 77 }
+		],
+		"panels(6213)" : 
+		[
+			{
+				class : "float_core.panel(1680)",
+				object_id : 87,
+				data :
+				{
+					"layout_settings(6226)" : null,
+					"is_visible(6309)" : true,
+					"is_enabled(6310)" : true,
+					"tooltip_text(6867)" : "",
+					"name(6211)" : "Main",
+					"root_item(6212)" : 
+					{
+						class : "float_core.grid_panel_item(1681)",
+						object_id : 88,
+						data :
+						{
+							"layout_settings(6226)" : null,
+							"is_visible(6309)" : true,
+							"is_enabled(6310)" : true,
+							"tooltip_text(6867)" : "",
+							"items(6221)" : 
+							[
+								{
+									class : "float_core.mapping_source_panel_item(1717)",
+									object_id : 89,
+									data :
+									{
+										"layout_settings(6226)" : 
+										{
+											class : "float_core.grid_panel_item_layout_settings(1694)",
+											object_id : 90,
+											data :
+											{
+												"width(6217)" : 17,
+												"height(6218)" : 4,
+												"x(6215)" : 0,
+												"y(6216)" : 13
+											}
+										},
+										"is_visible(6309)" : true,
+										"is_enabled(6310)" : true,
+										"tooltip_text(6867)" : "",
+										"data_model(6220)" : { object_ref : 14 },
+										"title(6241)" : "",
+										"filename(6258)" : ""
+									}
+								},
+								{
+									class : "float_core.display_panel_item(1804)",
+									object_id : 91,
+									data :
+									{
+										"layout_settings(6226)" : 
+										{
+											class : "float_core.grid_panel_item_layout_settings(1694)",
+											object_id : 92,
+											data :
+											{
+												"width(6217)" : 17,
+												"height(6218)" : 13,
+												"x(6215)" : 0,
+												"y(6216)" : 0
+											}
+										},
+										"is_visible(6309)" : true,
+										"is_enabled(6310)" : true,
+										"tooltip_text(6867)" : "",
+										"items(6221)" : 
+										[
+											{
+												class : "float_core.display_line_painting_container(1817)",
+												object_id : 93,
+												data :
+												{
+													"layout_settings(6226)" : 
+													{
+														class : "float_core.stack_panel_item_layout_settings(1803)",
+														object_id : 94,
+														data :
+														{
+															"width(6217)" : 1,
+															"height(6218)" : 1
+														}
+													},
+													"is_visible(6309)" : true,
+													"is_enabled(6310)" : true,
+													"tooltip_text(6867)" : "",
+													"items(6221)" : 
+													[
+														{
+															class : "float_core.display_point_panel_item(1806)",
+															object_id : 95,
+															data :
+															{
+																"layout_settings(6226)" : 
+																{
+																	class : "float_core.stack_panel_item_layout_settings(1803)",
+																	object_id : 96,
+																	data :
+																	{
+																		"width(6217)" : 1,
+																		"height(6218)" : 1
+																	}
+																},
+																"is_visible(6309)" : true,
+																"is_enabled(6310)" : true,
+																"tooltip_text(6867)" : "",
+																"is_interactive(6499)" : false,
+																"color(6518)" : 2,
+																"label(6496)" : "",
+																"offset_x(6500)" : -1.0,
+																"offset_y(6501)" : 1.0,
+																"component_x(6512)" : null,
+																"component_y(6513)" : null,
+																"show_modulated_value(6730)" : true,
+																"interpolation(6893)" : 0,
+																"interpolation_parameter(6894)" : 0.0,
+																"gain_x(6991)" : 1.0,
+																"gain_y(6992)" : 1.0
+															}
+														},
+														{
+															class : "float_core.display_point_panel_item(1806)",
+															object_id : 97,
+															data :
+															{
+																"layout_settings(6226)" : 
+																{
+																	class : "float_core.stack_panel_item_layout_settings(1803)",
+																	object_id : 98,
+																	data :
+																	{
+																		"width(6217)" : 1,
+																		"height(6218)" : 1
+																	}
+																},
+																"is_visible(6309)" : true,
+																"is_enabled(6310)" : true,
+																"tooltip_text(6867)" : "",
+																"is_interactive(6499)" : false,
+																"color(6518)" : 2,
+																"label(6496)" : "",
+																"offset_x(6500)" : -1.0,
+																"offset_y(6501)" : 0.0,
+																"component_x(6512)" : null,
+																"component_y(6513)" : null,
+																"show_modulated_value(6730)" : true,
+																"interpolation(6893)" : 2,
+																"interpolation_parameter(6894)" : 0.0,
+																"gain_x(6991)" : 1.0,
+																"gain_y(6992)" : 1.0
+															}
+														},
+														{
+															class : "float_core.display_point_panel_item(1806)",
+															object_id : 99,
+															data :
+															{
+																"layout_settings(6226)" : 
+																{
+																	class : "float_core.stack_panel_item_layout_settings(1803)",
+																	object_id : 100,
+																	data :
+																	{
+																		"width(6217)" : 1,
+																		"height(6218)" : 1
+																	}
+																},
+																"is_visible(6309)" : true,
+																"is_enabled(6310)" : true,
+																"tooltip_text(6867)" : "",
+																"is_interactive(6499)" : false,
+																"color(6518)" : 2,
+																"label(6496)" : "",
+																"offset_x(6500)" : 0.0,
+																"offset_y(6501)" : -1.0,
+																"component_x(6512)" : null,
+																"component_y(6513)" : null,
+																"show_modulated_value(6730)" : true,
+																"interpolation(6893)" : 2,
+																"interpolation_parameter(6894)" : 0.0,
+																"gain_x(6991)" : 1.0,
+																"gain_y(6992)" : 1.0
+															}
+														},
+														{
+															class : "float_core.display_point_panel_item(1806)",
+															object_id : 101,
+															data :
+															{
+																"layout_settings(6226)" : 
+																{
+																	class : "float_core.stack_panel_item_layout_settings(1803)",
+																	object_id : 102,
+																	data :
+																	{
+																		"width(6217)" : 1,
+																		"height(6218)" : 1
+																	}
+																},
+																"is_visible(6309)" : true,
+																"is_enabled(6310)" : true,
+																"tooltip_text(6867)" : "",
+																"is_interactive(6499)" : false,
+																"color(6518)" : 2,
+																"label(6496)" : "",
+																"offset_x(6500)" : 0.5,
+																"offset_y(6501)" : 0.0,
+																"component_x(6512)" : null,
+																"component_y(6513)" : null,
+																"show_modulated_value(6730)" : true,
+																"interpolation(6893)" : 2,
+																"interpolation_parameter(6894)" : 0.0,
+																"gain_x(6991)" : 1.0,
+																"gain_y(6992)" : 1.0
+															}
+														},
+														{
+															class : "float_core.display_point_panel_item(1806)",
+															object_id : 103,
+															data :
+															{
+																"layout_settings(6226)" : 
+																{
+																	class : "float_core.stack_panel_item_layout_settings(1803)",
+																	object_id : 104,
+																	data :
+																	{
+																		"width(6217)" : 1,
+																		"height(6218)" : 1
+																	}
+																},
+																"is_visible(6309)" : true,
+																"is_enabled(6310)" : true,
+																"tooltip_text(6867)" : "",
+																"is_interactive(6499)" : false,
+																"color(6518)" : 2,
+																"label(6496)" : "",
+																"offset_x(6500)" : 1.0,
+																"offset_y(6501)" : 1.0,
+																"component_x(6512)" : null,
+																"component_y(6513)" : null,
+																"show_modulated_value(6730)" : true,
+																"interpolation(6893)" : 2,
+																"interpolation_parameter(6894)" : 0.0,
+																"gain_x(6991)" : 1.0,
+																"gain_y(6992)" : 1.0
+															}
+														}
+													],
+													"border_style(6228)" : 0,
+													"title(6242)" : "",
+													"show_title(6243)" : false,
+													"title_color(6522)" : 6,
+													"brightness(6245)" : 1,
+													"color(6537)" : 1,
+													"show_modulated_value(6731)" : true
+												}
+											},
+											{
+												class : "float_core.display_line_panel_item(1807)",
+												object_id : 105,
+												data :
+												{
+													"layout_settings(6226)" : 
+													{
+														class : "float_core.stack_panel_item_layout_settings(1803)",
+														object_id : 106,
+														data :
+														{
+															"width(6217)" : 1,
+															"height(6218)" : 1
+														}
+													},
+													"is_visible(6309)" : false,
+													"is_enabled(6310)" : true,
+													"tooltip_text(6867)" : "",
+													"is_interactive(6499)" : true,
+													"color(6518)" : 1,
+													"offset(6497)" : 0.0,
+													"component(6503)" : { object_ref : 29 },
+													"is_horizontal(6498)" : true
+												}
+											},
+											{
+												class : "float_core.display_polyphonic_observer_panel_item(1816)",
+												object_id : 107,
+												data :
+												{
+													"layout_settings(6226)" : 
+													{
+														class : "float_core.stack_panel_item_layout_settings(1803)",
+														object_id : 108,
+														data :
+														{
+															"width(6217)" : 1,
+															"height(6218)" : 1
+														}
+													},
+													"is_visible(6309)" : true,
+													"is_enabled(6310)" : true,
+													"tooltip_text(6867)" : "",
+													"is_interactive(6499)" : false,
+													"color(6518)" : 6,
+													"label(6496)" : "",
+													"component(6513)" : { object_ref : 82 },
+													"numeric_domain_x(6553)" : 0,
+													"numeric_domain_y(6554)" : 0,
+													"numeric_domain_z(6555)" : 0,
+													"scope_mode(6715)" : false,
+													"draw_x_line(6895)" : false,
+													"draw_y_line(6896)" : false,
+													"dot_size(6897)" : 5.0
+												}
+											}
+										],
+										"border_style(6228)" : 0,
+										"title(6242)" : "LFO",
+										"show_title(6243)" : false,
+										"title_color(6522)" : 6,
+										"brightness(6245)" : 3,
+										"x_min(6504)" : -1.0,
+										"x_max(6505)" : 1.0,
+										"x_domain(6506)" : 0,
+										"x_unit(6507)" : 1,
+										"y_min(6508)" : -1.0,
+										"y_max(6509)" : 1.0,
+										"y_domain(6510)" : 0,
+										"y_unit(6511)" : 1,
+										"use_meter_mode(6737)" : false
+									}
+								}
+							],
+							"border_style(6228)" : 1,
+							"title(6242)" : "LFO",
+							"show_title(6243)" : false,
+							"title_color(6522)" : 6,
+							"brightness(6245)" : 0
+						}
+					},
+					"width(6232)" : 17,
+					"height(6233)" : 17,
+					"expressions(6277)" : 
+					[
+						{
+							class : "float_core.panel_expression(1728)",
+							object_id : 109,
+							data :
+							{
+								"expression(6274)" : "BIPOLAR ? -1 : 0",
+								"panel_item(6275)" : { object_ref : 99 },
+								"attribute_id(6316)" : 6501
+							}
+						},
+						{
+							class : "float_core.panel_expression(1728)",
+							object_id : 110,
+							data :
+							{
+								"expression(6274)" : "FORM",
+								"panel_item(6275)" : { object_ref : 99 },
+								"attribute_id(6316)" : 6893
+							}
+						},
+						{
+							class : "float_core.panel_expression(1728)",
+							object_id : 111,
+							data :
+							{
+								"expression(6274)" : "FORM*-1",
+								"panel_item(6275)" : { object_ref : 99 },
+								"attribute_id(6316)" : 6894
+							}
+						},
+						{
+							class : "float_core.panel_expression(1728)",
+							object_id : 112,
+							data :
+							{
+								"expression(6274)" : "SHAPE",
+								"panel_item(6275)" : { object_ref : 99 },
+								"attribute_id(6316)" : 6500
+							}
+						},
+						{
+							class : "float_core.panel_expression(1728)",
+							object_id : 113,
+							data :
+							{
+								"expression(6274)" : "0.5*SHAPE - 0.5",
+								"panel_item(6275)" : { object_ref : 97 },
+								"attribute_id(6316)" : 6500
+							}
+						},
+						{
+							class : "float_core.panel_expression(1728)",
+							object_id : 114,
+							data :
+							{
+								"expression(6274)" : "FORM",
+								"panel_item(6275)" : { object_ref : 97 },
+								"attribute_id(6316)" : 6894
+							}
+						},
+						{
+							class : "float_core.panel_expression(1728)",
+							object_id : 115,
+							data :
+							{
+								"expression(6274)" : "FORM",
+								"panel_item(6275)" : { object_ref : 101 },
+								"attribute_id(6316)" : 6894
+							}
+						},
+						{
+							class : "float_core.panel_expression(1728)",
+							object_id : 116,
+							data :
+							{
+								"expression(6274)" : "FORM*-1",
+								"panel_item(6275)" : { object_ref : 103 },
+								"attribute_id(6316)" : 6894
+							}
+						},
+						{
+							class : "float_core.panel_expression(1728)",
+							object_id : 117,
+							data :
+							{
+								"expression(6274)" : "0.5*SHAPE + 0.5",
+								"panel_item(6275)" : { object_ref : 101 },
+								"attribute_id(6316)" : 6500
+							}
+						},
+						{
+							class : "float_core.panel_expression(1728)",
+							object_id : 118,
+							data :
+							{
+								"expression(6274)" : "BIPOLAR ? 0 : 0.5",
+								"panel_item(6275)" : { object_ref : 97 },
+								"attribute_id(6316)" : 6501
+							}
+						},
+						{
+							class : "float_core.panel_expression(1728)",
+							object_id : 119,
+							data :
+							{
+								"expression(6274)" : "BIPOLAR ? 0 : 0.5",
+								"panel_item(6275)" : { object_ref : 101 },
+								"attribute_id(6316)" : 6501
+							}
+						}
+					]
+				}
+			},
+			{
+				class : "float_core.panel(1680)",
+				object_id : 120,
+				data :
+				{
+					"layout_settings(6226)" : null,
+					"is_visible(6309)" : true,
+					"is_enabled(6310)" : true,
+					"tooltip_text(6867)" : "",
+					"name(6211)" : "Detail",
+					"root_item(6212)" : 
+					{
+						class : "float_core.grid_panel_item(1681)",
+						object_id : 121,
+						data :
+						{
+							"layout_settings(6226)" : null,
+							"is_visible(6309)" : true,
+							"is_enabled(6310)" : true,
+							"tooltip_text(6867)" : "",
+							"items(6221)" : 
+							[
+								{
+									class : "float_core.image_panel_item(1719)",
+									object_id : 122,
+									data :
+									{
+										"layout_settings(6226)" : 
+										{
+											class : "float_core.grid_panel_item_layout_settings(1694)",
+											object_id : 123,
+											data :
+											{
+												"width(6217)" : 9,
+												"height(6218)" : 5,
+												"x(6215)" : 24,
+												"y(6216)" : 15
+											}
+										},
+										"is_visible(6309)" : true,
+										"is_enabled(6310)" : true,
+										"tooltip_text(6867)" : "",
+										"horizontal_alignment(6400)" : 1,
+										"vertical_alignment(6401)" : 1,
+										"filename(6258)" : "ramp_down.svg",
+										"svg_data(6259)" : "",
+										"color(6521)" : 6,
+										"scale(6767)" : 1.0,
+										"opacity(6768)" : 0.5
+									}
+								},
+								{
+									class : "float_core.number_field_panel_item(1713)",
+									object_id : 124,
+									data :
+									{
+										"layout_settings(6226)" : 
+										{
+											class : "float_core.grid_panel_item_layout_settings(1694)",
+											object_id : 125,
+											data :
+											{
+												"width(6217)" : 11,
+												"height(6218)" : 5,
+												"x(6215)" : 12,
+												"y(6216)" : 47
+											}
+										},
+										"is_visible(6309)" : true,
+										"is_enabled(6310)" : true,
+										"tooltip_text(6867)" : "",
+										"data_model(6220)" : { object_ref : 39 },
+										"style(6540)" : 2,
+										"show_value_bar(6581)" : false
+									}
+								},
+								{
+									class : "float_core.toggle_button_panel_item(1702)",
+									object_id : 126,
+									data :
+									{
+										"layout_settings(6226)" : 
+										{
+											class : "float_core.grid_panel_item_layout_settings(1694)",
+											object_id : 127,
+											data :
+											{
+												"width(6217)" : 10,
+												"height(6218)" : 5,
+												"x(6215)" : 24,
+												"y(6216)" : 47
+											}
+										},
+										"is_visible(6309)" : true,
+										"is_enabled(6310)" : true,
+										"tooltip_text(6867)" : "",
+										"data_model(6220)" : null,
+										"title(6241)" : "POLY",
+										"icon_name(6239)" : "",
+										"style(6240)" : 1,
+										"label_style(6267)" : 0,
+										"invert_value(6552)" : false,
+										"is_selected(6719)" : false
+									}
+								},
+								{
+									class : "float_core.number_field_panel_item(1713)",
+									object_id : 128,
+									data :
+									{
+										"layout_settings(6226)" : 
+										{
+											class : "float_core.grid_panel_item_layout_settings(1694)",
+											object_id : 129,
+											data :
+											{
+												"width(6217)" : 11,
+												"height(6218)" : 5,
+												"x(6215)" : 0,
+												"y(6216)" : 6
+											}
+										},
+										"is_visible(6309)" : true,
+										"is_enabled(6310)" : true,
+										"tooltip_text(6867)" : "",
+										"data_model(6220)" : { object_ref : 2 },
+										"style(6540)" : 1,
+										"show_value_bar(6581)" : false
+									}
+								},
+								{
+									class : "float_core.toggle_button_panel_item(1702)",
+									object_id : 130,
+									data :
+									{
+										"layout_settings(6226)" : 
+										{
+											class : "float_core.grid_panel_item_layout_settings(1694)",
+											object_id : 131,
+											data :
+											{
+												"width(6217)" : 10,
+												"height(6218)" : 5,
+												"x(6215)" : 24,
+												"y(6216)" : 40
+											}
+										},
+										"is_visible(6309)" : true,
+										"is_enabled(6310)" : true,
+										"tooltip_text(6867)" : "",
+										"data_model(6220)" : { object_ref : 10 },
+										"title(6241)" : "",
+										"icon_name(6239)" : "bipolar.svg",
+										"style(6240)" : 1,
+										"label_style(6267)" : 1,
+										"invert_value(6552)" : false,
+										"is_selected(6719)" : false
+									}
+								},
+								{
+									class : "float_core.knob_panel_item(1687)",
+									object_id : 132,
+									data :
+									{
+										"layout_settings(6226)" : 
+										{
+											class : "float_core.grid_panel_item_layout_settings(1694)",
+											object_id : 133,
+											data :
+											{
+												"width(6217)" : 11,
+												"height(6218)" : 7,
+												"x(6215)" : 12,
+												"y(6216)" : 14
+											}
+										},
+										"is_visible(6309)" : true,
+										"is_enabled(6310)" : true,
+										"tooltip_text(6867)" : "",
+										"data_model(6220)" : { object_ref : 29 },
+										"title(6241)" : "",
+										"knob_size(6223)" : 1,
+										"knob_style(7055)" : 0,
+										"label_color(7056)" : 999,
+										"pie_color(7057)" : 999
+									}
+								},
+								{
+									class : "float_core.knob_panel_item(1687)",
+									object_id : 134,
+									data :
+									{
+										"layout_settings(6226)" : 
+										{
+											class : "float_core.grid_panel_item_layout_settings(1694)",
+											object_id : 135,
+											data :
+											{
+												"width(6217)" : 11,
+												"height(6218)" : 7,
+												"x(6215)" : 12,
+												"y(6216)" : 22
+											}
+										},
+										"is_visible(6309)" : true,
+										"is_enabled(6310)" : true,
+										"tooltip_text(6867)" : "",
+										"data_model(6220)" : { object_ref : 34 },
+										"title(6241)" : "",
+										"knob_size(6223)" : 1,
+										"knob_style(7055)" : 0,
+										"label_color(7056)" : 999,
+										"pie_color(7057)" : 999
+									}
+								},
+								{
+									class : "float_core.knob_panel_item(1687)",
+									object_id : 136,
+									data :
+									{
+										"layout_settings(6226)" : 
+										{
+											class : "float_core.grid_panel_item_layout_settings(1694)",
+											object_id : 137,
+											data :
+											{
+												"width(6217)" : 11,
+												"height(6218)" : 7,
+												"x(6215)" : 12,
+												"y(6216)" : 4
+											}
+										},
+										"is_visible(6309)" : true,
+										"is_enabled(6310)" : true,
+										"tooltip_text(6867)" : "",
+										"data_model(6220)" : { object_ref : 2 },
+										"title(6241)" : "",
+										"knob_size(6223)" : 0,
+										"knob_style(7055)" : 0,
+										"label_color(7056)" : 999,
+										"pie_color(7057)" : 999
+									}
+								},
+								{
+									class : "float_core.image_panel_item(1719)",
+									object_id : 138,
+									data :
+									{
+										"layout_settings(6226)" : 
+										{
+											class : "float_core.grid_panel_item_layout_settings(1694)",
+											object_id : 139,
+											data :
+											{
+												"width(6217)" : 9,
+												"height(6218)" : 5,
+												"x(6215)" : 24,
+												"y(6216)" : 23
+											}
+										},
+										"is_visible(6309)" : true,
+										"is_enabled(6310)" : true,
+										"tooltip_text(6867)" : "",
+										"horizontal_alignment(6400)" : 1,
+										"vertical_alignment(6401)" : 1,
+										"filename(6258)" : "sine.svg",
+										"svg_data(6259)" : "",
+										"color(6521)" : 6,
+										"scale(6767)" : 1.0,
+										"opacity(6768)" : 0.5
+									}
+								},
+								{
+									class : "float_core.image_panel_item(1719)",
+									object_id : 140,
+									data :
+									{
+										"layout_settings(6226)" : 
+										{
+											class : "float_core.grid_panel_item_layout_settings(1694)",
+											object_id : 141,
+											data :
+											{
+												"width(6217)" : 9,
+												"height(6218)" : 5,
+												"x(6215)" : 2,
+												"y(6216)" : 15
+											}
+										},
+										"is_visible(6309)" : true,
+										"is_enabled(6310)" : true,
+										"tooltip_text(6867)" : "",
+										"horizontal_alignment(6400)" : 1,
+										"vertical_alignment(6401)" : 1,
+										"filename(6258)" : "ramp_up.svg",
+										"svg_data(6259)" : "",
+										"color(6521)" : 6,
+										"scale(6767)" : 1.0,
+										"opacity(6768)" : 0.5
+									}
+								},
+								{
+									class : "float_core.image_panel_item(1719)",
+									object_id : 142,
+									data :
+									{
+										"layout_settings(6226)" : 
+										{
+											class : "float_core.grid_panel_item_layout_settings(1694)",
+											object_id : 143,
+											data :
+											{
+												"width(6217)" : 9,
+												"height(6218)" : 5,
+												"x(6215)" : 2,
+												"y(6216)" : 23
+											}
+										},
+										"is_visible(6309)" : true,
+										"is_enabled(6310)" : true,
+										"tooltip_text(6867)" : "",
+										"horizontal_alignment(6400)" : 1,
+										"vertical_alignment(6401)" : 1,
+										"filename(6258)" : "inverse_quadratic.svg",
+										"svg_data(6259)" : "",
+										"color(6521)" : 6,
+										"scale(6767)" : 1.0,
+										"opacity(6768)" : 0.5
+									}
+								},
+								{
+									class : "float_core.knob_panel_item(1687)",
+									object_id : 144,
+									data :
+									{
+										"layout_settings(6226)" : 
+										{
+											class : "float_core.grid_panel_item_layout_settings(1694)",
+											object_id : 145,
+											data :
+											{
+												"width(6217)" : 11,
+												"height(6218)" : 7,
+												"x(6215)" : 12,
+												"y(6216)" : 39
+											}
+										},
+										"is_visible(6309)" : true,
+										"is_enabled(6310)" : true,
+										"tooltip_text(6867)" : "",
+										"data_model(6220)" : { object_ref : 6 },
+										"title(6241)" : "",
+										"knob_size(6223)" : 1,
+										"knob_style(7055)" : 0,
+										"label_color(7056)" : 999,
+										"pie_color(7057)" : 999
+									}
+								},
+								{
+									class : "float_core.image_panel_item(1719)",
+									object_id : 146,
+									data :
+									{
+										"layout_settings(6226)" : 
+										{
+											class : "float_core.grid_panel_item_layout_settings(1694)",
+											object_id : 147,
+											data :
+											{
+												"width(6217)" : 5,
+												"height(6218)" : 5,
+												"x(6215)" : 4,
+												"y(6216)" : 40
+											}
+										},
+										"is_visible(6309)" : true,
+										"is_enabled(6310)" : true,
+										"tooltip_text(6867)" : "",
+										"horizontal_alignment(6400)" : 1,
+										"vertical_alignment(6401)" : 1,
+										"filename(6258)" : "scale_vertical.svg",
+										"svg_data(6259)" : "",
+										"color(6521)" : 6,
+										"scale(6767)" : 1.0,
+										"opacity(6768)" : 0.5
+									}
+								},
+								{
+									class : "float_core.popup_chooser_panel_item(1714)",
+									object_id : 148,
+									data :
+									{
+										"layout_settings(6226)" : 
+										{
+											class : "float_core.grid_panel_item_layout_settings(1694)",
+											object_id : 149,
+											data :
+											{
+												"width(6217)" : 10,
+												"height(6218)" : 5,
+												"x(6215)" : 1,
+												"y(6216)" : 47
+											}
+										},
+										"is_visible(6309)" : true,
+										"is_enabled(6310)" : true,
+										"tooltip_text(6867)" : "",
+										"data_model(6220)" : { object_ref : 58 },
+										"label_style(6262)" : 0,
+										"style(6266)" : 0
+									}
+								},
+								{
+									class : "float_core.popup_chooser_panel_item(1714)",
+									object_id : 150,
+									data :
+									{
+										"layout_settings(6226)" : 
+										{
+											class : "float_core.grid_panel_item_layout_settings(1694)",
+											object_id : 151,
+											data :
+											{
+												"width(6217)" : 9,
+												"height(6218)" : 5,
+												"x(6215)" : 24,
+												"y(6216)" : 6
+											}
+										},
+										"is_visible(6309)" : true,
+										"is_enabled(6310)" : true,
+										"tooltip_text(6867)" : "",
+										"data_model(6220)" : { object_ref : 45 },
+										"label_style(6262)" : 0,
+										"style(6266)" : 0
+									}
+								},
+								{
+									class : "float_core.knob_panel_item(1687)",
+									object_id : 152,
+									data :
+									{
+										"layout_settings(6226)" : 
+										{
+											class : "float_core.grid_panel_item_layout_settings(1694)",
+											object_id : 153,
+											data :
+											{
+												"width(6217)" : 7,
+												"height(6218)" : 7,
+												"x(6215)" : 10,
+												"y(6216)" : 30
+											}
+										},
+										"is_visible(6309)" : true,
+										"is_enabled(6310)" : true,
+										"tooltip_text(6867)" : "",
+										"data_model(6220)" : { object_ref : 72 },
+										"title(6241)" : "",
+										"knob_size(6223)" : 1,
+										"knob_style(7055)" : 0,
+										"label_color(7056)" : 999,
+										"pie_color(7057)" : 999
+									}
+								},
+								{
+									class : "float_core.knob_panel_item(1687)",
+									object_id : 154,
+									data :
+									{
+										"layout_settings(6226)" : 
+										{
+											class : "float_core.grid_panel_item_layout_settings(1694)",
+											object_id : 155,
+											data :
+											{
+												"width(6217)" : 7,
+												"height(6218)" : 7,
+												"x(6215)" : 18,
+												"y(6216)" : 30
+											}
+										},
+										"is_visible(6309)" : true,
+										"is_enabled(6310)" : true,
+										"tooltip_text(6867)" : "",
+										"data_model(6220)" : { object_ref : 77 },
+										"title(6241)" : "",
+										"knob_size(6223)" : 1,
+										"knob_style(7055)" : 0,
+										"label_color(7056)" : 999,
+										"pie_color(7057)" : 999
+									}
+								},
+								{
+									class : "float_core.image_panel_item(1719)",
+									object_id : 156,
+									data :
+									{
+										"layout_settings(6226)" : 
+										{
+											class : "float_core.grid_panel_item_layout_settings(1694)",
+											object_id : 157,
+											data :
+											{
+												"width(6217)" : 5,
+												"height(6218)" : 5,
+												"x(6215)" : 4,
+												"y(6216)" : 31
+											}
+										},
+										"is_visible(6309)" : true,
+										"is_enabled(6310)" : true,
+										"tooltip_text(6867)" : "Delay before Fade-In starts",
+										"horizontal_alignment(6400)" : 1,
+										"vertical_alignment(6401)" : 1,
+										"filename(6258)" : "time_seconds.svg",
+										"svg_data(6259)" : "",
+										"color(6521)" : 6,
+										"scale(6767)" : 1.0,
+										"opacity(6768)" : 0.5
+									}
+								},
+								{
+									class : "float_core.image_panel_item(1719)",
+									object_id : 158,
+									data :
+									{
+										"layout_settings(6226)" : 
+										{
+											class : "float_core.grid_panel_item_layout_settings(1694)",
+											object_id : 159,
+											data :
+											{
+												"width(6217)" : 7,
+												"height(6218)" : 5,
+												"x(6215)" : 25,
+												"y(6216)" : 31
+											}
+										},
+										"is_visible(6309)" : true,
+										"is_enabled(6310)" : true,
+										"tooltip_text(6867)" : "Fade-In time for the LFO to reach its full level",
+										"horizontal_alignment(6400)" : 1,
+										"vertical_alignment(6401)" : 1,
+										"filename(6258)" : "fade_in.svg",
+										"svg_data(6259)" : "",
+										"color(6521)" : 6,
+										"scale(6767)" : 1.0,
+										"opacity(6768)" : 0.5
+									}
+								}
+							],
+							"border_style(6228)" : 1,
+							"title(6242)" : "LFO",
+							"show_title(6243)" : true,
+							"title_color(6522)" : 1,
+							"brightness(6245)" : 0
+						}
+					},
+					"width(6232)" : 35,
+					"height(6233)" : 53,
+					"expressions(6277)" : 
+					[
+						{
+							class : "float_core.panel_expression(1728)",
+							object_id : 160,
+							data :
+							{
+								"expression(6274)" : "PER_VOICE",
+								"panel_item(6275)" : { object_ref : 126 },
+								"attribute_id(6316)" : 6719
+							}
+						},
+						{
+							class : "float_core.panel_expression(1728)",
+							object_id : 161,
+							data :
+							{
+								"expression(6274)" : "CAN_BE_POLYPHONIC",
+								"panel_item(6275)" : { object_ref : 126 },
+								"attribute_id(6316)" : 6310
+							}
+						},
+						{
+							class : "float_core.panel_expression(1728)",
+							object_id : 162,
+							data :
+							{
+								"expression(6274)" : "TRIGGER == 1 || TRIGGER == 2",
+								"panel_item(6275)" : { object_ref : 124 },
+								"attribute_id(6316)" : 6310
+							}
+						},
+						{
+							class : "float_core.panel_expression(1728)",
+							object_id : 163,
+							data :
+							{
+								"expression(6274)" : "0.5 + 0.25 * SHAPE",
+								"panel_item(6275)" : { object_ref : 122 },
+								"attribute_id(6316)" : 6768
+							}
+						},
+						{
+							class : "float_core.panel_expression(1728)",
+							object_id : 164,
+							data :
+							{
+								"expression(6274)" : "0.5 - 0.25 * SHAPE",
+								"panel_item(6275)" : { object_ref : 140 },
+								"attribute_id(6316)" : 6768
+							}
+						},
+						{
+							class : "float_core.panel_expression(1728)",
+							object_id : 165,
+							data :
+							{
+								"expression(6274)" : "0.5 - 0.25 * FORM",
+								"panel_item(6275)" : { object_ref : 142 },
+								"attribute_id(6316)" : 6768
+							}
+						},
+						{
+							class : "float_core.panel_expression(1728)",
+							object_id : 166,
+							data :
+							{
+								"expression(6274)" : "0.5 + 0.25 * FORM",
+								"panel_item(6275)" : { object_ref : 138 },
+								"attribute_id(6316)" : 6768
+							}
+						},
+						{
+							class : "float_core.panel_expression(1728)",
+							object_id : 167,
+							data :
+							{
+								"expression(6274)" : "FADE_IN > 0 ? 0.75 : 0.25",
+								"panel_item(6275)" : { object_ref : 158 },
+								"attribute_id(6316)" : 6768
+							}
+						},
+						{
+							class : "float_core.panel_expression(1728)",
+							object_id : 168,
+							data :
+							{
+								"expression(6274)" : "DELAY > 0 ? 0.75 : 0.25",
+								"panel_item(6275)" : { object_ref : 156 },
+								"attribute_id(6316)" : 6768
+							}
+						},
+						{
+							class : "float_core.panel_expression(1728)",
+							object_id : 169,
+							data :
+							{
+								"expression(6274)" : "DEVICE_NAME.uppercase",
+								"panel_item(6275)" : { object_ref : 121 },
+								"attribute_id(6316)" : 6242
+							}
+						}
+					]
+				}
+			}
+		],
+		"proxy_in_ports(177)" : 
+		[
+			{
+				class : "float_core.proxy_in_port_component(154)",
+				object_id : 170,
+				data :
+				{
+					"settings(6194)" : 
+					{
+						class : "float_core.component_settings(236)",
+						object_id : 171,
+						data :
+						{
+							"desktop_settings(612)" : 
+							{
+								class : "float_core.desktop_settings(17)",
+								object_id : 172,
+								data :
+								{
+									"x(17)" : 0,
+									"y(18)" : 0,
+									"color(19)" : 
+									{
+										type : "color",
+										data : [0.5, 0.5, 0.5]
+									}
+								}
+							},
+							"inport_connections(614)" : 
+							[
+							],
+							"is_polyphonic(615)" : true
+						}
+					},
+					"port(301)" : 
+					{
+						class : "float_core.audio_port(242)",
+						object_id : 173,
+						data :
+						{
+							"name(498)" : "",
+							"description(4741)" : "",
+							"decorated_name(499)" : " Audio out (PARENT)",
+							"is_inport(500)" : false,
+							"is_optional(1384)" : false,
+							"channel_count(372)" : 3
+						}
+					}
+				}
+			},{ object_ref : 22 }
+		],
+		"proxy_out_ports(178)" : 
+		[
+		],
+		"fft_order(6566)" : 0,
+		"context_menu_panel(6834)" : null,
+		"device_UUID(6369)" : "ad947004-f1d3-40a1-bd15-3ec721ee7c65",
+		"device_name(6370)" : "LFO",
+		"description(6371)" : "Low Frequency Oscillator",
+		"creator(6372)" : "Bitwig",
+		"comment(6373)" : "",
+		"keywords(6374)" : "",
+		"category(6375)" : "LFO",
+		"has_been_modified(6376)" : true,
+		"detail_panel(6695)" : { object_ref : 120 },
+		"can_be_polyphonic(6707)" : true,
+		"should_be_polyphonic_by_default(6724)" : false,
+		"should_enable_perform_mode_by_default(6725)" : false
+	}
+}

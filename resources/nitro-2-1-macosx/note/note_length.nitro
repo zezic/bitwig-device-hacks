@@ -1,0 +1,85 @@
+struct NoteState
+{
+   /* true when the delay line is active */
+   bool is_active = false;
+
+   /* the time at which the note started */
+   i64 start_time = 0;
+}
+
+component note_length
+{
+   i64 sample_time = 0;
+   i32 num_active = 0;
+   i32[128] active_states;
+   NoteState[128] states;
+
+   init
+   {
+      for (i32 i = 0; i < 128; ++i)
+      {
+         active_states[i] = 0;
+         states[i].start_time = 0;
+         states[i].is_active = false;
+      }
+   }
+
+   // max 128 notes per seconds
+   const i64 MIN_NOTE_LEN = EC.samplerate / 128;
+
+   audio_inport f32 length;
+   event_outport NoteEvent note_out;
+   event_inport NoteEvent note_in
+   {
+      if (note_in.type == note_in.NOTE_ON)
+      {
+         send note_out note_in;
+
+
+         /* activate the line */
+         if (!states[note_in.key].is_active)
+         {
+            states[note_in.key].is_active = true;
+            active_states[num_active] = note_in.key;
+            ++num_active;
+         }
+
+         states[note_in.key].start_time = sample_time;
+      }
+      else if (note_in.type == note_in.NOTE_OFF)
+      {
+         /* discard the event */
+      }
+      else
+      {
+         send note_out note_in;
+      }
+   }
+
+   process
+   {
+      i64 length_samples = (length * EC.samplerate).i64;
+
+      for (i32 i = 0; i < num_active; ++i)
+      {
+         i32 key = active_states[i];
+         if (states[key].start_time + length_samples > sample_time)
+            continue;
+
+         /* send the note off */
+         NoteEvent note;
+         note.type = note.NOTE_OFF;
+         note.key = key;
+         note.v = 0;
+         send note_out note;
+
+         /* set the state inactive */
+         states[key].is_active = false;
+         if (i + 1 < num_active)
+            active_states[i] = active_states[num_active - 1];
+         --num_active;
+         --i;
+      }
+      ++sample_time;
+   }
+}

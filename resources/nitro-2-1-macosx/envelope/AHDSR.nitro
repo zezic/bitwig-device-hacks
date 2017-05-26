@@ -1,0 +1,152 @@
+component AHDSR
+{
+
+   const i32 OFF = 0;
+   const i32 ATTACK = 1;
+   const i32 HOLD = 2;
+   const i32 DECAY = 3;
+   const i32 SUSTAIN = 4;
+   const i32 RELEASE = 5;
+
+   i32 state = OFF;
+   f32 stageLevel = 0;
+   f32 stageRamp = 0;
+   f32 stageSlope = 0;
+
+   f32 phase = 0;
+   f32 phaseInc = 0;
+   f32 level = 0;
+   i32 frames = 0;
+
+   event_inport NoteTriggerEvent trigger
+   {
+      if (trigger.gate != 0)
+      {
+         frames = 0;
+         phase = 0;
+         if (attack <= 0.0011)
+         {
+            state = HOLD;
+            stageLevel = 1;
+            stageRamp = 0;
+         }
+         else
+         {
+            state = ATTACK;
+            stageLevel = 0;
+            stageRamp = 1;
+         }
+         send outGate true;
+      }
+      else
+      {
+         frames = 0;
+         state = RELEASE;
+         stageLevel = level;
+         stageRamp = -level;
+      }
+   }
+
+   f32 calcSlope(f32 x, f32 slope)
+   {
+      f32 x1 = x * (1.0 + slope) + (-slope * x * x);
+      f32 x2 = x1 * (1.0 + slope) + (-slope * x1 * x1);
+
+      return x2;
+   }
+
+   audio_inport f32 attack;
+   audio_inport f32 hold;
+   audio_inport f32 decay;
+   audio_inport f32 release;
+   audio_inport f32 sustainLevel;
+   audio_inport f32 attackShape;
+   audio_inport f32 decayShape;
+   audio_inport f32 releaseShape;
+   audio_inport f32 depth;
+
+   audio_outport f32 out;
+   value_outport bool outGate = false;
+
+   f32 timeToPhaseInc(f32 time)
+   {
+      f32 frames = time * EC.samplerate;
+      return (frames > 1) ? (1.0 / frames) : 1;
+   }
+
+   process
+   {
+      phase += phaseInc;
+
+      if (phase > 1)
+      {
+         if (state == ATTACK)
+         {
+            state = HOLD;
+            stageLevel = 1;
+            stageRamp = 0;
+         }
+         else if (state == HOLD)
+         {
+            state = DECAY;
+            stageLevel = 1;
+            stageRamp = -1 + sustainLevel;
+         }
+         else if (state == DECAY)
+         {
+            state = SUSTAIN;
+            stageLevel = sustainLevel;
+            stageRamp = 0;
+         }
+         else if (state == RELEASE)
+         {
+            state = OFF;
+            stageLevel = 0;
+            stageRamp = 0;
+         }
+
+         frames = 0;
+         phase = 0;
+      }
+
+      if ((frames & 0x2ff) == 0)
+      {
+         if (state == ATTACK)
+         {
+            phaseInc = timeToPhaseInc(attack);
+            stageSlope = attackShape;
+         }
+         else if (state == HOLD)
+         {
+            phaseInc = timeToPhaseInc(hold);
+            stageSlope = 0;
+         }
+         else if (state == DECAY)
+         {
+            phaseInc = timeToPhaseInc(decay);
+            stageSlope = -decayShape;
+         }
+         else if (state == SUSTAIN)
+         {
+            phaseInc = 0;
+            stageSlope = 0;
+         }
+         else if (state == RELEASE)
+         {
+            phaseInc = timeToPhaseInc(release);
+            stageSlope = -releaseShape;
+         }
+         else if (state == OFF)
+         {
+            phaseInc = 0;
+            stageSlope = 0;
+         }
+      }
+
+      level = stageRamp != 0 
+      ? stageLevel + calcSlope(phase, stageSlope) * stageRamp
+      : stageLevel;
+      out = level * depth;
+      frames++;
+   }
+}

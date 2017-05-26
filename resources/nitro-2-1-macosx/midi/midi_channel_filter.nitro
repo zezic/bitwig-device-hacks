@@ -1,0 +1,164 @@
+@name "MIDI Channel Filter"
+component midi_channel_filter
+{
+   @name "Channel 1"
+   value_inport bool ch1;
+
+   @name "Channel 2"
+   value_inport bool ch2;
+
+   @name "Channel 3"
+   value_inport bool ch3;
+
+   @name "Channel 4"
+   value_inport bool ch4;
+
+   @name "Channel 5"
+   value_inport bool ch5;
+
+   @name "Channel 6"
+   value_inport bool ch6;
+
+   @name "Channel 7"
+   value_inport bool ch7;
+
+   @name "Channel 8"
+   value_inport bool ch8;
+
+   @name "Channel 9"
+   value_inport bool ch9;
+
+   @name "Channel 10"
+   value_inport bool ch10;
+
+   @name "Channel 11"
+   value_inport bool ch11;
+
+   @name "Channel 12"
+   value_inport bool ch12;
+
+   @name "Channel 13"
+   value_inport bool ch13;
+
+   @name "Channel 14"
+   value_inport bool ch14;
+
+   @name "Channel 15"
+   value_inport bool ch15;
+
+   @name "Channel 16"
+   value_inport bool ch16;
+
+   @name "Note Output"
+   event_outport NoteEvent out;
+
+   @name "Channel 1 Event Trigger"
+   event_outport ch1_out;
+
+   @name "Channel 2 Event Trigger"
+   event_outport ch2_out;
+
+   @name "Channel 3 Event Trigger"
+   event_outport ch3_out;
+
+   @name "Channel 4 Event Trigger"
+   event_outport ch4_out;
+
+   @name "Channel 5 Event Trigger"
+   event_outport ch5_out;
+
+   @name "Channel 6 Event Trigger"
+   event_outport ch6_out;
+
+   @name "Channel 7 Event Trigger"
+   event_outport ch7_out;
+
+   @name "Channel 8 Event Trigger"
+   event_outport ch8_out;
+
+   @name "Channel 9 Event Trigger"
+   event_outport ch9_out;
+
+   @name "Channel 10 Event Trigger"
+   event_outport ch10_out;
+
+   @name "Channel 11 Event Trigger"
+   event_outport ch11_out;
+
+   @name "Channel 12 Event Trigger"
+   event_outport ch12_out;
+
+   @name "Channel 13 Event Trigger"
+   event_outport ch13_out;
+
+   @name "Channel 14 Event Trigger"
+   event_outport ch14_out;
+
+   @name "Channel 15 Event Trigger"
+   event_outport ch15_out;
+
+   @name "Channel 16 Event Trigger"
+   event_outport ch16_out;
+
+   @name "Note Input"
+   event_inport NoteEvent in
+   {
+      NoteEvent ev = in;
+
+      bool pass = true;
+
+      switch (ev.forcedChannel)
+      {
+      case 0: pass = ch1; send ch1_out;
+      case 1: pass = ch2; send ch2_out;
+      case 2: pass = ch3; send ch3_out;
+      case 3: pass = ch4; send ch4_out;
+      case 4: pass = ch5; send ch5_out;
+      case 5: pass = ch6; send ch6_out;
+      case 6: pass = ch7; send ch7_out;
+      case 7: pass = ch8; send ch8_out;
+      case 8: pass = ch9; send ch9_out;
+      case 9: pass = ch10; send ch10_out;
+      case 10: pass = ch11; send ch11_out;
+      case 11: pass = ch12; send ch12_out;
+      case 12: pass = ch13; send ch13_out;
+      case 13: pass = ch14; send ch14_out;
+      case 14: pass = ch15; send ch15_out;
+      case 15: pass = ch16; send ch16_out;
+      default: pass = ch1; send ch1_out;
+      }
+
+      if (ev.type == ev.MIDI)
+      {
+         i32 status = (ev.midi & 0xF0) >> 4;
+
+         if (8 <= status && status <= 14)
+         {
+            i32 channel = ev.midi & 0xF;
+            switch (channel)
+            {
+            case 0: pass = ch1; send ch1_out;
+            case 1: pass = ch2; send ch2_out;
+            case 2: pass = ch3; send ch3_out;
+            case 3: pass = ch4; send ch4_out;
+            case 4: pass = ch5; send ch5_out;
+            case 5: pass = ch6; send ch6_out;
+            case 6: pass = ch7; send ch7_out;
+            case 7: pass = ch8; send ch8_out;
+            case 8: pass = ch9; send ch9_out;
+            case 9: pass = ch10; send ch10_out;
+            case 10: pass = ch11; send ch11_out;
+            case 11: pass = ch12; send ch12_out;
+            case 12: pass = ch13; send ch13_out;
+            case 13: pass = ch14; send ch14_out;
+            case 14: pass = ch15; send ch15_out;
+            case 15: pass = ch16; send ch16_out;
+            default: pass = ch1; send ch1_out;
+            }
+         }
+      }
+
+      if (pass)
+         send out ev;
+   }
+}

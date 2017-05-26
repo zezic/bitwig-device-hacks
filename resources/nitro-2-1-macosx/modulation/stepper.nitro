@@ -1,0 +1,20 @@
+component stepper
+{
+   const i32 STEPS = 64;
+
+   value_inport f32[STEPS] data;
+
+   value_inport i32  steps;
+   audio_inport f32  phase;
+
+   audio_outport f32 valueOut;
+   audio_outport f32 stepOut;
+
+   process
+   {
+      i32 stepIndex = floor(phase * steps.f32).i32 % steps;
+
+      valueOut = data[stepIndex];
+      stepOut = stepIndex.f32;
+   }
+}

@@ -1,0 +1,62 @@
+@desc "Sends MIDI events to select the current song"
+component midi_song_select
+{
+   @name "Note"
+   event_outport NoteEvent midi_out;
+
+   i32 sleep_samples = 0;
+   bool schedule_send = false;
+   i32 cached_song = 0;
+
+   const i32 SLEEP_SAMPLES = (0.0015 * EC.samplerate).i32;
+
+   @name "Auto Load"
+   value_inport bool auto_load;
+
+   @name "Song"
+   value_inport i32 song;
+
+   @name "Load"
+   event_inport void load
+   {
+      schedule_send = true;
+   }
+
+   /* The note has to be last because we want it to start with the new song */
+   @name "Note In"
+   event_inport NoteEvent in
+   {
+      send midi_out in;
+   }
+
+   init
+   {
+      sleep_samples = 0;
+      schedule_send = false;
+      cached_song = 0;
+   }
+
+   process
+   {
+      if (sleep_samples > 0)
+      {
+         --sleep_samples;
+      }
+      else
+      {
+         i32 fixed_song = (song - 1) & 0x1f;
+         if (schedule_send || (auto_load && cached_song != fixed_song)
+         {
+            schedule_send = false;
+            cached_song = fixed_song;
+            sleep_samples = SLEEP_SAMPLES;
+
+            NoteEvent ev;
+            ev.type = ev.MIDI;
+
+            ev.midi = 0xF3 | (fixed_song << 8);
+            send midi_out ev;
+         }
+      }
+   }
+}

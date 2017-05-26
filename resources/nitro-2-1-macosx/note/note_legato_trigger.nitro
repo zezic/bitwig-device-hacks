@@ -1,0 +1,50 @@
+component note_legato_trigger
+{   
+   @name "Note In"
+   event_inport NoteEvent in
+   {
+      if (in.type == in.NOTE_ON)
+      {
+         if (!keymask[in.key])
+         {
+            keymask[in.key] = true;
+            count++;
+         }
+
+         if (count == 1)
+         {
+            NoteTriggerEvent e;
+            e.gate = 1;
+            e.key = in.key.i8;
+            e.velocity = (in.v * 127.0).i8;
+            send out e;
+         }
+      }
+      else if (in.type == in.NOTE_OFF)
+      {
+         if (keymask[in.key])
+         {
+            keymask[in.key] = false;
+            count--;
+         }
+
+         if (count == 0)
+         {
+            NoteTriggerEvent e;
+            e.gate = 0;
+            e.key = in.key.i8;
+            e.velocity = (in.v * 127.0).i8;
+            send out e;
+         }
+      }
+   }
+
+   event_outport NoteTriggerEvent out;
+
+   bool[128] keymask;
+   i32 count;
+
+   process
+   {
+   }
+}

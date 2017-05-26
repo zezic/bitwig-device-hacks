@@ -1,0 +1,7 @@
+component note_merge
+{
+   event_inport NoteEvent in0 { send out in0; }
+   event_inport NoteEvent in1 { send out in1; }
+
+   event_outport NoteEvent out;
+}

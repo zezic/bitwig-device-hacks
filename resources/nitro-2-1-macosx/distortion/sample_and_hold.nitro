@@ -1,0 +1,23 @@
+component sample_and_hold
+{
+   audio_inport f32 in;
+   audio_outport f32 out;
+   event_inport void trigger
+   {
+      do_trigger = true;
+   }
+
+   bool do_trigger = false;
+   f32 sample = 0;
+
+   process
+   {
+      if (do_trigger)
+      {
+         sample = in;
+         do_trigger = false;
+      }
+
+      out = sample;
+   }
+}

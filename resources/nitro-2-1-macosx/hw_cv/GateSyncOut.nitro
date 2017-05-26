@@ -1,0 +1,278 @@
+
+const i32 MODE_SYNC=0;
+const i32 MODE_PLAY=1;
+const i32 MODE_STOP=2;
+const i32 MODE_NOTE=3;
+const i32 MODE_OFF=4;
+
+const i32 RATE_1_96=0;
+const i32 RATE_1_64=1;
+const i32 RATE_1_48=2;
+const i32 RATE_1_32=3;
+const i32 RATE_1_24=4;
+const i32 RATE_1_16=5;
+const i32 RATE_1_12=6;
+const i32 RATE_1_8=7;
+const i32 RATE_1_6=8;
+const i32 RATE_1_4=9;
+const i32 RATE_1_3=10;
+const i32 RATE_1_2=11;
+const i32 RATE_1=12;
+const i32 RATE_2=13;
+const i32 RATE_4=14;
+const i32 RATE_8=15;
+
+const i32 PULSE_0_5_ms=0;
+const i32 PULSE_1_ms=1;
+const i32 PULSE_5_ms=2;
+const i32 PULSE_10_ms=3;
+const i32 PULSE_50=4;
+
+f32 getRateMultiplier(i32 rate)
+{
+   switch (rate)
+   {
+   case RATE_1_4:  return 1;
+   case RATE_1_8:  return 2;
+   case RATE_1_16: return 4;
+   case RATE_1_32: return 8;
+   case RATE_1_64: return 16;
+   case RATE_1_2:  return 0.5;
+   case RATE_1:    return 1.0/4.0;
+   case RATE_2:    return 1.0/8.0;
+   case RATE_4:    return 1.0/16.0;
+   case RATE_8:    return 1.0/32.0;
+   case RATE_1_3:  return 3.0/4.0;
+   case RATE_1_6:  return 3.0/2.0;
+   case RATE_1_12: return 3.0/1.0;
+   case RATE_1_24: return 6.0/1.0;
+   case RATE_1_48: return 12.0/1.0;
+   case RATE_1_96: return 24.0/1.0;
+   default:        return 1;
+   }
+}
+
+f32 getPulseMs(i32 pulse)
+{
+   if (pulse == PULSE_0_5_ms) return 0.5;
+   else if (pulse == PULSE_1_ms) return 1;
+   else if (pulse == PULSE_5_ms) return 5;
+   else if (pulse == PULSE_10_ms) return 10;
+   else if (pulse == PULSE_50) return 5; // fallback for manual reset button
+   return 0;
+}
+
+i32 calcPulseLength(i32 mode, i32 rateCount, i32 rateUnit, i32 pulse)
+{
+   f32 pulseMs = getPulseMs(pulse);
+
+   return (pulseMs * EC.samplerate * 0.001).i32;
+}
+
+struct channel
+{
+   bool gate = false;
+   i32 framesLeft = 0;
+   f32 lastPhase = 0;
+
+   void trigger(i32 frames)
+   {
+      gate = true;
+      framesLeft = frames;
+   }
+
+   f32 calcPhase(f32 beatTime, i32 rateCount, i32 rateUnit)
+   {
+      f32 btMul = beatTime * getRateMultiplier(rateUnit) / rateCount.f32;
+      f32 phase = btMul - floor(btMul);
+      return phase;
+   }
+
+   f32 proc(bool isPlaying, f32 beatTime, i32 mode, i32 rateCount, i32 rateUnit, i32 pulse, bool noteGate, bool gateMaster, bool didStart)
+   {
+      f32 phase = this.calcPhase(beatTime, rateCount, rateUnit);
+
+      if (mode == MODE_SYNC || gateMaster && (mode == MODE_OFF))
+      {
+         if (pulse == PULSE_50)
+         {
+            if (!gate)
+            {
+               return (phase < 0.5) && isPlaying ? 1 : 0;
+            }
+         }
+         else
+         {
+            f32 THRESHOLD = 0.25;
+            f32 START_THRESHOLD = 0.0001;
+
+            if (didStart ? (phase < START_THRESHOLD) : (phase < THRESHOLD && lastPhase > THRESHOLD))
+            {
+               this.trigger(calcPulseLength(mode, rateCount, rateUnit, pulse));
+            }
+         }
+      }
+      else if (mode == MODE_NOTE)
+      {
+         if (!gate)
+         {
+            return noteGate ? 1 : 0;
+         }
+      } 
+
+      lastPhase = phase;
+
+      if (framesLeft > 0)
+      {
+         framesLeft--;
+      }
+      else if (framesLeft == 0)
+      {
+         gate = false;
+      }
+      return (gate && mode != MODE_OFF) ? 1 : 0;
+   }
+}
+
+@no_audio_optim
+component GateSyncOut
+{
+   event_inport NoteEvent noteIn
+   {
+      switch (noteIn.type)
+      {
+      case noteIn.NOTE_ON: noteGate = true;
+      case noteIn.NOTE_OFF: noteGate = false;
+      }
+   }
+
+   value_inport bool isPlaying;
+   value_inport bool isWithinPreRoll;
+   audio_inport f32 beat;
+   audio_inport f32 beatsPerFrame;
+   audio_inport f32 beatWithShuffle;
+   value_inport bool useShuffle;
+   value_inport i32 modeL;
+   value_inport i32 modeR;
+
+   value_inport i32 rateCountL;
+   value_inport i32 rateCountR;
+   value_inport i32 rateUnitL;
+   value_inport i32 rateUnitR;
+   value_inport i32 pulseL;
+   value_inport i32 pulseR;
+
+
+   i32 getMode(i32 id)
+   {
+      return (id == 0) ? modeL : modeR;
+   }
+
+   i32 getRateUnit(i32 id)
+   {
+      return (id == 0) ? rateUnitL : rateUnitR;
+   }
+
+   i32 getRateCount(i32 id)
+   {
+      return (id == 0) ? rateCountL : rateCountR;
+   }
+
+   i32 getPulse(i32 id)
+   {
+      return (id == 0) ? pulseL : pulseR;
+   }
+
+   event_inport void triggerL
+   {
+      ch[0].trigger(calcPulseLength(modeL, rateCountL, rateUnitL, pulseL));
+   }
+   event_inport void triggerR
+   {
+      ch[1].trigger(calcPulseLength(modeR, rateCountR, rateUnitR, pulseR));
+   }
+
+   audio_inport f32 offset;
+   value_inport bool shouldGateClockFromReset;
+
+   audio_outport out;
+   audio_outport[2] f32 ledOut;
+
+   channel[2] ch;
+
+   i32 wasPlaying = 0;
+
+   bool noteGate;
+   bool clockGate = false;
+   bool wasPlayingNoPreroll = false;
+
+   i32[2] ledOnHold;
+
+   process
+   {
+      f32 beatTime = useShuffle ? beatWithShuffle : beat;
+      beatTime += offset * beatsPerFrame * EC.samplerate;
+      bool isPlayingNoPreRoll = !isWithinPreRoll && isPlaying;
+      i32 playing = isPlayingNoPreRoll ? 1 : 0;
+
+      bool didStart = isPlaying && !wasPlayingNoPreroll;
+
+      wasPlayingNoPreroll = isPlaying;
+
+      if (wasPlaying != playing)
+      {
+         for (i32 i = 0; i < 2; i++)
+         {
+            i32 mode = getMode(i);
+
+            if (mode == MODE_PLAY && isPlayingNoPreRoll || mode == MODE_STOP && !isPlaying)
+            {
+               ch[i].trigger(calcPulseLength(mode, getRateCount(i), getRateUnit(i), getPulse(i)));
+            }
+         }
+      }
+
+      f32<> result = 0;
+
+      result[1] = ch[1].proc(isPlayingNoPreRoll, beatTime, getMode(1), getRateCount(1), getRateUnit(1), getPulse(1), noteGate, shouldGateClockFromReset, didStart);
+
+      if (!shouldGateClockFromReset || (modeR >= 1 && modeR <= 3))
+      {
+         clockGate = true;
+      }
+      else if (isPlaying)
+      {
+         if (!clockGate && ch[1].gate)
+         {
+            clockGate = true;
+         }
+      }
+      else
+      {
+         clockGate = false;
+      }
+
+      result[0] = ch[0].proc(isPlayingNoPreRoll, beatTime, getMode(0), getRateCount(0), getRateUnit(0), getPulse(0), noteGate, false, didStart);
+      if (!clockGate)
+      {
+         result[0] = 0;
+      }
+
+      for (i32 i = 0; i < 2; i++)
+      {
+         if (result[i] > 0.5)
+         {
+            ledOnHold[i] = EC.samplerate / 150;
+         }
+         else if (ledOnHold[i] > 0)
+         {
+            ledOnHold[i]--;
+         }
+         ledOut[i] = (ledOnHold[i] > 0) ? 1 : 0;
+      }
+
+      out = result;
+
+      wasPlaying = playing;
+   }
+}

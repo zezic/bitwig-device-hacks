@@ -1,0 +1,16 @@
+import "svf";
+
+component bandpass
+{
+   audio_inport in;
+   audio_inport f32 freq;
+   audio_inport f32 resonance;
+   audio_outport out;
+
+   SVF!<typename f32<2> > filter;
+
+   process
+   {
+      out = filter.calc(in, filter.BP2, freq, resonance);
+   }
+}

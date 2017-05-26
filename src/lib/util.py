@@ -109,5 +109,5 @@ def parse_bitwig_device(device_data):
 
 def serialize_bitwig_device(device):
     return (device['header'] + '\n\n'
-        + util.json_encode(device['meta']) + '\n\n'
-        + util.json_encode(device['contents']) + '\n')
+        + json_encode(device['meta']) + '\n\n'
+        + json_encode(device['contents']) + '\n')

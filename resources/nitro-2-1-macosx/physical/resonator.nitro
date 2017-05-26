@@ -1,0 +1,40 @@
+component resonator
+{
+   audio_inport in;
+   audio_outport out;
+
+   audio_inport f32 freq;
+   audio_inport f32 feedback;
+
+   f32<EC.channels>[EC.samplerate] data;
+   i32 index = 0;
+
+   init
+   {  
+      for (i32 i = 0; i < data.length; ++i)
+         data[i] = 0;
+   }
+
+   process
+   {
+      f32 dt = freq * EC.samplerate;
+      i32 delayTime = dt.i32;
+      i32 taps = delayTime / 23;
+
+      f32<EC.channels> sum = 0;
+
+      if (taps < 1) taps = 1;
+
+      for(i32 i=0; i<taps; i++)
+      {
+         i32 readPos = index - delayTime - i;
+         if (readPos < 0) readPos = readPos + data.length;
+         sum = sum + data[readPos];
+      }
+
+      out = sum / taps.f32;
+      data[index] = in + out * feedback;
+
+      index = (index + 1) % data.length;
+   }
+}

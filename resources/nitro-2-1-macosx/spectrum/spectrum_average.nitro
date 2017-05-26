@@ -1,0 +1,46 @@
+component spectrum_average
+{
+   event_inport f32[EC.fftsize * 2 + 2] in
+   {
+      send_emplace out v
+      {
+         for (i32 b = 0; b < EC.fftsize + 1; b++)
+         {
+            f32 r = in[real(b)];
+            f32 i = in[imag(b)];
+            f32 p = r * r + i * i;
+
+            avg[b] = (averaging) * avg[b] + (1 - averaging) * p;
+
+            /* for now this v is a pointer and needs to be unref with [0]. */
+            v[0][real(b)] = sqrt(avg[b]);
+            v[0][imag(b)] = 0;
+         }
+      }
+   }
+
+   audio_inport f32 averaging;
+   event_outport f32[EC.fftsize * 2 + 2] out;
+
+   f32[EC.fftsize + 1] avg;
+
+   init
+   {
+      for (i32 b = 0; b < EC.fftsize + 1; b++)
+         avg[b] = 0;
+   }
+
+   i32 real(i32 b)
+   {
+      return 2 * b;
+   }
+
+   i32 imag(i32 b)
+   {
+      return 2 * b + 1;
+   }
+
+   process
+   {
+   }
+}

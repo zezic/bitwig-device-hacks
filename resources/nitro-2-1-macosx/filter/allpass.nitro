@@ -1,0 +1,24 @@
+@desc "One-pole allpass filter"
+component allpass
+{
+   audio_inport in;
+   audio_inport freq;
+
+   audio_outport out;
+
+   f32<EC.channels> r0 = 0;
+   f32<EC.channels> r1 = 0;
+
+   process
+   {
+      f32<EC.channels> angle = PI * (freq / EC.samplerate);
+      f32<EC.channels> g = sin(angle) / cos(angle);
+      f32<EC.channels> b0 = (g-1)/(g+1);
+      f32<EC.channels> b1 = 1;
+      f32<EC.channels> a1 = b0;
+
+      // Transposed Direct Form II
+      out = in * b0 + this.r0;
+      this.r0 = in * b1 - a1 * out;
+   }
+}

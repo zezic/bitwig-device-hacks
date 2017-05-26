@@ -1,0 +1,26 @@
+component bpm_mod
+{
+   audio_inport f32 beats;
+   audio_inport f32 beats_per_frame;
+
+   audio_outport f32 beats_out;
+   audio_outport f32 beats_per_frame_out;
+
+   value_inport bool host_sync;
+
+   audio_inport f32 rate;
+   audio_inport f32 custom_bpm;
+
+   process
+   {
+      f32 m = 1;
+
+      if (!host_sync)
+      {
+         m = custom_bpm / (beats_per_frame * EC.samplerate * 60);
+      }
+
+      beats_out = beats * m * rate;
+      beats_per_frame_out = beats_per_frame * m * rate;
+   }
+}

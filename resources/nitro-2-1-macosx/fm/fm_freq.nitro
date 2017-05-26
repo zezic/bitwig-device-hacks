@@ -1,0 +1,14 @@
+component fm_freq
+{
+   audio_inport f32 freq;
+   value_inport i32 ratio_num;
+   value_inport i32 ratio_denom;
+   audio_inport f32 freq_offset;
+
+   audio_outport f32 freq_out;
+
+   process
+   {
+      freq_out = freq * ratio_num.f32 / ratio_denom.f32 + freq_offset;
+   }
+}

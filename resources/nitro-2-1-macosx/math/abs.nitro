@@ -1,0 +1,13 @@
+@icon "abs.svg"
+component abs
+{
+   const i32 N = 1;
+   audio_inport[N] in;
+   audio_outport[N] out;
+
+   process
+   {
+      for (i32 i = 0; i < N; ++i)
+         out[i] = fabs(in[i]);
+   }
+}

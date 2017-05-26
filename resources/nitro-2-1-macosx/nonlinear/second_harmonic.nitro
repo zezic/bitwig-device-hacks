@@ -1,0 +1,11 @@
+component second_harmonic
+{
+   audio_inport in;
+   audio_inport f32 amount;
+   audio_outport out;
+
+   process
+   {
+      out = sin(PI * fabs(in)) * amount + (1-amount) * in;
+   }
+}

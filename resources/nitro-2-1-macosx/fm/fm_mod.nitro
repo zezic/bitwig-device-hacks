@@ -1,0 +1,34 @@
+component fm_mod
+{
+   value_inport i32 mod_range
+   {
+      switch (mod_range)
+      {
+         case 0:
+         mod_max = 0.5;
+         break;
+
+         case 1:
+         mod_max = 2;
+         break;
+
+         case 2:
+         mod_max = 16;
+         break;
+
+         default:
+         mod_max = 1;
+         break;
+      }
+   }
+
+   audio_inport f32 mod;
+   audio_outport f32 mod_out;
+
+   f32 mod_max = 1;
+
+   process
+   {
+      mod_out = mod_max * mod;
+   }
+}

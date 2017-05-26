@@ -1,0 +1,29 @@
+component quantize
+{
+   audio_inport f32 in;
+   audio_inport f32 q;
+   value_inport i32 mode;
+   audio_outport f32 out;
+
+   const i32 LINEAR_MODE = 0;
+   const i32 LOG_MODE = 1;
+   const i32 EXP_MODE = 2;
+
+   process
+   {
+      switch (mode)
+      {
+      case LINEAR_MODE:
+         out = trunc(in * q) / q;
+         break;
+
+      case LOG_MODE:
+         out = copysign(exp(trunc(q * log(fabs(in))) / q), in);
+         break;
+
+      case EXP_MODE:
+         out = copysign(log(trunc(q * exp(fabs(in))) / q), in);
+         break;
+      }
+   }
+}

@@ -1,0 +1,14 @@
+@icon "multiply.svg"
+component multiply
+{
+   const i32 N = 2;
+   audio_inport[N] in;
+   audio_outport out;
+
+   process
+   {
+      out = 1;
+      for (i32 i = 0; i < N; ++i)
+         out *= in[i];
+   }
+}

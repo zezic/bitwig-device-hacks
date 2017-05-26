@@ -1,0 +1,61 @@
+component ADSR
+{
+   event_inport NoteTriggerEvent trigger
+   {
+      if (trigger.gate != 0)
+      {
+         send outGate true;
+         gate = true;
+         discharge = false;
+      }
+      else
+      {
+         gate = false;
+      }
+   }
+
+   audio_inport f32 attack;
+   audio_inport f32 decay;
+   audio_inport f32 release;
+   audio_inport f32 sustain;
+
+   audio_outport f32 out;
+   value_outport bool outGate = false;
+
+   const f32 vcc = 1.5;
+   f32 v;
+   f32 v_delayed;
+   bool discharge;
+   bool gate;
+   bool lastOutGate;
+
+   f32 calculateCoefficient(f32 time, i32 index)
+   {
+      f32 shortest = 6;
+      f32 longest = -2;
+      f32 offset = -log(EC.samplerate).f32;
+
+      return exp(time * (longest - shortest) + offset + shortest);
+   }
+
+   process
+   {
+      f32 attackCoeff = calculateCoefficient(attack, 0);
+      f32 decayCoeff = calculateCoefficient(decay, 1);
+      f32 releaseCoeff = calculateCoefficient(release, 2);
+
+      out = 1;
+      discharge = gate && (discharge || v_delayed > 1);
+      v_delayed = v;
+
+      f32 dv_a = fmax(0, ((!discharge && gate) ? vcc : 0) - v);
+      f32 dv_d = fmin(0, (discharge ? (sustain * sustain) : vcc) - v);
+      f32 dv_r = fmin(0, (gate ? vcc : 0) - v);
+
+      v += dv_a * attackCoeff;
+      v += dv_d * decayCoeff;
+      v += dv_r * releaseCoeff;
+
+      out = v;
+   }
+}

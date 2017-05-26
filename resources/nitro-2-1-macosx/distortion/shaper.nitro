@@ -1,0 +1,57 @@
+component shaper
+{
+   audio_inport in;
+   audio_inport f32 drive;
+   value_inport i32 mode;
+   audio_outport out;
+
+   process
+   {
+      // TODO only switch mode on ZC
+      if (mode == 1) // SIN
+      {
+         //out = sin(in * (1 + 16 * drive * drive));
+         out = (1-drive * drive * drive) * in + cos(in * drive * 4);
+      }
+      else if (mode == 2) // RECTIFY
+      {
+         out = in * (1-drive) + 2 * drive * fabs(in);
+      }
+      else if (mode == 3) // DIODE
+      {
+         f32<> level = -2 + 4 * drive;
+         f32<> zero = 0;
+         out = fmax(in, level) - fmax(level, zero);
+      }
+      else if (mode == 4) // SOFTCLIP
+      {
+         f32<> lo = -1.139;
+         f32<> hi = 1.139;
+         f32<> a = -1.0/3.0;
+         f32<> b = 2.0/15.0;
+         f32<> c = -17.0/315.0;
+         f32<> x = fmax(fmin(in * (1 + 4 * drive), hi), lo);
+         f32<> xx1 = x * x;
+         f32<> y1 = 1 - a * xx1;
+         f32<> xxxx1 = xx1 * xx1;
+         y1 += b * xxxx1;
+         y1 += c * xxxx1 * xx1;
+         out = y1 * x;
+      }
+      else if (mode == 5) // HARDCLIP
+      {
+         f32 d = 2 * drive * drive;
+         f32<> lo = -2 + 0.6 * d;
+         f32<> hi = 2 - 0.4 * d;
+         out = fmin(fmax(in*(1 + 2 * d), lo), hi);
+      }
+      else if (mode == 6) // 2ND
+      {
+         out = sin(PI * fabs(in)) * drive + (1-drive) * in;
+      }
+      else
+      {
+         out = in;
+      }
+   }
+}

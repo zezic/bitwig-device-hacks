@@ -1,0 +1,317 @@
+component clipper
+{
+   audio_inport in;
+
+   audio_inport f32 drive;
+
+   value_inport i32 model;
+
+   audio_inport f32 asymmetry;
+
+   audio_inport f32 sagDepth;
+
+   audio_inport f32 outGain;
+
+   value_inport bool stereo;
+
+   const i32 MODEL_ANA = 0;
+   const i32 MODEL_CLASSA = 1;
+   const i32 MODEL_CLASSAB = 2;
+   const i32 MODEL_DIGI = 3;
+   const i32 MODEL_SINES = 4;
+   const i32 MODEL_FOLDA = 5;
+   const i32 MODEL_FOLDB = 6;
+   const i32 MODEL_FOLDC = 7;
+
+   audio_outport out;
+   audio_outport f32 sagOut;
+
+   const i32 OVERSAMPLING = 8;
+
+   const i32 M = 24;
+   f32<8>[M] LP_D8_COEFFS;
+   f32<8>[2][M] yd;
+   f32[2][M] xd;
+   bool lastStereo;
+
+   i32 index = 0;
+
+   init
+   {
+      for(i32 i=0; i<M; i++)
+      {
+         xd[i][0] = 0;
+         yd[i][0] = 0;
+         xd[i][1] = 0;
+         yd[i][1] = 0;
+      }
+
+      LP_D8_COEFFS[0] = <-0.000002, 0.000012, 0.000026, 0.000049, 0.000084, 0.000131, 0.000190, 0.000261>;
+      LP_D8_COEFFS[1] = <0.000341, 0.000423, 0.000503, 0.000571, 0.000618, 0.000634, 0.000612, 0.000545>;
+      LP_D8_COEFFS[2] = <0.000431, 0.000272, 0.000074, -0.000148, -0.000379, -0.000595, -0.000774, -0.000892>;
+      LP_D8_COEFFS[3] = <-0.000929, -0.000871, -0.000711, -0.000453, -0.000115, 0.000278, 0.000689, 0.001074>;
+      LP_D8_COEFFS[4] = <0.001387, 0.001584, 0.001628, 0.001495, 0.001181, 0.000698, 0.000081, -0.000616>;
+      LP_D8_COEFFS[5] = <-0.001322, -0.001958, -0.002445, -0.002710, -0.002698, -0.002379, -0.001757, -0.000870>;
+      LP_D8_COEFFS[6] = <0.000210, 0.001380, 0.002516, 0.003485, 0.004159, 0.004428, 0.004221, 0.003511>;
+      LP_D8_COEFFS[7] = <0.002328, 0.000757, -0.001061, -0.002945, -0.004686, -0.006068, -0.006898, -0.007023>;
+      LP_D8_COEFFS[8] = <-0.006353, -0.004882, -0.002692, 0.000043, 0.003070, 0.006076, 0.008715, 0.010645>;
+      LP_D8_COEFFS[9] = <0.011564, 0.011248, 0.009585, 0.006595, 0.002451, -0.002532, -0.007904, -0.013117>;
+      LP_D8_COEFFS[10] = <-0.017563, -0.020628, -0.021745, -0.020456, -0.016456, -0.009633, -0.000096, 0.011823>;
+      LP_D8_COEFFS[11] = <0.025582, 0.040460, 0.055608, 0.070108, 0.083049, 0.093591, 0.101038, 0.104892>;
+      LP_D8_COEFFS[12] = <0.104892, 0.101038, 0.093591, 0.083049, 0.070108, 0.055608, 0.040460, 0.025582>;
+      LP_D8_COEFFS[13] = <0.011823, -0.000096, -0.009633, -0.016456, -0.020456, -0.021745, -0.020628, -0.017563>;
+      LP_D8_COEFFS[14] = <-0.013117, -0.007904, -0.002532, 0.002451, 0.006595, 0.009585, 0.011248, 0.011564>;
+      LP_D8_COEFFS[15] = <0.010645, 0.008715, 0.006076, 0.003070, 0.000043, -0.002692, -0.004882, -0.006353>;
+      LP_D8_COEFFS[16] = <-0.007023, -0.006898, -0.006068, -0.004686, -0.002945, -0.001061, 0.000757, 0.002328>;
+      LP_D8_COEFFS[17] = <0.003511, 0.004221, 0.004428, 0.004159, 0.003485, 0.002516, 0.001380, 0.000210>;
+      LP_D8_COEFFS[18] = <-0.000870, -0.001757, -0.002379, -0.002698, -0.002710, -0.002445, -0.001958, -0.001322>;
+      LP_D8_COEFFS[19] = <-0.000616, 0.000081, 0.000698, 0.001181, 0.001495, 0.001628, 0.001584, 0.001387>;
+      LP_D8_COEFFS[20] = <0.001074, 0.000689, 0.000278, -0.000115, -0.000453, -0.000711, -0.000871, -0.000929>;
+      LP_D8_COEFFS[21] = <-0.000892, -0.000774, -0.000595, -0.000379, -0.000148, 0.000074, 0.000272, 0.000431>;
+      LP_D8_COEFFS[22] = <0.000545, 0.000612, 0.000634, 0.000618, 0.000571, 0.000503, 0.000423, 0.000341>;
+      LP_D8_COEFFS[23] = <0.000261, 0.000190, 0.000131, 0.000084, 0.000049, 0.000026, 0.000012, -0.000002>;
+   }
+
+   f32<8> clipAna(f32<8> x, f32 drive, f32 asym)
+   {
+      x *= drive*2;
+      if (asym != 0)
+      {
+         f32<8> half = 0.5;
+         f32<8> one = 2;
+         f32<8> g = fmax(half, 4 * (1 + copysign(one,x)*asym));
+         return copysign((1 - exp(-fabs(x*g)))/g, x);
+      }
+      else
+      {
+         f32<8> g = 4;
+         return copysign((1 - exp(-fabs(x*g)))/g, x);
+      }
+   }
+
+   f32<8> clipDigi(f32<8> x, f32 drive, f32 asym)
+   {
+      f32<8> hi = 1;
+      f32<8> zero = 0;
+      f32<8> lo = -1;
+
+      x *= drive;
+      //      f32<8> y = (1-asym)*fabs(x) + asym*sqrt(fabs(x));
+      //      f32<8> z = 0.25 * round(y*4);
+      //      z = copysign((1-asym)*z + asym*z*z, x);
+      f32 bias = 8*(1-asym);
+      f32<8> y = sqrt(fabs(x));
+      f32<8> z = pow(0.5,bias) * round(y*pow(2,bias));
+      z = copysign(z*z, x);
+      return fmax(lo, fmin(z, hi));
+   }
+
+   f32<8> clipClassAFunc(f32<8> x)
+   {
+      f32<8> hi = 2;
+      f32<8> zero = 0;
+      f32<8> a = 0.00223;
+
+      f32<8> y = fmax(zero, x);
+      y = fmin(hi, y*y);
+      return y * (1 - a * (y * y) * (y * y) * (y * y));
+   }
+
+   f32<8> clipClassA(f32<8> x, f32 drive, f32 asym)
+   {
+      x *= drive;
+
+      f32<8> bias = 1.6 * asym;
+
+      return clipClassAFunc(x+bias) - clipClassAFunc(bias);
+   }
+
+   f32<8> clipClassAB(f32<8> x, f32 drive, f32 asym)
+   {
+      /*f32<8> hi = 1.5;
+      f32<8> zero = 0;
+      f32<8> lo = -1.5;
+      f32<8> a = 0.14816;
+
+      f32<8> x0 = asym;
+      x *= drive;
+
+      f32<8> y0 = fmax(zero, x + x0);
+      f32<8> y1 = fmax(zero, -x + x0);
+
+      f32<8> y = y0 * y0 - y1 * y1;
+
+      return fmax(lo, fmin(y*(1-a*y*y), hi));*/
+
+      x *= drive;
+
+      f32<8> bias = 2 * asym - 0.4;
+
+      return 0.5 * (clipClassAFunc(bias+x) - clipClassAFunc(bias-x));
+   }
+
+   f32<8> clipSines(f32<8> x, f32 drive, f32 asym)
+   {
+      f32<8> zero = 1-asym;
+      x *= drive; 
+      return 0.5*sin(2*x*(1+asym*fabs(x)));
+   }
+
+   f32<8> clipFoldA(f32<8> x, f32 drive, f32 asym)
+   {
+      x *= drive;
+
+      f32<8> bias = 1.6 * asym;
+
+      f32<8> y = clipClassAFunc(x+bias) - clipClassAFunc(bias);
+      f32<8> zero = 0;
+      f32<8> xm = fmax(zero, x);
+      return y / (1 + (xm*xm)*(xm*xm));
+   }
+
+   f32<8> clipFoldB(f32<8> x, f32 drive, f32 asym)
+   {
+      x *= drive;
+
+      f32<8> bias = 1.6 * asym;
+
+      f32<8> y = clipClassAFunc(x+bias) - clipClassAFunc(bias);
+      f32<8> zero = 0;
+      f32<8> xm = fmin(zero, x);
+      return y / (1 + (xm*xm)*(xm*xm));
+   }
+
+   f32<8> clipFoldC(f32<8> x, f32 drive, f32 asym)
+   {
+      x *= drive;
+
+      f32<8> bias = 1.6 * asym;
+
+      f32<8> y = clipClassAFunc(x+bias) - clipClassAFunc(bias);
+      return y / (1 + (x*x)*(x*x));
+   }
+
+   f32 phase = 0;
+
+   f32 power = 1;
+
+   f32<8> ringtestfunc(f32<8> x)
+   {
+      return x + x * x;
+   }
+
+   f32<8> flip(f32<8> x)
+   {
+      f32<8> y = 0;
+      for(i32 i=0; i<8; i++)
+      {
+         y[i] = x[7 - i];
+      }
+      return y;
+   }
+
+   process
+   {
+      f32<> xi = in * power;
+      f32<> xo = 0;
+
+      i32 channels = stereo ? 2 : 1;
+
+      if (stereo && !lastStereo)
+      {
+         for(i32 i=0; i<M; i++)
+         {
+            xd[i][1] = xd[i][0];
+            yd[i][1] = yd[i][0];
+         }
+      }
+
+      lastStereo = stereo;
+
+      for(i32 ch=0; ch<channels; ch++)
+      {
+         xd[index][ch] = xi[ch];
+
+         f32<8> xv = LP_D8_COEFFS[0] * xi[ch];
+
+         for(i32 i=1; i<M; i++)
+         {
+            i32 ii = index - i;
+            if (ii < 0) ii += M;
+
+            xv += LP_D8_COEFFS[i] * xd[ii][ch];
+         }
+
+         f32<8> y;
+
+         if (model == MODEL_ANA)
+         {
+            y = clipAna(xv, drive, asymmetry);
+         }
+         else if (model == MODEL_DIGI)
+         {
+            y = clipDigi(xv, drive, asymmetry);
+         }
+         else if (model == MODEL_CLASSA)
+         {
+            y = clipClassA(xv, drive, asymmetry);
+         }
+         else if (model == MODEL_CLASSAB)
+         {
+            y = clipClassAB(xv, drive, asymmetry);
+         }
+         else if (model == MODEL_SINES)
+         {
+            y = clipSines(xv, drive, asymmetry);
+         }
+         else if (model == MODEL_FOLDA)
+         {
+            y = clipFoldA(xv, drive, asymmetry);
+         }
+         else if (model == MODEL_FOLDB)
+         {
+            y = clipFoldB(xv, drive, asymmetry);
+         }
+         else if (model == MODEL_FOLDC)
+         {
+            y = clipFoldC(xv, drive, asymmetry);
+         }
+
+         //f32<8> y = ringtestfunc(xv);
+         y = flip(y);
+
+         yd[index][ch] = y;
+
+         f32<8> ysum = y * LP_D8_COEFFS[0];
+
+         for(i32 i=1; i<M; i++)
+         {
+            i32 ii = index - i;
+            if (ii < 0) ii += M;
+
+            ysum += LP_D8_COEFFS[i] * yd[ii][ch];
+         }
+
+         ysum *= OVERSAMPLING.f32;
+
+         f32 r = 0.25 * (ysum[0] + ysum[1] + ysum[2] + ysum[3] + ysum[4] + ysum[5] + ysum[6] + ysum[7]);
+         xo[ch] = r;
+      }
+
+      if (!stereo)
+      {
+         xo[1] = xo[0];
+      }
+
+      f32 charge = 10.f32 / EC.samplerate;
+      f32 sum = stereo ? (xo[0] + xo[1]) * 0.5 : xo[0];
+      power = fmax(0, power - charge*sum*sum*sagDepth*sagDepth*10); 
+      power = fmin(1, power + charge);
+
+      out = 0.25 * xo * outGain;
+      sagOut = 1 - power;
+
+      index++;
+      if (index >= M) index = 0;
+   }
+}

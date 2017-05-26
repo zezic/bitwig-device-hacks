@@ -1,0 +1,421 @@
+struct ChordState
+{
+   bool is_active = false;
+   i8[7] keys;
+   i8    num_keys;
+}
+
+component multi_note
+{
+   /* which chords are currently active */
+   i8[128] active_chords;
+   i8      num_active;
+
+   /* Rembember which notes where started by the chord */
+   ChordState[128] chords;
+
+   /* tells which key started the note */
+   i8[128] triggered_by;
+
+   value_inport bool n1_enabled;
+   value_inport i32  n1_pitch_offset;
+   value_inport i32  n1_vel_offset;
+
+   value_inport bool n2_enabled;
+   value_inport i32  n2_pitch_offset;
+   value_inport i32  n2_vel_offset;
+
+   value_inport bool n3_enabled;
+   value_inport i32  n3_pitch_offset;
+   value_inport i32  n3_vel_offset;
+
+   value_inport bool n4_enabled;
+   value_inport i32  n4_pitch_offset;
+   value_inport i32  n4_vel_offset;
+
+   value_inport bool n5_enabled;
+   value_inport i32  n5_pitch_offset;
+   value_inport i32  n5_vel_offset;
+
+   value_inport bool n6_enabled;
+   value_inport i32  n6_pitch_offset;
+   value_inport i32  n6_vel_offset;
+
+   value_inport bool n7_enabled;
+   value_inport i32  n7_pitch_offset;
+   value_inport i32  n7_vel_offset;
+
+   event_outport NoteEvent note_out;
+
+   event_inport NoteEvent note_in
+   {
+      if (note_in.type == note_in.NOTE_ON)
+      {
+         // Check if the chord was already active
+         if (chords[note_in.key].is_active)
+         {
+            /* stop all the notes */
+            for (i8 i = 0; i < chords[note_in.key].num_keys; ++i)
+            {
+               i32 key = chords[note_in.key].keys[i].i32;
+               if (triggered_by[key] == note_in.key.i8)
+               {
+                  /* stop the note */
+                  NoteEvent note;
+                  note.type = note.NOTE_OFF;
+                  note.v = 0;
+                  note.key = key;
+                  send note_out note;
+
+                  triggered_by[key] = -1;
+               }
+            }
+         }
+         else
+         {
+            chords[note_in.key].is_active = true;
+            chords[note_in.key].num_keys = 0;
+            active_chords[num_active] = note_in.key.i8;
+            ++num_active;
+         }
+
+         if (n1_enabled)
+         {
+            /* prepare the note */
+            i32 key = note_in.key + n1_pitch_offset;
+            if (key > 127)
+                key = 127;
+            else if (key < 0)
+                key = 0;
+
+            /* prepare the velocity */
+            f32 velocity = note_in.v + n1_vel_offset.f32 / 127.0;
+            if (velocity > 1.0)
+               velocity = 1.0;
+            else if (velocity < 0)
+               velocity = 0;
+
+            if (triggered_by[key] >= 0)
+            {
+               /* send note off */
+               NoteEvent note;
+               note.type = note.NOTE_OFF;
+               note.key  = key;
+               note.v    = 0;
+               send note_out note;
+            }
+
+            /* send note on */
+            NoteEvent note;
+            note.type = note.NOTE_ON;
+            note.key  = key;
+            note.v    = velocity;
+            send note_out note;
+
+            /* keep track of played keys for this chord */
+            triggered_by[key] = note_in.key.i8;
+            chords[note_in.key].keys[chords[note_in.key].num_keys] = key.i8;
+            ++chords[note_in.key].num_keys;
+         }
+
+         if (n2_enabled)
+         {
+            /* prepare the note */
+            i32 key = note_in.key + n2_pitch_offset;
+            if (key > 127)
+                key = 127;
+            else if (key < 0)
+                key = 0;
+
+            /* prepare the velocity */
+            f32 velocity = note_in.v + n2_vel_offset.f32 / 127.0;
+            if (velocity > 1.0)
+               velocity = 1.0;
+            else if (velocity < 0)
+               velocity = 0;
+
+            if (triggered_by[key] >= 0)
+            {
+               /* send note off */
+               NoteEvent note;
+               note.type = note.NOTE_OFF;
+               note.key  = key;
+               note.v    = 0;
+               send note_out note;
+            }
+
+            /* send note on */
+            NoteEvent note;
+            note.type = note.NOTE_ON;
+            note.key  = key;
+            note.v    = velocity;
+            send note_out note;
+
+            /* keep track of played keys for this chord */
+            triggered_by[key] = note_in.key.i8;
+            chords[note_in.key].keys[chords[note_in.key].num_keys] = key.i8;
+            ++chords[note_in.key].num_keys;
+         }
+
+         if (n3_enabled)
+         {
+            /* prepare the note */
+            i32 key = note_in.key + n3_pitch_offset;
+            if (key > 127)
+                key = 127;
+            else if (key < 0)
+                key = 0;
+
+            /* prepare the velocity */
+            f32 velocity = note_in.v + n3_vel_offset.f32 / 127.0;
+            if (velocity > 1.0)
+               velocity = 1.0;
+            else if (velocity < 0)
+               velocity = 0;
+
+            if (triggered_by[key] >= 0)
+            {
+               /* send note off */
+               NoteEvent note;
+               note.type = note.NOTE_OFF;
+               note.key  = key;
+               note.v    = 0;
+               send note_out note;
+            }
+
+            /* send note on */
+            NoteEvent note;
+            note.type = note.NOTE_ON;
+            note.key  = key;
+            note.v    = velocity;
+            send note_out note;
+
+            /* keep track of played keys for this chord */
+            triggered_by[key] = note_in.key.i8;
+            chords[note_in.key].keys[chords[note_in.key].num_keys] = key.i8;
+            ++chords[note_in.key].num_keys;
+         }
+
+         if (n4_enabled)
+         {
+            /* prepare the note */
+            i32 key = note_in.key + n4_pitch_offset;
+            if (key > 127)
+                key = 127;
+            else if (key < 0)
+                key = 0;
+
+            /* prepare the velocity */
+            f32 velocity = note_in.v + n4_vel_offset.f32 / 127.0;
+            if (velocity > 1.0)
+               velocity = 1.0;
+            else if (velocity < 0)
+               velocity = 0;
+
+            if (triggered_by[key] >= 0)
+            {
+               /* send note off */
+               NoteEvent note;
+               note.type = note.NOTE_OFF;
+               note.key  = key;
+               note.v    = 0;
+               send note_out note;
+            }
+
+            /* send note on */
+            NoteEvent note;
+            note.type = note.NOTE_ON;
+            note.key  = key;
+            note.v    = velocity;
+            send note_out note;
+
+            /* keep track of played keys for this chord */
+            triggered_by[key] = note_in.key.i8;
+            chords[note_in.key].keys[chords[note_in.key].num_keys] = key.i8;
+            ++chords[note_in.key].num_keys;
+         }
+
+         if (n5_enabled)
+         {
+            /* prepare the note */
+            i32 key = note_in.key + n5_pitch_offset;
+            if (key > 127)
+                key = 127;
+            else if (key < 0)
+                key = 0;
+
+            /* prepare the velocity */
+            f32 velocity = note_in.v + n5_vel_offset.f32 / 127.0;
+            if (velocity > 1.0)
+               velocity = 1.0;
+            else if (velocity < 0)
+               velocity = 0;
+
+            if (triggered_by[key] >= 0)
+            {
+               /* send note off */
+               NoteEvent note;
+               note.type = note.NOTE_OFF;
+               note.key  = key;
+               note.v    = 0;
+               send note_out note;
+            }
+
+            /* send note on */
+            NoteEvent note;
+            note.type = note.NOTE_ON;
+            note.key  = key;
+            note.v    = velocity;
+            send note_out note;
+
+            /* keep track of played keys for this chord */
+            triggered_by[key] = note_in.key.i8;
+            chords[note_in.key].keys[chords[note_in.key].num_keys] = key.i8;
+            ++chords[note_in.key].num_keys;
+         }
+
+         if (n6_enabled)
+         {
+            /* prepare the note */
+            i32 key = note_in.key + n6_pitch_offset;
+            if (key > 127)
+                key = 127;
+            else if (key < 0)
+                key = 0;
+
+            /* prepare the velocity */
+            f32 velocity = note_in.v + n6_vel_offset.f32 / 127.0;
+            if (velocity > 1.0)
+               velocity = 1.0;
+            else if (velocity < 0)
+               velocity = 0;
+
+            if (triggered_by[key] >= 0)
+            {
+               /* send note off */
+               NoteEvent note;
+               note.type = note.NOTE_OFF;
+               note.key  = key;
+               note.v    = 0;
+               send note_out note;
+            }
+
+            /* send note on */
+            NoteEvent note;
+            note.type = note.NOTE_ON;
+            note.key  = key;
+            note.v    = velocity;
+            send note_out note;
+
+            /* keep track of played keys for this chord */
+            triggered_by[key] = note_in.key.i8;
+            chords[note_in.key].keys[chords[note_in.key].num_keys] = key.i8;
+            ++chords[note_in.key].num_keys;
+         }
+
+         if (n7_enabled)
+         {
+            /* prepare the note */
+            i32 key = note_in.key + n7_pitch_offset;
+            if (key > 127)
+                key = 127;
+            else if (key < 0)
+                key = 0;
+
+            /* prepare the velocity */
+            f32 velocity = note_in.v + n7_vel_offset.f32 / 127.0;
+            if (velocity > 1.0)
+               velocity = 1.0;
+            else if (velocity < 0)
+               velocity = 0;
+
+            if (triggered_by[key] >= 0)
+            {
+               /* send note off */
+               NoteEvent note;
+               note.type = note.NOTE_OFF;
+               note.key  = key;
+               note.v    = 0;
+               send note_out note;
+            }
+
+            /* send note on */
+            NoteEvent note;
+            note.type = note.NOTE_ON;
+            note.key  = key;
+            note.v    = velocity;
+            send note_out note;
+
+            /* keep track of played keys for this chord */
+            triggered_by[key] = note_in.key.i8;
+            chords[note_in.key].keys[chords[note_in.key].num_keys] = key.i8;
+            ++chords[note_in.key].num_keys;
+         }
+      }
+      else if (note_in.type == note_in.NOTE_OFF)
+      {
+         if (chords[note_in.key].is_active)
+         {
+            /* stop all the notes */
+            for (i8 i = 0; i < chords[note_in.key].num_keys; ++i)
+            {
+               i32 key = chords[note_in.key].keys[i].i32;
+               if (triggered_by[key] == note_in.key.i8)
+               {
+                  /* stop the note */
+                  NoteEvent note;
+                  note.type = note.NOTE_OFF;
+                  note.v = 0;
+                  note.key = key;
+                  send note_out note;
+
+                  triggered_by[key] = -1;
+               }
+            }
+
+            chords[note_in.key].is_active = false;
+            chords[note_in.key].num_keys = 0;
+
+            /* Update active chords */
+            for (i8 i = 0; i < num_active; ++i)
+            {
+               if (active_chords[i] != note_in.key.i8)
+                  continue;
+               if (i + 1 < num_active)
+                  active_chords[i] = active_chords[num_active - 1];
+               break;
+            }
+            --num_active;
+         }
+      }
+      else if ((note_in.type == note_in.PARAMETER_PRESSURE ||
+                note_in.type == note_in.PARAMETER_TRANSPOSE ||
+                note_in.type == note_in.PARAMETER_GAIN ||
+                note_in.type == note_in.PARAMETER_PAN ||
+                note_in.type == note_in.PARAMETER_TIMBRE) &&
+               chords[note_in.key].is_active)
+      {
+         /* send the event to all the notes */
+         for (i8 i = 0; i < chords[note_in.key].num_keys; ++i)
+         {
+            i32 key = chords[note_in.key].keys[i].i32;
+            if (triggered_by[key] == note_in.key.i8)
+            {
+               /* send the event */
+               NoteEvent note;
+               note = note_in;
+               note.key = key;
+               send note_out note;
+            }
+         }
+      }
+      else
+      {
+         send note_out note_in;
+      }
+   }
+
+   process
+   {
+   }
+}

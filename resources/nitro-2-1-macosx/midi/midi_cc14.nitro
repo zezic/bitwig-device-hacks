@@ -1,0 +1,56 @@
+component midi_cc14
+{
+   value_inport i32 channel;
+   value_inport i32 cc;
+   audio_inport f32 valF;
+   event_inport void flush
+   {
+      schedule_send = true;
+   }
+
+   event_outport NoteEvent out;
+
+   i32 last_val;
+   i32 sleep_samples;
+   bool schedule_send;
+
+   const i32 SLEEP_SAMPLES = (0.0015 * EC.samplerate).i32;
+
+   init
+   {
+      schedule_send = true;
+      last_val = -1;
+      sleep_samples = 0;
+   }
+
+   process
+   {
+      if (sleep_samples > 0)
+      {
+         --sleep_samples;
+      }
+      else
+      {
+         i32 val = valF.i32 & 0x3fff;
+
+         if (schedule_send || val != last_val)
+         {
+            last_val = val;
+            i32 val_msb = (val >> 7) & 0x7f;
+            i32 val_lsb = val & 0x7f;
+
+            NoteEvent e;
+            e.type = e.MIDI;
+            e.midi = 0xB0 | (channel - 1) | (cc << 8) | (val_msb << 16);
+            e.forcedChannel = (channel - 1);
+            send out e;
+
+            e.type = e.MIDI;
+            e.midi = 0xB0 | (channel - 1) | ((cc + 32) << 8) | (val_lsb << 16);
+            e.forcedChannel = (channel - 1);
+            send out e;
+            sleep_samples = 2 * SLEEP_SAMPLES;
+         }
+      }
+   }
+}

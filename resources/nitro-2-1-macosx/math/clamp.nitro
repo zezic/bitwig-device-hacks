@@ -1,0 +1,12 @@
+component clamp
+{
+   audio_inport in;
+   audio_inport minval;
+   audio_inport maxval;
+   audio_outport out;
+
+   process
+   {
+      out = fmin(maxval, fmax(in, minval));
+   }
+}

@@ -1,0 +1,28 @@
+component apply_velocity
+{   
+   @name "Audio"
+   audio_inport in;
+
+   @name "Note Trigger"
+   event_inport NoteTriggerEvent noteIn
+   {
+      if (noteIn.gate == 1 && noteIn.velocity > 0)
+      {
+         this.velocity = noteIn.velocity.f32 * (1.0 / 127.0);
+         this.gain = exp(-4*depth * (1 - this.velocity));
+      }
+   }
+
+   @name "Velocity Depth"
+   audio_inport f32 depth;
+
+   audio_outport out;
+
+   f32 velocity = 1.0;
+   f32 gain = 1.0;
+
+   process
+   {
+      out = in * gain;
+   }
+}

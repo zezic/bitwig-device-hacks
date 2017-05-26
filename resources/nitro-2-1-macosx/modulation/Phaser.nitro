@@ -1,0 +1,56 @@
+component phaser
+{
+   audio_inport in;
+   audio_inport freq;
+   audio_inport f32 feedback;
+   audio_inport f32 mix;
+   value_inport i32 poles;
+
+   audio_outport out;
+
+   f32<>[32] r0;
+
+   f32<> lastPoleOut = 0;
+
+   f32<> maxRate = 0.5;
+
+   init
+   {
+      for (i32 i = 0; i < this.r0.length; ++i)
+      {
+         this.r0[i] = 0;
+      }
+   }
+
+   f32<> clip(f32<> x)
+   {
+      f32<> lo = -1;
+      f32<> hi = 1;
+      return fmax(lo, fmin(x, hi));
+   }
+
+   process
+   {
+      f32<> angle = PI * fmin(maxRate, (freq / EC.samplerate));
+      f32<> g = sin(angle) / cos(angle);
+      f32<> b0 = (g-1)/(g+1);
+      f32<> b1 = 1;
+      f32<> a1 = b0;
+
+      // Transposed Direct Form II
+      f32<> poleIn = sqrt(1-fabs(feedback)) * in + feedback * this.lastPoleOut;
+      f32<> poleOut;
+      i32 np = poles <= 32 ? poles : 32;
+
+      for(i32 p=0; p<np; p++)
+      {
+         poleOut = poleIn * b0 + this.r0[p];
+         this.r0[p] = poleIn * b1 - a1 * poleOut;
+         poleIn = poleOut;
+      }
+
+      this.lastPoleOut = poleOut;
+
+      out = (mix * poleOut + (2-mix) * in) * 0.5;
+   }
+}

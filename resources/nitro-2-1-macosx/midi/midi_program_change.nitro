@@ -1,0 +1,162 @@
+@desc "Sends MIDI events to change the current program"
+component midi_program_change
+{
+   const i32 MAX_EVENT = 64;
+   const i32 SLEEP_SAMPLES = (0.0015 * EC.samplerate).i32;
+   i32  sleep_samples = 0;
+   bool schedule_send = false;
+   i32 decay_samples = 0;
+   f32 decay_ramp = 0;
+   f32 decay_val = 1;
+   NoteEvent[MAX_EVENT] event_buffer;
+   i32                  event_count = 0;
+
+   @name "Note"
+   event_outport NoteEvent midi_out;
+
+   @name "Enveloppe"
+   audio_outport f32 env_out;
+
+   i32 cached_program  = 0;
+
+   @name "Channel"
+   value_inport i32 channel;
+
+   @name "Bank MSB"
+   value_inport i32 bank_msb;
+
+   @name "Bank LSB"
+   value_inport i32 bank_lsb;
+
+   @name "Auto Load"
+   value_inport bool auto_load;
+
+   @name "Send Bank MSB"
+   value_inport bool send_bank_msb;
+
+   @name "Send Bank LSB"
+   value_inport bool send_bank_lsb;
+
+   @name "Program"
+   value_inport i32 program
+   {
+      if ((program - 1) != cached_program)
+      {
+         cached_program = (program - 1) & 0x7f;
+
+         if (auto_load)
+         {
+            schedule_send = true;
+            decay_samples = (decaySecs * EC.samplerate).i32;
+            decay_ramp = exp(- 5 * log(10.f32) / decay_samples.f32);
+            decay_val = 1;
+         }
+      }
+   }
+
+   @name "Load"
+   event_inport void load
+   {
+      schedule_send = true;
+      decay_samples = (decaySecs * EC.samplerate).i32;
+      decay_ramp = exp(- 5 * log(10.f32) / decay_samples.f32);
+      decay_val = 1;
+   }
+
+   value_inport bool antiClick
+   {
+      if (!antiClick && event_count > 0 && !schedule_send)
+      {
+         // send buffered events
+         for (i32 i = 0; i < event_count; ++i)
+         {
+            send midi_out event_buffer[i];
+         }
+         event_count = 0;
+      }
+   }
+
+   audio_inport f32  decaySecs;
+
+   /* The note has to be last because we want it to start with the new program */
+   @name "Note In"
+   event_inport NoteEvent in
+   {
+      if (schedule_send && antiClick && decay_samples > 0)
+      {
+         if (event_count < MAX_EVENT)
+         {
+            event_buffer[event_count] = in;
+            ++event_count;
+         }
+      }
+      else
+      {
+         send midi_out in;
+      }
+   }
+
+   init
+   {
+      sleep_samples = 0;
+      schedule_send = false;
+   }
+
+   process
+   {
+      env_out = 1;
+
+      if (sleep_samples > 0)
+      {
+         --sleep_samples;
+      }
+      else if (schedule_send)
+      {
+         if (antiClick && decay_samples > 0)
+         {
+            decay_val *= decay_ramp;
+            env_out = decay_val;
+            --decay_samples;
+         }
+         else
+         {
+            schedule_send = false;
+            sleep_samples = SLEEP_SAMPLES;
+
+            cached_program = (program - 1) & 0x7f;
+            i32 cached_channel = (channel -  1) & 0xf;
+            i32 cached_bank_msb = (bank_msb -  1) & 0x7f;
+            i32 cached_bank_lsb = (bank_lsb -  1) & 0x7f;
+
+            NoteEvent ev;
+            ev.type = ev.MIDI;
+            ev.forcedChannel = cached_channel;
+
+            // send the msb
+            if (send_bank_msb)
+            {
+               ev.midi = 0x00B0 | cached_channel | (cached_bank_msb << 16);
+               send midi_out ev;
+            }
+
+            // send the lsb
+            if (send_bank_lsb)
+            {
+               ev.midi = 0x20B0 | cached_channel | (cached_bank_lsb << 16);
+               send midi_out ev;
+            }
+
+            // send the program
+            ev.midi = 0xC0 | cached_channel | (cached_program << 8);
+            send midi_out ev;
+
+            // send buffered events
+            for (i32 i = 0; i < event_count; ++i)
+            {
+               send midi_out event_buffer[i];
+            }
+            event_count = 0;
+         }
+      }
+   }
+}

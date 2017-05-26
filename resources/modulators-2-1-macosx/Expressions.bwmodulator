@@ -1,0 +1,717 @@
+BtWg000100010085000015fc0000000000000000{
+	class : "meta",
+	object_id : 1,
+	data :
+	{
+		"application_version_name" : "none",
+		"branch" : "claes/future",
+		"comment" : "",
+		"creator" : "Bitwig",
+		"device_category" : "Control",
+		"device_description" : "Extracts polyphonic note-expressions.",
+		"device_id" : "modulator:dcacb71b-0f1a-4493-8916-bd460eee71d5",
+		"device_name" : "Expressions",
+		"device_uuid" : "dcacb71b-0f1a-4493-8916-bd460eee71d5",
+		"is_polyphonic" : false,
+		"revision_id" : "7babc0e1063f1d652038e01a6af747e8f3df440a",
+		"revision_no" : 49847,
+		"tags" : "",
+		"type" : "application/bitwig-modulator"
+	}
+}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
+{
+	class : "float_core.modulator_contents(1735)",
+	object_id : 1,
+	data :
+	{
+		"settings(6194)" : null,
+		"child_components(173)" : 
+		[
+			{
+				class : "float_core.modulation_source_atom(766)",
+				object_id : 2,
+				data :
+				{
+					"settings(6194)" : 
+					{
+						class : "float_core.component_settings(236)",
+						object_id : 3,
+						data :
+						{
+							"desktop_settings(612)" : 
+							{
+								class : "float_core.desktop_settings(17)",
+								object_id : 4,
+								data :
+								{
+									"x(17)" : 140,
+									"y(18)" : 216,
+									"color(19)" : 
+									{
+										type : "color",
+										data : [0.5, 0.5, 0.5]
+									}
+								}
+							},
+							"inport_connections(614)" : 
+							[
+								{
+									class : "float_core.inport_connection(105)",
+									object_id : 5,
+									data :
+									{
+										"source_component(248)" : 
+										{
+											class : "float_common_atoms.nitro_atom(1721)",
+											object_id : 6,
+											data :
+											{
+												"settings(6194)" : 
+												{
+													class : "float_core.component_settings(236)",
+													object_id : 7,
+													data :
+													{
+														"desktop_settings(612)" : 
+														{
+															class : "float_core.desktop_settings(17)",
+															object_id : 8,
+															data :
+															{
+																"x(17)" : 56,
+																"y(18)" : 156,
+																"color(19)" : 
+																{
+																	type : "color",
+																	data : [0.5, 0.5, 0.5]
+																}
+															}
+														},
+														"inport_connections(614)" : 
+														[
+															{
+																class : "float_core.inport_connection(105)",
+																object_id : 9,
+																data :
+																{
+																	"source_component(248)" : 
+																	{
+																		class : "float_core.boolean_value_atom(87)",
+																		object_id : 10,
+																		data :
+																		{
+																			"settings(6194)" : 
+																			{
+																				class : "float_core.component_settings(236)",
+																				object_id : 11,
+																				data :
+																				{
+																					"desktop_settings(612)" : 
+																					{
+																						class : "float_core.desktop_settings(17)",
+																						object_id : 12,
+																						data :
+																						{
+																							"x(17)" : 92,
+																							"y(18)" : 68,
+																							"color(19)" : 
+																							{
+																								type : "color",
+																								data : [0.5, 0.5, 0.5]
+																							}
+																						}
+																					},
+																					"inport_connections(614)" : 
+																					[
+																					],
+																					"is_polyphonic(615)" : true
+																				}
+																			},
+																			"channel_count(607)" : 0,
+																			"oversampling(608)" : 0,
+																			"name(374)" : "Relative Timbre",
+																			"label(821)" : "",
+																			"tooltip_text(823)" : "",
+																			"preset_identifier(701)" : "RELATIVE_TIMBRE",
+																			"modulations_to_ignore(3826)" : "VELOCITY,RELEASE_VELOCITY,PRESSURE,TIMBRE",
+																			"value_type(702)" : 
+																			{
+																				class : "float_core.boolean_value_type(198)",
+																				object_id : 13,
+																				data :
+																				{
+																					"icon_name(4755)" : "",
+																					"default_value(6957)" : false
+																				}
+																			},
+																			"value(210)" : true
+																		}
+																	},
+																	"outport_index(249)" : 0,
+																	"high_quality(1943)" : true,
+																	"unconnected_value(6443)" : 0.0
+																}
+															},
+															{
+																class : "float_core.inport_connection(105)",
+																object_id : 14,
+																data :
+																{
+																	"source_component(248)" : 
+																	{
+																		class : "float_core.proxy_in_port_component(154)",
+																		object_id : 15,
+																		data :
+																		{
+																			"settings(6194)" : 
+																			{
+																				class : "float_core.component_settings(236)",
+																				object_id : 16,
+																				data :
+																				{
+																					"desktop_settings(612)" : 
+																					{
+																						class : "float_core.desktop_settings(17)",
+																						object_id : 17,
+																						data :
+																						{
+																							"x(17)" : 0,
+																							"y(18)" : 0,
+																							"color(19)" : 
+																							{
+																								type : "color",
+																								data : [0.5, 0.5, 0.5]
+																							}
+																						}
+																					},
+																					"inport_connections(614)" : 
+																					[
+																					],
+																					"is_polyphonic(615)" : true
+																				}
+																			},
+																			"port(301)" : 
+																			{
+																				class : "float_core.note_port(61)",
+																				object_id : 18,
+																				data :
+																				{
+																					"name(498)" : "",
+																					"description(4741)" : "",
+																					"decorated_name(499)" : " Note out",
+																					"is_inport(500)" : false,
+																					"is_optional(1384)" : false
+																				}
+																			}
+																		}
+																	},
+																	"outport_index(249)" : 0,
+																	"high_quality(1943)" : true,
+																	"unconnected_value(6443)" : 0.0
+																}
+															}
+														],
+														"is_polyphonic(615)" : true
+													}
+												},
+												"channel_count(607)" : 0,
+												"oversampling(608)" : 0,
+												"code(6264)" : "component note_expressions\n{   \n   value_inport bool timbreIsRelative;\n\n   @name \"Note In\"\n   event_inport NoteEvent in\n   {\n      if (in.type == in.NOTE_ON)\n      {\n         needNewTimbreAtNoteOn = true;\n         vel = in.v;\n         pressure = 0;\n         pressureDiff = 0;\n         pressureRamptime = 0;\n      }\n      else if (in.type == in.NOTE_OFF)\n      {\n         release_vel = in.v;\n      }\n      else if (in.type == in.PARAMETER_TIMBRE)\n      {\n         if (needNewTimbreAtNoteOn)\n         {\n            timbreAtNoteOn = in.v;\n            needNewTimbreAtNoteOn = false;\n         }\n\n         if (in.ramptime > 0)\n         {\n            timbreRamptime = in.ramptime;\n            timbreDiff = (in.v - timbre) / in.ramptime.f32;\n         }\n         else\n         {\n            timbreRamptime = 0;\n            timbre = in.v;\n            timbreDiff = 0;\n         }\n      }\n      else if (in.type == in.PARAMETER_PRESSURE)\n      {\n         if (in.ramptime > 0)\n         {\n            pressureRamptime = in.ramptime;\n            pressureDiff = (in.v - pressure) / in.ramptime.f32;\n         }\n         else\n         {\n            pressureRamptime = 0;\n            pressure = in.v;\n            pressureDiff = 0;\n         }\n      }\n      else if (in.type == in.MIDI)\n      {\n         i32 status = (in.midi >> 0) & 0xf0;\n         i32 value = (in.midi >> 8) & 0x7f;\n\n         if (status == 0xD0)\n         {\n            pressure = value.f32 * (1.0 / 127.0);\n         }\n      }\n   }\n   audio_outport f32 out_vel;\n   audio_outport f32 out_release_vel;\n   audio_outport f32 out_timbre;\n   audio_outport f32 out_pressure;\n\n   f32 vel = 0.0f;\n   f32 release_vel = 0.0f;\n   f32 pressure = 0.0f;\n   f32 pressureDiff = 0.0f;\n   i32 pressureRamptime = 0;\n\n   bool needNewTimbreAtNoteOn = true;\n   f32 timbreAtNoteOn = 0.0f;\n\n   f32 timbre = 0.0f;\n   f32 timbreDiff = 0.0f;\n   i32 timbreRamptime = 0;\n\n   process\n   {\n      if (timbreRamptime > 0)\n      {\n         timbre += timbreDiff;\n         timbreRamptime--;\n      }\n\n      if (pressureRamptime > 0)\n      {\n         pressure += pressureDiff;\n         pressureRamptime--;\n      }\n\n      out_vel = vel;\n      out_release_vel = release_vel;\n\n      out_pressure = pressure;\n\n      if (timbreIsRelative)\n      {\n         out_timbre = needNewTimbreAtNoteOn ? 0.f32 : (timbre - timbreAtNoteOn);\n      }\n      else\n      {\n         out_timbre = timbre;\n      }\n   }\n}\n",
+												"fft_order(6567)" : 0
+											}
+										},
+										"outport_index(249)" : 3,
+										"high_quality(1943)" : true,
+										"unconnected_value(6443)" : 0.0
+									}
+								}
+							],
+							"is_polyphonic(615)" : true
+						}
+					},
+					"channel_count(607)" : 1,
+					"oversampling(608)" : 0,
+					"name(3639)" : "Pressure",
+					"preset_identifier(3640)" : "PRESSURE",
+					"display_settings(5452)" : 
+					{
+						type : "map<string,object>",
+						data : 
+						{
+							"Claes" : 
+							{
+								class : "float_core.modulation_source_atom_display_settings(1488)",
+								object_id : 19,
+								data :
+								{
+									"is_source_expanded_in_inspector(5455)" : false
+								}
+							}
+						}
+					}
+				}
+			},
+			{
+				class : "float_core.modulation_source_atom(766)",
+				object_id : 20,
+				data :
+				{
+					"settings(6194)" : 
+					{
+						class : "float_core.component_settings(236)",
+						object_id : 21,
+						data :
+						{
+							"desktop_settings(612)" : 
+							{
+								class : "float_core.desktop_settings(17)",
+								object_id : 22,
+								data :
+								{
+									"x(17)" : 112,
+									"y(18)" : 216,
+									"color(19)" : 
+									{
+										type : "color",
+										data : [0.5, 0.5, 0.5]
+									}
+								}
+							},
+							"inport_connections(614)" : 
+							[
+								{
+									class : "float_core.inport_connection(105)",
+									object_id : 23,
+									data :
+									{
+										"source_component(248)" : { object_ref : 6 },
+										"outport_index(249)" : 2,
+										"high_quality(1943)" : true,
+										"unconnected_value(6443)" : 0.0
+									}
+								}
+							],
+							"is_polyphonic(615)" : true
+						}
+					},
+					"channel_count(607)" : 1,
+					"oversampling(608)" : 0,
+					"name(3639)" : "Timbre",
+					"preset_identifier(3640)" : "TIMBRE",
+					"display_settings(5452)" : 
+					{
+						type : "map<string,object>",
+						data : 
+						{
+							"Claes" : 
+							{
+								class : "float_core.modulation_source_atom_display_settings(1488)",
+								object_id : 24,
+								data :
+								{
+									"is_source_expanded_in_inspector(5455)" : false
+								}
+							}
+						}
+					}
+				}
+			},
+			{
+				class : "float_core.modulation_source_atom(766)",
+				object_id : 25,
+				data :
+				{
+					"settings(6194)" : 
+					{
+						class : "float_core.component_settings(236)",
+						object_id : 26,
+						data :
+						{
+							"desktop_settings(612)" : 
+							{
+								class : "float_core.desktop_settings(17)",
+								object_id : 27,
+								data :
+								{
+									"x(17)" : 56,
+									"y(18)" : 216,
+									"color(19)" : 
+									{
+										type : "color",
+										data : [0.5, 0.5, 0.5]
+									}
+								}
+							},
+							"inport_connections(614)" : 
+							[
+								{
+									class : "float_core.inport_connection(105)",
+									object_id : 28,
+									data :
+									{
+										"source_component(248)" : { object_ref : 6 },
+										"outport_index(249)" : 0,
+										"high_quality(1943)" : true,
+										"unconnected_value(6443)" : 0.0
+									}
+								}
+							],
+							"is_polyphonic(615)" : true
+						}
+					},
+					"channel_count(607)" : 1,
+					"oversampling(608)" : 0,
+					"name(3639)" : "Velocity",
+					"preset_identifier(3640)" : "VELOCITY",
+					"display_settings(5452)" : 
+					{
+						type : "map<string,object>",
+						data : 
+						{
+							"Claes" : 
+							{
+								class : "float_core.modulation_source_atom_display_settings(1488)",
+								object_id : 29,
+								data :
+								{
+									"is_source_expanded_in_inspector(5455)" : false
+								}
+							}
+						}
+					}
+				}
+			},
+			{
+				class : "float_core.modulation_source_atom(766)",
+				object_id : 30,
+				data :
+				{
+					"settings(6194)" : 
+					{
+						class : "float_core.component_settings(236)",
+						object_id : 31,
+						data :
+						{
+							"desktop_settings(612)" : 
+							{
+								class : "float_core.desktop_settings(17)",
+								object_id : 32,
+								data :
+								{
+									"x(17)" : 84,
+									"y(18)" : 216,
+									"color(19)" : 
+									{
+										type : "color",
+										data : [0.5, 0.5, 0.5]
+									}
+								}
+							},
+							"inport_connections(614)" : 
+							[
+								{
+									class : "float_core.inport_connection(105)",
+									object_id : 33,
+									data :
+									{
+										"source_component(248)" : { object_ref : 6 },
+										"outport_index(249)" : 1,
+										"high_quality(1943)" : true,
+										"unconnected_value(6443)" : 0.0
+									}
+								}
+							],
+							"is_polyphonic(615)" : true
+						}
+					},
+					"channel_count(607)" : 1,
+					"oversampling(608)" : 0,
+					"name(3639)" : "Release Velocity",
+					"preset_identifier(3640)" : "RELEASE_VELOCITY",
+					"display_settings(5452)" : 
+					{
+						type : "map<string,object>",
+						data : 
+						{
+							"Claes" : 
+							{
+								class : "float_core.modulation_source_atom_display_settings(1488)",
+								object_id : 34,
+								data :
+								{
+									"is_source_expanded_in_inspector(5455)" : false
+								}
+							}
+						}
+					}
+				}
+			},{ object_ref : 6 },{ object_ref : 10 }
+		],
+		"panels(6213)" : 
+		[
+			{
+				class : "float_core.panel(1680)",
+				object_id : 35,
+				data :
+				{
+					"layout_settings(6226)" : null,
+					"is_visible(6309)" : true,
+					"is_enabled(6310)" : true,
+					"tooltip_text(6867)" : "",
+					"name(6211)" : "Main",
+					"root_item(6212)" : 
+					{
+						class : "float_core.grid_panel_item(1681)",
+						object_id : 36,
+						data :
+						{
+							"layout_settings(6226)" : null,
+							"is_visible(6309)" : true,
+							"is_enabled(6310)" : true,
+							"tooltip_text(6867)" : "",
+							"items(6221)" : 
+							[
+								{
+									class : "float_core.mapping_source_panel_item(1717)",
+									object_id : 37,
+									data :
+									{
+										"layout_settings(6226)" : 
+										{
+											class : "float_core.grid_panel_item_layout_settings(1694)",
+											object_id : 38,
+											data :
+											{
+												"width(6217)" : 7,
+												"height(6218)" : 7,
+												"x(6215)" : 9,
+												"y(6216)" : 10
+											}
+										},
+										"is_visible(6309)" : true,
+										"is_enabled(6310)" : true,
+										"tooltip_text(6867)" : "",
+										"data_model(6220)" : { object_ref : 2 },
+										"title(6241)" : "PRES",
+										"filename(6258)" : ""
+									}
+								},
+								{
+									class : "float_core.mapping_source_panel_item(1717)",
+									object_id : 39,
+									data :
+									{
+										"layout_settings(6226)" : 
+										{
+											class : "float_core.grid_panel_item_layout_settings(1694)",
+											object_id : 40,
+											data :
+											{
+												"width(6217)" : 7,
+												"height(6218)" : 7,
+												"x(6215)" : 9,
+												"y(6216)" : 3
+											}
+										},
+										"is_visible(6309)" : true,
+										"is_enabled(6310)" : true,
+										"tooltip_text(6867)" : "",
+										"data_model(6220)" : { object_ref : 20 },
+										"title(6241)" : "TIMB",
+										"filename(6258)" : ""
+									}
+								},
+								{
+									class : "float_core.mapping_source_panel_item(1717)",
+									object_id : 41,
+									data :
+									{
+										"layout_settings(6226)" : 
+										{
+											class : "float_core.grid_panel_item_layout_settings(1694)",
+											object_id : 42,
+											data :
+											{
+												"width(6217)" : 7,
+												"height(6218)" : 7,
+												"x(6215)" : 1,
+												"y(6216)" : 10
+											}
+										},
+										"is_visible(6309)" : true,
+										"is_enabled(6310)" : true,
+										"tooltip_text(6867)" : "",
+										"data_model(6220)" : { object_ref : 30 },
+										"title(6241)" : "REL",
+										"filename(6258)" : ""
+									}
+								},
+								{
+									class : "float_core.mapping_source_panel_item(1717)",
+									object_id : 43,
+									data :
+									{
+										"layout_settings(6226)" : 
+										{
+											class : "float_core.grid_panel_item_layout_settings(1694)",
+											object_id : 44,
+											data :
+											{
+												"width(6217)" : 7,
+												"height(6218)" : 7,
+												"x(6215)" : 1,
+												"y(6216)" : 3
+											}
+										},
+										"is_visible(6309)" : true,
+										"is_enabled(6310)" : true,
+										"tooltip_text(6867)" : "",
+										"data_model(6220)" : { object_ref : 25 },
+										"title(6241)" : "VEL",
+										"filename(6258)" : ""
+									}
+								}
+							],
+							"border_style(6228)" : 1,
+							"title(6242)" : "EXPRESSIONS",
+							"show_title(6243)" : true,
+							"title_color(6522)" : 6,
+							"brightness(6245)" : 0
+						}
+					},
+					"width(6232)" : 17,
+					"height(6233)" : 17,
+					"expressions(6277)" : 
+					[
+					]
+				}
+			},
+			{
+				class : "float_core.panel(1680)",
+				object_id : 45,
+				data :
+				{
+					"layout_settings(6226)" : null,
+					"is_visible(6309)" : true,
+					"is_enabled(6310)" : true,
+					"tooltip_text(6867)" : "",
+					"name(6211)" : "Menu",
+					"root_item(6212)" : 
+					{
+						class : "float_core.menu_container_panel_item(1923)",
+						object_id : 46,
+						data :
+						{
+							"layout_settings(6226)" : null,
+							"is_visible(6309)" : true,
+							"is_enabled(6310)" : true,
+							"tooltip_text(6867)" : "",
+							"items(6221)" : 
+							[
+								{
+									class : "float_core.menu_toggle_panel_item(1924)",
+									object_id : 47,
+									data :
+									{
+										"layout_settings(6226)" : 
+										{
+											class : "float_core.menu_container_panel_item_layout_settings(1928)",
+											object_id : 48,
+											data :
+											{
+												"width(6217)" : 1,
+												"height(6218)" : 1
+											}
+										},
+										"is_visible(6309)" : true,
+										"is_enabled(6310)" : true,
+										"tooltip_text(6867)" : "",
+										"title(6839)" : "Timbre is Relative",
+										"icon_name(6840)" : "",
+										"data_model(6835)" : { object_ref : 10 },
+										"invert_value(6837)" : false,
+										"is_selected(6838)" : false
+									}
+								}
+							],
+							"title(6836)" : ""
+						}
+					},
+					"width(6232)" : 17,
+					"height(6233)" : 53,
+					"expressions(6277)" : 
+					[
+					]
+				}
+			}
+		],
+		"proxy_in_ports(177)" : 
+		[
+			{
+				class : "float_core.proxy_in_port_component(154)",
+				object_id : 49,
+				data :
+				{
+					"settings(6194)" : 
+					{
+						class : "float_core.component_settings(236)",
+						object_id : 50,
+						data :
+						{
+							"desktop_settings(612)" : 
+							{
+								class : "float_core.desktop_settings(17)",
+								object_id : 51,
+								data :
+								{
+									"x(17)" : 0,
+									"y(18)" : 0,
+									"color(19)" : 
+									{
+										type : "color",
+										data : [0.5, 0.5, 0.5]
+									}
+								}
+							},
+							"inport_connections(614)" : 
+							[
+							],
+							"is_polyphonic(615)" : true
+						}
+					},
+					"port(301)" : 
+					{
+						class : "float_core.audio_port(242)",
+						object_id : 52,
+						data :
+						{
+							"name(498)" : "",
+							"description(4741)" : "",
+							"decorated_name(499)" : " Audio out (PARENT)",
+							"is_inport(500)" : false,
+							"is_optional(1384)" : false,
+							"channel_count(372)" : 3
+						}
+					}
+				}
+			},{ object_ref : 15 }
+		],
+		"proxy_out_ports(178)" : 
+		[
+		],
+		"fft_order(6566)" : 0,
+		"context_menu_panel(6834)" : { object_ref : 45 },
+		"device_UUID(6369)" : "dcacb71b-0f1a-4493-8916-bd460eee71d5",
+		"device_name(6370)" : "Expressions",
+		"description(6371)" : "Extracts polyphonic note-expressions.",
+		"creator(6372)" : "Bitwig",
+		"comment(6373)" : "",
+		"keywords(6374)" : "",
+		"category(6375)" : "Control",
+		"has_been_modified(6376)" : true,
+		"detail_panel(6695)" : null,
+		"can_be_polyphonic(6707)" : true,
+		"should_be_polyphonic_by_default(6724)" : true,
+		"should_enable_perform_mode_by_default(6725)" : false
+	}
+}

@@ -1,0 +1,55 @@
+component white_noise
+{
+   audio_outport out;
+
+   i32 rate = 1;
+   i32<> seed = 0;
+   f32<> state = 0;
+   f32 scale = 1;
+   i32 pos = 0;
+
+   init
+   {
+      // use rate so the energy/Hz is equivalent to at 44kHz
+      rate = round(EC.samplerate / 44100).i32;
+      if (rate <= 0) rate = 1;
+
+      // for the non-integer parts (like 48/44) just scale it to be conistent energy/Hz
+      scale = EC.samplerate / (44100 * rate).f32;
+
+      for(i32 c=0; c<EC.channels; c++)
+      {
+         seed[c] = rand();
+         if (seed[c] == 0) seed[c] = -1;
+      }
+   }
+
+   i32<> rando(i32<> i)
+   {
+      i32<> a = i;
+      a ^= i << 13; 
+      a ^= a >> 17; 
+      a ^= a << 5; 
+      return a;
+   }
+
+   process
+   {
+      pos++;
+
+      if (pos >= rate)
+      {
+         pos = 0;
+         seed = rando(seed);
+
+         // state = seed.f32<> * (1.0 / 2147483648.0).f32;
+         // because the staement above doesn't compile we need to do this in a loop
+         for(i32 c=0; c<EC.channels; c++)
+         {
+            state[c] = scale * seed[c].f32 * (1.0 / 2147483648.0).f32;
+         }
+      }
+
+      out = state;
+   }
+}

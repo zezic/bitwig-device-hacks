@@ -1,0 +1,14 @@
+@icon "add.svg"
+component add
+{
+   const i32 N = 2;
+   audio_inport[N] in;
+   audio_outport out;
+
+   process
+   {
+      out = 0;
+      for (i32 i = 0; i < N; ++i)
+         out += in[i];
+   }
+}

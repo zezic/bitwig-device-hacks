@@ -1,0 +1,14 @@
+component interleave4
+{
+   audio_inport f32 in0;
+   audio_inport f32 in1;
+   audio_inport f32 in2;
+   audio_inport f32 in3;
+
+   audio_outport f32<4> out;
+
+   process
+   {
+      out = < in0, in1, in2, in3 >;
+   }
+}

@@ -1,0 +1,12 @@
+component identity_transform
+{
+   event_inport f32[EC.fftsize*2] in
+   {
+      send out in;
+   }
+   event_outport f32[EC.fftsize*2] out;
+
+   process
+   {
+   }
+}

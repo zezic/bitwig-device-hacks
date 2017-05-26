@@ -1,0 +1,281 @@
+struct fm42_carrier
+{
+   f32 phase;
+}
+
+component fm42
+{
+   audio_inport[4] f32 freq;
+
+   @desc "Initial phase on reset"
+   audio_inport[4] f32 startPhase;
+
+   value_inport bool phaseReset1;
+   value_inport bool phaseReset2;
+   value_inport bool phaseReset3;
+   value_inport bool phaseReset4;
+
+   value_inport i32 waveform1;
+   value_inport i32 waveform2;
+   value_inport i32 waveform3;
+   value_inport i32 waveform4;
+
+   value_inport i32 routing
+   {
+      switch (routing)
+      {
+      /* 4 -> 3 -> 2 -> 1 */
+      case 0:
+         pmMatrix[0 + 4 * 0] = 0;
+         pmMatrix[0 + 4 * 1] = 1;
+         pmMatrix[0 + 4 * 2] = 0;
+         pmMatrix[0 + 4 * 3] = 0;
+         pmMatrix[1 + 4 * 0] = 0;
+         pmMatrix[1 + 4 * 1] = 0;
+         pmMatrix[1 + 4 * 2] = 1;
+         pmMatrix[1 + 4 * 3] = 0;
+         pmMatrix[2 + 4 * 0] = 0;
+         pmMatrix[2 + 4 * 1] = 0;
+         pmMatrix[2 + 4 * 2] = 0;
+         pmMatrix[2 + 4 * 3] = 1;
+         pmMatrix[3 + 4 * 0] = 0;
+         pmMatrix[3 + 4 * 1] = 0;
+         pmMatrix[3 + 4 * 2] = 0;
+         pmMatrix[3 + 4 * 3] = 0;
+         break;
+
+      /* 4 -> 3, 2 -> 1 */
+      case 1:
+         pmMatrix[0 + 4 * 0] = 0;
+         pmMatrix[0 + 4 * 1] = 1;
+         pmMatrix[0 + 4 * 2] = 1;
+         pmMatrix[0 + 4 * 3] = 0;
+         pmMatrix[1 + 4 * 0] = 0;
+         pmMatrix[1 + 4 * 1] = 0;
+         pmMatrix[1 + 4 * 2] = 0;
+         pmMatrix[1 + 4 * 3] = 1;
+         pmMatrix[2 + 4 * 0] = 0;
+         pmMatrix[2 + 4 * 1] = 0;
+         pmMatrix[2 + 4 * 2] = 0;
+         pmMatrix[2 + 4 * 3] = 1;
+         pmMatrix[3 + 4 * 0] = 0;
+         pmMatrix[3 + 4 * 1] = 0;
+         pmMatrix[3 + 4 * 2] = 0;
+         pmMatrix[3 + 4 * 3] = 0;
+         break;
+
+      /* 4, 3, 2 -> 1 */
+      case 2:
+         pmMatrix[0 + 4 * 0] = 0;
+         pmMatrix[0 + 4 * 1] = 1;
+         pmMatrix[0 + 4 * 2] = 1;
+         pmMatrix[0 + 4 * 3] = 1;
+         pmMatrix[1 + 4 * 0] = 0;
+         pmMatrix[1 + 4 * 1] = 0;
+         pmMatrix[1 + 4 * 2] = 0;
+         pmMatrix[1 + 4 * 3] = 0;
+         pmMatrix[2 + 4 * 0] = 0;
+         pmMatrix[2 + 4 * 1] = 0;
+         pmMatrix[2 + 4 * 2] = 0;
+         pmMatrix[2 + 4 * 3] = 0;
+         pmMatrix[3 + 4 * 0] = 0;
+         pmMatrix[3 + 4 * 1] = 0;
+         pmMatrix[3 + 4 * 2] = 0;
+         pmMatrix[3 + 4 * 3] = 0;
+         break;
+
+      /* 4, 3 -> 2 -> 1 */
+      case 3:
+         pmMatrix[0 + 4 * 0] = 0;
+         pmMatrix[0 + 4 * 1] = 1;
+         pmMatrix[0 + 4 * 2] = 0;
+         pmMatrix[0 + 4 * 3] = 0;
+         pmMatrix[1 + 4 * 0] = 0;
+         pmMatrix[1 + 4 * 1] = 0;
+         pmMatrix[1 + 4 * 2] = 1;
+         pmMatrix[1 + 4 * 3] = 1;
+         pmMatrix[2 + 4 * 0] = 0;
+         pmMatrix[2 + 4 * 1] = 0;
+         pmMatrix[2 + 4 * 2] = 0;
+         pmMatrix[2 + 4 * 3] = 0;
+         pmMatrix[3 + 4 * 0] = 0;
+         pmMatrix[3 + 4 * 1] = 0;
+         pmMatrix[3 + 4 * 2] = 0;
+         pmMatrix[3 + 4 * 3] = 0;
+         break;
+
+      /* 3 -> 1 ; 4 -> 2 */
+      case 5:
+         pmMatrix[0 + 4 * 0] = 0;
+         pmMatrix[0 + 4 * 1] = 0;
+         pmMatrix[0 + 4 * 2] = 1;
+         pmMatrix[0 + 4 * 3] = 0;
+         pmMatrix[1 + 4 * 0] = 0;
+         pmMatrix[1 + 4 * 1] = 0;
+         pmMatrix[1 + 4 * 2] = 0;
+         pmMatrix[1 + 4 * 3] = 1;
+         pmMatrix[2 + 4 * 0] = 0;
+         pmMatrix[2 + 4 * 1] = 0;
+         pmMatrix[2 + 4 * 2] = 0;
+         pmMatrix[2 + 4 * 3] = 0;
+         pmMatrix[3 + 4 * 0] = 0;
+         pmMatrix[3 + 4 * 1] = 0;
+         pmMatrix[3 + 4 * 2] = 0;
+         pmMatrix[3 + 4 * 3] = 0;
+         break;
+
+      /* 4 -> 3 -> 2, 1 */
+      case 6:
+         pmMatrix[0 + 4 * 0] = 0;
+         pmMatrix[0 + 4 * 1] = 0;
+         pmMatrix[0 + 4 * 2] = 1;
+         pmMatrix[0 + 4 * 3] = 0;
+         pmMatrix[1 + 4 * 0] = 0;
+         pmMatrix[1 + 4 * 1] = 0;
+         pmMatrix[1 + 4 * 2] = 1;
+         pmMatrix[1 + 4 * 3] = 0;
+         pmMatrix[2 + 4 * 0] = 0;
+         pmMatrix[2 + 4 * 1] = 0;
+         pmMatrix[2 + 4 * 2] = 0;
+         pmMatrix[2 + 4 * 3] = 1;
+         pmMatrix[3 + 4 * 0] = 0;
+         pmMatrix[3 + 4 * 1] = 0;
+         pmMatrix[3 + 4 * 2] = 0;
+         pmMatrix[3 + 4 * 3] = 0;
+         break;
+
+      /* 4, 3 -> 2, 1 */
+      case 7:
+         pmMatrix[0 + 4 * 0] = 0;
+         pmMatrix[0 + 4 * 1] = 0;
+         pmMatrix[0 + 4 * 2] = 1;
+         pmMatrix[0 + 4 * 3] = 1;
+         pmMatrix[1 + 4 * 0] = 0;
+         pmMatrix[1 + 4 * 1] = 0;
+         pmMatrix[1 + 4 * 2] = 1;
+         pmMatrix[1 + 4 * 3] = 1;
+         pmMatrix[2 + 4 * 0] = 0;
+         pmMatrix[2 + 4 * 1] = 0;
+         pmMatrix[2 + 4 * 2] = 0;
+         pmMatrix[2 + 4 * 3] = 0;
+         pmMatrix[3 + 4 * 0] = 0;
+         pmMatrix[3 + 4 * 1] = 0;
+         pmMatrix[3 + 4 * 2] = 0;
+         pmMatrix[3 + 4 * 3] = 0;
+         break;
+
+      default:
+         pmMatrix[0 + 4 * 0] = 0;
+         pmMatrix[0 + 4 * 1] = 0;
+         pmMatrix[0 + 4 * 2] = 0;
+         pmMatrix[0 + 4 * 3] = 0;
+         pmMatrix[1 + 4 * 0] = 0;
+         pmMatrix[1 + 4 * 1] = 0;
+         pmMatrix[1 + 4 * 2] = 0;
+         pmMatrix[1 + 4 * 3] = 0;
+         pmMatrix[2 + 4 * 0] = 0;
+         pmMatrix[2 + 4 * 1] = 0;
+         pmMatrix[2 + 4 * 2] = 0;
+         pmMatrix[2 + 4 * 3] = 0;
+         pmMatrix[3 + 4 * 0] = 0;
+         pmMatrix[3 + 4 * 1] = 0;
+         pmMatrix[3 + 4 * 2] = 0;
+         pmMatrix[3 + 4 * 3] = 0;
+         break;
+      }
+   }
+
+   audio_inport[4] f32 pmAmount;
+   audio_inport[4] f32 carrierAmount;
+
+   event_inport void reset
+   {
+      if (phaseReset1)
+         phase[0] = startPhase[0];
+      if (phaseReset2)
+         phase[1] = startPhase[1];
+      if (phaseReset3)
+         phase[2] = startPhase[2];
+      if (phaseReset4)
+         phase[3] = startPhase[3];
+   }
+
+   audio_outport[4] f32 ops;
+
+   f32[4] phase;
+   /* modulation amount: pmMatrix[i + 4 * j]: i carrier index, j operator */
+   f32[4 * 4] pmMatrix;
+
+   f32 wave(i32 waveform, f32 phase)
+   {
+      phase = phase % (2 * PI);
+
+      switch (waveform)
+      {
+      case 0:
+         return sin(phase);
+
+      case 1:
+         if (phase < 0)
+            phase += 2 * PI;
+         if (phase < PI / 2)
+            return sin(2 * phase);
+         if (phase < PI)
+            return sin(2 * (phase - PI / 2));
+         return 0;
+
+      case 2:
+         return fmax(sin(phase), 0);
+
+      case 3:
+         if (phase < 0)
+            phase += 2 * PI;
+         if (phase < PI / 2)
+            return sin(2 * phase);
+         if (phase < PI)
+            return sin(2 * (phase - PI / 2));
+         return sin(phase);
+      }
+
+      return 0;
+   }
+
+   init
+   {
+      for (i32 i = 0; i < 4; ++i)
+         phase[i] = 0;
+      for (i32 i = 0; i < 16; ++i)
+         pmMatrix = 0;
+   }
+
+   process
+   {
+      f32[4] oscPhase;
+      f32[4] carrier;
+
+      /* calculate the operator 4 */
+      oscPhase[3] = phase[3];
+      ops[3] = wave(waveform4, oscPhase[3]);
+      carrier[3] = ops[3] * carrierAmount[3];
+
+      /* calculate the operator 3 */
+      oscPhase[2] = phase[2] + pmAmount[2] * (pmMatrix[2 + 4 * 3] * carrier[3]);
+      ops[2] = wave(waveform4, oscPhase[2]);
+      carrier[2] = ops[2] * carrierAmount[2];
+
+      /* calculate the operator 2 */
+      oscPhase[1] = phase[1] + pmAmount[1] * (pmMatrix[1 + 4 * 3] * carrier[3] + pmMatrix[1 + 4 * 2] * carrier[2]);
+      ops[1] = wave(waveform4, oscPhase[1]);
+      carrier[1] = ops[1] * carrierAmount[1];
+
+      /* calculate the operator 1 */
+      oscPhase[0] = phase[0] + pmAmount[0] * (pmMatrix[0 + 4 * 3] * carrier[3] + pmMatrix[0 + 4 * 2] * carrier[2] + pmMatrix[0 + 4 * 1] * carrier[1]);
+      ops[0] = wave(waveform4, oscPhase[0]);
+
+      /* increase the phase */
+      for (i32 i = 0; i < 4; ++i) {
+         phase[i] += freq[i] * 2 * PI / EC.samplerate;
+         phase[i] %= 2 * PI;
+      }
+   }
+}

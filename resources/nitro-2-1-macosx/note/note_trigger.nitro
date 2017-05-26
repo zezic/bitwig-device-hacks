@@ -1,0 +1,25 @@
+component note_trigger
+{   
+   @name "Note In"
+   event_inport NoteEvent in
+   {
+      if (in.type == in.NOTE_ON)
+      {
+         NoteTriggerEvent e;
+         e.gate = 1;
+         e.key = in.key.i8;
+         e.velocity = (in.v * 127.0).i8;
+         send out e;
+      }
+      else if (in.type == in.NOTE_OFF)
+      {
+         NoteTriggerEvent e;
+         e.gate = 0;
+         e.key = in.key.i8;
+         e.velocity = (in.v * 127.0).i8;
+         send out e;
+      }
+   }
+
+   event_outport NoteTriggerEvent out;
+}

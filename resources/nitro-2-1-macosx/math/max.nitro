@@ -1,0 +1,11 @@
+component max
+{
+   audio_inport a;
+   audio_inport b;
+   audio_outport out;
+
+   process
+   {
+      out = fmax(a,b);
+   }
+}

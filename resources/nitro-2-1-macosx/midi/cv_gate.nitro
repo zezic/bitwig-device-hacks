@@ -1,0 +1,43 @@
+component cv_gate
+{
+   audio_inport f32 beat;
+
+   value_inport i32 rate_index
+   {
+      rate = 4.0 / (1 << rate_index).f32;
+   }
+
+   f32 rate = 1;
+
+   @name "Gate length (ms)"
+   audio_inport f32 gate_len;
+
+   audio_outport f32 out;
+
+   i32 decay = 0;
+   f32 prev_val = 0;
+
+   process
+   {
+      /* detect beats */
+      f32 val = floor(beat * rate);
+
+      if (val > prev_val + 0.9)
+      {
+         decay = (gate_len * EC.samplerate).i32;
+      }
+
+      prev_val = val;
+
+      /* calculate output signal */
+      if (decay > 0)
+      {
+         out = 1;
+         --decay;
+      }
+      else
+      {
+         out = 0;
+      }
+   }
+}

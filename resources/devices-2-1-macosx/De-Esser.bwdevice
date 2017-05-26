@@ -1,0 +1,2061 @@
+BtWg00010001008a000016a80000000000000000{
+	class : "meta",
+	object_id : 1,
+	data :
+	{
+		"application_version_name" : "none",
+		"branch" : "claes/future",
+		"comment" : "",
+		"creator" : "Bitwig",
+		"device_category" : "Dynamics",
+		"device_description" : "Reduce excessive sibilance.",
+		"device_id" : "8750db61-e9d3-4d0e-a610-e734006a64dc",
+		"device_name" : "De-Esser",
+		"device_type" : "audio_to_audio",
+		"device_uuid" : "8750db61-e9d3-4d0e-a610-e734006a64dc",
+		"has_audio_input" : false,
+		"has_audio_output" : false,
+		"has_note_input" : false,
+		"has_note_output" : false,
+		"revision_id" : "0bd8ce9209df94bb15c2ede3c24d090529e29e40",
+		"revision_no" : 48561,
+		"suggest_for_audio_input" : true,
+		"suggest_for_note_input" : false,
+		"tags" : "",
+		"type" : "application/bitwig-device"
+	}
+}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
+{
+	class : "float_core.device_contents(151)",
+	object_id : 1,
+	data :
+	{
+		"settings(6194)" : null,
+		"child_components(173)" : 
+		[
+			{
+				class : "float_core.decimal_value_atom(289)",
+				object_id : 2,
+				data :
+				{
+					"settings(6194)" : 
+					{
+						class : "float_core.component_settings(236)",
+						object_id : 3,
+						data :
+						{
+							"desktop_settings(612)" : 
+							{
+								class : "float_core.desktop_settings(17)",
+								object_id : 4,
+								data :
+								{
+									"x(17)" : 102,
+									"y(18)" : 38,
+									"color(19)" : 
+									{
+										type : "color",
+										data : [0.5, 0.5, 0.5]
+									}
+								}
+							},
+							"panel_settings(613)" : 
+							{
+								class : "float_core.panel_settings(202)",
+								object_id : 5,
+								data :
+								{
+									"x(502)" : 26,
+									"y(503)" : 10,
+									"width(504)" : 47,
+									"height(505)" : 45,
+									"is_visible(506)" : true
+								}
+							},
+							"inport_connections(614)" : 
+							[
+							],
+							"is_polyphonic(615)" : false
+						}
+					},
+					"channel_count(607)" : 0,
+					"oversampling(608)" : 0,
+					"name(374)" : "Frequency",
+					"label(821)" : "Freq",
+					"tooltip_text(823)" : "",
+					"preset_identifier(701)" : "FREQ",
+					"modulations_to_ignore(3826)" : "",
+					"value_type(702)" : 
+					{
+						class : "float_core.decimal_value_type(123)",
+						object_id : 6,
+						data :
+						{
+							"min(292)" : 102.22000000000011,
+							"max(293)" : 119.19999999999959,
+							"default_value(891)" : 111.0,
+							"domain(294)" : 2,
+							"engine_domain(295)" : 0,
+							"value_origin(3014)" : 0,
+							"pixel_step_size(1988)" : -1.0,
+							"unit(296)" : 4,
+							"decimal_digit_count(297)" : -1,
+							"edit_style(298)" : 0,
+							"parameter_smoothing(4433)" : true,
+							"allow_automation_curves(4434)" : true
+						}
+					},
+					"value(712)" : 111.0
+				}
+			},
+			{
+				class : "float_core.decimal_value_atom(289)",
+				object_id : 7,
+				data :
+				{
+					"settings(6194)" : 
+					{
+						class : "float_core.component_settings(236)",
+						object_id : 8,
+						data :
+						{
+							"desktop_settings(612)" : 
+							{
+								class : "float_core.desktop_settings(17)",
+								object_id : 9,
+								data :
+								{
+									"x(17)" : 300,
+									"y(18)" : 380,
+									"color(19)" : 
+									{
+										type : "color",
+										data : [0.5, 0.5, 0.5]
+									}
+								}
+							},
+							"panel_settings(613)" : 
+							{
+								class : "float_core.panel_settings(202)",
+								object_id : 10,
+								data :
+								{
+									"x(502)" : 28,
+									"y(503)" : 160,
+									"width(504)" : 47,
+									"height(505)" : 45,
+									"is_visible(506)" : true
+								}
+							},
+							"inport_connections(614)" : 
+							[
+							],
+							"is_polyphonic(615)" : false
+						}
+					},
+					"channel_count(607)" : 0,
+					"oversampling(608)" : 0,
+					"name(374)" : "Amount",
+					"label(821)" : "",
+					"tooltip_text(823)" : "",
+					"preset_identifier(701)" : "AMOUNT",
+					"modulations_to_ignore(3826)" : "",
+					"value_type(702)" : 
+					{
+						class : "float_core.decimal_value_type(123)",
+						object_id : 11,
+						data :
+						{
+							"min(292)" : 0.0,
+							"max(293)" : 2.0,
+							"default_value(891)" : 1.0,
+							"domain(294)" : 0,
+							"engine_domain(295)" : 0,
+							"value_origin(3014)" : 0,
+							"pixel_step_size(1988)" : -1.0,
+							"unit(296)" : 1,
+							"decimal_digit_count(297)" : -1,
+							"edit_style(298)" : 0,
+							"parameter_smoothing(4433)" : true,
+							"allow_automation_curves(4434)" : true
+						}
+					},
+					"value(712)" : 1.0
+				}
+			},
+			{
+				class : "float_common_atoms.audio_switcher_atom(401)",
+				object_id : 12,
+				data :
+				{
+					"settings(6194)" : 
+					{
+						class : "float_core.component_settings(236)",
+						object_id : 13,
+						data :
+						{
+							"desktop_settings(612)" : 
+							{
+								class : "float_core.desktop_settings(17)",
+								object_id : 14,
+								data :
+								{
+									"x(17)" : 34,
+									"y(18)" : 684,
+									"color(19)" : 
+									{
+										type : "color",
+										data : [0.5, 0.5, 0.5]
+									}
+								}
+							},
+							"panel_settings(613)" : null,
+							"inport_connections(614)" : 
+							[
+								{
+									class : "float_core.inport_connection(105)",
+									object_id : 15,
+									data :
+									{
+										"source_component(248)" : 
+										{
+											class : "float_common_atoms.multiply_atom(367)",
+											object_id : 16,
+											data :
+											{
+												"settings(6194)" : 
+												{
+													class : "float_core.component_settings(236)",
+													object_id : 17,
+													data :
+													{
+														"desktop_settings(612)" : 
+														{
+															class : "float_core.desktop_settings(17)",
+															object_id : 18,
+															data :
+															{
+																"x(17)" : 34,
+																"y(18)" : 626,
+																"color(19)" : 
+																{
+																	type : "color",
+																	data : [0.5, 0.5, 0.5]
+																}
+															}
+														},
+														"panel_settings(613)" : null,
+														"inport_connections(614)" : 
+														[
+															{
+																class : "float_core.inport_connection(105)",
+																object_id : 19,
+																data :
+																{
+																	"source_component(248)" : 
+																	{
+																		class : "float_core.proxy_in_port_component(154)",
+																		object_id : 20,
+																		data :
+																		{
+																			"settings(6194)" : 
+																			{
+																				class : "float_core.component_settings(236)",
+																				object_id : 21,
+																				data :
+																				{
+																					"desktop_settings(612)" : 
+																					{
+																						class : "float_core.desktop_settings(17)",
+																						object_id : 22,
+																						data :
+																						{
+																							"x(17)" : 0,
+																							"y(18)" : 0,
+																							"color(19)" : 
+																							{
+																								type : "color",
+																								data : [0.5, 0.5, 0.5]
+																							}
+																						}
+																					},
+																					"panel_settings(613)" : null,
+																					"inport_connections(614)" : 
+																					[
+																					],
+																					"is_polyphonic(615)" : false
+																				}
+																			},
+																			"port(301)" : 
+																			{
+																				class : "float_core.audio_port(242)",
+																				object_id : 23,
+																				data :
+																				{
+																					"name(498)" : "",
+																					"description(4741)" : "",
+																					"decorated_name(499)" : " Audio out (PARENT)",
+																					"is_inport(500)" : false,
+																					"is_optional(1384)" : false,
+																					"channel_count(372)" : 3
+																				}
+																			}
+																		}
+																	},
+																	"outport_index(249)" : 0,
+																	"high_quality(1943)" : true,
+																	"unconnected_value(6443)" : 0.0
+																}
+															},
+															{
+																class : "float_core.inport_connection(105)",
+																object_id : 24,
+																data :
+																{
+																	"source_component(248)" : 
+																	{
+																		class : "float_common_atoms.domain_converter_atom(320)",
+																		object_id : 25,
+																		data :
+																		{
+																			"settings(6194)" : 
+																			{
+																				class : "float_core.component_settings(236)",
+																				object_id : 26,
+																				data :
+																				{
+																					"desktop_settings(612)" : 
+																					{
+																						class : "float_core.desktop_settings(17)",
+																						object_id : 27,
+																						data :
+																						{
+																							"x(17)" : 206,
+																							"y(18)" : 594,
+																							"color(19)" : 
+																							{
+																								type : "color",
+																								data : [0.5, 0.5, 0.5]
+																							}
+																						}
+																					},
+																					"panel_settings(613)" : null,
+																					"inport_connections(614)" : 
+																					[
+																						{
+																							class : "float_core.inport_connection(105)",
+																							object_id : 28,
+																							data :
+																							{
+																								"source_component(248)" : 
+																								{
+																									class : "float_common_atoms.multiply_atom(367)",
+																									object_id : 29,
+																									data :
+																									{
+																										"settings(6194)" : 
+																										{
+																											class : "float_core.component_settings(236)",
+																											object_id : 30,
+																											data :
+																											{
+																												"desktop_settings(612)" : 
+																												{
+																													class : "float_core.desktop_settings(17)",
+																													object_id : 31,
+																													data :
+																													{
+																														"x(17)" : 206,
+																														"y(18)" : 558,
+																														"color(19)" : 
+																														{
+																															type : "color",
+																															data : [0.5, 0.5, 0.5]
+																														}
+																													}
+																												},
+																												"panel_settings(613)" : null,
+																												"inport_connections(614)" : 
+																												[
+																													{
+																														class : "float_core.inport_connection(105)",
+																														object_id : 32,
+																														data :
+																														{
+																															"source_component(248)" : 
+																															{
+																																class : "float_common_atoms.max_atom(352)",
+																																object_id : 33,
+																																data :
+																																{
+																																	"settings(6194)" : 
+																																	{
+																																		class : "float_core.component_settings(236)",
+																																		object_id : 34,
+																																		data :
+																																		{
+																																			"desktop_settings(612)" : 
+																																			{
+																																				class : "float_core.desktop_settings(17)",
+																																				object_id : 35,
+																																				data :
+																																				{
+																																					"x(17)" : 206,
+																																					"y(18)" : 512,
+																																					"color(19)" : 
+																																					{
+																																						type : "color",
+																																						data : [0.5, 0.5, 0.5]
+																																					}
+																																				}
+																																			},
+																																			"panel_settings(613)" : null,
+																																			"inport_connections(614)" : 
+																																			[
+																																				{
+																																					class : "float_core.inport_connection(105)",
+																																					object_id : 36,
+																																					data :
+																																					{
+																																						"source_component(248)" : 
+																																						{
+																																							class : "float_common_atoms.subtract_atom(343)",
+																																							object_id : 37,
+																																							data :
+																																							{
+																																								"settings(6194)" : 
+																																								{
+																																									class : "float_core.component_settings(236)",
+																																									object_id : 38,
+																																									data :
+																																									{
+																																										"desktop_settings(612)" : 
+																																										{
+																																											class : "float_core.desktop_settings(17)",
+																																											object_id : 39,
+																																											data :
+																																											{
+																																												"x(17)" : 206,
+																																												"y(18)" : 468,
+																																												"color(19)" : 
+																																												{
+																																													type : "color",
+																																													data : [0.5, 0.5, 0.5]
+																																												}
+																																											}
+																																										},
+																																										"panel_settings(613)" : null,
+																																										"inport_connections(614)" : 
+																																										[
+																																											{
+																																												class : "float_core.inport_connection(105)",
+																																												object_id : 40,
+																																												data :
+																																												{
+																																													"source_component(248)" : 
+																																													{
+																																														class : "float_common_atoms.constant_add_atom(308)",
+																																														object_id : 41,
+																																														data :
+																																														{
+																																															"settings(6194)" : 
+																																															{
+																																																class : "float_core.component_settings(236)",
+																																																object_id : 42,
+																																																data :
+																																																{
+																																																	"desktop_settings(612)" : 
+																																																	{
+																																																		class : "float_core.desktop_settings(17)",
+																																																		object_id : 43,
+																																																		data :
+																																																		{
+																																																			"x(17)" : 206,
+																																																			"y(18)" : 412,
+																																																			"color(19)" : 
+																																																			{
+																																																				type : "color",
+																																																				data : [0.5, 0.5, 0.5]
+																																																			}
+																																																		}
+																																																	},
+																																																	"panel_settings(613)" : null,
+																																																	"inport_connections(614)" : 
+																																																	[
+																																																		{
+																																																			class : "float_core.inport_connection(105)",
+																																																			object_id : 44,
+																																																			data :
+																																																			{
+																																																				"source_component(248)" : 
+																																																				{
+																																																					class : "float_common_atoms.gain_detector_atom(545)",
+																																																					object_id : 45,
+																																																					data :
+																																																					{
+																																																						"settings(6194)" : 
+																																																						{
+																																																							class : "float_core.component_settings(236)",
+																																																							object_id : 46,
+																																																							data :
+																																																							{
+																																																								"desktop_settings(612)" : 
+																																																								{
+																																																									class : "float_core.desktop_settings(17)",
+																																																									object_id : 47,
+																																																									data :
+																																																									{
+																																																										"x(17)" : 206,
+																																																										"y(18)" : 324,
+																																																										"color(19)" : 
+																																																										{
+																																																											type : "color",
+																																																											data : [0.5, 0.5, 0.5]
+																																																										}
+																																																									}
+																																																								},
+																																																								"panel_settings(613)" : null,
+																																																								"inport_connections(614)" : 
+																																																								[
+																																																									{
+																																																										class : "float_core.inport_connection(105)",
+																																																										object_id : 48,
+																																																										data :
+																																																										{
+																																																											"source_component(248)" : 
+																																																											{
+																																																												class : "float_common_atoms.svf_filter_atom(578)",
+																																																												object_id : 49,
+																																																												data :
+																																																												{
+																																																													"settings(6194)" : 
+																																																													{
+																																																														class : "float_core.component_settings(236)",
+																																																														object_id : 50,
+																																																														data :
+																																																														{
+																																																															"desktop_settings(612)" : 
+																																																															{
+																																																																class : "float_core.desktop_settings(17)",
+																																																																object_id : 51,
+																																																																data :
+																																																																{
+																																																																	"x(17)" : 122,
+																																																																	"y(18)" : 214,
+																																																																	"color(19)" : 
+																																																																	{
+																																																																		type : "color",
+																																																																		data : [0.5, 0.5, 0.5]
+																																																																	}
+																																																																}
+																																																															},
+																																																															"panel_settings(613)" : null,
+																																																															"inport_connections(614)" : 
+																																																															[
+																																																																{
+																																																																	class : "float_core.inport_connection(105)",
+																																																																	object_id : 52,
+																																																																	data :
+																																																																	{
+																																																																		"source_component(248)" : { object_ref : 20 },
+																																																																		"outport_index(249)" : 0,
+																																																																		"high_quality(1943)" : true,
+																																																																		"unconnected_value(6443)" : 0.0
+																																																																	}
+																																																																},
+																																																																{
+																																																																	class : "float_core.inport_connection(105)",
+																																																																	object_id : 53,
+																																																																	data :
+																																																																	{
+																																																																		"source_component(248)" : 
+																																																																		{
+																																																																			class : "float_core.indexed_value_atom(180)",
+																																																																			object_id : 54,
+																																																																			data :
+																																																																			{
+																																																																				"settings(6194)" : 
+																																																																				{
+																																																																					class : "float_core.component_settings(236)",
+																																																																					object_id : 55,
+																																																																					data :
+																																																																					{
+																																																																						"desktop_settings(612)" : 
+																																																																						{
+																																																																							class : "float_core.desktop_settings(17)",
+																																																																							object_id : 56,
+																																																																							data :
+																																																																							{
+																																																																								"x(17)" : 176,
+																																																																								"y(18)" : 36,
+																																																																								"color(19)" : 
+																																																																								{
+																																																																									type : "color",
+																																																																									data : [0.5, 0.5, 0.5]
+																																																																								}
+																																																																							}
+																																																																						},
+																																																																						"panel_settings(613)" : 
+																																																																						{
+																																																																							class : "float_core.panel_settings(202)",
+																																																																							object_id : 57,
+																																																																							data :
+																																																																							{
+																																																																								"x(502)" : 4,
+																																																																								"y(503)" : 4,
+																																																																								"width(504)" : 19,
+																																																																								"height(505)" : 33,
+																																																																								"is_visible(506)" : true
+																																																																							}
+																																																																						},
+																																																																						"inport_connections(614)" : 
+																																																																						[
+																																																																						],
+																																																																						"is_polyphonic(615)" : false
+																																																																					}
+																																																																				},
+																																																																				"channel_count(607)" : 0,
+																																																																				"oversampling(608)" : 0,
+																																																																				"name(374)" : "Filter Type",
+																																																																				"label(821)" : "",
+																																																																				"tooltip_text(823)" : "",
+																																																																				"preset_identifier(701)" : "FILTER_TYPE",
+																																																																				"modulations_to_ignore(3826)" : "",
+																																																																				"value_type(702)" : 
+																																																																				{
+																																																																					class : "float_core.indexed_value_type(155)",
+																																																																					object_id : 58,
+																																																																					data :
+																																																																					{
+																																																																						"items(393)" : 
+																																																																						[
+																																																																							{
+																																																																								class : "float_core.indexed_value_item(258)",
+																																																																								object_id : 59,
+																																																																								data :
+																																																																								{
+																																																																									"id(650)" : 1,
+																																																																									"name(651)" : "highpass12"
+																																																																								}
+																																																																							},
+																																																																							{
+																																																																								class : "float_core.indexed_value_item(258)",
+																																																																								object_id : 60,
+																																																																								data :
+																																																																								{
+																																																																									"id(650)" : 11,
+																																																																									"name(651)" : "highpass24"
+																																																																								}
+																																																																							}
+																																																																						],
+																																																																						"edit_style(394)" : 6,
+																																																																						"columns(824)" : 0,
+																																																																						"default_value(6958)" : 11
+																																																																					}
+																																																																				},
+																																																																				"value(457)" : 11
+																																																																			}
+																																																																		},
+																																																																		"outport_index(249)" : 0,
+																																																																		"high_quality(1943)" : true,
+																																																																		"unconnected_value(6443)" : 0.0
+																																																																	}
+																																																																},
+																																																																{
+																																																																	class : "float_core.inport_connection(105)",
+																																																																	object_id : 61,
+																																																																	data :
+																																																																	{
+																																																																		"source_component(248)" : { object_ref : 2 },
+																																																																		"outport_index(249)" : 0,
+																																																																		"high_quality(1943)" : true,
+																																																																		"unconnected_value(6443)" : 0.0
+																																																																	}
+																																																																},
+																																																																{
+																																																																	class : "float_core.inport_connection(105)",
+																																																																	object_id : 62,
+																																																																	data :
+																																																																	{
+																																																																		"source_component(248)" : null,
+																																																																		"outport_index(249)" : 0,
+																																																																		"high_quality(1943)" : true,
+																																																																		"unconnected_value(6443)" : 1.0
+																																																																	}
+																																																																},
+																																																																{
+																																																																	class : "float_core.inport_connection(105)",
+																																																																	object_id : 63,
+																																																																	data :
+																																																																	{
+																																																																		"source_component(248)" : null,
+																																																																		"outport_index(249)" : 0,
+																																																																		"high_quality(1943)" : true,
+																																																																		"unconnected_value(6443)" : 0.707
+																																																																	}
+																																																																},
+																																																																{
+																																																																	class : "float_core.inport_connection(105)",
+																																																																	object_id : 64,
+																																																																	data :
+																																																																	{
+																																																																		"source_component(248)" : null,
+																																																																		"outport_index(249)" : 0,
+																																																																		"high_quality(1943)" : true,
+																																																																		"unconnected_value(6443)" : 1.0
+																																																																	}
+																																																																}
+																																																															],
+																																																															"is_polyphonic(615)" : false
+																																																														}
+																																																													},
+																																																													"channel_count(607)" : 1,
+																																																													"oversampling(608)" : 0,
+																																																													"internal_oversampling(2205)" : 1,
+																																																													"nonlinearity(2207)" : 4,
+																																																													"clip_level(3676)" : 0.0,
+																																																													"resonance_mode(3682)" : 0
+																																																												}
+																																																											},
+																																																											"outport_index(249)" : 0,
+																																																											"high_quality(1943)" : true,
+																																																											"unconnected_value(6443)" : 0.0
+																																																										}
+																																																									},
+																																																									{
+																																																										class : "float_core.inport_connection(105)",
+																																																										object_id : 65,
+																																																										data :
+																																																										{
+																																																											"source_component(248)" : 
+																																																											{
+																																																												class : "float_common_atoms.constant_value_atom(314)",
+																																																												object_id : 66,
+																																																												data :
+																																																												{
+																																																													"settings(6194)" : 
+																																																													{
+																																																														class : "float_core.component_settings(236)",
+																																																														object_id : 67,
+																																																														data :
+																																																														{
+																																																															"desktop_settings(612)" : 
+																																																															{
+																																																																class : "float_core.desktop_settings(17)",
+																																																																object_id : 68,
+																																																																data :
+																																																																{
+																																																																	"x(17)" : 822,
+																																																																	"y(18)" : 88,
+																																																																	"color(19)" : 
+																																																																	{
+																																																																		type : "color",
+																																																																		data : [0.5, 0.5, 0.5]
+																																																																	}
+																																																																}
+																																																															},
+																																																															"panel_settings(613)" : null,
+																																																															"inport_connections(614)" : 
+																																																															[
+																																																															],
+																																																															"is_polyphonic(615)" : false
+																																																														}
+																																																													},
+																																																													"channel_count(607)" : 1,
+																																																													"oversampling(608)" : 0,
+																																																													"constant_value(750)" : 0.001
+																																																												}
+																																																											},
+																																																											"outport_index(249)" : 0,
+																																																											"high_quality(1943)" : true,
+																																																											"unconnected_value(6443)" : 0.0
+																																																										}
+																																																									},
+																																																									{
+																																																										class : "float_core.inport_connection(105)",
+																																																										object_id : 69,
+																																																										data :
+																																																										{
+																																																											"source_component(248)" : 
+																																																											{
+																																																												class : "float_common_atoms.constant_value_atom(314)",
+																																																												object_id : 70,
+																																																												data :
+																																																												{
+																																																													"settings(6194)" : 
+																																																													{
+																																																														class : "float_core.component_settings(236)",
+																																																														object_id : 71,
+																																																														data :
+																																																														{
+																																																															"desktop_settings(612)" : 
+																																																															{
+																																																																class : "float_core.desktop_settings(17)",
+																																																																object_id : 72,
+																																																																data :
+																																																																{
+																																																																	"x(17)" : 906,
+																																																																	"y(18)" : 88,
+																																																																	"color(19)" : 
+																																																																	{
+																																																																		type : "color",
+																																																																		data : [0.5, 0.5, 0.5]
+																																																																	}
+																																																																}
+																																																															},
+																																																															"panel_settings(613)" : null,
+																																																															"inport_connections(614)" : 
+																																																															[
+																																																															],
+																																																															"is_polyphonic(615)" : false
+																																																														}
+																																																													},
+																																																													"channel_count(607)" : 1,
+																																																													"oversampling(608)" : 0,
+																																																													"constant_value(750)" : 0.01
+																																																												}
+																																																											},
+																																																											"outport_index(249)" : 0,
+																																																											"high_quality(1943)" : true,
+																																																											"unconnected_value(6443)" : 0.0
+																																																										}
+																																																									},
+																																																									{
+																																																										class : "float_core.inport_connection(105)",
+																																																										object_id : 73,
+																																																										data :
+																																																										{
+																																																											"source_component(248)" : 
+																																																											{
+																																																												class : "float_common_atoms.constant_integer_value_atom(298)",
+																																																												object_id : 74,
+																																																												data :
+																																																												{
+																																																													"settings(6194)" : 
+																																																													{
+																																																														class : "float_core.component_settings(236)",
+																																																														object_id : 75,
+																																																														data :
+																																																														{
+																																																															"desktop_settings(612)" : 
+																																																															{
+																																																																class : "float_core.desktop_settings(17)",
+																																																																object_id : 76,
+																																																																data :
+																																																																{
+																																																																	"x(17)" : 918,
+																																																																	"y(18)" : 126,
+																																																																	"color(19)" : 
+																																																																	{
+																																																																		type : "color",
+																																																																		data : [0.5, 0.5, 0.5]
+																																																																	}
+																																																																}
+																																																															},
+																																																															"panel_settings(613)" : null,
+																																																															"inport_connections(614)" : 
+																																																															[
+																																																															],
+																																																															"is_polyphonic(615)" : false
+																																																														}
+																																																													},
+																																																													"channel_count(607)" : 0,
+																																																													"oversampling(608)" : 0,
+																																																													"constant_value(720)" : 0
+																																																												}
+																																																											},
+																																																											"outport_index(249)" : 0,
+																																																											"high_quality(1943)" : true,
+																																																											"unconnected_value(6443)" : 0.0
+																																																										}
+																																																									}
+																																																								],
+																																																								"is_polyphonic(615)" : false
+																																																							}
+																																																						},
+																																																						"channel_count(607)" : 0,
+																																																						"oversampling(608)" : 0
+																																																					}
+																																																				},
+																																																				"outport_index(249)" : 0,
+																																																				"high_quality(1943)" : true,
+																																																				"unconnected_value(6443)" : 0.0
+																																																			}
+																																																		}
+																																																	],
+																																																	"is_polyphonic(615)" : false
+																																																}
+																																															},
+																																															"channel_count(607)" : 1,
+																																															"oversampling(608)" : 0,
+																																															"constant_value(750)" : 2.0
+																																														}
+																																													},
+																																													"outport_index(249)" : 0,
+																																													"high_quality(1943)" : true,
+																																													"unconnected_value(6443)" : 0.0
+																																												}
+																																											},
+																																											{
+																																												class : "float_core.inport_connection(105)",
+																																												object_id : 77,
+																																												data :
+																																												{
+																																													"source_component(248)" : 
+																																													{
+																																														class : "float_common_atoms.max_atom(352)",
+																																														object_id : 78,
+																																														data :
+																																														{
+																																															"settings(6194)" : 
+																																															{
+																																																class : "float_core.component_settings(236)",
+																																																object_id : 79,
+																																																data :
+																																																{
+																																																	"desktop_settings(612)" : 
+																																																	{
+																																																		class : "float_core.desktop_settings(17)",
+																																																		object_id : 80,
+																																																		data :
+																																																		{
+																																																			"x(17)" : 360,
+																																																			"y(18)" : 370,
+																																																			"color(19)" : 
+																																																			{
+																																																				type : "color",
+																																																				data : [0.5, 0.5, 0.5]
+																																																			}
+																																																		}
+																																																	},
+																																																	"panel_settings(613)" : null,
+																																																	"inport_connections(614)" : 
+																																																	[
+																																																		{
+																																																			class : "float_core.inport_connection(105)",
+																																																			object_id : 81,
+																																																			data :
+																																																			{
+																																																				"source_component(248)" : 
+																																																				{
+																																																					class : "float_common_atoms.gain_detector_atom(545)",
+																																																					object_id : 82,
+																																																					data :
+																																																					{
+																																																						"settings(6194)" : 
+																																																						{
+																																																							class : "float_core.component_settings(236)",
+																																																							object_id : 83,
+																																																							data :
+																																																							{
+																																																								"desktop_settings(612)" : 
+																																																								{
+																																																									class : "float_core.desktop_settings(17)",
+																																																									object_id : 84,
+																																																									data :
+																																																									{
+																																																										"x(17)" : 288,
+																																																										"y(18)" : 326,
+																																																										"color(19)" : 
+																																																										{
+																																																											type : "color",
+																																																											data : [0.5, 0.5, 0.5]
+																																																										}
+																																																									}
+																																																								},
+																																																								"panel_settings(613)" : null,
+																																																								"inport_connections(614)" : 
+																																																								[
+																																																									{
+																																																										class : "float_core.inport_connection(105)",
+																																																										object_id : 85,
+																																																										data :
+																																																										{
+																																																											"source_component(248)" : 
+																																																											{
+																																																												class : "float_common_atoms.svf_filter_atom(578)",
+																																																												object_id : 86,
+																																																												data :
+																																																												{
+																																																													"settings(6194)" : 
+																																																													{
+																																																														class : "float_core.component_settings(236)",
+																																																														object_id : 87,
+																																																														data :
+																																																														{
+																																																															"desktop_settings(612)" : 
+																																																															{
+																																																																class : "float_core.desktop_settings(17)",
+																																																																object_id : 88,
+																																																																data :
+																																																																{
+																																																																	"x(17)" : 204,
+																																																																	"y(18)" : 214,
+																																																																	"color(19)" : 
+																																																																	{
+																																																																		type : "color",
+																																																																		data : [0.5, 0.5, 0.5]
+																																																																	}
+																																																																}
+																																																															},
+																																																															"panel_settings(613)" : null,
+																																																															"inport_connections(614)" : 
+																																																															[
+																																																																{
+																																																																	class : "float_core.inport_connection(105)",
+																																																																	object_id : 89,
+																																																																	data :
+																																																																	{
+																																																																		"source_component(248)" : { object_ref : 20 },
+																																																																		"outport_index(249)" : 0,
+																																																																		"high_quality(1943)" : true,
+																																																																		"unconnected_value(6443)" : 0.0
+																																																																	}
+																																																																},
+																																																																{
+																																																																	class : "float_core.inport_connection(105)",
+																																																																	object_id : 90,
+																																																																	data :
+																																																																	{
+																																																																		"source_component(248)" : { object_ref : 54 },
+																																																																		"outport_index(249)" : 0,
+																																																																		"high_quality(1943)" : true,
+																																																																		"unconnected_value(6443)" : 0.0
+																																																																	}
+																																																																},
+																																																																{
+																																																																	class : "float_core.inport_connection(105)",
+																																																																	object_id : 91,
+																																																																	data :
+																																																																	{
+																																																																		"source_component(248)" : 
+																																																																		{
+																																																																			class : "float_common_atoms.constant_value_atom(314)",
+																																																																			object_id : 92,
+																																																																			data :
+																																																																			{
+																																																																				"settings(6194)" : 
+																																																																				{
+																																																																					class : "float_core.component_settings(236)",
+																																																																					object_id : 93,
+																																																																					data :
+																																																																					{
+																																																																						"desktop_settings(612)" : 
+																																																																						{
+																																																																							class : "float_core.desktop_settings(17)",
+																																																																							object_id : 94,
+																																																																							data :
+																																																																							{
+																																																																								"x(17)" : 366,
+																																																																								"y(18)" : 166,
+																																																																								"color(19)" : 
+																																																																								{
+																																																																									type : "color",
+																																																																									data : [0.5, 0.5, 0.5]
+																																																																								}
+																																																																							}
+																																																																						},
+																																																																						"panel_settings(613)" : null,
+																																																																						"inport_connections(614)" : 
+																																																																						[
+																																																																						],
+																																																																						"is_polyphonic(615)" : false
+																																																																					}
+																																																																				},
+																																																																				"channel_count(607)" : 1,
+																																																																				"oversampling(608)" : 0,
+																																																																				"constant_value(750)" : 130.0
+																																																																			}
+																																																																		},
+																																																																		"outport_index(249)" : 0,
+																																																																		"high_quality(1943)" : true,
+																																																																		"unconnected_value(6443)" : 0.0
+																																																																	}
+																																																																},
+																																																																{
+																																																																	class : "float_core.inport_connection(105)",
+																																																																	object_id : 95,
+																																																																	data :
+																																																																	{
+																																																																		"source_component(248)" : null,
+																																																																		"outport_index(249)" : 0,
+																																																																		"high_quality(1943)" : true,
+																																																																		"unconnected_value(6443)" : 1.0
+																																																																	}
+																																																																},
+																																																																{
+																																																																	class : "float_core.inport_connection(105)",
+																																																																	object_id : 96,
+																																																																	data :
+																																																																	{
+																																																																		"source_component(248)" : null,
+																																																																		"outport_index(249)" : 0,
+																																																																		"high_quality(1943)" : true,
+																																																																		"unconnected_value(6443)" : 0.707
+																																																																	}
+																																																																},
+																																																																{
+																																																																	class : "float_core.inport_connection(105)",
+																																																																	object_id : 97,
+																																																																	data :
+																																																																	{
+																																																																		"source_component(248)" : null,
+																																																																		"outport_index(249)" : 0,
+																																																																		"high_quality(1943)" : true,
+																																																																		"unconnected_value(6443)" : 1.0
+																																																																	}
+																																																																}
+																																																															],
+																																																															"is_polyphonic(615)" : false
+																																																														}
+																																																													},
+																																																													"channel_count(607)" : 1,
+																																																													"oversampling(608)" : 0,
+																																																													"internal_oversampling(2205)" : 1,
+																																																													"nonlinearity(2207)" : 4,
+																																																													"clip_level(3676)" : 0.0,
+																																																													"resonance_mode(3682)" : 0
+																																																												}
+																																																											},
+																																																											"outport_index(249)" : 0,
+																																																											"high_quality(1943)" : true,
+																																																											"unconnected_value(6443)" : 0.0
+																																																										}
+																																																									},
+																																																									{
+																																																										class : "float_core.inport_connection(105)",
+																																																										object_id : 98,
+																																																										data :
+																																																										{
+																																																											"source_component(248)" : { object_ref : 66 },
+																																																											"outport_index(249)" : 0,
+																																																											"high_quality(1943)" : true,
+																																																											"unconnected_value(6443)" : 0.0
+																																																										}
+																																																									},
+																																																									{
+																																																										class : "float_core.inport_connection(105)",
+																																																										object_id : 99,
+																																																										data :
+																																																										{
+																																																											"source_component(248)" : { object_ref : 70 },
+																																																											"outport_index(249)" : 0,
+																																																											"high_quality(1943)" : true,
+																																																											"unconnected_value(6443)" : 0.0
+																																																										}
+																																																									},
+																																																									{
+																																																										class : "float_core.inport_connection(105)",
+																																																										object_id : 100,
+																																																										data :
+																																																										{
+																																																											"source_component(248)" : { object_ref : 74 },
+																																																											"outport_index(249)" : 0,
+																																																											"high_quality(1943)" : true,
+																																																											"unconnected_value(6443)" : 0.0
+																																																										}
+																																																									}
+																																																								],
+																																																								"is_polyphonic(615)" : false
+																																																							}
+																																																						},
+																																																						"channel_count(607)" : 1,
+																																																						"oversampling(608)" : 0
+																																																					}
+																																																				},
+																																																				"outport_index(249)" : 0,
+																																																				"high_quality(1943)" : true,
+																																																				"unconnected_value(6443)" : 0.0
+																																																			}
+																																																		},
+																																																		{
+																																																			class : "float_core.inport_connection(105)",
+																																																			object_id : 101,
+																																																			data :
+																																																			{
+																																																				"source_component(248)" : 
+																																																				{
+																																																					class : "float_common_atoms.constant_value_atom(314)",
+																																																					object_id : 102,
+																																																					data :
+																																																					{
+																																																						"settings(6194)" : 
+																																																						{
+																																																							class : "float_core.component_settings(236)",
+																																																							object_id : 103,
+																																																							data :
+																																																							{
+																																																								"desktop_settings(612)" : 
+																																																								{
+																																																									class : "float_core.desktop_settings(17)",
+																																																									object_id : 104,
+																																																									data :
+																																																									{
+																																																										"x(17)" : 754,
+																																																										"y(18)" : 298,
+																																																										"color(19)" : 
+																																																										{
+																																																											type : "color",
+																																																											data : [0.5, 0.5, 0.5]
+																																																										}
+																																																									}
+																																																								},
+																																																								"panel_settings(613)" : null,
+																																																								"inport_connections(614)" : 
+																																																								[
+																																																								],
+																																																								"is_polyphonic(615)" : false
+																																																							}
+																																																						},
+																																																						"channel_count(607)" : 1,
+																																																						"oversampling(608)" : 0,
+																																																						"constant_value(750)" : -50.0
+																																																					}
+																																																				},
+																																																				"outport_index(249)" : 0,
+																																																				"high_quality(1943)" : true,
+																																																				"unconnected_value(6443)" : 0.0
+																																																			}
+																																																		}
+																																																	],
+																																																	"is_polyphonic(615)" : false
+																																																}
+																																															},
+																																															"channel_count(607)" : 1,
+																																															"oversampling(608)" : 0,
+																																															"second_input_is_scalar(3154)" : false
+																																														}
+																																													},
+																																													"outport_index(249)" : 0,
+																																													"high_quality(1943)" : false,
+																																													"unconnected_value(6443)" : 0.0
+																																												}
+																																											}
+																																										],
+																																										"is_polyphonic(615)" : false
+																																									}
+																																								},
+																																								"channel_count(607)" : 1,
+																																								"oversampling(608)" : 0,
+																																								"second_input_is_scalar(3154)" : false
+																																							}
+																																						},
+																																						"outport_index(249)" : 0,
+																																						"high_quality(1943)" : true,
+																																						"unconnected_value(6443)" : 0.0
+																																					}
+																																				},
+																																				{
+																																					class : "float_core.inport_connection(105)",
+																																					object_id : 105,
+																																					data :
+																																					{
+																																						"source_component(248)" : 
+																																						{
+																																							class : "float_common_atoms.constant_value_atom(314)",
+																																							object_id : 106,
+																																							data :
+																																							{
+																																								"settings(6194)" : 
+																																								{
+																																									class : "float_core.component_settings(236)",
+																																									object_id : 107,
+																																									data :
+																																									{
+																																										"desktop_settings(612)" : 
+																																										{
+																																											class : "float_core.desktop_settings(17)",
+																																											object_id : 108,
+																																											data :
+																																											{
+																																												"x(17)" : 404,
+																																												"y(18)" : 372,
+																																												"color(19)" : 
+																																												{
+																																													type : "color",
+																																													data : [0.5, 0.5, 0.5]
+																																												}
+																																											}
+																																										},
+																																										"panel_settings(613)" : null,
+																																										"inport_connections(614)" : 
+																																										[
+																																										],
+																																										"is_polyphonic(615)" : false
+																																									}
+																																								},
+																																								"channel_count(607)" : 1,
+																																								"oversampling(608)" : 0,
+																																								"constant_value(750)" : 0.0
+																																							}
+																																						},
+																																						"outport_index(249)" : 0,
+																																						"high_quality(1943)" : true,
+																																						"unconnected_value(6443)" : 0.0
+																																					}
+																																				}
+																																			],
+																																			"is_polyphonic(615)" : false
+																																		}
+																																	},
+																																	"channel_count(607)" : 1,
+																																	"oversampling(608)" : 0,
+																																	"second_input_is_scalar(3154)" : false
+																																}
+																															},
+																															"outport_index(249)" : 0,
+																															"high_quality(1943)" : true,
+																															"unconnected_value(6443)" : 0.0
+																														}
+																													},
+																													{
+																														class : "float_core.inport_connection(105)",
+																														object_id : 109,
+																														data :
+																														{
+																															"source_component(248)" : 
+																															{
+																																class : "float_common_atoms.constant_multiply_atom(303)",
+																																object_id : 110,
+																																data :
+																																{
+																																	"settings(6194)" : 
+																																	{
+																																		class : "float_core.component_settings(236)",
+																																		object_id : 111,
+																																		data :
+																																		{
+																																			"desktop_settings(612)" : 
+																																			{
+																																				class : "float_core.desktop_settings(17)",
+																																				object_id : 112,
+																																				data :
+																																				{
+																																					"x(17)" : 300,
+																																					"y(18)" : 464,
+																																					"color(19)" : 
+																																					{
+																																						type : "color",
+																																						data : [0.5, 0.5, 0.5]
+																																					}
+																																				}
+																																			},
+																																			"panel_settings(613)" : null,
+																																			"inport_connections(614)" : 
+																																			[
+																																				{
+																																					class : "float_core.inport_connection(105)",
+																																					object_id : 113,
+																																					data :
+																																					{
+																																						"source_component(248)" : { object_ref : 7 },
+																																						"outport_index(249)" : 0,
+																																						"high_quality(1943)" : true,
+																																						"unconnected_value(6443)" : 0.0
+																																					}
+																																				}
+																																			],
+																																			"is_polyphonic(615)" : false
+																																		}
+																																	},
+																																	"channel_count(607)" : 1,
+																																	"oversampling(608)" : 0,
+																																	"constant_value(750)" : -3.0
+																																}
+																															},
+																															"outport_index(249)" : 0,
+																															"high_quality(1943)" : true,
+																															"unconnected_value(6443)" : 0.0
+																														}
+																													}
+																												],
+																												"is_polyphonic(615)" : false
+																											}
+																										},
+																										"channel_count(607)" : 1,
+																										"oversampling(608)" : 0,
+																										"second_input_is_scalar(3154)" : false
+																									}
+																								},
+																								"outport_index(249)" : 0,
+																								"high_quality(1943)" : true,
+																								"unconnected_value(6443)" : 0.0
+																							}
+																						}
+																					],
+																					"is_polyphonic(615)" : false
+																				}
+																			},
+																			"channel_count(607)" : 1,
+																			"oversampling(608)" : 0,
+																			"source_domain(727)" : 1,
+																			"destination_domain(728)" : 0
+																		}
+																	},
+																	"outport_index(249)" : 0,
+																	"high_quality(1943)" : true,
+																	"unconnected_value(6443)" : 0.0
+																}
+															}
+														],
+														"is_polyphonic(615)" : false
+													}
+												},
+												"channel_count(607)" : 0,
+												"oversampling(608)" : 0,
+												"second_input_is_scalar(3154)" : true
+											}
+										},
+										"outport_index(249)" : 0,
+										"high_quality(1943)" : true,
+										"unconnected_value(6443)" : 0.0
+									}
+								},
+								{
+									class : "float_core.inport_connection(105)",
+									object_id : 114,
+									data :
+									{
+										"source_component(248)" : { object_ref : 49 },
+										"outport_index(249)" : 0,
+										"high_quality(1943)" : false,
+										"unconnected_value(6443)" : 0.0
+									}
+								},
+								{
+									class : "float_core.inport_connection(105)",
+									object_id : 115,
+									data :
+									{
+										"source_component(248)" : 
+										{
+											class : "float_core.boolean_value_atom(87)",
+											object_id : 116,
+											data :
+											{
+												"settings(6194)" : 
+												{
+													class : "float_core.component_settings(236)",
+													object_id : 117,
+													data :
+													{
+														"desktop_settings(612)" : 
+														{
+															class : "float_core.desktop_settings(17)",
+															object_id : 118,
+															data :
+															{
+																"x(17)" : 80,
+																"y(18)" : 630,
+																"color(19)" : 
+																{
+																	type : "color",
+																	data : [0.5, 0.5, 0.5]
+																}
+															}
+														},
+														"panel_settings(613)" : 
+														{
+															class : "float_core.panel_settings(202)",
+															object_id : 119,
+															data :
+															{
+																"x(502)" : 4,
+																"y(503)" : 40,
+																"width(504)" : 19,
+																"height(505)" : 17,
+																"is_visible(506)" : true
+															}
+														},
+														"inport_connections(614)" : 
+														[
+														],
+														"is_polyphonic(615)" : false
+													}
+												},
+												"channel_count(607)" : 0,
+												"oversampling(608)" : 0,
+												"name(374)" : "Monitor",
+												"label(821)" : "",
+												"tooltip_text(823)" : "",
+												"preset_identifier(701)" : "MONITOR",
+												"modulations_to_ignore(3826)" : "",
+												"value_type(702)" : 
+												{
+													class : "float_core.boolean_value_type(198)",
+													object_id : 120,
+													data :
+													{
+														"icon_name(4755)" : "solo",
+														"default_value(6957)" : false
+													}
+												},
+												"value(210)" : false
+											}
+										},
+										"outport_index(249)" : 0,
+										"high_quality(1943)" : false,
+										"unconnected_value(6443)" : 0.0
+									}
+								}
+							],
+							"is_polyphonic(615)" : false
+						}
+					},
+					"channel_count(607)" : 0,
+					"oversampling(608)" : 0
+				}
+			},{ object_ref : 116 },{ object_ref : 49 },{ object_ref : 54 },{ object_ref : 66 },{ object_ref : 70 },
+			{
+				class : "float_core.gain_change_meter_atom(556)",
+				object_id : 121,
+				data :
+				{
+					"settings(6194)" : 
+					{
+						class : "float_core.component_settings(236)",
+						object_id : 122,
+						data :
+						{
+							"desktop_settings(612)" : 
+							{
+								class : "float_core.desktop_settings(17)",
+								object_id : 123,
+								data :
+								{
+									"x(17)" : 206,
+									"y(18)" : 702,
+									"color(19)" : 
+									{
+										type : "color",
+										data : [0.5, 0.5, 0.5]
+									}
+								}
+							},
+							"panel_settings(613)" : 
+							{
+								class : "float_core.panel_settings(202)",
+								object_id : 124,
+								data :
+								{
+									"x(502)" : 10,
+									"y(503)" : 62,
+									"width(504)" : 7,
+									"height(505)" : 139,
+									"is_visible(506)" : true
+								}
+							},
+							"inport_connections(614)" : 
+							[
+								{
+									class : "float_core.inport_connection(105)",
+									object_id : 125,
+									data :
+									{
+										"source_component(248)" : { object_ref : 25 },
+										"outport_index(249)" : 0,
+										"high_quality(1943)" : true,
+										"unconnected_value(6443)" : 0.0
+									}
+								}
+							],
+							"is_polyphonic(615)" : false
+						}
+					},
+					"channel_count(607)" : 1,
+					"min_db(2012)" : -60.0,
+					"max_db(2013)" : 0.0
+				}
+			},{ object_ref : 16 },{ object_ref : 106 },{ object_ref : 25 },{ object_ref : 82 },{ object_ref : 45 },{ object_ref : 37 },{ object_ref : 29 },{ object_ref : 74 },{ object_ref : 41 },{ object_ref : 33 },{ object_ref : 110 },{ object_ref : 78 },{ object_ref : 102 },{ object_ref : 86 },{ object_ref : 92 }
+		],
+		"panels(6213)" : 
+		[
+			{
+				class : "float_core.panel(1680)",
+				object_id : 126,
+				data :
+				{
+					"layout_settings(6226)" : null,
+					"is_visible(6309)" : true,
+					"is_enabled(6310)" : true,
+					"tooltip_text(6867)" : "",
+					"name(6211)" : "Main",
+					"root_item(6212)" : 
+					{
+						class : "float_core.grid_panel_item(1681)",
+						object_id : 127,
+						data :
+						{
+							"layout_settings(6226)" : null,
+							"is_visible(6309)" : true,
+							"is_enabled(6310)" : true,
+							"tooltip_text(6867)" : "",
+							"items(6221)" : 
+							[
+								{
+									class : "float_core.grid_panel_item(1681)",
+									object_id : 128,
+									data :
+									{
+										"layout_settings(6226)" : 
+										{
+											class : "float_core.grid_panel_item_layout_settings(1694)",
+											object_id : 129,
+											data :
+											{
+												"width(6217)" : 19,
+												"height(6218)" : 53,
+												"x(6215)" : 0,
+												"y(6216)" : 0
+											}
+										},
+										"is_visible(6309)" : true,
+										"is_enabled(6310)" : true,
+										"tooltip_text(6867)" : "",
+										"items(6221)" : 
+										[
+											{
+												class : "float_core.button_group_chooser_panel_item(1712)",
+												object_id : 130,
+												data :
+												{
+													"layout_settings(6226)" : 
+													{
+														class : "float_core.grid_panel_item_layout_settings(1694)",
+														object_id : 131,
+														data :
+														{
+															"width(6217)" : 9,
+															"height(6218)" : 5,
+															"x(6215)" : 1,
+															"y(6216)" : 17
+														}
+													},
+													"is_visible(6309)" : true,
+													"is_enabled(6310)" : true,
+													"tooltip_text(6867)" : "",
+													"data_model(6220)" : { object_ref : 54 },
+													"is_horizontal(6255)" : true,
+													"break_count(6256)" : 0,
+													"label_style(6257)" : 1
+												}
+											},
+											{
+												class : "float_core.knob_panel_item(1687)",
+												object_id : 132,
+												data :
+												{
+													"layout_settings(6226)" : 
+													{
+														class : "float_core.grid_panel_item_layout_settings(1694)",
+														object_id : 133,
+														data :
+														{
+															"width(6217)" : 11,
+															"height(6218)" : 11,
+															"x(6215)" : 3,
+															"y(6216)" : 2
+														}
+													},
+													"is_visible(6309)" : true,
+													"is_enabled(6310)" : true,
+													"tooltip_text(6867)" : "Frequency",
+													"data_model(6220)" : { object_ref : 2 },
+													"title(6241)" : "Freq",
+													"knob_size(6223)" : 2,
+													"knob_style(7055)" : 0,
+													"label_color(7056)" : 999,
+													"pie_color(7057)" : 999
+												}
+											},
+											{
+												class : "float_core.toggle_button_panel_item(1702)",
+												object_id : 134,
+												data :
+												{
+													"layout_settings(6226)" : 
+													{
+														class : "float_core.grid_panel_item_layout_settings(1694)",
+														object_id : 135,
+														data :
+														{
+															"width(6217)" : 5,
+															"height(6218)" : 5,
+															"x(6215)" : 11,
+															"y(6216)" : 17
+														}
+													},
+													"is_visible(6309)" : true,
+													"is_enabled(6310)" : true,
+													"tooltip_text(6867)" : "",
+													"data_model(6220)" : { object_ref : 116 },
+													"title(6241)" : "",
+													"icon_name(6239)" : "solo.svg",
+													"style(6240)" : 0,
+													"label_style(6267)" : 2,
+													"invert_value(6552)" : false,
+													"is_selected(6719)" : false
+												}
+											},
+											{
+												class : "float_core.display_panel_item(1804)",
+												object_id : 136,
+												data :
+												{
+													"layout_settings(6226)" : 
+													{
+														class : "float_core.grid_panel_item_layout_settings(1694)",
+														object_id : 137,
+														data :
+														{
+															"width(6217)" : 15,
+															"height(6218)" : 13,
+															"x(6215)" : 0,
+															"y(6216)" : 23
+														}
+													},
+													"is_visible(6309)" : true,
+													"is_enabled(6310)" : true,
+													"tooltip_text(6867)" : "",
+													"items(6221)" : 
+													[
+														{
+															class : "float_core.grid_panel_item(1681)",
+															object_id : 138,
+															data :
+															{
+																"layout_settings(6226)" : 
+																{
+																	class : "float_core.stack_panel_item_layout_settings(1803)",
+																	object_id : 139,
+																	data :
+																	{
+																		"width(6217)" : 17,
+																		"height(6218)" : 13
+																	}
+																},
+																"is_visible(6309)" : true,
+																"is_enabled(6310)" : true,
+																"tooltip_text(6867)" : "",
+																"items(6221)" : 
+																[
+																	{
+																		class : "float_core.meter_scale_panel_item(1891)",
+																		object_id : 140,
+																		data :
+																		{
+																			"layout_settings(6226)" : 
+																			{
+																				class : "float_core.grid_panel_item_layout_settings(1694)",
+																				object_id : 141,
+																				data :
+																				{
+																					"width(6217)" : 4,
+																					"height(6218)" : 13,
+																					"x(6215)" : 0,
+																					"y(6216)" : 0
+																				}
+																			},
+																			"is_visible(6309)" : true,
+																			"is_enabled(6310)" : true,
+																			"tooltip_text(6867)" : "",
+																			"show_labels(6736)" : true
+																		}
+																	},
+																	{
+																		class : "float_core.meter_scale_panel_item(1891)",
+																		object_id : 142,
+																		data :
+																		{
+																			"layout_settings(6226)" : 
+																			{
+																				class : "float_core.grid_panel_item_layout_settings(1694)",
+																				object_id : 143,
+																				data :
+																				{
+																					"width(6217)" : 1,
+																					"height(6218)" : 13,
+																					"x(6215)" : 4,
+																					"y(6216)" : 0
+																				}
+																			},
+																			"is_visible(6309)" : true,
+																			"is_enabled(6310)" : false,
+																			"tooltip_text(6867)" : "",
+																			"show_labels(6736)" : false
+																		}
+																	},
+																	{
+																		class : "float_core.meter_panel_item(1724)",
+																		object_id : 144,
+																		data :
+																		{
+																			"layout_settings(6226)" : 
+																			{
+																				class : "float_core.grid_panel_item_layout_settings(1694)",
+																				object_id : 145,
+																				data :
+																				{
+																					"width(6217)" : 5,
+																					"height(6218)" : 13,
+																					"x(6215)" : 6,
+																					"y(6216)" : 0
+																				}
+																			},
+																			"is_visible(6309)" : true,
+																			"is_enabled(6310)" : true,
+																			"tooltip_text(6867)" : "",
+																			"data_model(6742)" : { object_ref : 121 },
+																			"meter_style(6738)" : 2,
+																			"meter_origin(6739)" : 1,
+																			"min_bound(6740)" : -80.0,
+																			"max_bound(6741)" : 0.0,
+																			"value_offset(6743)" : 0.0
+																		}
+																	},
+																	{
+																		class : "float_core.meter_scale_panel_item(1891)",
+																		object_id : 146,
+																		data :
+																		{
+																			"layout_settings(6226)" : 
+																			{
+																				class : "float_core.grid_panel_item_layout_settings(1694)",
+																				object_id : 147,
+																				data :
+																				{
+																					"width(6217)" : 3,
+																					"height(6218)" : 13,
+																					"x(6215)" : 12,
+																					"y(6216)" : 0
+																				}
+																			},
+																			"is_visible(6309)" : true,
+																			"is_enabled(6310)" : false,
+																			"tooltip_text(6867)" : "",
+																			"show_labels(6736)" : false
+																		}
+																	}
+																],
+																"border_style(6228)" : 0,
+																"title(6242)" : "",
+																"show_title(6243)" : false,
+																"title_color(6522)" : 6,
+																"brightness(6245)" : 1
+															}
+														}
+													],
+													"border_style(6228)" : 0,
+													"title(6242)" : "",
+													"show_title(6243)" : false,
+													"title_color(6522)" : 6,
+													"brightness(6245)" : 3,
+													"x_min(6504)" : 0.0,
+													"x_max(6505)" : 1.0,
+													"x_domain(6506)" : 0,
+													"x_unit(6507)" : 1,
+													"y_min(6508)" : -20.0,
+													"y_max(6509)" : 0.0,
+													"y_domain(6510)" : 1,
+													"y_unit(6511)" : 2,
+													"use_meter_mode(6737)" : false
+												}
+											},
+											{
+												class : "float_core.knob_panel_item(1687)",
+												object_id : 148,
+												data :
+												{
+													"layout_settings(6226)" : 
+													{
+														class : "float_core.grid_panel_item_layout_settings(1694)",
+														object_id : 149,
+														data :
+														{
+															"width(6217)" : 15,
+															"height(6218)" : 12,
+															"x(6215)" : 1,
+															"y(6216)" : 38
+														}
+													},
+													"is_visible(6309)" : true,
+													"is_enabled(6310)" : true,
+													"tooltip_text(6867)" : "",
+													"data_model(6220)" : { object_ref : 7 },
+													"title(6241)" : "Amount",
+													"knob_size(6223)" : 2,
+													"knob_style(7055)" : 0,
+													"label_color(7056)" : 999,
+													"pie_color(7057)" : 999
+												}
+											}
+										],
+										"border_style(6228)" : 1,
+										"title(6242)" : "",
+										"show_title(6243)" : false,
+										"title_color(6522)" : 6,
+										"brightness(6245)" : 1
+									}
+								}
+							],
+							"border_style(6228)" : 0,
+							"title(6242)" : "",
+							"show_title(6243)" : false,
+							"title_color(6522)" : 6,
+							"brightness(6245)" : 1
+						}
+					},
+					"width(6232)" : 17,
+					"height(6233)" : 53,
+					"expressions(6277)" : 
+					[
+						{
+							class : "float_core.panel_expression(1728)",
+							object_id : 150,
+							data :
+							{
+								"expression(6274)" : "FREQ_display",
+								"panel_item(6275)" : { object_ref : 132 },
+								"attribute_id(6316)" : 6241
+							}
+						}
+					]
+				}
+			}
+		],
+		"panel_width(175)" : 77,
+		"proxy_in_ports(177)" : 
+		[
+			{ object_ref : 20 },
+			{
+				class : "float_core.proxy_in_port_component(154)",
+				object_id : 151,
+				data :
+				{
+					"settings(6194)" : 
+					{
+						class : "float_core.component_settings(236)",
+						object_id : 152,
+						data :
+						{
+							"desktop_settings(612)" : 
+							{
+								class : "float_core.desktop_settings(17)",
+								object_id : 153,
+								data :
+								{
+									"x(17)" : 150,
+									"y(18)" : 0,
+									"color(19)" : 
+									{
+										type : "color",
+										data : [0.5, 0.5, 0.5]
+									}
+								}
+							},
+							"panel_settings(613)" : null,
+							"inport_connections(614)" : 
+							[
+							],
+							"is_polyphonic(615)" : false
+						}
+					},
+					"port(301)" : 
+					{
+						class : "float_core.note_port(61)",
+						object_id : 154,
+						data :
+						{
+							"name(498)" : "",
+							"description(4741)" : "",
+							"decorated_name(499)" : " Note out",
+							"is_inport(500)" : false,
+							"is_optional(1384)" : false
+						}
+					}
+				}
+			}
+		],
+		"proxy_out_ports(178)" : 
+		[
+			{
+				class : "float_core.proxy_out_port_component(50)",
+				object_id : 155,
+				data :
+				{
+					"settings(6194)" : 
+					{
+						class : "float_core.component_settings(236)",
+						object_id : 156,
+						data :
+						{
+							"desktop_settings(612)" : 
+							{
+								class : "float_core.desktop_settings(17)",
+								object_id : 157,
+								data :
+								{
+									"x(17)" : 34,
+									"y(18)" : 760,
+									"color(19)" : 
+									{
+										type : "color",
+										data : [0.5, 0.5, 0.5]
+									}
+								}
+							},
+							"panel_settings(613)" : null,
+							"inport_connections(614)" : 
+							[
+								{
+									class : "float_core.inport_connection(105)",
+									object_id : 158,
+									data :
+									{
+										"source_component(248)" : { object_ref : 12 },
+										"outport_index(249)" : 0,
+										"high_quality(1943)" : true,
+										"unconnected_value(6443)" : 0.0
+									}
+								}
+							],
+							"is_polyphonic(615)" : false
+						}
+					},
+					"port(301)" : 
+					{
+						class : "float_core.audio_port(242)",
+						object_id : 159,
+						data :
+						{
+							"name(498)" : "",
+							"description(4741)" : "",
+							"decorated_name(499)" : " Audio in (PARENT)",
+							"is_inport(500)" : true,
+							"is_optional(1384)" : false,
+							"channel_count(372)" : 3
+						}
+					}
+				}
+			}
+		],
+		"fft_order(6566)" : 0,
+		"context_menu_panel(6834)" : null,
+		"polyphony(179)" : 1,
+		"sleep_level_threshold(1977)" : -96.0,
+		"sleep_level_timeout(1978)" : 0.05,
+		"device_UUID(385)" : "8750db61-e9d3-4d0e-a610-e734006a64dc",
+		"device_name(386)" : "De-Esser",
+		"description(2057)" : "Reduce excessive sibilance.",
+		"creator(387)" : "Bitwig",
+		"comment(388)" : "",
+		"keywords(389)" : "",
+		"category(390)" : "Dynamics",
+		"device_type(391)" : 0,
+		"suggest_for_note_input(4846)" : false,
+		"suggest_for_audio_input(4847)" : true,
+		"has_been_modified(392)" : true,
+		"color_tint(6384)" : 0,
+		"header_area_panel(6417)" : null
+	}
+}

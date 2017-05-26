@@ -1,0 +1,4139 @@
+BtWg000100010087000016cc0000000000000000{
+	class : "meta",
+	object_id : 1,
+	data :
+	{
+		"application_version_name" : "none",
+		"branch" : "alex/faster-midi",
+		"comment" : "",
+		"creator" : "Bitwig",
+		"device_category" : "Note FX",
+		"device_description" : "Transposes notes according to a map of pitch classes.",
+		"device_id" : "284a1949-29d5-4dd4-8315-86cef92fd2cd",
+		"device_name" : "Transposition Map",
+		"device_type" : "note_to_note",
+		"device_uuid" : "284a1949-29d5-4dd4-8315-86cef92fd2cd",
+		"has_audio_input" : false,
+		"has_audio_output" : false,
+		"has_note_input" : false,
+		"has_note_output" : false,
+		"revision_id" : "9d5030f210d284909cc6873556049ee988813144",
+		"revision_no" : 43676,
+		"suggest_for_audio_input" : false,
+		"suggest_for_note_input" : true,
+		"tags" : "",
+		"type" : "application/bitwig-device"
+	}
+}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
+{
+	class : "float_core.device_contents(151)",
+	object_id : 1,
+	data :
+	{
+		"settings(6194)" : null,
+		"child_components(173)" : 
+		[
+			{
+				class : "float_common_atoms.pitch_class_mapping_atom(1153)",
+				object_id : 2,
+				data :
+				{
+					"settings(6194)" : 
+					{
+						class : "float_core.component_settings(236)",
+						object_id : 3,
+						data :
+						{
+							"desktop_settings(612)" : 
+							{
+								class : "float_core.desktop_settings(17)",
+								object_id : 4,
+								data :
+								{
+									"x(17)" : 244,
+									"y(18)" : 366,
+									"color(19)" : 
+									{
+										type : "color",
+										data : [0.5, 0.5, 0.5]
+									}
+								}
+							},
+							"panel_settings(613)" : null,
+							"inport_connections(614)" : 
+							[
+								{
+									class : "float_core.inport_connection(105)",
+									object_id : 5,
+									data :
+									{
+										"source_component(248)" : 
+										{
+											class : "float_common_atoms.note_pitch_atom(1158)",
+											object_id : 6,
+											data :
+											{
+												"settings(6194)" : 
+												{
+													class : "float_core.component_settings(236)",
+													object_id : 7,
+													data :
+													{
+														"desktop_settings(612)" : 
+														{
+															class : "float_core.desktop_settings(17)",
+															object_id : 8,
+															data :
+															{
+																"x(17)" : 50,
+																"y(18)" : 248,
+																"color(19)" : 
+																{
+																	type : "color",
+																	data : [0.5, 0.5, 0.5]
+																}
+															}
+														},
+														"panel_settings(613)" : null,
+														"inport_connections(614)" : 
+														[
+															{
+																class : "float_core.inport_connection(105)",
+																object_id : 9,
+																data :
+																{
+																	"source_component(248)" : 
+																	{
+																		class : "float_core.proxy_in_port_component(154)",
+																		object_id : 10,
+																		data :
+																		{
+																			"settings(6194)" : 
+																			{
+																				class : "float_core.component_settings(236)",
+																				object_id : 11,
+																				data :
+																				{
+																					"desktop_settings(612)" : 
+																					{
+																						class : "float_core.desktop_settings(17)",
+																						object_id : 12,
+																						data :
+																						{
+																							"x(17)" : 18,
+																							"y(18)" : 64,
+																							"color(19)" : 
+																							{
+																								type : "color",
+																								data : [0.5, 0.5, 0.5]
+																							}
+																						}
+																					},
+																					"panel_settings(613)" : null,
+																					"inport_connections(614)" : 
+																					[
+																					],
+																					"is_polyphonic(615)" : false
+																				}
+																			},
+																			"port(301)" : 
+																			{
+																				class : "float_core.note_port(61)",
+																				object_id : 13,
+																				data :
+																				{
+																					"name(498)" : "",
+																					"description(4741)" : "",
+																					"decorated_name(499)" : " Note out",
+																					"is_inport(500)" : false,
+																					"is_optional(1384)" : false
+																				}
+																			}
+																		}
+																	},
+																	"outport_index(249)" : 0,
+																	"high_quality(1943)" : true,
+																	"unconnected_value(6443)" : 0.0
+																}
+															},
+															{
+																class : "float_core.inport_connection(105)",
+																object_id : 14,
+																data :
+																{
+																	"source_component(248)" : 
+																	{
+																		class : "float_common_atoms.int_to_audio_atom(404)",
+																		object_id : 15,
+																		data :
+																		{
+																			"settings(6194)" : 
+																			{
+																				class : "float_core.component_settings(236)",
+																				object_id : 16,
+																				data :
+																				{
+																					"desktop_settings(612)" : 
+																					{
+																						class : "float_core.desktop_settings(17)",
+																						object_id : 17,
+																						data :
+																						{
+																							"x(17)" : 92,
+																							"y(18)" : 132,
+																							"color(19)" : 
+																							{
+																								type : "color",
+																								data : [0.5, 0.5, 0.5]
+																							}
+																						}
+																					},
+																					"panel_settings(613)" : null,
+																					"inport_connections(614)" : 
+																					[
+																						{
+																							class : "float_core.inport_connection(105)",
+																							object_id : 18,
+																							data :
+																							{
+																								"source_component(248)" : 
+																								{
+																									class : "float_core.integer_value_atom(394)",
+																									object_id : 19,
+																									data :
+																									{
+																										"settings(6194)" : 
+																										{
+																											class : "float_core.component_settings(236)",
+																											object_id : 20,
+																											data :
+																											{
+																												"desktop_settings(612)" : 
+																												{
+																													class : "float_core.desktop_settings(17)",
+																													object_id : 21,
+																													data :
+																													{
+																														"x(17)" : 96,
+																														"y(18)" : 44,
+																														"color(19)" : 
+																														{
+																															type : "color",
+																															data : [0.5, 0.5, 0.5]
+																														}
+																													}
+																												},
+																												"panel_settings(613)" : 
+																												{
+																													class : "float_core.panel_settings(202)",
+																													object_id : 22,
+																													data :
+																													{
+																														"x(502)" : 4,
+																														"y(503)" : 16,
+																														"width(504)" : 45,
+																														"height(505)" : 17,
+																														"is_visible(506)" : true
+																													}
+																												},
+																												"inport_connections(614)" : 
+																												[
+																												],
+																												"is_polyphonic(615)" : false
+																											}
+																										},
+																										"channel_count(607)" : 0,
+																										"oversampling(608)" : 0,
+																										"name(374)" : "Transpose",
+																										"label(821)" : "Transp.",
+																										"tooltip_text(823)" : "The number of semitones incoming notes are shifted before the pitch class mapping takes place.",
+																										"preset_identifier(701)" : "TRANSPOSE",
+																										"modulations_to_ignore(3826)" : "",
+																										"value_type(702)" : 
+																										{
+																											class : "float_core.integer_value_type(143)",
+																											object_id : 23,
+																											data :
+																											{
+																												"min(345)" : -12,
+																												"max(346)" : 12,
+																												"edit_style(818)" : 4,
+																												"value_prefix(819)" : "",
+																												"value_postfix(820)" : "",
+																												"value_origin(4723)" : 2,
+																												"pixel_step_size(4724)" : -1.0
+																											}
+																										},
+																										"value(828)" : 0
+																									}
+																								},
+																								"outport_index(249)" : 0,
+																								"high_quality(1943)" : true,
+																								"unconnected_value(6443)" : 0.0
+																							}
+																						}
+																					],
+																					"is_polyphonic(615)" : false
+																				}
+																			},
+																			"channel_count(607)" : 0,
+																			"oversampling(608)" : 0,
+																			"multiplier(844)" : 1.0,
+																			"offset(845)" : 0.0,
+																			"smoothing(846)" : true
+																		}
+																	},
+																	"outport_index(249)" : 0,
+																	"high_quality(1943)" : true,
+																	"unconnected_value(6443)" : 0.0
+																}
+															}
+														],
+														"is_polyphonic(615)" : false
+													}
+												},
+												"channel_count(607)" : 0,
+												"oversampling(608)" : 0
+											}
+										},
+										"outport_index(249)" : 0,
+										"high_quality(1943)" : true,
+										"unconnected_value(6443)" : 0.0
+									}
+								},
+								{
+									class : "float_core.inport_connection(105)",
+									object_id : 24,
+									data :
+									{
+										"source_component(248)" : 
+										{
+											class : "float_core.indexed_value_atom(180)",
+											object_id : 25,
+											data :
+											{
+												"settings(6194)" : 
+												{
+													class : "float_core.component_settings(236)",
+													object_id : 26,
+													data :
+													{
+														"desktop_settings(612)" : 
+														{
+															class : "float_core.desktop_settings(17)",
+															object_id : 27,
+															data :
+															{
+																"x(17)" : 212,
+																"y(18)" : 58,
+																"color(19)" : 
+																{
+																	type : "color",
+																	data : [0.5, 0.5, 0.5]
+																}
+															}
+														},
+														"panel_settings(613)" : 
+														{
+															class : "float_core.panel_settings(202)",
+															object_id : 28,
+															data :
+															{
+																"x(502)" : 4,
+																"y(503)" : 132,
+																"width(504)" : 45,
+																"height(505)" : 17,
+																"is_visible(506)" : true
+															}
+														},
+														"inport_connections(614)" : 
+														[
+														],
+														"is_polyphonic(615)" : false
+													}
+												},
+												"channel_count(607)" : 0,
+												"oversampling(608)" : 0,
+												"name(374)" : "Root",
+												"label(821)" : "",
+												"tooltip_text(823)" : "The root pitch class of the scale.",
+												"preset_identifier(701)" : "ROOT",
+												"modulations_to_ignore(3826)" : "Root",
+												"value_type(702)" : 
+												{
+													class : "float_core.indexed_value_type(155)",
+													object_id : 29,
+													data :
+													{
+														"items(393)" : 
+														[
+															{
+																class : "float_core.indexed_value_item(258)",
+																object_id : 30,
+																data :
+																{
+																	"id(650)" : 0,
+																	"name(651)" : "C"
+																}
+															},
+															{
+																class : "float_core.indexed_value_item(258)",
+																object_id : 31,
+																data :
+																{
+																	"id(650)" : 1,
+																	"name(651)" : "C#"
+																}
+															},
+															{
+																class : "float_core.indexed_value_item(258)",
+																object_id : 32,
+																data :
+																{
+																	"id(650)" : 2,
+																	"name(651)" : "D"
+																}
+															},
+															{
+																class : "float_core.indexed_value_item(258)",
+																object_id : 33,
+																data :
+																{
+																	"id(650)" : 3,
+																	"name(651)" : "D#"
+																}
+															},
+															{
+																class : "float_core.indexed_value_item(258)",
+																object_id : 34,
+																data :
+																{
+																	"id(650)" : 4,
+																	"name(651)" : "E"
+																}
+															},
+															{
+																class : "float_core.indexed_value_item(258)",
+																object_id : 35,
+																data :
+																{
+																	"id(650)" : 5,
+																	"name(651)" : "F"
+																}
+															},
+															{
+																class : "float_core.indexed_value_item(258)",
+																object_id : 36,
+																data :
+																{
+																	"id(650)" : 6,
+																	"name(651)" : "F#"
+																}
+															},
+															{
+																class : "float_core.indexed_value_item(258)",
+																object_id : 37,
+																data :
+																{
+																	"id(650)" : 7,
+																	"name(651)" : "G"
+																}
+															},
+															{
+																class : "float_core.indexed_value_item(258)",
+																object_id : 38,
+																data :
+																{
+																	"id(650)" : 8,
+																	"name(651)" : "G#"
+																}
+															},
+															{
+																class : "float_core.indexed_value_item(258)",
+																object_id : 39,
+																data :
+																{
+																	"id(650)" : 9,
+																	"name(651)" : "A"
+																}
+															},
+															{
+																class : "float_core.indexed_value_item(258)",
+																object_id : 40,
+																data :
+																{
+																	"id(650)" : 10,
+																	"name(651)" : "A#"
+																}
+															},
+															{
+																class : "float_core.indexed_value_item(258)",
+																object_id : 41,
+																data :
+																{
+																	"id(650)" : 11,
+																	"name(651)" : "B"
+																}
+															}
+														],
+														"edit_style(394)" : 10,
+														"columns(824)" : 0
+													}
+												},
+												"value(457)" : 0
+											}
+										},
+										"outport_index(249)" : 0,
+										"high_quality(1943)" : true,
+										"unconnected_value(6443)" : 0.0
+									}
+								},
+								{
+									class : "float_core.inport_connection(105)",
+									object_id : 42,
+									data :
+									{
+										"source_component(248)" : 
+										{
+											class : "float_core.indexed_value_atom(180)",
+											object_id : 43,
+											data :
+											{
+												"settings(6194)" : 
+												{
+													class : "float_core.component_settings(236)",
+													object_id : 44,
+													data :
+													{
+														"desktop_settings(612)" : 
+														{
+															class : "float_core.desktop_settings(17)",
+															object_id : 45,
+															data :
+															{
+																"x(17)" : 248,
+																"y(18)" : 140,
+																"color(19)" : 
+																{
+																	type : "color",
+																	data : [0.5, 0.5, 0.5]
+																}
+															}
+														},
+														"panel_settings(613)" : 
+														{
+															class : "float_core.panel_settings(202)",
+															object_id : 46,
+															data :
+															{
+																"x(502)" : 4,
+																"y(503)" : 58,
+																"width(504)" : 45,
+																"height(505)" : 51,
+																"is_visible(506)" : true
+															}
+														},
+														"inport_connections(614)" : 
+														[
+														],
+														"is_polyphonic(615)" : false
+													}
+												},
+												"channel_count(607)" : 0,
+												"oversampling(608)" : 0,
+												"name(374)" : "Octave",
+												"label(821)" : "",
+												"tooltip_text(823)" : "Controls how the octave order is chosen.",
+												"preset_identifier(701)" : "OCTAVE",
+												"modulations_to_ignore(3826)" : "",
+												"value_type(702)" : 
+												{
+													class : "float_core.indexed_value_type(155)",
+													object_id : 47,
+													data :
+													{
+														"items(393)" : 
+														[
+															{
+																class : "float_core.indexed_value_item(258)",
+																object_id : 48,
+																data :
+																{
+																	"id(650)" : 0,
+																	"name(651)" : "Auto"
+																}
+															},
+															{
+																class : "float_core.indexed_value_item(258)",
+																object_id : 49,
+																data :
+																{
+																	"id(650)" : 1,
+																	"name(651)" : "Up"
+																}
+															},
+															{
+																class : "float_core.indexed_value_item(258)",
+																object_id : 50,
+																data :
+																{
+																	"id(650)" : 2,
+																	"name(651)" : "Down"
+																}
+															}
+														],
+														"edit_style(394)" : 2,
+														"columns(824)" : 0
+													}
+												},
+												"value(457)" : 0
+											}
+										},
+										"outport_index(249)" : 0,
+										"high_quality(1943)" : true,
+										"unconnected_value(6443)" : 0.0
+									}
+								},
+								{
+									class : "float_core.inport_connection(105)",
+									object_id : 51,
+									data :
+									{
+										"source_component(248)" : 
+										{
+											class : "float_core.indexed_value_atom(180)",
+											object_id : 52,
+											data :
+											{
+												"settings(6194)" : 
+												{
+													class : "float_core.component_settings(236)",
+													object_id : 53,
+													data :
+													{
+														"desktop_settings(612)" : 
+														{
+															class : "float_core.desktop_settings(17)",
+															object_id : 54,
+															data :
+															{
+																"x(17)" : 280,
+																"y(18)" : 36,
+																"color(19)" : 
+																{
+																	type : "color",
+																	data : [0.5, 0.5, 0.5]
+																}
+															}
+														},
+														"panel_settings(613)" : 
+														{
+															class : "float_core.panel_settings(202)",
+															object_id : 55,
+															data :
+															{
+																"x(502)" : 60,
+																"y(503)" : 20,
+																"width(504)" : 14,
+																"height(505)" : 183,
+																"is_visible(506)" : true
+															}
+														},
+														"inport_connections(614)" : 
+														[
+														],
+														"is_polyphonic(615)" : false
+													}
+												},
+												"channel_count(607)" : 0,
+												"oversampling(608)" : 0,
+												"name(374)" : "Output Pitch Class 00",
+												"label(821)" : "Output Pitch Class 00",
+												"tooltip_text(823)" : "Chooses the output pitch class for input pitch class 0.",
+												"preset_identifier(701)" : "OUTPUT_PITCH_CLASS_00",
+												"modulations_to_ignore(3826)" : "",
+												"value_type(702)" : 
+												{
+													class : "float_core.indexed_value_type(155)",
+													object_id : 56,
+													data :
+													{
+														"items(393)" : 
+														[
+															{
+																class : "float_core.indexed_value_item(258)",
+																object_id : 57,
+																data :
+																{
+																	"id(650)" : 0,
+																	"name(651)" : "1"
+																}
+															},
+															{
+																class : "float_core.indexed_value_item(258)",
+																object_id : 58,
+																data :
+																{
+																	"id(650)" : 1,
+																	"name(651)" : "1#"
+																}
+															},
+															{
+																class : "float_core.indexed_value_item(258)",
+																object_id : 59,
+																data :
+																{
+																	"id(650)" : 2,
+																	"name(651)" : "2"
+																}
+															},
+															{
+																class : "float_core.indexed_value_item(258)",
+																object_id : 60,
+																data :
+																{
+																	"id(650)" : 3,
+																	"name(651)" : "2#"
+																}
+															},
+															{
+																class : "float_core.indexed_value_item(258)",
+																object_id : 61,
+																data :
+																{
+																	"id(650)" : 4,
+																	"name(651)" : "3"
+																}
+															},
+															{
+																class : "float_core.indexed_value_item(258)",
+																object_id : 62,
+																data :
+																{
+																	"id(650)" : 5,
+																	"name(651)" : "4"
+																}
+															},
+															{
+																class : "float_core.indexed_value_item(258)",
+																object_id : 63,
+																data :
+																{
+																	"id(650)" : 6,
+																	"name(651)" : "4#"
+																}
+															},
+															{
+																class : "float_core.indexed_value_item(258)",
+																object_id : 64,
+																data :
+																{
+																	"id(650)" : 7,
+																	"name(651)" : "5"
+																}
+															},
+															{
+																class : "float_core.indexed_value_item(258)",
+																object_id : 65,
+																data :
+																{
+																	"id(650)" : 8,
+																	"name(651)" : "5#"
+																}
+															},
+															{
+																class : "float_core.indexed_value_item(258)",
+																object_id : 66,
+																data :
+																{
+																	"id(650)" : 9,
+																	"name(651)" : "6"
+																}
+															},
+															{
+																class : "float_core.indexed_value_item(258)",
+																object_id : 67,
+																data :
+																{
+																	"id(650)" : 10,
+																	"name(651)" : "6#"
+																}
+															},
+															{
+																class : "float_core.indexed_value_item(258)",
+																object_id : 68,
+																data :
+																{
+																	"id(650)" : 11,
+																	"name(651)" : "7"
+																}
+															}
+														],
+														"edit_style(394)" : 9,
+														"columns(824)" : 0
+													}
+												},
+												"value(457)" : 0
+											}
+										},
+										"outport_index(249)" : 0,
+										"high_quality(1943)" : true,
+										"unconnected_value(6443)" : 0.0
+									}
+								},
+								{
+									class : "float_core.inport_connection(105)",
+									object_id : 69,
+									data :
+									{
+										"source_component(248)" : 
+										{
+											class : "float_core.indexed_value_atom(180)",
+											object_id : 70,
+											data :
+											{
+												"settings(6194)" : 
+												{
+													class : "float_core.component_settings(236)",
+													object_id : 71,
+													data :
+													{
+														"desktop_settings(612)" : 
+														{
+															class : "float_core.desktop_settings(17)",
+															object_id : 72,
+															data :
+															{
+																"x(17)" : 352,
+																"y(18)" : 36,
+																"color(19)" : 
+																{
+																	type : "color",
+																	data : [0.5, 0.5, 0.5]
+																}
+															}
+														},
+														"panel_settings(613)" : 
+														{
+															class : "float_core.panel_settings(202)",
+															object_id : 73,
+															data :
+															{
+																"x(502)" : 76,
+																"y(503)" : 20,
+																"width(504)" : 14,
+																"height(505)" : 183,
+																"is_visible(506)" : true
+															}
+														},
+														"inport_connections(614)" : 
+														[
+														],
+														"is_polyphonic(615)" : false
+													}
+												},
+												"channel_count(607)" : 0,
+												"oversampling(608)" : 0,
+												"name(374)" : "Output Pitch Class 01",
+												"label(821)" : "",
+												"tooltip_text(823)" : "Chooses the output pitch class for input pitch class 1.",
+												"preset_identifier(701)" : "OUTPUT_PITCH_CLASS_01",
+												"modulations_to_ignore(3826)" : "",
+												"value_type(702)" : 
+												{
+													class : "float_core.indexed_value_type(155)",
+													object_id : 74,
+													data :
+													{
+														"items(393)" : 
+														[
+															{
+																class : "float_core.indexed_value_item(258)",
+																object_id : 75,
+																data :
+																{
+																	"id(650)" : 0,
+																	"name(651)" : "1"
+																}
+															},
+															{
+																class : "float_core.indexed_value_item(258)",
+																object_id : 76,
+																data :
+																{
+																	"id(650)" : 1,
+																	"name(651)" : "1#"
+																}
+															},
+															{
+																class : "float_core.indexed_value_item(258)",
+																object_id : 77,
+																data :
+																{
+																	"id(650)" : 2,
+																	"name(651)" : "2"
+																}
+															},
+															{
+																class : "float_core.indexed_value_item(258)",
+																object_id : 78,
+																data :
+																{
+																	"id(650)" : 3,
+																	"name(651)" : "2#"
+																}
+															},
+															{
+																class : "float_core.indexed_value_item(258)",
+																object_id : 79,
+																data :
+																{
+																	"id(650)" : 4,
+																	"name(651)" : "3"
+																}
+															},
+															{
+																class : "float_core.indexed_value_item(258)",
+																object_id : 80,
+																data :
+																{
+																	"id(650)" : 5,
+																	"name(651)" : "4"
+																}
+															},
+															{
+																class : "float_core.indexed_value_item(258)",
+																object_id : 81,
+																data :
+																{
+																	"id(650)" : 6,
+																	"name(651)" : "4#"
+																}
+															},
+															{
+																class : "float_core.indexed_value_item(258)",
+																object_id : 82,
+																data :
+																{
+																	"id(650)" : 7,
+																	"name(651)" : "5"
+																}
+															},
+															{
+																class : "float_core.indexed_value_item(258)",
+																object_id : 83,
+																data :
+																{
+																	"id(650)" : 8,
+																	"name(651)" : "5#"
+																}
+															},
+															{
+																class : "float_core.indexed_value_item(258)",
+																object_id : 84,
+																data :
+																{
+																	"id(650)" : 9,
+																	"name(651)" : "6"
+																}
+															},
+															{
+																class : "float_core.indexed_value_item(258)",
+																object_id : 85,
+																data :
+																{
+																	"id(650)" : 10,
+																	"name(651)" : "6#"
+																}
+															},
+															{
+																class : "float_core.indexed_value_item(258)",
+																object_id : 86,
+																data :
+																{
+																	"id(650)" : 11,
+																	"name(651)" : "7"
+																}
+															}
+														],
+														"edit_style(394)" : 9,
+														"columns(824)" : 0
+													}
+												},
+												"value(457)" : 1
+											}
+										},
+										"outport_index(249)" : 0,
+										"high_quality(1943)" : true,
+										"unconnected_value(6443)" : 0.0
+									}
+								},
+								{
+									class : "float_core.inport_connection(105)",
+									object_id : 87,
+									data :
+									{
+										"source_component(248)" : 
+										{
+											class : "float_core.indexed_value_atom(180)",
+											object_id : 88,
+											data :
+											{
+												"settings(6194)" : 
+												{
+													class : "float_core.component_settings(236)",
+													object_id : 89,
+													data :
+													{
+														"desktop_settings(612)" : 
+														{
+															class : "float_core.desktop_settings(17)",
+															object_id : 90,
+															data :
+															{
+																"x(17)" : 300,
+																"y(18)" : 96,
+																"color(19)" : 
+																{
+																	type : "color",
+																	data : [0.5, 0.5, 0.5]
+																}
+															}
+														},
+														"panel_settings(613)" : 
+														{
+															class : "float_core.panel_settings(202)",
+															object_id : 91,
+															data :
+															{
+																"x(502)" : 92,
+																"y(503)" : 20,
+																"width(504)" : 14,
+																"height(505)" : 183,
+																"is_visible(506)" : true
+															}
+														},
+														"inport_connections(614)" : 
+														[
+														],
+														"is_polyphonic(615)" : false
+													}
+												},
+												"channel_count(607)" : 0,
+												"oversampling(608)" : 0,
+												"name(374)" : "Output Pitch Class 02",
+												"label(821)" : "",
+												"tooltip_text(823)" : "Chooses the output pitch class for input pitch class 2.",
+												"preset_identifier(701)" : "OUTPUT_PITCH_CLASS_02",
+												"modulations_to_ignore(3826)" : "",
+												"value_type(702)" : 
+												{
+													class : "float_core.indexed_value_type(155)",
+													object_id : 92,
+													data :
+													{
+														"items(393)" : 
+														[
+															{
+																class : "float_core.indexed_value_item(258)",
+																object_id : 93,
+																data :
+																{
+																	"id(650)" : 0,
+																	"name(651)" : "1"
+																}
+															},
+															{
+																class : "float_core.indexed_value_item(258)",
+																object_id : 94,
+																data :
+																{
+																	"id(650)" : 1,
+																	"name(651)" : "1#"
+																}
+															},
+															{
+																class : "float_core.indexed_value_item(258)",
+																object_id : 95,
+																data :
+																{
+																	"id(650)" : 2,
+																	"name(651)" : "2"
+																}
+															},
+															{
+																class : "float_core.indexed_value_item(258)",
+																object_id : 96,
+																data :
+																{
+																	"id(650)" : 3,
+																	"name(651)" : "2#"
+																}
+															},
+															{
+																class : "float_core.indexed_value_item(258)",
+																object_id : 97,
+																data :
+																{
+																	"id(650)" : 4,
+																	"name(651)" : "3"
+																}
+															},
+															{
+																class : "float_core.indexed_value_item(258)",
+																object_id : 98,
+																data :
+																{
+																	"id(650)" : 5,
+																	"name(651)" : "4"
+																}
+															},
+															{
+																class : "float_core.indexed_value_item(258)",
+																object_id : 99,
+																data :
+																{
+																	"id(650)" : 6,
+																	"name(651)" : "4#"
+																}
+															},
+															{
+																class : "float_core.indexed_value_item(258)",
+																object_id : 100,
+																data :
+																{
+																	"id(650)" : 7,
+																	"name(651)" : "5"
+																}
+															},
+															{
+																class : "float_core.indexed_value_item(258)",
+																object_id : 101,
+																data :
+																{
+																	"id(650)" : 8,
+																	"name(651)" : "5#"
+																}
+															},
+															{
+																class : "float_core.indexed_value_item(258)",
+																object_id : 102,
+																data :
+																{
+																	"id(650)" : 9,
+																	"name(651)" : "6"
+																}
+															},
+															{
+																class : "float_core.indexed_value_item(258)",
+																object_id : 103,
+																data :
+																{
+																	"id(650)" : 10,
+																	"name(651)" : "6#"
+																}
+															},
+															{
+																class : "float_core.indexed_value_item(258)",
+																object_id : 104,
+																data :
+																{
+																	"id(650)" : 11,
+																	"name(651)" : "7"
+																}
+															}
+														],
+														"edit_style(394)" : 9,
+														"columns(824)" : 0
+													}
+												},
+												"value(457)" : 2
+											}
+										},
+										"outport_index(249)" : 0,
+										"high_quality(1943)" : true,
+										"unconnected_value(6443)" : 0.0
+									}
+								},
+								{
+									class : "float_core.inport_connection(105)",
+									object_id : 105,
+									data :
+									{
+										"source_component(248)" : 
+										{
+											class : "float_core.indexed_value_atom(180)",
+											object_id : 106,
+											data :
+											{
+												"settings(6194)" : 
+												{
+													class : "float_core.component_settings(236)",
+													object_id : 107,
+													data :
+													{
+														"desktop_settings(612)" : 
+														{
+															class : "float_core.desktop_settings(17)",
+															object_id : 108,
+															data :
+															{
+																"x(17)" : 372,
+																"y(18)" : 96,
+																"color(19)" : 
+																{
+																	type : "color",
+																	data : [0.5, 0.5, 0.5]
+																}
+															}
+														},
+														"panel_settings(613)" : 
+														{
+															class : "float_core.panel_settings(202)",
+															object_id : 109,
+															data :
+															{
+																"x(502)" : 108,
+																"y(503)" : 20,
+																"width(504)" : 14,
+																"height(505)" : 183,
+																"is_visible(506)" : true
+															}
+														},
+														"inport_connections(614)" : 
+														[
+														],
+														"is_polyphonic(615)" : false
+													}
+												},
+												"channel_count(607)" : 0,
+												"oversampling(608)" : 0,
+												"name(374)" : "Output Pitch Class 03",
+												"label(821)" : "",
+												"tooltip_text(823)" : "Chooses the output pitch class for input pitch class 3.",
+												"preset_identifier(701)" : "OUTPUT_PITCH_CLASS_03",
+												"modulations_to_ignore(3826)" : "",
+												"value_type(702)" : 
+												{
+													class : "float_core.indexed_value_type(155)",
+													object_id : 110,
+													data :
+													{
+														"items(393)" : 
+														[
+															{
+																class : "float_core.indexed_value_item(258)",
+																object_id : 111,
+																data :
+																{
+																	"id(650)" : 0,
+																	"name(651)" : "1"
+																}
+															},
+															{
+																class : "float_core.indexed_value_item(258)",
+																object_id : 112,
+																data :
+																{
+																	"id(650)" : 1,
+																	"name(651)" : "1#"
+																}
+															},
+															{
+																class : "float_core.indexed_value_item(258)",
+																object_id : 113,
+																data :
+																{
+																	"id(650)" : 2,
+																	"name(651)" : "2"
+																}
+															},
+															{
+																class : "float_core.indexed_value_item(258)",
+																object_id : 114,
+																data :
+																{
+																	"id(650)" : 3,
+																	"name(651)" : "2#"
+																}
+															},
+															{
+																class : "float_core.indexed_value_item(258)",
+																object_id : 115,
+																data :
+																{
+																	"id(650)" : 4,
+																	"name(651)" : "3"
+																}
+															},
+															{
+																class : "float_core.indexed_value_item(258)",
+																object_id : 116,
+																data :
+																{
+																	"id(650)" : 5,
+																	"name(651)" : "4"
+																}
+															},
+															{
+																class : "float_core.indexed_value_item(258)",
+																object_id : 117,
+																data :
+																{
+																	"id(650)" : 6,
+																	"name(651)" : "4#"
+																}
+															},
+															{
+																class : "float_core.indexed_value_item(258)",
+																object_id : 118,
+																data :
+																{
+																	"id(650)" : 7,
+																	"name(651)" : "5"
+																}
+															},
+															{
+																class : "float_core.indexed_value_item(258)",
+																object_id : 119,
+																data :
+																{
+																	"id(650)" : 8,
+																	"name(651)" : "5#"
+																}
+															},
+															{
+																class : "float_core.indexed_value_item(258)",
+																object_id : 120,
+																data :
+																{
+																	"id(650)" : 9,
+																	"name(651)" : "6"
+																}
+															},
+															{
+																class : "float_core.indexed_value_item(258)",
+																object_id : 121,
+																data :
+																{
+																	"id(650)" : 10,
+																	"name(651)" : "6#"
+																}
+															},
+															{
+																class : "float_core.indexed_value_item(258)",
+																object_id : 122,
+																data :
+																{
+																	"id(650)" : 11,
+																	"name(651)" : "7"
+																}
+															}
+														],
+														"edit_style(394)" : 9,
+														"columns(824)" : 0
+													}
+												},
+												"value(457)" : 3
+											}
+										},
+										"outport_index(249)" : 0,
+										"high_quality(1943)" : true,
+										"unconnected_value(6443)" : 0.0
+									}
+								},
+								{
+									class : "float_core.inport_connection(105)",
+									object_id : 123,
+									data :
+									{
+										"source_component(248)" : 
+										{
+											class : "float_core.indexed_value_atom(180)",
+											object_id : 124,
+											data :
+											{
+												"settings(6194)" : 
+												{
+													class : "float_core.component_settings(236)",
+													object_id : 125,
+													data :
+													{
+														"desktop_settings(612)" : 
+														{
+															class : "float_core.desktop_settings(17)",
+															object_id : 126,
+															data :
+															{
+																"x(17)" : 424,
+																"y(18)" : 36,
+																"color(19)" : 
+																{
+																	type : "color",
+																	data : [0.5, 0.5, 0.5]
+																}
+															}
+														},
+														"panel_settings(613)" : 
+														{
+															class : "float_core.panel_settings(202)",
+															object_id : 127,
+															data :
+															{
+																"x(502)" : 124,
+																"y(503)" : 20,
+																"width(504)" : 14,
+																"height(505)" : 183,
+																"is_visible(506)" : true
+															}
+														},
+														"inport_connections(614)" : 
+														[
+														],
+														"is_polyphonic(615)" : false
+													}
+												},
+												"channel_count(607)" : 0,
+												"oversampling(608)" : 0,
+												"name(374)" : "Output Pitch Class 04",
+												"label(821)" : "",
+												"tooltip_text(823)" : "Chooses the output pitch class for input pitch class 4.",
+												"preset_identifier(701)" : "OUTPUT_PITCH_CLASS_04",
+												"modulations_to_ignore(3826)" : "",
+												"value_type(702)" : 
+												{
+													class : "float_core.indexed_value_type(155)",
+													object_id : 128,
+													data :
+													{
+														"items(393)" : 
+														[
+															{
+																class : "float_core.indexed_value_item(258)",
+																object_id : 129,
+																data :
+																{
+																	"id(650)" : 0,
+																	"name(651)" : "1"
+																}
+															},
+															{
+																class : "float_core.indexed_value_item(258)",
+																object_id : 130,
+																data :
+																{
+																	"id(650)" : 1,
+																	"name(651)" : "1#"
+																}
+															},
+															{
+																class : "float_core.indexed_value_item(258)",
+																object_id : 131,
+																data :
+																{
+																	"id(650)" : 2,
+																	"name(651)" : "2"
+																}
+															},
+															{
+																class : "float_core.indexed_value_item(258)",
+																object_id : 132,
+																data :
+																{
+																	"id(650)" : 3,
+																	"name(651)" : "2#"
+																}
+															},
+															{
+																class : "float_core.indexed_value_item(258)",
+																object_id : 133,
+																data :
+																{
+																	"id(650)" : 4,
+																	"name(651)" : "3"
+																}
+															},
+															{
+																class : "float_core.indexed_value_item(258)",
+																object_id : 134,
+																data :
+																{
+																	"id(650)" : 5,
+																	"name(651)" : "4"
+																}
+															},
+															{
+																class : "float_core.indexed_value_item(258)",
+																object_id : 135,
+																data :
+																{
+																	"id(650)" : 6,
+																	"name(651)" : "4#"
+																}
+															},
+															{
+																class : "float_core.indexed_value_item(258)",
+																object_id : 136,
+																data :
+																{
+																	"id(650)" : 7,
+																	"name(651)" : "5"
+																}
+															},
+															{
+																class : "float_core.indexed_value_item(258)",
+																object_id : 137,
+																data :
+																{
+																	"id(650)" : 8,
+																	"name(651)" : "5#"
+																}
+															},
+															{
+																class : "float_core.indexed_value_item(258)",
+																object_id : 138,
+																data :
+																{
+																	"id(650)" : 9,
+																	"name(651)" : "6"
+																}
+															},
+															{
+																class : "float_core.indexed_value_item(258)",
+																object_id : 139,
+																data :
+																{
+																	"id(650)" : 10,
+																	"name(651)" : "6#"
+																}
+															},
+															{
+																class : "float_core.indexed_value_item(258)",
+																object_id : 140,
+																data :
+																{
+																	"id(650)" : 11,
+																	"name(651)" : "7"
+																}
+															}
+														],
+														"edit_style(394)" : 9,
+														"columns(824)" : 0
+													}
+												},
+												"value(457)" : 4
+											}
+										},
+										"outport_index(249)" : 0,
+										"high_quality(1943)" : true,
+										"unconnected_value(6443)" : 0.0
+									}
+								},
+								{
+									class : "float_core.inport_connection(105)",
+									object_id : 141,
+									data :
+									{
+										"source_component(248)" : 
+										{
+											class : "float_core.indexed_value_atom(180)",
+											object_id : 142,
+											data :
+											{
+												"settings(6194)" : 
+												{
+													class : "float_core.component_settings(236)",
+													object_id : 143,
+													data :
+													{
+														"desktop_settings(612)" : 
+														{
+															class : "float_core.desktop_settings(17)",
+															object_id : 144,
+															data :
+															{
+																"x(17)" : 448,
+																"y(18)" : 96,
+																"color(19)" : 
+																{
+																	type : "color",
+																	data : [0.5, 0.5, 0.5]
+																}
+															}
+														},
+														"panel_settings(613)" : 
+														{
+															class : "float_core.panel_settings(202)",
+															object_id : 145,
+															data :
+															{
+																"x(502)" : 140,
+																"y(503)" : 20,
+																"width(504)" : 14,
+																"height(505)" : 183,
+																"is_visible(506)" : true
+															}
+														},
+														"inport_connections(614)" : 
+														[
+														],
+														"is_polyphonic(615)" : false
+													}
+												},
+												"channel_count(607)" : 0,
+												"oversampling(608)" : 0,
+												"name(374)" : "Output Pitch Class 05",
+												"label(821)" : "",
+												"tooltip_text(823)" : "Chooses the output pitch class for input pitch class 5.",
+												"preset_identifier(701)" : "OUTPUT_PITCH_CLASS_05",
+												"modulations_to_ignore(3826)" : "",
+												"value_type(702)" : 
+												{
+													class : "float_core.indexed_value_type(155)",
+													object_id : 146,
+													data :
+													{
+														"items(393)" : 
+														[
+															{
+																class : "float_core.indexed_value_item(258)",
+																object_id : 147,
+																data :
+																{
+																	"id(650)" : 0,
+																	"name(651)" : "1"
+																}
+															},
+															{
+																class : "float_core.indexed_value_item(258)",
+																object_id : 148,
+																data :
+																{
+																	"id(650)" : 1,
+																	"name(651)" : "1#"
+																}
+															},
+															{
+																class : "float_core.indexed_value_item(258)",
+																object_id : 149,
+																data :
+																{
+																	"id(650)" : 2,
+																	"name(651)" : "2"
+																}
+															},
+															{
+																class : "float_core.indexed_value_item(258)",
+																object_id : 150,
+																data :
+																{
+																	"id(650)" : 3,
+																	"name(651)" : "2#"
+																}
+															},
+															{
+																class : "float_core.indexed_value_item(258)",
+																object_id : 151,
+																data :
+																{
+																	"id(650)" : 4,
+																	"name(651)" : "3"
+																}
+															},
+															{
+																class : "float_core.indexed_value_item(258)",
+																object_id : 152,
+																data :
+																{
+																	"id(650)" : 5,
+																	"name(651)" : "4"
+																}
+															},
+															{
+																class : "float_core.indexed_value_item(258)",
+																object_id : 153,
+																data :
+																{
+																	"id(650)" : 6,
+																	"name(651)" : "4#"
+																}
+															},
+															{
+																class : "float_core.indexed_value_item(258)",
+																object_id : 154,
+																data :
+																{
+																	"id(650)" : 7,
+																	"name(651)" : "5"
+																}
+															},
+															{
+																class : "float_core.indexed_value_item(258)",
+																object_id : 155,
+																data :
+																{
+																	"id(650)" : 8,
+																	"name(651)" : "5#"
+																}
+															},
+															{
+																class : "float_core.indexed_value_item(258)",
+																object_id : 156,
+																data :
+																{
+																	"id(650)" : 9,
+																	"name(651)" : "6"
+																}
+															},
+															{
+																class : "float_core.indexed_value_item(258)",
+																object_id : 157,
+																data :
+																{
+																	"id(650)" : 10,
+																	"name(651)" : "6#"
+																}
+															},
+															{
+																class : "float_core.indexed_value_item(258)",
+																object_id : 158,
+																data :
+																{
+																	"id(650)" : 11,
+																	"name(651)" : "7"
+																}
+															}
+														],
+														"edit_style(394)" : 9,
+														"columns(824)" : 0
+													}
+												},
+												"value(457)" : 5
+											}
+										},
+										"outport_index(249)" : 0,
+										"high_quality(1943)" : true,
+										"unconnected_value(6443)" : 0.0
+									}
+								},
+								{
+									class : "float_core.inport_connection(105)",
+									object_id : 159,
+									data :
+									{
+										"source_component(248)" : 
+										{
+											class : "float_core.indexed_value_atom(180)",
+											object_id : 160,
+											data :
+											{
+												"settings(6194)" : 
+												{
+													class : "float_core.component_settings(236)",
+													object_id : 161,
+													data :
+													{
+														"desktop_settings(612)" : 
+														{
+															class : "float_core.desktop_settings(17)",
+															object_id : 162,
+															data :
+															{
+																"x(17)" : 496,
+																"y(18)" : 36,
+																"color(19)" : 
+																{
+																	type : "color",
+																	data : [0.5, 0.5, 0.5]
+																}
+															}
+														},
+														"panel_settings(613)" : 
+														{
+															class : "float_core.panel_settings(202)",
+															object_id : 163,
+															data :
+															{
+																"x(502)" : 156,
+																"y(503)" : 20,
+																"width(504)" : 14,
+																"height(505)" : 183,
+																"is_visible(506)" : true
+															}
+														},
+														"inport_connections(614)" : 
+														[
+														],
+														"is_polyphonic(615)" : false
+													}
+												},
+												"channel_count(607)" : 0,
+												"oversampling(608)" : 0,
+												"name(374)" : "Output Pitch Class 06",
+												"label(821)" : "",
+												"tooltip_text(823)" : "Chooses the output pitch class for input pitch class 6.",
+												"preset_identifier(701)" : "OUTPUT_PITCH_CLASS_06",
+												"modulations_to_ignore(3826)" : "",
+												"value_type(702)" : 
+												{
+													class : "float_core.indexed_value_type(155)",
+													object_id : 164,
+													data :
+													{
+														"items(393)" : 
+														[
+															{
+																class : "float_core.indexed_value_item(258)",
+																object_id : 165,
+																data :
+																{
+																	"id(650)" : 0,
+																	"name(651)" : "1"
+																}
+															},
+															{
+																class : "float_core.indexed_value_item(258)",
+																object_id : 166,
+																data :
+																{
+																	"id(650)" : 1,
+																	"name(651)" : "1#"
+																}
+															},
+															{
+																class : "float_core.indexed_value_item(258)",
+																object_id : 167,
+																data :
+																{
+																	"id(650)" : 2,
+																	"name(651)" : "2"
+																}
+															},
+															{
+																class : "float_core.indexed_value_item(258)",
+																object_id : 168,
+																data :
+																{
+																	"id(650)" : 3,
+																	"name(651)" : "2#"
+																}
+															},
+															{
+																class : "float_core.indexed_value_item(258)",
+																object_id : 169,
+																data :
+																{
+																	"id(650)" : 4,
+																	"name(651)" : "3"
+																}
+															},
+															{
+																class : "float_core.indexed_value_item(258)",
+																object_id : 170,
+																data :
+																{
+																	"id(650)" : 5,
+																	"name(651)" : "4"
+																}
+															},
+															{
+																class : "float_core.indexed_value_item(258)",
+																object_id : 171,
+																data :
+																{
+																	"id(650)" : 6,
+																	"name(651)" : "4#"
+																}
+															},
+															{
+																class : "float_core.indexed_value_item(258)",
+																object_id : 172,
+																data :
+																{
+																	"id(650)" : 7,
+																	"name(651)" : "5"
+																}
+															},
+															{
+																class : "float_core.indexed_value_item(258)",
+																object_id : 173,
+																data :
+																{
+																	"id(650)" : 8,
+																	"name(651)" : "5#"
+																}
+															},
+															{
+																class : "float_core.indexed_value_item(258)",
+																object_id : 174,
+																data :
+																{
+																	"id(650)" : 9,
+																	"name(651)" : "6"
+																}
+															},
+															{
+																class : "float_core.indexed_value_item(258)",
+																object_id : 175,
+																data :
+																{
+																	"id(650)" : 10,
+																	"name(651)" : "6#"
+																}
+															},
+															{
+																class : "float_core.indexed_value_item(258)",
+																object_id : 176,
+																data :
+																{
+																	"id(650)" : 11,
+																	"name(651)" : "7"
+																}
+															}
+														],
+														"edit_style(394)" : 9,
+														"columns(824)" : 0
+													}
+												},
+												"value(457)" : 6
+											}
+										},
+										"outport_index(249)" : 0,
+										"high_quality(1943)" : true,
+										"unconnected_value(6443)" : 0.0
+									}
+								},
+								{
+									class : "float_core.inport_connection(105)",
+									object_id : 177,
+									data :
+									{
+										"source_component(248)" : 
+										{
+											class : "float_core.indexed_value_atom(180)",
+											object_id : 178,
+											data :
+											{
+												"settings(6194)" : 
+												{
+													class : "float_core.component_settings(236)",
+													object_id : 179,
+													data :
+													{
+														"desktop_settings(612)" : 
+														{
+															class : "float_core.desktop_settings(17)",
+															object_id : 180,
+															data :
+															{
+																"x(17)" : 520,
+																"y(18)" : 96,
+																"color(19)" : 
+																{
+																	type : "color",
+																	data : [0.5, 0.5, 0.5]
+																}
+															}
+														},
+														"panel_settings(613)" : 
+														{
+															class : "float_core.panel_settings(202)",
+															object_id : 181,
+															data :
+															{
+																"x(502)" : 172,
+																"y(503)" : 20,
+																"width(504)" : 14,
+																"height(505)" : 183,
+																"is_visible(506)" : true
+															}
+														},
+														"inport_connections(614)" : 
+														[
+														],
+														"is_polyphonic(615)" : false
+													}
+												},
+												"channel_count(607)" : 0,
+												"oversampling(608)" : 0,
+												"name(374)" : "Output Pitch Class 07",
+												"label(821)" : "",
+												"tooltip_text(823)" : "Chooses the output pitch class for input pitch class 7.",
+												"preset_identifier(701)" : "OUTPUT_PITCH_CLASS_07",
+												"modulations_to_ignore(3826)" : "",
+												"value_type(702)" : 
+												{
+													class : "float_core.indexed_value_type(155)",
+													object_id : 182,
+													data :
+													{
+														"items(393)" : 
+														[
+															{
+																class : "float_core.indexed_value_item(258)",
+																object_id : 183,
+																data :
+																{
+																	"id(650)" : 0,
+																	"name(651)" : "1"
+																}
+															},
+															{
+																class : "float_core.indexed_value_item(258)",
+																object_id : 184,
+																data :
+																{
+																	"id(650)" : 1,
+																	"name(651)" : "1#"
+																}
+															},
+															{
+																class : "float_core.indexed_value_item(258)",
+																object_id : 185,
+																data :
+																{
+																	"id(650)" : 2,
+																	"name(651)" : "2"
+																}
+															},
+															{
+																class : "float_core.indexed_value_item(258)",
+																object_id : 186,
+																data :
+																{
+																	"id(650)" : 3,
+																	"name(651)" : "2#"
+																}
+															},
+															{
+																class : "float_core.indexed_value_item(258)",
+																object_id : 187,
+																data :
+																{
+																	"id(650)" : 4,
+																	"name(651)" : "3"
+																}
+															},
+															{
+																class : "float_core.indexed_value_item(258)",
+																object_id : 188,
+																data :
+																{
+																	"id(650)" : 5,
+																	"name(651)" : "4"
+																}
+															},
+															{
+																class : "float_core.indexed_value_item(258)",
+																object_id : 189,
+																data :
+																{
+																	"id(650)" : 6,
+																	"name(651)" : "4#"
+																}
+															},
+															{
+																class : "float_core.indexed_value_item(258)",
+																object_id : 190,
+																data :
+																{
+																	"id(650)" : 7,
+																	"name(651)" : "5"
+																}
+															},
+															{
+																class : "float_core.indexed_value_item(258)",
+																object_id : 191,
+																data :
+																{
+																	"id(650)" : 8,
+																	"name(651)" : "5#"
+																}
+															},
+															{
+																class : "float_core.indexed_value_item(258)",
+																object_id : 192,
+																data :
+																{
+																	"id(650)" : 9,
+																	"name(651)" : "6"
+																}
+															},
+															{
+																class : "float_core.indexed_value_item(258)",
+																object_id : 193,
+																data :
+																{
+																	"id(650)" : 10,
+																	"name(651)" : "6#"
+																}
+															},
+															{
+																class : "float_core.indexed_value_item(258)",
+																object_id : 194,
+																data :
+																{
+																	"id(650)" : 11,
+																	"name(651)" : "7"
+																}
+															}
+														],
+														"edit_style(394)" : 9,
+														"columns(824)" : 0
+													}
+												},
+												"value(457)" : 7
+											}
+										},
+										"outport_index(249)" : 0,
+										"high_quality(1943)" : true,
+										"unconnected_value(6443)" : 0.0
+									}
+								},
+								{
+									class : "float_core.inport_connection(105)",
+									object_id : 195,
+									data :
+									{
+										"source_component(248)" : 
+										{
+											class : "float_core.indexed_value_atom(180)",
+											object_id : 196,
+											data :
+											{
+												"settings(6194)" : 
+												{
+													class : "float_core.component_settings(236)",
+													object_id : 197,
+													data :
+													{
+														"desktop_settings(612)" : 
+														{
+															class : "float_core.desktop_settings(17)",
+															object_id : 198,
+															data :
+															{
+																"x(17)" : 568,
+																"y(18)" : 32,
+																"color(19)" : 
+																{
+																	type : "color",
+																	data : [0.5, 0.5, 0.5]
+																}
+															}
+														},
+														"panel_settings(613)" : 
+														{
+															class : "float_core.panel_settings(202)",
+															object_id : 199,
+															data :
+															{
+																"x(502)" : 188,
+																"y(503)" : 20,
+																"width(504)" : 14,
+																"height(505)" : 183,
+																"is_visible(506)" : true
+															}
+														},
+														"inport_connections(614)" : 
+														[
+														],
+														"is_polyphonic(615)" : false
+													}
+												},
+												"channel_count(607)" : 0,
+												"oversampling(608)" : 0,
+												"name(374)" : "Output Pitch Class 08",
+												"label(821)" : "",
+												"tooltip_text(823)" : "Chooses the output pitch class for input pitch class 8.",
+												"preset_identifier(701)" : "OUTPUT_PITCH_CLASS_08",
+												"modulations_to_ignore(3826)" : "",
+												"value_type(702)" : 
+												{
+													class : "float_core.indexed_value_type(155)",
+													object_id : 200,
+													data :
+													{
+														"items(393)" : 
+														[
+															{
+																class : "float_core.indexed_value_item(258)",
+																object_id : 201,
+																data :
+																{
+																	"id(650)" : 0,
+																	"name(651)" : "1"
+																}
+															},
+															{
+																class : "float_core.indexed_value_item(258)",
+																object_id : 202,
+																data :
+																{
+																	"id(650)" : 1,
+																	"name(651)" : "1#"
+																}
+															},
+															{
+																class : "float_core.indexed_value_item(258)",
+																object_id : 203,
+																data :
+																{
+																	"id(650)" : 2,
+																	"name(651)" : "2"
+																}
+															},
+															{
+																class : "float_core.indexed_value_item(258)",
+																object_id : 204,
+																data :
+																{
+																	"id(650)" : 3,
+																	"name(651)" : "2#"
+																}
+															},
+															{
+																class : "float_core.indexed_value_item(258)",
+																object_id : 205,
+																data :
+																{
+																	"id(650)" : 4,
+																	"name(651)" : "3"
+																}
+															},
+															{
+																class : "float_core.indexed_value_item(258)",
+																object_id : 206,
+																data :
+																{
+																	"id(650)" : 5,
+																	"name(651)" : "4"
+																}
+															},
+															{
+																class : "float_core.indexed_value_item(258)",
+																object_id : 207,
+																data :
+																{
+																	"id(650)" : 6,
+																	"name(651)" : "4#"
+																}
+															},
+															{
+																class : "float_core.indexed_value_item(258)",
+																object_id : 208,
+																data :
+																{
+																	"id(650)" : 7,
+																	"name(651)" : "5"
+																}
+															},
+															{
+																class : "float_core.indexed_value_item(258)",
+																object_id : 209,
+																data :
+																{
+																	"id(650)" : 8,
+																	"name(651)" : "5#"
+																}
+															},
+															{
+																class : "float_core.indexed_value_item(258)",
+																object_id : 210,
+																data :
+																{
+																	"id(650)" : 9,
+																	"name(651)" : "6"
+																}
+															},
+															{
+																class : "float_core.indexed_value_item(258)",
+																object_id : 211,
+																data :
+																{
+																	"id(650)" : 10,
+																	"name(651)" : "6#"
+																}
+															},
+															{
+																class : "float_core.indexed_value_item(258)",
+																object_id : 212,
+																data :
+																{
+																	"id(650)" : 11,
+																	"name(651)" : "7"
+																}
+															}
+														],
+														"edit_style(394)" : 9,
+														"columns(824)" : 0
+													}
+												},
+												"value(457)" : 8
+											}
+										},
+										"outport_index(249)" : 0,
+										"high_quality(1943)" : true,
+										"unconnected_value(6443)" : 0.0
+									}
+								},
+								{
+									class : "float_core.inport_connection(105)",
+									object_id : 213,
+									data :
+									{
+										"source_component(248)" : 
+										{
+											class : "float_core.indexed_value_atom(180)",
+											object_id : 214,
+											data :
+											{
+												"settings(6194)" : 
+												{
+													class : "float_core.component_settings(236)",
+													object_id : 215,
+													data :
+													{
+														"desktop_settings(612)" : 
+														{
+															class : "float_core.desktop_settings(17)",
+															object_id : 216,
+															data :
+															{
+																"x(17)" : 592,
+																"y(18)" : 96,
+																"color(19)" : 
+																{
+																	type : "color",
+																	data : [0.5, 0.5, 0.5]
+																}
+															}
+														},
+														"panel_settings(613)" : 
+														{
+															class : "float_core.panel_settings(202)",
+															object_id : 217,
+															data :
+															{
+																"x(502)" : 204,
+																"y(503)" : 20,
+																"width(504)" : 14,
+																"height(505)" : 183,
+																"is_visible(506)" : true
+															}
+														},
+														"inport_connections(614)" : 
+														[
+														],
+														"is_polyphonic(615)" : false
+													}
+												},
+												"channel_count(607)" : 0,
+												"oversampling(608)" : 0,
+												"name(374)" : "Output Pitch Class 09",
+												"label(821)" : "Output Pitch Class 09",
+												"tooltip_text(823)" : "Chooses the output pitch class for input pitch class 9.",
+												"preset_identifier(701)" : "OUTPUT_PITCH_CLASS_09",
+												"modulations_to_ignore(3826)" : "",
+												"value_type(702)" : 
+												{
+													class : "float_core.indexed_value_type(155)",
+													object_id : 218,
+													data :
+													{
+														"items(393)" : 
+														[
+															{
+																class : "float_core.indexed_value_item(258)",
+																object_id : 219,
+																data :
+																{
+																	"id(650)" : 0,
+																	"name(651)" : "1"
+																}
+															},
+															{
+																class : "float_core.indexed_value_item(258)",
+																object_id : 220,
+																data :
+																{
+																	"id(650)" : 1,
+																	"name(651)" : "1#"
+																}
+															},
+															{
+																class : "float_core.indexed_value_item(258)",
+																object_id : 221,
+																data :
+																{
+																	"id(650)" : 2,
+																	"name(651)" : "2"
+																}
+															},
+															{
+																class : "float_core.indexed_value_item(258)",
+																object_id : 222,
+																data :
+																{
+																	"id(650)" : 3,
+																	"name(651)" : "2#"
+																}
+															},
+															{
+																class : "float_core.indexed_value_item(258)",
+																object_id : 223,
+																data :
+																{
+																	"id(650)" : 4,
+																	"name(651)" : "3"
+																}
+															},
+															{
+																class : "float_core.indexed_value_item(258)",
+																object_id : 224,
+																data :
+																{
+																	"id(650)" : 5,
+																	"name(651)" : "4"
+																}
+															},
+															{
+																class : "float_core.indexed_value_item(258)",
+																object_id : 225,
+																data :
+																{
+																	"id(650)" : 6,
+																	"name(651)" : "4#"
+																}
+															},
+															{
+																class : "float_core.indexed_value_item(258)",
+																object_id : 226,
+																data :
+																{
+																	"id(650)" : 7,
+																	"name(651)" : "5"
+																}
+															},
+															{
+																class : "float_core.indexed_value_item(258)",
+																object_id : 227,
+																data :
+																{
+																	"id(650)" : 8,
+																	"name(651)" : "5#"
+																}
+															},
+															{
+																class : "float_core.indexed_value_item(258)",
+																object_id : 228,
+																data :
+																{
+																	"id(650)" : 9,
+																	"name(651)" : "6"
+																}
+															},
+															{
+																class : "float_core.indexed_value_item(258)",
+																object_id : 229,
+																data :
+																{
+																	"id(650)" : 10,
+																	"name(651)" : "6#"
+																}
+															},
+															{
+																class : "float_core.indexed_value_item(258)",
+																object_id : 230,
+																data :
+																{
+																	"id(650)" : 11,
+																	"name(651)" : "7"
+																}
+															}
+														],
+														"edit_style(394)" : 9,
+														"columns(824)" : 0
+													}
+												},
+												"value(457)" : 9
+											}
+										},
+										"outport_index(249)" : 0,
+										"high_quality(1943)" : true,
+										"unconnected_value(6443)" : 0.0
+									}
+								},
+								{
+									class : "float_core.inport_connection(105)",
+									object_id : 231,
+									data :
+									{
+										"source_component(248)" : 
+										{
+											class : "float_core.indexed_value_atom(180)",
+											object_id : 232,
+											data :
+											{
+												"settings(6194)" : 
+												{
+													class : "float_core.component_settings(236)",
+													object_id : 233,
+													data :
+													{
+														"desktop_settings(612)" : 
+														{
+															class : "float_core.desktop_settings(17)",
+															object_id : 234,
+															data :
+															{
+																"x(17)" : 640,
+																"y(18)" : 32,
+																"color(19)" : 
+																{
+																	type : "color",
+																	data : [0.5, 0.5, 0.5]
+																}
+															}
+														},
+														"panel_settings(613)" : 
+														{
+															class : "float_core.panel_settings(202)",
+															object_id : 235,
+															data :
+															{
+																"x(502)" : 220,
+																"y(503)" : 20,
+																"width(504)" : 14,
+																"height(505)" : 183,
+																"is_visible(506)" : true
+															}
+														},
+														"inport_connections(614)" : 
+														[
+														],
+														"is_polyphonic(615)" : false
+													}
+												},
+												"channel_count(607)" : 0,
+												"oversampling(608)" : 0,
+												"name(374)" : "Output Pitch Class 10",
+												"label(821)" : "",
+												"tooltip_text(823)" : "Chooses the output pitch class for input pitch class 10.",
+												"preset_identifier(701)" : "OUTPUT_PITCH_CLASS_10",
+												"modulations_to_ignore(3826)" : "",
+												"value_type(702)" : 
+												{
+													class : "float_core.indexed_value_type(155)",
+													object_id : 236,
+													data :
+													{
+														"items(393)" : 
+														[
+															{
+																class : "float_core.indexed_value_item(258)",
+																object_id : 237,
+																data :
+																{
+																	"id(650)" : 0,
+																	"name(651)" : "1"
+																}
+															},
+															{
+																class : "float_core.indexed_value_item(258)",
+																object_id : 238,
+																data :
+																{
+																	"id(650)" : 1,
+																	"name(651)" : "1#"
+																}
+															},
+															{
+																class : "float_core.indexed_value_item(258)",
+																object_id : 239,
+																data :
+																{
+																	"id(650)" : 2,
+																	"name(651)" : "2"
+																}
+															},
+															{
+																class : "float_core.indexed_value_item(258)",
+																object_id : 240,
+																data :
+																{
+																	"id(650)" : 3,
+																	"name(651)" : "2#"
+																}
+															},
+															{
+																class : "float_core.indexed_value_item(258)",
+																object_id : 241,
+																data :
+																{
+																	"id(650)" : 4,
+																	"name(651)" : "3"
+																}
+															},
+															{
+																class : "float_core.indexed_value_item(258)",
+																object_id : 242,
+																data :
+																{
+																	"id(650)" : 5,
+																	"name(651)" : "4"
+																}
+															},
+															{
+																class : "float_core.indexed_value_item(258)",
+																object_id : 243,
+																data :
+																{
+																	"id(650)" : 6,
+																	"name(651)" : "4#"
+																}
+															},
+															{
+																class : "float_core.indexed_value_item(258)",
+																object_id : 244,
+																data :
+																{
+																	"id(650)" : 7,
+																	"name(651)" : "5"
+																}
+															},
+															{
+																class : "float_core.indexed_value_item(258)",
+																object_id : 245,
+																data :
+																{
+																	"id(650)" : 8,
+																	"name(651)" : "5#"
+																}
+															},
+															{
+																class : "float_core.indexed_value_item(258)",
+																object_id : 246,
+																data :
+																{
+																	"id(650)" : 9,
+																	"name(651)" : "6"
+																}
+															},
+															{
+																class : "float_core.indexed_value_item(258)",
+																object_id : 247,
+																data :
+																{
+																	"id(650)" : 10,
+																	"name(651)" : "6#"
+																}
+															},
+															{
+																class : "float_core.indexed_value_item(258)",
+																object_id : 248,
+																data :
+																{
+																	"id(650)" : 11,
+																	"name(651)" : "7"
+																}
+															}
+														],
+														"edit_style(394)" : 9,
+														"columns(824)" : 0
+													}
+												},
+												"value(457)" : 10
+											}
+										},
+										"outport_index(249)" : 0,
+										"high_quality(1943)" : true,
+										"unconnected_value(6443)" : 0.0
+									}
+								},
+								{
+									class : "float_core.inport_connection(105)",
+									object_id : 249,
+									data :
+									{
+										"source_component(248)" : 
+										{
+											class : "float_core.indexed_value_atom(180)",
+											object_id : 250,
+											data :
+											{
+												"settings(6194)" : 
+												{
+													class : "float_core.component_settings(236)",
+													object_id : 251,
+													data :
+													{
+														"desktop_settings(612)" : 
+														{
+															class : "float_core.desktop_settings(17)",
+															object_id : 252,
+															data :
+															{
+																"x(17)" : 664,
+																"y(18)" : 96,
+																"color(19)" : 
+																{
+																	type : "color",
+																	data : [0.5, 0.5, 0.5]
+																}
+															}
+														},
+														"panel_settings(613)" : 
+														{
+															class : "float_core.panel_settings(202)",
+															object_id : 253,
+															data :
+															{
+																"x(502)" : 236,
+																"y(503)" : 20,
+																"width(504)" : 14,
+																"height(505)" : 183,
+																"is_visible(506)" : true
+															}
+														},
+														"inport_connections(614)" : 
+														[
+														],
+														"is_polyphonic(615)" : false
+													}
+												},
+												"channel_count(607)" : 0,
+												"oversampling(608)" : 0,
+												"name(374)" : "Output Pitch Class 11",
+												"label(821)" : "",
+												"tooltip_text(823)" : "Chooses the output pitch class for input pitch class 11.",
+												"preset_identifier(701)" : "OUTPUT_PITCH_CLASS_11",
+												"modulations_to_ignore(3826)" : "",
+												"value_type(702)" : 
+												{
+													class : "float_core.indexed_value_type(155)",
+													object_id : 254,
+													data :
+													{
+														"items(393)" : 
+														[
+															{
+																class : "float_core.indexed_value_item(258)",
+																object_id : 255,
+																data :
+																{
+																	"id(650)" : 0,
+																	"name(651)" : "1"
+																}
+															},
+															{
+																class : "float_core.indexed_value_item(258)",
+																object_id : 256,
+																data :
+																{
+																	"id(650)" : 1,
+																	"name(651)" : "1#"
+																}
+															},
+															{
+																class : "float_core.indexed_value_item(258)",
+																object_id : 257,
+																data :
+																{
+																	"id(650)" : 2,
+																	"name(651)" : "2"
+																}
+															},
+															{
+																class : "float_core.indexed_value_item(258)",
+																object_id : 258,
+																data :
+																{
+																	"id(650)" : 3,
+																	"name(651)" : "2#"
+																}
+															},
+															{
+																class : "float_core.indexed_value_item(258)",
+																object_id : 259,
+																data :
+																{
+																	"id(650)" : 4,
+																	"name(651)" : "3"
+																}
+															},
+															{
+																class : "float_core.indexed_value_item(258)",
+																object_id : 260,
+																data :
+																{
+																	"id(650)" : 5,
+																	"name(651)" : "4"
+																}
+															},
+															{
+																class : "float_core.indexed_value_item(258)",
+																object_id : 261,
+																data :
+																{
+																	"id(650)" : 6,
+																	"name(651)" : "4#"
+																}
+															},
+															{
+																class : "float_core.indexed_value_item(258)",
+																object_id : 262,
+																data :
+																{
+																	"id(650)" : 7,
+																	"name(651)" : "5"
+																}
+															},
+															{
+																class : "float_core.indexed_value_item(258)",
+																object_id : 263,
+																data :
+																{
+																	"id(650)" : 8,
+																	"name(651)" : "5#"
+																}
+															},
+															{
+																class : "float_core.indexed_value_item(258)",
+																object_id : 264,
+																data :
+																{
+																	"id(650)" : 9,
+																	"name(651)" : "6"
+																}
+															},
+															{
+																class : "float_core.indexed_value_item(258)",
+																object_id : 265,
+																data :
+																{
+																	"id(650)" : 10,
+																	"name(651)" : "6#"
+																}
+															},
+															{
+																class : "float_core.indexed_value_item(258)",
+																object_id : 266,
+																data :
+																{
+																	"id(650)" : 11,
+																	"name(651)" : "7"
+																}
+															}
+														],
+														"edit_style(394)" : 9,
+														"columns(824)" : 0
+													}
+												},
+												"value(457)" : 11
+											}
+										},
+										"outport_index(249)" : 0,
+										"high_quality(1943)" : true,
+										"unconnected_value(6443)" : 0.0
+									}
+								}
+							],
+							"is_polyphonic(615)" : false
+						}
+					},
+					"channel_count(607)" : 0,
+					"oversampling(608)" : 0
+				}
+			},{ object_ref : 25 },{ object_ref : 43 },{ object_ref : 52 },{ object_ref : 70 },{ object_ref : 124 },{ object_ref : 88 },{ object_ref : 178 },{ object_ref : 160 },{ object_ref : 142 },{ object_ref : 106 },{ object_ref : 250 },{ object_ref : 232 },{ object_ref : 214 },{ object_ref : 196 },{ object_ref : 19 },{ object_ref : 6 },{ object_ref : 15 }
+		],
+		"panels(6213)" : 
+		[
+			{
+				class : "float_core.panel(1680)",
+				object_id : 267,
+				data :
+				{
+					"layout_settings(6226)" : null,
+					"is_visible(6309)" : true,
+					"is_enabled(6310)" : true,
+					"name(6211)" : "Main",
+					"root_item(6212)" : 
+					{
+						class : "float_core.grid_panel_item(1681)",
+						object_id : 268,
+						data :
+						{
+							"layout_settings(6226)" : null,
+							"is_visible(6309)" : true,
+							"is_enabled(6310)" : true,
+							"items(6221)" : 
+							[
+								{
+									class : "float_core.grid_panel_item(1681)",
+									object_id : 269,
+									data :
+									{
+										"layout_settings(6226)" : 
+										{
+											class : "float_core.grid_panel_item_layout_settings(1694)",
+											object_id : 270,
+											data :
+											{
+												"width(6217)" : 13,
+												"height(6218)" : 17,
+												"x(6215)" : 0,
+												"y(6216)" : 0
+											}
+										},
+										"is_visible(6309)" : true,
+										"is_enabled(6310)" : true,
+										"items(6221)" : 
+										[
+											{
+												class : "float_core.number_field_panel_item(1713)",
+												object_id : 271,
+												data :
+												{
+													"layout_settings(6226)" : 
+													{
+														class : "float_core.grid_panel_item_layout_settings(1694)",
+														object_id : 272,
+														data :
+														{
+															"width(6217)" : 11,
+															"height(6218)" : 4,
+															"x(6215)" : 1,
+															"y(6216)" : 4
+														}
+													},
+													"is_visible(6309)" : true,
+													"is_enabled(6310)" : true,
+													"data_model(6220)" : { object_ref : 19 },
+													"style(6540)" : 0,
+													"show_value_bar(6581)" : true
+												}
+											}
+										],
+										"border_style(6228)" : 1,
+										"title(6242)" : "Input",
+										"show_title(6243)" : true,
+										"title_color(6522)" : 6,
+										"brightness(6245)" : 1
+									}
+								},
+								{
+									class : "float_core.grid_panel_item(1681)",
+									object_id : 273,
+									data :
+									{
+										"layout_settings(6226)" : 
+										{
+											class : "float_core.grid_panel_item_layout_settings(1694)",
+											object_id : 274,
+											data :
+											{
+												"width(6217)" : 53,
+												"height(6218)" : 53,
+												"x(6215)" : 14,
+												"y(6216)" : 0
+											}
+										},
+										"is_visible(6309)" : true,
+										"is_enabled(6310)" : true,
+										"items(6221)" : 
+										[
+											{
+												class : "float_core.image_panel_item(1719)",
+												object_id : 275,
+												data :
+												{
+													"layout_settings(6226)" : 
+													{
+														class : "float_core.grid_panel_item_layout_settings(1694)",
+														object_id : 276,
+														data :
+														{
+															"width(6217)" : 4,
+															"height(6218)" : 4,
+															"x(6215)" : 0,
+															"y(6216)" : 0
+														}
+													},
+													"is_visible(6309)" : true,
+													"is_enabled(6310)" : true,
+													"horizontal_alignment(6400)" : 1,
+													"vertical_alignment(6401)" : 1,
+													"filename(6258)" : "arrow_down.svg",
+													"svg_data(6259)" : "",
+													"color(6521)" : 6,
+													"scale(6767)" : 1.0,
+													"opacity(6768)" : 1.0
+												}
+											},
+											{
+												class : "float_core.button_group_chooser_panel_item(1712)",
+												object_id : 277,
+												data :
+												{
+													"layout_settings(6226)" : 
+													{
+														class : "float_core.grid_panel_item_layout_settings(1694)",
+														object_id : 278,
+														data :
+														{
+															"width(6217)" : 4,
+															"height(6218)" : 45,
+															"x(6215)" : 4,
+															"y(6216)" : 4
+														}
+													},
+													"is_visible(6309)" : true,
+													"is_enabled(6310)" : true,
+													"data_model(6220)" : { object_ref : 52 },
+													"is_horizontal(6255)" : false,
+													"break_count(6256)" : 0,
+													"label_style(6257)" : 1
+												}
+											},
+											{
+												class : "float_core.button_group_chooser_panel_item(1712)",
+												object_id : 279,
+												data :
+												{
+													"layout_settings(6226)" : 
+													{
+														class : "float_core.grid_panel_item_layout_settings(1694)",
+														object_id : 280,
+														data :
+														{
+															"width(6217)" : 4,
+															"height(6218)" : 45,
+															"x(6215)" : 8,
+															"y(6216)" : 4
+														}
+													},
+													"is_visible(6309)" : true,
+													"is_enabled(6310)" : true,
+													"data_model(6220)" : { object_ref : 70 },
+													"is_horizontal(6255)" : false,
+													"break_count(6256)" : 0,
+													"label_style(6257)" : 1
+												}
+											},
+											{
+												class : "float_core.button_group_chooser_panel_item(1712)",
+												object_id : 281,
+												data :
+												{
+													"layout_settings(6226)" : 
+													{
+														class : "float_core.grid_panel_item_layout_settings(1694)",
+														object_id : 282,
+														data :
+														{
+															"width(6217)" : 4,
+															"height(6218)" : 45,
+															"x(6215)" : 12,
+															"y(6216)" : 4
+														}
+													},
+													"is_visible(6309)" : true,
+													"is_enabled(6310)" : true,
+													"data_model(6220)" : { object_ref : 88 },
+													"is_horizontal(6255)" : false,
+													"break_count(6256)" : 0,
+													"label_style(6257)" : 1
+												}
+											},
+											{
+												class : "float_core.button_group_chooser_panel_item(1712)",
+												object_id : 283,
+												data :
+												{
+													"layout_settings(6226)" : 
+													{
+														class : "float_core.grid_panel_item_layout_settings(1694)",
+														object_id : 284,
+														data :
+														{
+															"width(6217)" : 4,
+															"height(6218)" : 45,
+															"x(6215)" : 16,
+															"y(6216)" : 4
+														}
+													},
+													"is_visible(6309)" : true,
+													"is_enabled(6310)" : true,
+													"data_model(6220)" : { object_ref : 106 },
+													"is_horizontal(6255)" : false,
+													"break_count(6256)" : 0,
+													"label_style(6257)" : 1
+												}
+											},
+											{
+												class : "float_core.button_group_chooser_panel_item(1712)",
+												object_id : 285,
+												data :
+												{
+													"layout_settings(6226)" : 
+													{
+														class : "float_core.grid_panel_item_layout_settings(1694)",
+														object_id : 286,
+														data :
+														{
+															"width(6217)" : 4,
+															"height(6218)" : 45,
+															"x(6215)" : 20,
+															"y(6216)" : 4
+														}
+													},
+													"is_visible(6309)" : true,
+													"is_enabled(6310)" : true,
+													"data_model(6220)" : { object_ref : 124 },
+													"is_horizontal(6255)" : false,
+													"break_count(6256)" : 0,
+													"label_style(6257)" : 1
+												}
+											},
+											{
+												class : "float_core.button_group_chooser_panel_item(1712)",
+												object_id : 287,
+												data :
+												{
+													"layout_settings(6226)" : 
+													{
+														class : "float_core.grid_panel_item_layout_settings(1694)",
+														object_id : 288,
+														data :
+														{
+															"width(6217)" : 4,
+															"height(6218)" : 45,
+															"x(6215)" : 24,
+															"y(6216)" : 4
+														}
+													},
+													"is_visible(6309)" : true,
+													"is_enabled(6310)" : true,
+													"data_model(6220)" : { object_ref : 142 },
+													"is_horizontal(6255)" : false,
+													"break_count(6256)" : 0,
+													"label_style(6257)" : 1
+												}
+											},
+											{
+												class : "float_core.button_group_chooser_panel_item(1712)",
+												object_id : 289,
+												data :
+												{
+													"layout_settings(6226)" : 
+													{
+														class : "float_core.grid_panel_item_layout_settings(1694)",
+														object_id : 290,
+														data :
+														{
+															"width(6217)" : 4,
+															"height(6218)" : 45,
+															"x(6215)" : 28,
+															"y(6216)" : 4
+														}
+													},
+													"is_visible(6309)" : true,
+													"is_enabled(6310)" : true,
+													"data_model(6220)" : { object_ref : 160 },
+													"is_horizontal(6255)" : false,
+													"break_count(6256)" : 0,
+													"label_style(6257)" : 1
+												}
+											},
+											{
+												class : "float_core.button_group_chooser_panel_item(1712)",
+												object_id : 291,
+												data :
+												{
+													"layout_settings(6226)" : 
+													{
+														class : "float_core.grid_panel_item_layout_settings(1694)",
+														object_id : 292,
+														data :
+														{
+															"width(6217)" : 4,
+															"height(6218)" : 45,
+															"x(6215)" : 32,
+															"y(6216)" : 4
+														}
+													},
+													"is_visible(6309)" : true,
+													"is_enabled(6310)" : true,
+													"data_model(6220)" : { object_ref : 178 },
+													"is_horizontal(6255)" : false,
+													"break_count(6256)" : 0,
+													"label_style(6257)" : 1
+												}
+											},
+											{
+												class : "float_core.button_group_chooser_panel_item(1712)",
+												object_id : 293,
+												data :
+												{
+													"layout_settings(6226)" : 
+													{
+														class : "float_core.grid_panel_item_layout_settings(1694)",
+														object_id : 294,
+														data :
+														{
+															"width(6217)" : 4,
+															"height(6218)" : 45,
+															"x(6215)" : 36,
+															"y(6216)" : 4
+														}
+													},
+													"is_visible(6309)" : true,
+													"is_enabled(6310)" : true,
+													"data_model(6220)" : { object_ref : 196 },
+													"is_horizontal(6255)" : false,
+													"break_count(6256)" : 0,
+													"label_style(6257)" : 1
+												}
+											},
+											{
+												class : "float_core.button_group_chooser_panel_item(1712)",
+												object_id : 295,
+												data :
+												{
+													"layout_settings(6226)" : 
+													{
+														class : "float_core.grid_panel_item_layout_settings(1694)",
+														object_id : 296,
+														data :
+														{
+															"width(6217)" : 4,
+															"height(6218)" : 45,
+															"x(6215)" : 40,
+															"y(6216)" : 4
+														}
+													},
+													"is_visible(6309)" : true,
+													"is_enabled(6310)" : true,
+													"data_model(6220)" : { object_ref : 214 },
+													"is_horizontal(6255)" : false,
+													"break_count(6256)" : 0,
+													"label_style(6257)" : 1
+												}
+											},
+											{
+												class : "float_core.button_group_chooser_panel_item(1712)",
+												object_id : 297,
+												data :
+												{
+													"layout_settings(6226)" : 
+													{
+														class : "float_core.grid_panel_item_layout_settings(1694)",
+														object_id : 298,
+														data :
+														{
+															"width(6217)" : 4,
+															"height(6218)" : 45,
+															"x(6215)" : 44,
+															"y(6216)" : 4
+														}
+													},
+													"is_visible(6309)" : true,
+													"is_enabled(6310)" : true,
+													"data_model(6220)" : { object_ref : 232 },
+													"is_horizontal(6255)" : false,
+													"break_count(6256)" : 0,
+													"label_style(6257)" : 1
+												}
+											},
+											{
+												class : "float_core.button_group_chooser_panel_item(1712)",
+												object_id : 299,
+												data :
+												{
+													"layout_settings(6226)" : 
+													{
+														class : "float_core.grid_panel_item_layout_settings(1694)",
+														object_id : 300,
+														data :
+														{
+															"width(6217)" : 4,
+															"height(6218)" : 45,
+															"x(6215)" : 48,
+															"y(6216)" : 4
+														}
+													},
+													"is_visible(6309)" : true,
+													"is_enabled(6310)" : true,
+													"data_model(6220)" : { object_ref : 250 },
+													"is_horizontal(6255)" : false,
+													"break_count(6256)" : 0,
+													"label_style(6257)" : 1
+												}
+											},
+											{
+												class : "float_core.label_panel_item(1683)",
+												object_id : 301,
+												data :
+												{
+													"layout_settings(6226)" : 
+													{
+														class : "float_core.grid_panel_item_layout_settings(1694)",
+														object_id : 302,
+														data :
+														{
+															"width(6217)" : 4,
+															"height(6218)" : 4,
+															"x(6215)" : 4,
+															"y(6216)" : 0
+														}
+													},
+													"is_visible(6309)" : true,
+													"is_enabled(6310)" : true,
+													"horizontal_alignment(6400)" : 1,
+													"vertical_alignment(6401)" : 1,
+													"text(6219)" : "1",
+													"color(6520)" : 6
+												}
+											},
+											{
+												class : "float_core.label_panel_item(1683)",
+												object_id : 303,
+												data :
+												{
+													"layout_settings(6226)" : 
+													{
+														class : "float_core.grid_panel_item_layout_settings(1694)",
+														object_id : 304,
+														data :
+														{
+															"width(6217)" : 4,
+															"height(6218)" : 4,
+															"x(6215)" : 12,
+															"y(6216)" : 0
+														}
+													},
+													"is_visible(6309)" : true,
+													"is_enabled(6310)" : true,
+													"horizontal_alignment(6400)" : 1,
+													"vertical_alignment(6401)" : 1,
+													"text(6219)" : "2",
+													"color(6520)" : 6
+												}
+											},
+											{
+												class : "float_core.label_panel_item(1683)",
+												object_id : 305,
+												data :
+												{
+													"layout_settings(6226)" : 
+													{
+														class : "float_core.grid_panel_item_layout_settings(1694)",
+														object_id : 306,
+														data :
+														{
+															"width(6217)" : 4,
+															"height(6218)" : 4,
+															"x(6215)" : 20,
+															"y(6216)" : 0
+														}
+													},
+													"is_visible(6309)" : true,
+													"is_enabled(6310)" : true,
+													"horizontal_alignment(6400)" : 1,
+													"vertical_alignment(6401)" : 1,
+													"text(6219)" : "3",
+													"color(6520)" : 6
+												}
+											},
+											{
+												class : "float_core.label_panel_item(1683)",
+												object_id : 307,
+												data :
+												{
+													"layout_settings(6226)" : 
+													{
+														class : "float_core.grid_panel_item_layout_settings(1694)",
+														object_id : 308,
+														data :
+														{
+															"width(6217)" : 4,
+															"height(6218)" : 4,
+															"x(6215)" : 24,
+															"y(6216)" : 0
+														}
+													},
+													"is_visible(6309)" : true,
+													"is_enabled(6310)" : true,
+													"horizontal_alignment(6400)" : 1,
+													"vertical_alignment(6401)" : 1,
+													"text(6219)" : "4",
+													"color(6520)" : 6
+												}
+											},
+											{
+												class : "float_core.label_panel_item(1683)",
+												object_id : 309,
+												data :
+												{
+													"layout_settings(6226)" : 
+													{
+														class : "float_core.grid_panel_item_layout_settings(1694)",
+														object_id : 310,
+														data :
+														{
+															"width(6217)" : 4,
+															"height(6218)" : 4,
+															"x(6215)" : 32,
+															"y(6216)" : 0
+														}
+													},
+													"is_visible(6309)" : true,
+													"is_enabled(6310)" : true,
+													"horizontal_alignment(6400)" : 1,
+													"vertical_alignment(6401)" : 1,
+													"text(6219)" : "5",
+													"color(6520)" : 6
+												}
+											},
+											{
+												class : "float_core.label_panel_item(1683)",
+												object_id : 311,
+												data :
+												{
+													"layout_settings(6226)" : 
+													{
+														class : "float_core.grid_panel_item_layout_settings(1694)",
+														object_id : 312,
+														data :
+														{
+															"width(6217)" : 4,
+															"height(6218)" : 4,
+															"x(6215)" : 40,
+															"y(6216)" : 0
+														}
+													},
+													"is_visible(6309)" : true,
+													"is_enabled(6310)" : true,
+													"horizontal_alignment(6400)" : 1,
+													"vertical_alignment(6401)" : 1,
+													"text(6219)" : "6",
+													"color(6520)" : 6
+												}
+											},
+											{
+												class : "float_core.label_panel_item(1683)",
+												object_id : 313,
+												data :
+												{
+													"layout_settings(6226)" : 
+													{
+														class : "float_core.grid_panel_item_layout_settings(1694)",
+														object_id : 314,
+														data :
+														{
+															"width(6217)" : 4,
+															"height(6218)" : 4,
+															"x(6215)" : 48,
+															"y(6216)" : 0
+														}
+													},
+													"is_visible(6309)" : true,
+													"is_enabled(6310)" : true,
+													"horizontal_alignment(6400)" : 1,
+													"vertical_alignment(6401)" : 1,
+													"text(6219)" : "7",
+													"color(6520)" : 6
+												}
+											},
+											{
+												class : "float_core.label_panel_item(1683)",
+												object_id : 315,
+												data :
+												{
+													"layout_settings(6226)" : 
+													{
+														class : "float_core.grid_panel_item_layout_settings(1694)",
+														object_id : 316,
+														data :
+														{
+															"width(6217)" : 4,
+															"height(6218)" : 4,
+															"x(6215)" : 8,
+															"y(6216)" : 0
+														}
+													},
+													"is_visible(6309)" : true,
+													"is_enabled(6310)" : false,
+													"horizontal_alignment(6400)" : 1,
+													"vertical_alignment(6401)" : 1,
+													"text(6219)" : "#",
+													"color(6520)" : 6
+												}
+											},
+											{
+												class : "float_core.label_panel_item(1683)",
+												object_id : 317,
+												data :
+												{
+													"layout_settings(6226)" : 
+													{
+														class : "float_core.grid_panel_item_layout_settings(1694)",
+														object_id : 318,
+														data :
+														{
+															"width(6217)" : 4,
+															"height(6218)" : 4,
+															"x(6215)" : 16,
+															"y(6216)" : 0
+														}
+													},
+													"is_visible(6309)" : true,
+													"is_enabled(6310)" : false,
+													"horizontal_alignment(6400)" : 1,
+													"vertical_alignment(6401)" : 1,
+													"text(6219)" : "#",
+													"color(6520)" : 6
+												}
+											},
+											{
+												class : "float_core.label_panel_item(1683)",
+												object_id : 319,
+												data :
+												{
+													"layout_settings(6226)" : 
+													{
+														class : "float_core.grid_panel_item_layout_settings(1694)",
+														object_id : 320,
+														data :
+														{
+															"width(6217)" : 4,
+															"height(6218)" : 4,
+															"x(6215)" : 28,
+															"y(6216)" : 0
+														}
+													},
+													"is_visible(6309)" : true,
+													"is_enabled(6310)" : false,
+													"horizontal_alignment(6400)" : 1,
+													"vertical_alignment(6401)" : 1,
+													"text(6219)" : "#",
+													"color(6520)" : 6
+												}
+											},
+											{
+												class : "float_core.label_panel_item(1683)",
+												object_id : 321,
+												data :
+												{
+													"layout_settings(6226)" : 
+													{
+														class : "float_core.grid_panel_item_layout_settings(1694)",
+														object_id : 322,
+														data :
+														{
+															"width(6217)" : 4,
+															"height(6218)" : 4,
+															"x(6215)" : 36,
+															"y(6216)" : 0
+														}
+													},
+													"is_visible(6309)" : true,
+													"is_enabled(6310)" : false,
+													"horizontal_alignment(6400)" : 1,
+													"vertical_alignment(6401)" : 1,
+													"text(6219)" : "#",
+													"color(6520)" : 6
+												}
+											},
+											{
+												class : "float_core.label_panel_item(1683)",
+												object_id : 323,
+												data :
+												{
+													"layout_settings(6226)" : 
+													{
+														class : "float_core.grid_panel_item_layout_settings(1694)",
+														object_id : 324,
+														data :
+														{
+															"width(6217)" : 4,
+															"height(6218)" : 4,
+															"x(6215)" : 44,
+															"y(6216)" : 0
+														}
+													},
+													"is_visible(6309)" : true,
+													"is_enabled(6310)" : false,
+													"horizontal_alignment(6400)" : 1,
+													"vertical_alignment(6401)" : 1,
+													"text(6219)" : "#",
+													"color(6520)" : 6
+												}
+											},
+											{
+												class : "float_core.label_panel_item(1683)",
+												object_id : 325,
+												data :
+												{
+													"layout_settings(6226)" : 
+													{
+														class : "float_core.grid_panel_item_layout_settings(1694)",
+														object_id : 326,
+														data :
+														{
+															"width(6217)" : 4,
+															"height(6218)" : 4,
+															"x(6215)" : 0,
+															"y(6216)" : 48
+														}
+													},
+													"is_visible(6309)" : true,
+													"is_enabled(6310)" : true,
+													"horizontal_alignment(6400)" : 1,
+													"vertical_alignment(6401)" : 1,
+													"text(6219)" : "7",
+													"color(6520)" : 6
+												}
+											},
+											{
+												class : "float_core.label_panel_item(1683)",
+												object_id : 327,
+												data :
+												{
+													"layout_settings(6226)" : 
+													{
+														class : "float_core.grid_panel_item_layout_settings(1694)",
+														object_id : 328,
+														data :
+														{
+															"width(6217)" : 4,
+															"height(6218)" : 4,
+															"x(6215)" : 0,
+															"y(6216)" : 44
+														}
+													},
+													"is_visible(6309)" : true,
+													"is_enabled(6310)" : false,
+													"horizontal_alignment(6400)" : 1,
+													"vertical_alignment(6401)" : 1,
+													"text(6219)" : "#",
+													"color(6520)" : 6
+												}
+											},
+											{
+												class : "float_core.label_panel_item(1683)",
+												object_id : 329,
+												data :
+												{
+													"layout_settings(6226)" : 
+													{
+														class : "float_core.grid_panel_item_layout_settings(1694)",
+														object_id : 330,
+														data :
+														{
+															"width(6217)" : 4,
+															"height(6218)" : 4,
+															"x(6215)" : 0,
+															"y(6216)" : 40
+														}
+													},
+													"is_visible(6309)" : true,
+													"is_enabled(6310)" : true,
+													"horizontal_alignment(6400)" : 1,
+													"vertical_alignment(6401)" : 1,
+													"text(6219)" : "6",
+													"color(6520)" : 6
+												}
+											},
+											{
+												class : "float_core.label_panel_item(1683)",
+												object_id : 331,
+												data :
+												{
+													"layout_settings(6226)" : 
+													{
+														class : "float_core.grid_panel_item_layout_settings(1694)",
+														object_id : 332,
+														data :
+														{
+															"width(6217)" : 4,
+															"height(6218)" : 4,
+															"x(6215)" : 0,
+															"y(6216)" : 36
+														}
+													},
+													"is_visible(6309)" : true,
+													"is_enabled(6310)" : false,
+													"horizontal_alignment(6400)" : 1,
+													"vertical_alignment(6401)" : 1,
+													"text(6219)" : "#",
+													"color(6520)" : 6
+												}
+											},
+											{
+												class : "float_core.label_panel_item(1683)",
+												object_id : 333,
+												data :
+												{
+													"layout_settings(6226)" : 
+													{
+														class : "float_core.grid_panel_item_layout_settings(1694)",
+														object_id : 334,
+														data :
+														{
+															"width(6217)" : 4,
+															"height(6218)" : 4,
+															"x(6215)" : 0,
+															"y(6216)" : 32
+														}
+													},
+													"is_visible(6309)" : true,
+													"is_enabled(6310)" : true,
+													"horizontal_alignment(6400)" : 1,
+													"vertical_alignment(6401)" : 1,
+													"text(6219)" : "5",
+													"color(6520)" : 6
+												}
+											},
+											{
+												class : "float_core.label_panel_item(1683)",
+												object_id : 335,
+												data :
+												{
+													"layout_settings(6226)" : 
+													{
+														class : "float_core.grid_panel_item_layout_settings(1694)",
+														object_id : 336,
+														data :
+														{
+															"width(6217)" : 4,
+															"height(6218)" : 4,
+															"x(6215)" : 0,
+															"y(6216)" : 28
+														}
+													},
+													"is_visible(6309)" : true,
+													"is_enabled(6310)" : false,
+													"horizontal_alignment(6400)" : 1,
+													"vertical_alignment(6401)" : 1,
+													"text(6219)" : "#",
+													"color(6520)" : 6
+												}
+											},
+											{
+												class : "float_core.label_panel_item(1683)",
+												object_id : 337,
+												data :
+												{
+													"layout_settings(6226)" : 
+													{
+														class : "float_core.grid_panel_item_layout_settings(1694)",
+														object_id : 338,
+														data :
+														{
+															"width(6217)" : 4,
+															"height(6218)" : 4,
+															"x(6215)" : 0,
+															"y(6216)" : 24
+														}
+													},
+													"is_visible(6309)" : true,
+													"is_enabled(6310)" : true,
+													"horizontal_alignment(6400)" : 1,
+													"vertical_alignment(6401)" : 1,
+													"text(6219)" : "4",
+													"color(6520)" : 6
+												}
+											},
+											{
+												class : "float_core.label_panel_item(1683)",
+												object_id : 339,
+												data :
+												{
+													"layout_settings(6226)" : 
+													{
+														class : "float_core.grid_panel_item_layout_settings(1694)",
+														object_id : 340,
+														data :
+														{
+															"width(6217)" : 4,
+															"height(6218)" : 4,
+															"x(6215)" : 0,
+															"y(6216)" : 20
+														}
+													},
+													"is_visible(6309)" : true,
+													"is_enabled(6310)" : true,
+													"horizontal_alignment(6400)" : 1,
+													"vertical_alignment(6401)" : 1,
+													"text(6219)" : "3",
+													"color(6520)" : 6
+												}
+											},
+											{
+												class : "float_core.label_panel_item(1683)",
+												object_id : 341,
+												data :
+												{
+													"layout_settings(6226)" : 
+													{
+														class : "float_core.grid_panel_item_layout_settings(1694)",
+														object_id : 342,
+														data :
+														{
+															"width(6217)" : 4,
+															"height(6218)" : 4,
+															"x(6215)" : 0,
+															"y(6216)" : 16
+														}
+													},
+													"is_visible(6309)" : true,
+													"is_enabled(6310)" : false,
+													"horizontal_alignment(6400)" : 1,
+													"vertical_alignment(6401)" : 1,
+													"text(6219)" : "#",
+													"color(6520)" : 6
+												}
+											},
+											{
+												class : "float_core.label_panel_item(1683)",
+												object_id : 343,
+												data :
+												{
+													"layout_settings(6226)" : 
+													{
+														class : "float_core.grid_panel_item_layout_settings(1694)",
+														object_id : 344,
+														data :
+														{
+															"width(6217)" : 4,
+															"height(6218)" : 4,
+															"x(6215)" : 0,
+															"y(6216)" : 12
+														}
+													},
+													"is_visible(6309)" : true,
+													"is_enabled(6310)" : true,
+													"horizontal_alignment(6400)" : 1,
+													"vertical_alignment(6401)" : 1,
+													"text(6219)" : "2",
+													"color(6520)" : 6
+												}
+											},
+											{
+												class : "float_core.label_panel_item(1683)",
+												object_id : 345,
+												data :
+												{
+													"layout_settings(6226)" : 
+													{
+														class : "float_core.grid_panel_item_layout_settings(1694)",
+														object_id : 346,
+														data :
+														{
+															"width(6217)" : 4,
+															"height(6218)" : 4,
+															"x(6215)" : 0,
+															"y(6216)" : 8
+														}
+													},
+													"is_visible(6309)" : true,
+													"is_enabled(6310)" : false,
+													"horizontal_alignment(6400)" : 1,
+													"vertical_alignment(6401)" : 1,
+													"text(6219)" : "#",
+													"color(6520)" : 6
+												}
+											},
+											{
+												class : "float_core.label_panel_item(1683)",
+												object_id : 347,
+												data :
+												{
+													"layout_settings(6226)" : 
+													{
+														class : "float_core.grid_panel_item_layout_settings(1694)",
+														object_id : 348,
+														data :
+														{
+															"width(6217)" : 4,
+															"height(6218)" : 4,
+															"x(6215)" : 0,
+															"y(6216)" : 4
+														}
+													},
+													"is_visible(6309)" : true,
+													"is_enabled(6310)" : true,
+													"horizontal_alignment(6400)" : 1,
+													"vertical_alignment(6401)" : 1,
+													"text(6219)" : "1",
+													"color(6520)" : 6
+												}
+											}
+										],
+										"border_style(6228)" : 1,
+										"title(6242)" : "Pitch Class Transfer Mapping",
+										"show_title(6243)" : false,
+										"title_color(6522)" : 6,
+										"brightness(6245)" : 1
+									}
+								},
+								{
+									class : "float_core.grid_panel_item(1681)",
+									object_id : 349,
+									data :
+									{
+										"layout_settings(6226)" : 
+										{
+											class : "float_core.grid_panel_item_layout_settings(1694)",
+											object_id : 350,
+											data :
+											{
+												"width(6217)" : 13,
+												"height(6218)" : 17,
+												"x(6215)" : 0,
+												"y(6216)" : 18
+											}
+										},
+										"is_visible(6309)" : true,
+										"is_enabled(6310)" : true,
+										"items(6221)" : 
+										[
+											{
+												class : "float_core.button_group_chooser_panel_item(1712)",
+												object_id : 351,
+												data :
+												{
+													"layout_settings(6226)" : 
+													{
+														class : "float_core.grid_panel_item_layout_settings(1694)",
+														object_id : 352,
+														data :
+														{
+															"width(6217)" : 11,
+															"height(6218)" : 12,
+															"x(6215)" : 1,
+															"y(6216)" : 4
+														}
+													},
+													"is_visible(6309)" : true,
+													"is_enabled(6310)" : true,
+													"data_model(6220)" : { object_ref : 43 },
+													"is_horizontal(6255)" : false,
+													"break_count(6256)" : 0,
+													"label_style(6257)" : 0
+												}
+											}
+										],
+										"border_style(6228)" : 1,
+										"title(6242)" : "Octave",
+										"show_title(6243)" : true,
+										"title_color(6522)" : 6,
+										"brightness(6245)" : 1
+									}
+								},
+								{
+									class : "float_core.grid_panel_item(1681)",
+									object_id : 353,
+									data :
+									{
+										"layout_settings(6226)" : 
+										{
+											class : "float_core.grid_panel_item_layout_settings(1694)",
+											object_id : 354,
+											data :
+											{
+												"width(6217)" : 13,
+												"height(6218)" : 17,
+												"x(6215)" : 0,
+												"y(6216)" : 36
+											}
+										},
+										"is_visible(6309)" : true,
+										"is_enabled(6310)" : true,
+										"items(6221)" : 
+										[
+											{
+												class : "float_core.popup_chooser_panel_item(1714)",
+												object_id : 355,
+												data :
+												{
+													"layout_settings(6226)" : 
+													{
+														class : "float_core.grid_panel_item_layout_settings(1694)",
+														object_id : 356,
+														data :
+														{
+															"width(6217)" : 11,
+															"height(6218)" : 4,
+															"x(6215)" : 1,
+															"y(6216)" : 4
+														}
+													},
+													"is_visible(6309)" : true,
+													"is_enabled(6310)" : true,
+													"data_model(6220)" : { object_ref : 25 },
+													"label_style(6262)" : 0,
+													"style(6266)" : 2
+												}
+											}
+										],
+										"border_style(6228)" : 1,
+										"title(6242)" : "Root",
+										"show_title(6243)" : true,
+										"title_color(6522)" : 6,
+										"brightness(6245)" : 1
+									}
+								}
+							],
+							"border_style(6228)" : 0,
+							"title(6242)" : "",
+							"show_title(6243)" : false,
+							"title_color(6522)" : 6,
+							"brightness(6245)" : 1
+						}
+					},
+					"width(6232)" : 67,
+					"height(6233)" : 53,
+					"expressions(6277)" : 
+					[
+					]
+				}
+			}
+		],
+		"panel_width(175)" : 255,
+		"proxy_in_ports(177)" : 
+		[
+			{
+				class : "float_core.proxy_in_port_component(154)",
+				object_id : 357,
+				data :
+				{
+					"settings(6194)" : 
+					{
+						class : "float_core.component_settings(236)",
+						object_id : 358,
+						data :
+						{
+							"desktop_settings(612)" : 
+							{
+								class : "float_core.desktop_settings(17)",
+								object_id : 359,
+								data :
+								{
+									"x(17)" : 8,
+									"y(18)" : 2,
+									"color(19)" : 
+									{
+										type : "color",
+										data : [0.5, 0.5, 0.5]
+									}
+								}
+							},
+							"panel_settings(613)" : null,
+							"inport_connections(614)" : 
+							[
+							],
+							"is_polyphonic(615)" : false
+						}
+					},
+					"port(301)" : 
+					{
+						class : "float_core.audio_port(242)",
+						object_id : 360,
+						data :
+						{
+							"name(498)" : "",
+							"description(4741)" : "",
+							"decorated_name(499)" : " Audio out (PARENT)",
+							"is_inport(500)" : false,
+							"is_optional(1384)" : false,
+							"channel_count(372)" : 3
+						}
+					}
+				}
+			},{ object_ref : 10 }
+		],
+		"proxy_out_ports(178)" : 
+		[
+			{
+				class : "float_core.proxy_out_port_component(50)",
+				object_id : 361,
+				data :
+				{
+					"settings(6194)" : 
+					{
+						class : "float_core.component_settings(236)",
+						object_id : 362,
+						data :
+						{
+							"desktop_settings(612)" : 
+							{
+								class : "float_core.desktop_settings(17)",
+								object_id : 363,
+								data :
+								{
+									"x(17)" : 232,
+									"y(18)" : 424,
+									"color(19)" : 
+									{
+										type : "color",
+										data : [0.5, 0.5, 0.5]
+									}
+								}
+							},
+							"panel_settings(613)" : null,
+							"inport_connections(614)" : 
+							[
+								{
+									class : "float_core.inport_connection(105)",
+									object_id : 364,
+									data :
+									{
+										"source_component(248)" : { object_ref : 2 },
+										"outport_index(249)" : 0,
+										"high_quality(1943)" : true,
+										"unconnected_value(6443)" : 0.0
+									}
+								}
+							],
+							"is_polyphonic(615)" : false
+						}
+					},
+					"port(301)" : 
+					{
+						class : "float_core.note_port(61)",
+						object_id : 365,
+						data :
+						{
+							"name(498)" : "",
+							"description(4741)" : "",
+							"decorated_name(499)" : " Note in",
+							"is_inport(500)" : true,
+							"is_optional(1384)" : false
+						}
+					}
+				}
+			}
+		],
+		"fft_order(6566)" : 0,
+		"context_menu_panel(6834)" : null,
+		"polyphony(179)" : 1,
+		"sleep_level_threshold(1977)" : -96.0,
+		"sleep_level_timeout(1978)" : 0.05,
+		"device_UUID(385)" : "284a1949-29d5-4dd4-8315-86cef92fd2cd",
+		"device_name(386)" : "Transposition Map",
+		"description(2057)" : "Transposes notes according to a map of pitch classes.",
+		"creator(387)" : "Bitwig",
+		"comment(388)" : "",
+		"keywords(389)" : "",
+		"category(390)" : "Note FX",
+		"device_type(391)" : 1,
+		"suggest_for_note_input(4846)" : true,
+		"suggest_for_audio_input(4847)" : false,
+		"has_been_modified(392)" : true,
+		"color_tint(6384)" : 0,
+		"header_area_panel(6417)" : null
+	}
+}

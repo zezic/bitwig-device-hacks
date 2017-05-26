@@ -1,0 +1,2505 @@
+BtWg000100010085000015f60000000000000000{
+	class : "meta",
+	object_id : 1,
+	data :
+	{
+		"application_version_name" : "none",
+		"branch" : "alex/future",
+		"comment" : "",
+		"creator" : "Bitwig",
+		"device_category" : "Envelope",
+		"device_description" : "AHDSR envelope with ADR curve control",
+		"device_id" : "modulator:aaf4f8c0-0847-4331-9cb2-cdd764c86602",
+		"device_name" : "AHDSR",
+		"device_uuid" : "aaf4f8c0-0847-4331-9cb2-cdd764c86602",
+		"is_polyphonic" : false,
+		"revision_id" : "0b960c530f56e7b5f580c5e0ae461b2e4a44a525",
+		"revision_no" : 48920,
+		"tags" : "",
+		"type" : "application/bitwig-modulator"
+	}
+}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
+{
+	class : "float_core.modulator_contents(1735)",
+	object_id : 1,
+	data :
+	{
+		"settings(6194)" : null,
+		"child_components(173)" : 
+		[
+			{
+				class : "float_core.modulation_source_atom(766)",
+				object_id : 2,
+				data :
+				{
+					"settings(6194)" : 
+					{
+						class : "float_core.component_settings(236)",
+						object_id : 3,
+						data :
+						{
+							"desktop_settings(612)" : 
+							{
+								class : "float_core.desktop_settings(17)",
+								object_id : 4,
+								data :
+								{
+									"x(17)" : 160,
+									"y(18)" : 456,
+									"color(19)" : 
+									{
+										type : "color",
+										data : [0.5, 0.5, 0.5]
+									}
+								}
+							},
+							"panel_settings(613)" : 
+							{
+								class : "float_core.panel_settings(202)",
+								object_id : 5,
+								data :
+								{
+									"x(502)" : 272,
+									"y(503)" : 168,
+									"width(504)" : 29,
+									"height(505)" : 26,
+									"is_visible(506)" : true
+								}
+							},
+							"inport_connections(614)" : 
+							[
+								{
+									class : "float_core.inport_connection(105)",
+									object_id : 6,
+									data :
+									{
+										"source_component(248)" : 
+										{
+											class : "float_common_atoms.multiply_atom(367)",
+											object_id : 7,
+											data :
+											{
+												"settings(6194)" : 
+												{
+													class : "float_core.component_settings(236)",
+													object_id : 8,
+													data :
+													{
+														"desktop_settings(612)" : 
+														{
+															class : "float_core.desktop_settings(17)",
+															object_id : 9,
+															data :
+															{
+																"x(17)" : 160,
+																"y(18)" : 324,
+																"color(19)" : 
+																{
+																	type : "color",
+																	data : [0.5, 0.5, 0.5]
+																}
+															}
+														},
+														"panel_settings(613)" : null,
+														"inport_connections(614)" : 
+														[
+															{
+																class : "float_core.inport_connection(105)",
+																object_id : 10,
+																data :
+																{
+																	"source_component(248)" : 
+																	{
+																		class : "float_common_atoms.ahdsr_atom(466)",
+																		object_id : 11,
+																		data :
+																		{
+																			"settings(6194)" : 
+																			{
+																				class : "float_core.component_settings(236)",
+																				object_id : 12,
+																				data :
+																				{
+																					"desktop_settings(612)" : 
+																					{
+																						class : "float_core.desktop_settings(17)",
+																						object_id : 13,
+																						data :
+																						{
+																							"x(17)" : 160,
+																							"y(18)" : 212,
+																							"color(19)" : 
+																							{
+																								type : "color",
+																								data : [0.5, 0.5, 0.5]
+																							}
+																						}
+																					},
+																					"panel_settings(613)" : null,
+																					"inport_connections(614)" : 
+																					[
+																						{
+																							class : "float_core.inport_connection(105)",
+																							object_id : 14,
+																							data :
+																							{
+																								"source_component(248)" : 
+																								{
+																									class : "float_common_atoms.nitro_atom(1721)",
+																									object_id : 15,
+																									data :
+																									{
+																										"settings(6194)" : 
+																										{
+																											class : "float_core.component_settings(236)",
+																											object_id : 16,
+																											data :
+																											{
+																												"desktop_settings(612)" : 
+																												{
+																													class : "float_core.desktop_settings(17)",
+																													object_id : 17,
+																													data :
+																													{
+																														"x(17)" : 56,
+																														"y(18)" : 88,
+																														"color(19)" : 
+																														{
+																															type : "color",
+																															data : [0.5, 0.5, 0.5]
+																														}
+																													}
+																												},
+																												"panel_settings(613)" : null,
+																												"inport_connections(614)" : 
+																												[
+																													{
+																														class : "float_core.inport_connection(105)",
+																														object_id : 18,
+																														data :
+																														{
+																															"source_component(248)" : 
+																															{
+																																class : "float_core.proxy_in_port_component(154)",
+																																object_id : 19,
+																																data :
+																																{
+																																	"settings(6194)" : 
+																																	{
+																																		class : "float_core.component_settings(236)",
+																																		object_id : 20,
+																																		data :
+																																		{
+																																			"desktop_settings(612)" : 
+																																			{
+																																				class : "float_core.desktop_settings(17)",
+																																				object_id : 21,
+																																				data :
+																																				{
+																																					"x(17)" : 0,
+																																					"y(18)" : 0,
+																																					"color(19)" : 
+																																					{
+																																						type : "color",
+																																						data : [0.5, 0.5, 0.5]
+																																					}
+																																				}
+																																			},
+																																			"panel_settings(613)" : null,
+																																			"inport_connections(614)" : 
+																																			[
+																																			],
+																																			"is_polyphonic(615)" : true
+																																		}
+																																	},
+																																	"port(301)" : 
+																																	{
+																																		class : "float_core.note_port(61)",
+																																		object_id : 22,
+																																		data :
+																																		{
+																																			"name(498)" : "",
+																																			"description(4741)" : "",
+																																			"decorated_name(499)" : " Note out",
+																																			"is_inport(500)" : false,
+																																			"is_optional(1384)" : false
+																																		}
+																																	}
+																																}
+																															},
+																															"outport_index(249)" : 0,
+																															"high_quality(1943)" : true,
+																															"unconnected_value(6443)" : 0.0
+																														}
+																													}
+																												],
+																												"is_polyphonic(615)" : true
+																											}
+																										},
+																										"channel_count(607)" : 0,
+																										"oversampling(608)" : 0,
+																										"code(6264)" : "component note_trigger\n{   \n   @name \"Note In\"\n   event_inport NoteEvent in\n   {\n      if (in.type == in.NOTE_ON)\n      {\n         NoteTriggerEvent e;\n         e.gate = 1;\n         e.key = in.key.i8;\n         e.velocity = (in.v * 127.0).i8;\n         send out e;\n      }\n      else if (in.type == in.NOTE_OFF)\n      {\n         NoteTriggerEvent e;\n         e.gate = 0;\n         e.key = in.key.i8;\n         e.velocity = (in.v * 127.0).i8;\n         send out e;\n      }\n   }\n\n   event_outport NoteTriggerEvent out;\n}\n",
+																										"fft_order(6567)" : 0
+																									}
+																								},
+																								"outport_index(249)" : 0,
+																								"high_quality(1943)" : true,
+																								"unconnected_value(6443)" : 0.0
+																							}
+																						},
+																						{
+																							class : "float_core.inport_connection(105)",
+																							object_id : 23,
+																							data :
+																							{
+																								"source_component(248)" : 
+																								{
+																									class : "float_core.decimal_value_atom(289)",
+																									object_id : 24,
+																									data :
+																									{
+																										"settings(6194)" : 
+																										{
+																											class : "float_core.component_settings(236)",
+																											object_id : 25,
+																											data :
+																											{
+																												"desktop_settings(612)" : 
+																												{
+																													class : "float_core.desktop_settings(17)",
+																													object_id : 26,
+																													data :
+																													{
+																														"x(17)" : 172,
+																														"y(18)" : 100,
+																														"color(19)" : 
+																														{
+																															type : "color",
+																															data : [0.5, 0.5, 0.5]
+																														}
+																													}
+																												},
+																												"panel_settings(613)" : 
+																												{
+																													class : "float_core.panel_settings(202)",
+																													object_id : 27,
+																													data :
+																													{
+																														"x(502)" : 304,
+																														"y(503)" : 168,
+																														"width(504)" : 27,
+																														"height(505)" : 37,
+																														"is_visible(506)" : true
+																													}
+																												},
+																												"inport_connections(614)" : 
+																												[
+																												],
+																												"is_polyphonic(615)" : true
+																											}
+																										},
+																										"channel_count(607)" : 0,
+																										"oversampling(608)" : 0,
+																										"name(374)" : "Attack Time",
+																										"label(821)" : "A",
+																										"tooltip_text(823)" : "",
+																										"preset_identifier(701)" : "ATTACK_TIME",
+																										"modulations_to_ignore(3826)" : "EG",
+																										"value_type(702)" : 
+																										{
+																											class : "float_core.decimal_value_type(123)",
+																											object_id : 28,
+																											data :
+																											{
+																												"min(292)" : -3.0,
+																												"max(293)" : 1.0,
+																												"default_value(891)" : -3.0,
+																												"domain(294)" : 3,
+																												"engine_domain(295)" : 0,
+																												"value_origin(3014)" : 0,
+																												"pixel_step_size(1988)" : -1.0,
+																												"unit(296)" : 3,
+																												"decimal_digit_count(297)" : -1,
+																												"edit_style(298)" : 1,
+																												"parameter_smoothing(4433)" : true,
+																												"allow_automation_curves(4434)" : true
+																											}
+																										},
+																										"value(712)" : -1.6040356083086043
+																									}
+																								},
+																								"outport_index(249)" : 0,
+																								"high_quality(1943)" : true,
+																								"unconnected_value(6443)" : 0.0
+																							}
+																						},
+																						{
+																							class : "float_core.inport_connection(105)",
+																							object_id : 29,
+																							data :
+																							{
+																								"source_component(248)" : 
+																								{
+																									class : "float_core.decimal_value_atom(289)",
+																									object_id : 30,
+																									data :
+																									{
+																										"settings(6194)" : 
+																										{
+																											class : "float_core.component_settings(236)",
+																											object_id : 31,
+																											data :
+																											{
+																												"desktop_settings(612)" : 
+																												{
+																													class : "float_core.desktop_settings(17)",
+																													object_id : 32,
+																													data :
+																													{
+																														"x(17)" : 184,
+																														"y(18)" : 60,
+																														"color(19)" : 
+																														{
+																															type : "color",
+																															data : [0.5, 0.5, 0.5]
+																														}
+																													}
+																												},
+																												"panel_settings(613)" : 
+																												{
+																													class : "float_core.panel_settings(202)",
+																													object_id : 33,
+																													data :
+																													{
+																														"x(502)" : 308,
+																														"y(503)" : 156,
+																														"width(504)" : 23,
+																														"height(505)" : 9,
+																														"is_visible(506)" : true
+																													}
+																												},
+																												"inport_connections(614)" : 
+																												[
+																												],
+																												"is_polyphonic(615)" : true
+																											}
+																										},
+																										"channel_count(607)" : 0,
+																										"oversampling(608)" : 0,
+																										"name(374)" : "Attack Shape",
+																										"label(821)" : "A (S)",
+																										"tooltip_text(823)" : "",
+																										"preset_identifier(701)" : "ATTACK_SHAPE",
+																										"modulations_to_ignore(3826)" : "EG",
+																										"value_type(702)" : 
+																										{
+																											class : "float_core.decimal_value_type(123)",
+																											object_id : 34,
+																											data :
+																											{
+																												"min(292)" : -1.0,
+																												"max(293)" : 1.0,
+																												"default_value(891)" : 0.0,
+																												"domain(294)" : 0,
+																												"engine_domain(295)" : 0,
+																												"value_origin(3014)" : 0,
+																												"pixel_step_size(1988)" : -1.0,
+																												"unit(296)" : 1,
+																												"decimal_digit_count(297)" : -1,
+																												"edit_style(298)" : 5,
+																												"parameter_smoothing(4433)" : true,
+																												"allow_automation_curves(4434)" : true
+																											}
+																										},
+																										"value(712)" : 0.0
+																									}
+																								},
+																								"outport_index(249)" : 0,
+																								"high_quality(1943)" : true,
+																								"unconnected_value(6443)" : 0.0
+																							}
+																						},
+																						{
+																							class : "float_core.inport_connection(105)",
+																							object_id : 35,
+																							data :
+																							{
+																								"source_component(248)" : 
+																								{
+																									class : "float_core.decimal_value_atom(289)",
+																									object_id : 36,
+																									data :
+																									{
+																										"settings(6194)" : 
+																										{
+																											class : "float_core.component_settings(236)",
+																											object_id : 37,
+																											data :
+																											{
+																												"desktop_settings(612)" : 
+																												{
+																													class : "float_core.desktop_settings(17)",
+																													object_id : 38,
+																													data :
+																													{
+																														"x(17)" : 220,
+																														"y(18)" : 100,
+																														"color(19)" : 
+																														{
+																															type : "color",
+																															data : [0.5, 0.5, 0.5]
+																														}
+																													}
+																												},
+																												"panel_settings(613)" : 
+																												{
+																													class : "float_core.panel_settings(202)",
+																													object_id : 39,
+																													data :
+																													{
+																														"x(502)" : 336,
+																														"y(503)" : 168,
+																														"width(504)" : 27,
+																														"height(505)" : 37,
+																														"is_visible(506)" : true
+																													}
+																												},
+																												"inport_connections(614)" : 
+																												[
+																												],
+																												"is_polyphonic(615)" : true
+																											}
+																										},
+																										"channel_count(607)" : 0,
+																										"oversampling(608)" : 0,
+																										"name(374)" : "Hold Time",
+																										"label(821)" : "H",
+																										"tooltip_text(823)" : "",
+																										"preset_identifier(701)" : "HOLD_TIME",
+																										"modulations_to_ignore(3826)" : "EG",
+																										"value_type(702)" : 
+																										{
+																											class : "float_core.decimal_value_type(123)",
+																											object_id : 40,
+																											data :
+																											{
+																												"min(292)" : -3.0,
+																												"max(293)" : 1.0,
+																												"default_value(891)" : -3.0,
+																												"domain(294)" : 3,
+																												"engine_domain(295)" : 0,
+																												"value_origin(3014)" : 0,
+																												"pixel_step_size(1988)" : -1.0,
+																												"unit(296)" : 3,
+																												"decimal_digit_count(297)" : -1,
+																												"edit_style(298)" : 1,
+																												"parameter_smoothing(4433)" : true,
+																												"allow_automation_curves(4434)" : true
+																											}
+																										},
+																										"value(712)" : -1.651611929789246
+																									}
+																								},
+																								"outport_index(249)" : 0,
+																								"high_quality(1943)" : true,
+																								"unconnected_value(6443)" : 0.0
+																							}
+																						},
+																						{
+																							class : "float_core.inport_connection(105)",
+																							object_id : 41,
+																							data :
+																							{
+																								"source_component(248)" : 
+																								{
+																									class : "float_core.decimal_value_atom(289)",
+																									object_id : 42,
+																									data :
+																									{
+																										"settings(6194)" : 
+																										{
+																											class : "float_core.component_settings(236)",
+																											object_id : 43,
+																											data :
+																											{
+																												"desktop_settings(612)" : 
+																												{
+																													class : "float_core.desktop_settings(17)",
+																													object_id : 44,
+																													data :
+																													{
+																														"x(17)" : 268,
+																														"y(18)" : 100,
+																														"color(19)" : 
+																														{
+																															type : "color",
+																															data : [0.5, 0.5, 0.5]
+																														}
+																													}
+																												},
+																												"panel_settings(613)" : 
+																												{
+																													class : "float_core.panel_settings(202)",
+																													object_id : 45,
+																													data :
+																													{
+																														"x(502)" : 364,
+																														"y(503)" : 168,
+																														"width(504)" : 27,
+																														"height(505)" : 37,
+																														"is_visible(506)" : true
+																													}
+																												},
+																												"inport_connections(614)" : 
+																												[
+																												],
+																												"is_polyphonic(615)" : true
+																											}
+																										},
+																										"channel_count(607)" : 0,
+																										"oversampling(608)" : 0,
+																										"name(374)" : "Decay Time",
+																										"label(821)" : "D",
+																										"tooltip_text(823)" : "",
+																										"preset_identifier(701)" : "DECAY_TIME",
+																										"modulations_to_ignore(3826)" : "EG",
+																										"value_type(702)" : 
+																										{
+																											class : "float_core.decimal_value_type(123)",
+																											object_id : 46,
+																											data :
+																											{
+																												"min(292)" : -2.0,
+																												"max(293)" : 1.0,
+																												"default_value(891)" : -1.0,
+																												"domain(294)" : 3,
+																												"engine_domain(295)" : 0,
+																												"value_origin(3014)" : 0,
+																												"pixel_step_size(1988)" : -1.0,
+																												"unit(296)" : 3,
+																												"decimal_digit_count(297)" : -1,
+																												"edit_style(298)" : 1,
+																												"parameter_smoothing(4433)" : true,
+																												"allow_automation_curves(4434)" : true
+																											}
+																										},
+																										"value(712)" : -0.40499461958333816
+																									}
+																								},
+																								"outport_index(249)" : 0,
+																								"high_quality(1943)" : true,
+																								"unconnected_value(6443)" : 0.0
+																							}
+																						},
+																						{
+																							class : "float_core.inport_connection(105)",
+																							object_id : 47,
+																							data :
+																							{
+																								"source_component(248)" : 
+																								{
+																									class : "float_core.decimal_value_atom(289)",
+																									object_id : 48,
+																									data :
+																									{
+																										"settings(6194)" : 
+																										{
+																											class : "float_core.component_settings(236)",
+																											object_id : 49,
+																											data :
+																											{
+																												"desktop_settings(612)" : 
+																												{
+																													class : "float_core.desktop_settings(17)",
+																													object_id : 50,
+																													data :
+																													{
+																														"x(17)" : 268,
+																														"y(18)" : 60,
+																														"color(19)" : 
+																														{
+																															type : "color",
+																															data : [0.5, 0.5, 0.5]
+																														}
+																													}
+																												},
+																												"panel_settings(613)" : 
+																												{
+																													class : "float_core.panel_settings(202)",
+																													object_id : 51,
+																													data :
+																													{
+																														"x(502)" : 368,
+																														"y(503)" : 156,
+																														"width(504)" : 23,
+																														"height(505)" : 9,
+																														"is_visible(506)" : true
+																													}
+																												},
+																												"inport_connections(614)" : 
+																												[
+																												],
+																												"is_polyphonic(615)" : true
+																											}
+																										},
+																										"channel_count(607)" : 0,
+																										"oversampling(608)" : 0,
+																										"name(374)" : "Decay Shape",
+																										"label(821)" : "D (S)",
+																										"tooltip_text(823)" : "",
+																										"preset_identifier(701)" : "DECAY_SHAPE",
+																										"modulations_to_ignore(3826)" : "EG",
+																										"value_type(702)" : 
+																										{
+																											class : "float_core.decimal_value_type(123)",
+																											object_id : 52,
+																											data :
+																											{
+																												"min(292)" : -1.0,
+																												"max(293)" : 1.0,
+																												"default_value(891)" : 0.0,
+																												"domain(294)" : 0,
+																												"engine_domain(295)" : 0,
+																												"value_origin(3014)" : 0,
+																												"pixel_step_size(1988)" : -1.0,
+																												"unit(296)" : 1,
+																												"decimal_digit_count(297)" : -1,
+																												"edit_style(298)" : 6,
+																												"parameter_smoothing(4433)" : true,
+																												"allow_automation_curves(4434)" : true
+																											}
+																										},
+																										"value(712)" : 0.0
+																									}
+																								},
+																								"outport_index(249)" : 0,
+																								"high_quality(1943)" : true,
+																								"unconnected_value(6443)" : 0.0
+																							}
+																						},
+																						{
+																							class : "float_core.inport_connection(105)",
+																							object_id : 53,
+																							data :
+																							{
+																								"source_component(248)" : 
+																								{
+																									class : "float_core.decimal_value_atom(289)",
+																									object_id : 54,
+																									data :
+																									{
+																										"settings(6194)" : 
+																										{
+																											class : "float_core.component_settings(236)",
+																											object_id : 55,
+																											data :
+																											{
+																												"desktop_settings(612)" : 
+																												{
+																													class : "float_core.desktop_settings(17)",
+																													object_id : 56,
+																													data :
+																													{
+																														"x(17)" : 316,
+																														"y(18)" : 100,
+																														"color(19)" : 
+																														{
+																															type : "color",
+																															data : [0.5, 0.5, 0.5]
+																														}
+																													}
+																												},
+																												"panel_settings(613)" : 
+																												{
+																													class : "float_core.panel_settings(202)",
+																													object_id : 57,
+																													data :
+																													{
+																														"x(502)" : 396,
+																														"y(503)" : 168,
+																														"width(504)" : 27,
+																														"height(505)" : 37,
+																														"is_visible(506)" : true
+																													}
+																												},
+																												"inport_connections(614)" : 
+																												[
+																												],
+																												"is_polyphonic(615)" : true
+																											}
+																										},
+																										"channel_count(607)" : 0,
+																										"oversampling(608)" : 0,
+																										"name(374)" : "Sustain Level",
+																										"label(821)" : "S",
+																										"tooltip_text(823)" : "",
+																										"preset_identifier(701)" : "SUSTAIN_LEVEL",
+																										"modulations_to_ignore(3826)" : "EG",
+																										"value_type(702)" : 
+																										{
+																											class : "float_core.decimal_value_type(123)",
+																											object_id : 58,
+																											data :
+																											{
+																												"min(292)" : 0.0,
+																												"max(293)" : 1.0,
+																												"default_value(891)" : 1.0,
+																												"domain(294)" : 0,
+																												"engine_domain(295)" : 0,
+																												"value_origin(3014)" : 0,
+																												"pixel_step_size(1988)" : -1.0,
+																												"unit(296)" : 1,
+																												"decimal_digit_count(297)" : -1,
+																												"edit_style(298)" : 1,
+																												"parameter_smoothing(4433)" : true,
+																												"allow_automation_curves(4434)" : true
+																											}
+																										},
+																										"value(712)" : 0.5
+																									}
+																								},
+																								"outport_index(249)" : 0,
+																								"high_quality(1943)" : true,
+																								"unconnected_value(6443)" : 0.0
+																							}
+																						},
+																						{
+																							class : "float_core.inport_connection(105)",
+																							object_id : 59,
+																							data :
+																							{
+																								"source_component(248)" : 
+																								{
+																									class : "float_core.decimal_value_atom(289)",
+																									object_id : 60,
+																									data :
+																									{
+																										"settings(6194)" : 
+																										{
+																											class : "float_core.component_settings(236)",
+																											object_id : 61,
+																											data :
+																											{
+																												"desktop_settings(612)" : 
+																												{
+																													class : "float_core.desktop_settings(17)",
+																													object_id : 62,
+																													data :
+																													{
+																														"x(17)" : 364,
+																														"y(18)" : 100,
+																														"color(19)" : 
+																														{
+																															type : "color",
+																															data : [0.5, 0.5, 0.5]
+																														}
+																													}
+																												},
+																												"panel_settings(613)" : 
+																												{
+																													class : "float_core.panel_settings(202)",
+																													object_id : 63,
+																													data :
+																													{
+																														"x(502)" : 424,
+																														"y(503)" : 168,
+																														"width(504)" : 27,
+																														"height(505)" : 37,
+																														"is_visible(506)" : true
+																													}
+																												},
+																												"inport_connections(614)" : 
+																												[
+																												],
+																												"is_polyphonic(615)" : true
+																											}
+																										},
+																										"channel_count(607)" : 0,
+																										"oversampling(608)" : 0,
+																										"name(374)" : "Release Time",
+																										"label(821)" : "R",
+																										"tooltip_text(823)" : "",
+																										"preset_identifier(701)" : "RELEASE_TIME",
+																										"modulations_to_ignore(3826)" : "EG",
+																										"value_type(702)" : 
+																										{
+																											class : "float_core.decimal_value_type(123)",
+																											object_id : 64,
+																											data :
+																											{
+																												"min(292)" : -2.0,
+																												"max(293)" : 1.0,
+																												"default_value(891)" : -3.0,
+																												"domain(294)" : 3,
+																												"engine_domain(295)" : 0,
+																												"value_origin(3014)" : 0,
+																												"pixel_step_size(1988)" : -1.0,
+																												"unit(296)" : 3,
+																												"decimal_digit_count(297)" : -1,
+																												"edit_style(298)" : 1,
+																												"parameter_smoothing(4433)" : true,
+																												"allow_automation_curves(4434)" : true
+																											}
+																										},
+																										"value(712)" : -0.6225800314190933
+																									}
+																								},
+																								"outport_index(249)" : 0,
+																								"high_quality(1943)" : true,
+																								"unconnected_value(6443)" : 0.0
+																							}
+																						},
+																						{
+																							class : "float_core.inport_connection(105)",
+																							object_id : 65,
+																							data :
+																							{
+																								"source_component(248)" : 
+																								{
+																									class : "float_core.decimal_value_atom(289)",
+																									object_id : 66,
+																									data :
+																									{
+																										"settings(6194)" : 
+																										{
+																											class : "float_core.component_settings(236)",
+																											object_id : 67,
+																											data :
+																											{
+																												"desktop_settings(612)" : 
+																												{
+																													class : "float_core.desktop_settings(17)",
+																													object_id : 68,
+																													data :
+																													{
+																														"x(17)" : 364,
+																														"y(18)" : 60,
+																														"color(19)" : 
+																														{
+																															type : "color",
+																															data : [0.5, 0.5, 0.5]
+																														}
+																													}
+																												},
+																												"panel_settings(613)" : 
+																												{
+																													class : "float_core.panel_settings(202)",
+																													object_id : 69,
+																													data :
+																													{
+																														"x(502)" : 428,
+																														"y(503)" : 156,
+																														"width(504)" : 23,
+																														"height(505)" : 9,
+																														"is_visible(506)" : true
+																													}
+																												},
+																												"inport_connections(614)" : 
+																												[
+																												],
+																												"is_polyphonic(615)" : true
+																											}
+																										},
+																										"channel_count(607)" : 0,
+																										"oversampling(608)" : 0,
+																										"name(374)" : "Release Shape",
+																										"label(821)" : "R (S)",
+																										"tooltip_text(823)" : "",
+																										"preset_identifier(701)" : "RELEASE_SHAPE",
+																										"modulations_to_ignore(3826)" : "EG",
+																										"value_type(702)" : 
+																										{
+																											class : "float_core.decimal_value_type(123)",
+																											object_id : 70,
+																											data :
+																											{
+																												"min(292)" : -1.0,
+																												"max(293)" : 1.0,
+																												"default_value(891)" : 0.0,
+																												"domain(294)" : 0,
+																												"engine_domain(295)" : 0,
+																												"value_origin(3014)" : 0,
+																												"pixel_step_size(1988)" : -1.0,
+																												"unit(296)" : 1,
+																												"decimal_digit_count(297)" : -1,
+																												"edit_style(298)" : 6,
+																												"parameter_smoothing(4433)" : true,
+																												"allow_automation_curves(4434)" : true
+																											}
+																										},
+																										"value(712)" : 0.0
+																									}
+																								},
+																								"outport_index(249)" : 0,
+																								"high_quality(1943)" : true,
+																								"unconnected_value(6443)" : 0.0
+																							}
+																						}
+																					],
+																					"is_polyphonic(615)" : true
+																				}
+																			},
+																			"channel_count(607)" : 0,
+																			"oversampling(608)" : 0
+																		}
+																	},
+																	"outport_index(249)" : 0,
+																	"high_quality(1943)" : true,
+																	"unconnected_value(6443)" : 0.0
+																}
+															},
+															{
+																class : "float_core.inport_connection(105)",
+																object_id : 71,
+																data :
+																{
+																	"source_component(248)" : 
+																	{
+																		class : "float_core.decimal_value_atom(289)",
+																		object_id : 72,
+																		data :
+																		{
+																			"settings(6194)" : 
+																			{
+																				class : "float_core.component_settings(236)",
+																				object_id : 73,
+																				data :
+																				{
+																					"desktop_settings(612)" : 
+																					{
+																						class : "float_core.desktop_settings(17)",
+																						object_id : 74,
+																						data :
+																						{
+																							"x(17)" : 172,
+																							"y(18)" : 268,
+																							"color(19)" : 
+																							{
+																								type : "color",
+																								data : [0.5, 0.5, 0.5]
+																							}
+																						}
+																					},
+																					"panel_settings(613)" : 
+																					{
+																						class : "float_core.panel_settings(202)",
+																						object_id : 75,
+																						data :
+																						{
+																							"x(502)" : 0,
+																							"y(503)" : 36,
+																							"width(504)" : 5,
+																							"height(505)" : 5,
+																							"is_visible(506)" : true
+																						}
+																					},
+																					"inport_connections(614)" : 
+																					[
+																					],
+																					"is_polyphonic(615)" : true
+																				}
+																			},
+																			"channel_count(607)" : 0,
+																			"oversampling(608)" : 0,
+																			"name(374)" : "Depth",
+																			"label(821)" : "",
+																			"tooltip_text(823)" : "",
+																			"preset_identifier(701)" : "DEPTH",
+																			"modulations_to_ignore(3826)" : "EG",
+																			"value_type(702)" : 
+																			{
+																				class : "float_core.decimal_value_type(123)",
+																				object_id : 76,
+																				data :
+																				{
+																					"min(292)" : -1.0,
+																					"max(293)" : 1.0,
+																					"default_value(891)" : 1.0,
+																					"domain(294)" : 0,
+																					"engine_domain(295)" : 0,
+																					"value_origin(3014)" : 2,
+																					"pixel_step_size(1988)" : -1.0,
+																					"unit(296)" : 1,
+																					"decimal_digit_count(297)" : -1,
+																					"edit_style(298)" : 0,
+																					"parameter_smoothing(4433)" : true,
+																					"allow_automation_curves(4434)" : true
+																				}
+																			},
+																			"value(712)" : 1.0
+																		}
+																	},
+																	"outport_index(249)" : 0,
+																	"high_quality(1943)" : true,
+																	"unconnected_value(6443)" : 0.0
+																}
+															}
+														],
+														"is_polyphonic(615)" : true
+													}
+												},
+												"channel_count(607)" : 1,
+												"oversampling(608)" : 0,
+												"second_input_is_scalar(3154)" : false
+											}
+										},
+										"outport_index(249)" : 0,
+										"high_quality(1943)" : true,
+										"unconnected_value(6443)" : 0.0
+									}
+								}
+							],
+							"is_polyphonic(615)" : true
+						}
+					},
+					"channel_count(607)" : 1,
+					"oversampling(608)" : 0,
+					"name(3639)" : "",
+					"preset_identifier(3640)" : "EG",
+					"display_settings(5452)" : 
+					{
+						type : "map<string,object>",
+						data : 
+						{
+							"abique" : 
+							{
+								class : "float_core.modulation_source_atom_display_settings(1488)",
+								object_id : 77,
+								data :
+								{
+									"is_source_expanded_in_inspector(5455)" : false
+								}
+							}
+						}
+					}
+				}
+			},{ object_ref : 11 },{ object_ref : 24 },{ object_ref : 36 },{ object_ref : 42 },{ object_ref : 54 },{ object_ref : 48 },{ object_ref : 30 },{ object_ref : 66 },{ object_ref : 60 },{ object_ref : 72 },{ object_ref : 7 },
+			{
+				class : "float_core.polyphonic_observer_atom(1815)",
+				object_id : 78,
+				data :
+				{
+					"settings(6194)" : 
+					{
+						class : "float_core.component_settings(236)",
+						object_id : 79,
+						data :
+						{
+							"desktop_settings(612)" : 
+							{
+								class : "float_core.desktop_settings(17)",
+								object_id : 80,
+								data :
+								{
+									"x(17)" : 260,
+									"y(18)" : 476,
+									"color(19)" : 
+									{
+										type : "color",
+										data : [0.5, 0.5, 0.5]
+									}
+								}
+							},
+							"panel_settings(613)" : null,
+							"inport_connections(614)" : 
+							[
+								{
+									class : "float_core.inport_connection(105)",
+									object_id : 81,
+									data :
+									{
+										"source_component(248)" : { object_ref : 7 },
+										"outport_index(249)" : 0,
+										"high_quality(1943)" : true,
+										"unconnected_value(6443)" : 0.0
+									}
+								}
+							],
+							"is_polyphonic(615)" : true
+						}
+					},
+					"channel_count(607)" : 1,
+					"oversampling(608)" : 0,
+					"dimensions(6533)" : 1
+				}
+			},{ object_ref : 15 },
+			{
+				class : "float_core.scope_observer_component(1996)",
+				object_id : 82,
+				data :
+				{
+					"settings(6194)" : 
+					{
+						class : "float_core.component_settings(236)",
+						object_id : 83,
+						data :
+						{
+							"desktop_settings(612)" : 
+							{
+								class : "float_core.desktop_settings(17)",
+								object_id : 84,
+								data :
+								{
+									"x(17)" : 296,
+									"y(18)" : 416,
+									"color(19)" : 
+									{
+										type : "color",
+										data : [0.5, 0.5, 0.5]
+									}
+								}
+							},
+							"panel_settings(613)" : null,
+							"inport_connections(614)" : 
+							[
+								{
+									class : "float_core.inport_connection(105)",
+									object_id : 85,
+									data :
+									{
+										"source_component(248)" : { object_ref : 7 },
+										"outport_index(249)" : 0,
+										"high_quality(1943)" : true,
+										"unconnected_value(6443)" : 0.0
+									}
+								}
+							],
+							"is_polyphonic(615)" : false
+						}
+					}
+				}
+			}
+		],
+		"panels(6213)" : 
+		[
+			{
+				class : "float_core.panel(1680)",
+				object_id : 86,
+				data :
+				{
+					"layout_settings(6226)" : null,
+					"is_visible(6309)" : true,
+					"is_enabled(6310)" : true,
+					"tooltip_text(6867)" : "",
+					"name(6211)" : "Main",
+					"root_item(6212)" : 
+					{
+						class : "float_core.grid_panel_item(1681)",
+						object_id : 87,
+						data :
+						{
+							"layout_settings(6226)" : null,
+							"is_visible(6309)" : true,
+							"is_enabled(6310)" : true,
+							"tooltip_text(6867)" : "",
+							"items(6221)" : 
+							[
+								{
+									class : "float_core.mapping_source_panel_item(1717)",
+									object_id : 88,
+									data :
+									{
+										"layout_settings(6226)" : 
+										{
+											class : "float_core.grid_panel_item_layout_settings(1694)",
+											object_id : 89,
+											data :
+											{
+												"width(6217)" : 17,
+												"height(6218)" : 4,
+												"x(6215)" : 0,
+												"y(6216)" : 13
+											}
+										},
+										"is_visible(6309)" : true,
+										"is_enabled(6310)" : true,
+										"tooltip_text(6867)" : "",
+										"data_model(6220)" : { object_ref : 2 },
+										"title(6241)" : "",
+										"filename(6258)" : ""
+									}
+								},
+								{
+									class : "float_core.display_panel_item(1804)",
+									object_id : 90,
+									data :
+									{
+										"layout_settings(6226)" : 
+										{
+											class : "float_core.grid_panel_item_layout_settings(1694)",
+											object_id : 91,
+											data :
+											{
+												"width(6217)" : 17,
+												"height(6218)" : 13,
+												"x(6215)" : 0,
+												"y(6216)" : 0
+											}
+										},
+										"is_visible(6309)" : true,
+										"is_enabled(6310)" : true,
+										"tooltip_text(6867)" : "",
+										"items(6221)" : 
+										[
+											{
+												class : "float_core.display_polyphonic_observer_panel_item(1816)",
+												object_id : 92,
+												data :
+												{
+													"layout_settings(6226)" : 
+													{
+														class : "float_core.stack_panel_item_layout_settings(1803)",
+														object_id : 93,
+														data :
+														{
+															"width(6217)" : 1,
+															"height(6218)" : 1
+														}
+													},
+													"is_visible(6309)" : true,
+													"is_enabled(6310)" : true,
+													"tooltip_text(6867)" : "",
+													"is_interactive(6499)" : false,
+													"color(6518)" : 4,
+													"label(6496)" : "",
+													"component(6513)" : { object_ref : 78 },
+													"numeric_domain_x(6553)" : 3,
+													"numeric_domain_y(6554)" : 0,
+													"numeric_domain_z(6555)" : 0,
+													"scope_mode(6715)" : true,
+													"draw_x_line(6895)" : true,
+													"draw_y_line(6896)" : true,
+													"dot_size(6897)" : 3.0
+												}
+											},
+											{
+												class : "float_core.display_line_painting_container(1817)",
+												object_id : 94,
+												data :
+												{
+													"layout_settings(6226)" : 
+													{
+														class : "float_core.stack_panel_item_layout_settings(1803)",
+														object_id : 95,
+														data :
+														{
+															"width(6217)" : 1,
+															"height(6218)" : 1
+														}
+													},
+													"is_visible(6309)" : true,
+													"is_enabled(6310)" : true,
+													"tooltip_text(6867)" : "",
+													"items(6221)" : 
+													[
+														{
+															class : "float_core.display_point_panel_item(1806)",
+															object_id : 96,
+															data :
+															{
+																"layout_settings(6226)" : 
+																{
+																	class : "float_core.stack_panel_item_layout_settings(1803)",
+																	object_id : 97,
+																	data :
+																	{
+																		"width(6217)" : 1,
+																		"height(6218)" : 1
+																	}
+																},
+																"is_visible(6309)" : true,
+																"is_enabled(6310)" : true,
+																"tooltip_text(6867)" : "",
+																"is_interactive(6499)" : false,
+																"color(6518)" : 2,
+																"label(6496)" : "",
+																"offset_x(6500)" : 0.0,
+																"offset_y(6501)" : 0.0,
+																"component_x(6512)" : null,
+																"component_y(6513)" : null,
+																"show_modulated_value(6730)" : true,
+																"interpolation(6893)" : 0,
+																"interpolation_parameter(6894)" : 0.0,
+																"gain_x(6991)" : 1.0,
+																"gain_y(6992)" : 1.0
+															}
+														},
+														{
+															class : "float_core.display_point_panel_item(1806)",
+															object_id : 98,
+															data :
+															{
+																"layout_settings(6226)" : 
+																{
+																	class : "float_core.stack_panel_item_layout_settings(1803)",
+																	object_id : 99,
+																	data :
+																	{
+																		"width(6217)" : 1,
+																		"height(6218)" : 1
+																	}
+																},
+																"is_visible(6309)" : true,
+																"is_enabled(6310)" : true,
+																"tooltip_text(6867)" : "",
+																"is_interactive(6499)" : false,
+																"color(6518)" : 2,
+																"label(6496)" : "",
+																"offset_x(6500)" : 0.0,
+																"offset_y(6501)" : 1.0,
+																"component_x(6512)" : { object_ref : 24 },
+																"component_y(6513)" : null,
+																"show_modulated_value(6730)" : true,
+																"interpolation(6893)" : 2,
+																"interpolation_parameter(6894)" : 0.0,
+																"gain_x(6991)" : 1.0,
+																"gain_y(6992)" : 1.0
+															}
+														},
+														{
+															class : "float_core.display_point_panel_item(1806)",
+															object_id : 100,
+															data :
+															{
+																"layout_settings(6226)" : 
+																{
+																	class : "float_core.stack_panel_item_layout_settings(1803)",
+																	object_id : 101,
+																	data :
+																	{
+																		"width(6217)" : 1,
+																		"height(6218)" : 1
+																	}
+																},
+																"is_visible(6309)" : true,
+																"is_enabled(6310)" : true,
+																"tooltip_text(6867)" : "",
+																"is_interactive(6499)" : false,
+																"color(6518)" : 2,
+																"label(6496)" : "",
+																"offset_x(6500)" : 0.0,
+																"offset_y(6501)" : 1.0,
+																"component_x(6512)" : { object_ref : 36 },
+																"component_y(6513)" : null,
+																"show_modulated_value(6730)" : true,
+																"interpolation(6893)" : 0,
+																"interpolation_parameter(6894)" : 0.0,
+																"gain_x(6991)" : 1.0,
+																"gain_y(6992)" : 1.0
+															}
+														},
+														{
+															class : "float_core.display_point_panel_item(1806)",
+															object_id : 102,
+															data :
+															{
+																"layout_settings(6226)" : 
+																{
+																	class : "float_core.stack_panel_item_layout_settings(1803)",
+																	object_id : 103,
+																	data :
+																	{
+																		"width(6217)" : 1,
+																		"height(6218)" : 1
+																	}
+																},
+																"is_visible(6309)" : true,
+																"is_enabled(6310)" : true,
+																"tooltip_text(6867)" : "",
+																"is_interactive(6499)" : false,
+																"color(6518)" : 2,
+																"label(6496)" : "",
+																"offset_x(6500)" : 0.0,
+																"offset_y(6501)" : 0.0,
+																"component_x(6512)" : { object_ref : 42 },
+																"component_y(6513)" : { object_ref : 54 },
+																"show_modulated_value(6730)" : true,
+																"interpolation(6893)" : 2,
+																"interpolation_parameter(6894)" : 0.0,
+																"gain_x(6991)" : 1.0,
+																"gain_y(6992)" : 1.0
+															}
+														},
+														{
+															class : "float_core.display_point_panel_item(1806)",
+															object_id : 104,
+															data :
+															{
+																"layout_settings(6226)" : 
+																{
+																	class : "float_core.stack_panel_item_layout_settings(1803)",
+																	object_id : 105,
+																	data :
+																	{
+																		"width(6217)" : 1,
+																		"height(6218)" : 1
+																	}
+																},
+																"is_visible(6309)" : true,
+																"is_enabled(6310)" : true,
+																"tooltip_text(6867)" : "",
+																"is_interactive(6499)" : false,
+																"color(6518)" : 2,
+																"label(6496)" : "",
+																"offset_x(6500)" : 0.0,
+																"offset_y(6501)" : 0.0,
+																"component_x(6512)" : null,
+																"component_y(6513)" : { object_ref : 54 },
+																"show_modulated_value(6730)" : true,
+																"interpolation(6893)" : 0,
+																"interpolation_parameter(6894)" : 0.0,
+																"gain_x(6991)" : 1.0,
+																"gain_y(6992)" : 1.0
+															}
+														},
+														{
+															class : "float_core.display_point_panel_item(1806)",
+															object_id : 106,
+															data :
+															{
+																"layout_settings(6226)" : 
+																{
+																	class : "float_core.stack_panel_item_layout_settings(1803)",
+																	object_id : 107,
+																	data :
+																	{
+																		"width(6217)" : 1,
+																		"height(6218)" : 1
+																	}
+																},
+																"is_visible(6309)" : true,
+																"is_enabled(6310)" : true,
+																"tooltip_text(6867)" : "",
+																"is_interactive(6499)" : false,
+																"color(6518)" : 2,
+																"label(6496)" : "",
+																"offset_x(6500)" : 0.0,
+																"offset_y(6501)" : 0.0,
+																"component_x(6512)" : { object_ref : 60 },
+																"component_y(6513)" : null,
+																"show_modulated_value(6730)" : true,
+																"interpolation(6893)" : 2,
+																"interpolation_parameter(6894)" : 0.0,
+																"gain_x(6991)" : 1.0,
+																"gain_y(6992)" : 1.0
+															}
+														}
+													],
+													"border_style(6228)" : 0,
+													"title(6242)" : "",
+													"show_title(6243)" : false,
+													"title_color(6522)" : 6,
+													"brightness(6245)" : 1,
+													"color(6537)" : 2,
+													"show_modulated_value(6731)" : true
+												}
+											},
+											{
+												class : "float_core.display_scope_observer_panel_item(1997)",
+												object_id : 108,
+												data :
+												{
+													"layout_settings(6226)" : 
+													{
+														class : "float_core.stack_panel_item_layout_settings(1803)",
+														object_id : 109,
+														data :
+														{
+															"width(6217)" : 1,
+															"height(6218)" : 1
+														}
+													},
+													"is_visible(6309)" : true,
+													"is_enabled(6310)" : true,
+													"tooltip_text(6867)" : "",
+													"is_interactive(6499)" : false,
+													"color(6518)" : 4,
+													"label(7100)" : "",
+													"component(7101)" : { object_ref : 82 },
+													"numeric_domain_x(7102)" : 0,
+													"numeric_domain_y(7103)" : 0,
+													"numeric_domain_z(7104)" : 0,
+													"draw_x_line(7105)" : true,
+													"draw_y_line(7106)" : true,
+													"dot_size(7107)" : 3.0
+												}
+											}
+										],
+										"border_style(6228)" : 0,
+										"title(6242)" : "",
+										"show_title(6243)" : false,
+										"title_color(6522)" : 6,
+										"brightness(6245)" : 3,
+										"x_min(6504)" : 0.0,
+										"x_max(6505)" : 10.0,
+										"x_domain(6506)" : 3,
+										"x_unit(6507)" : 3,
+										"y_min(6508)" : 0.0,
+										"y_max(6509)" : 1.0,
+										"y_domain(6510)" : 0,
+										"y_unit(6511)" : 1,
+										"use_meter_mode(6737)" : false
+									}
+								}
+							],
+							"border_style(6228)" : 1,
+							"title(6242)" : "",
+							"show_title(6243)" : false,
+							"title_color(6522)" : 6,
+							"brightness(6245)" : 0
+						}
+					},
+					"width(6232)" : 17,
+					"height(6233)" : 17,
+					"expressions(6277)" : 
+					[
+						{
+							class : "float_core.panel_expression(1728)",
+							object_id : 110,
+							data :
+							{
+								"expression(6274)" : "8 + ATTACK_TIME + HOLD_TIME",
+								"panel_item(6275)" : { object_ref : 102 },
+								"attribute_id(6316)" : 6500
+							}
+						},
+						{
+							class : "float_core.panel_expression(1728)",
+							object_id : 111,
+							data :
+							{
+								"expression(6274)" : "ATTACK_TIME+6",
+								"panel_item(6275)" : { object_ref : 100 },
+								"attribute_id(6316)" : 6500
+							}
+						},
+						{
+							class : "float_core.panel_expression(1728)",
+							object_id : 112,
+							data :
+							{
+								"expression(6274)" : "10 + DECAY_TIME + ATTACK_TIME + HOLD_TIME",
+								"panel_item(6275)" : { object_ref : 104 },
+								"attribute_id(6316)" : 6500
+							}
+						},
+						{
+							class : "float_core.panel_expression(1728)",
+							object_id : 113,
+							data :
+							{
+								"expression(6274)" : "12 + DECAY_TIME + ATTACK_TIME + HOLD_TIME",
+								"panel_item(6275)" : { object_ref : 106 },
+								"attribute_id(6316)" : 6500
+							}
+						},
+						{
+							class : "float_core.panel_expression(1728)",
+							object_id : 114,
+							data :
+							{
+								"expression(6274)" : "3",
+								"panel_item(6275)" : { object_ref : 98 },
+								"attribute_id(6316)" : 6500
+							}
+						},
+						{
+							class : "float_core.panel_expression(1728)",
+							object_id : 115,
+							data :
+							{
+								"expression(6274)" : "ATTACK_SHAPE*-1",
+								"panel_item(6275)" : { object_ref : 98 },
+								"attribute_id(6316)" : 6894
+							}
+						},
+						{
+							class : "float_core.panel_expression(1728)",
+							object_id : 116,
+							data :
+							{
+								"expression(6274)" : "DECAY_SHAPE",
+								"panel_item(6275)" : { object_ref : 102 },
+								"attribute_id(6316)" : 6894
+							}
+						},
+						{
+							class : "float_core.panel_expression(1728)",
+							object_id : 117,
+							data :
+							{
+								"expression(6274)" : "RELEASE_SHAPE",
+								"panel_item(6275)" : { object_ref : 106 },
+								"attribute_id(6316)" : 6894
+							}
+						},
+						{
+							class : "float_core.panel_expression(1728)",
+							object_id : 118,
+							data :
+							{
+								"expression(6274)" : "PER_VOICE",
+								"panel_item(6275)" : { object_ref : 92 },
+								"attribute_id(6316)" : 6309
+							}
+						},
+						{
+							class : "float_core.panel_expression(1728)",
+							object_id : 119,
+							data :
+							{
+								"expression(6274)" : "!PER_VOICE",
+								"panel_item(6275)" : { object_ref : 108 },
+								"attribute_id(6316)" : 6309
+							}
+						}
+					]
+				}
+			},
+			{
+				class : "float_core.panel(1680)",
+				object_id : 120,
+				data :
+				{
+					"layout_settings(6226)" : null,
+					"is_visible(6309)" : true,
+					"is_enabled(6310)" : true,
+					"tooltip_text(6867)" : "",
+					"name(6211)" : "Detail",
+					"root_item(6212)" : 
+					{
+						class : "float_core.grid_panel_item(1681)",
+						object_id : 121,
+						data :
+						{
+							"layout_settings(6226)" : null,
+							"is_visible(6309)" : true,
+							"is_enabled(6310)" : true,
+							"tooltip_text(6867)" : "",
+							"items(6221)" : 
+							[
+								{
+									class : "float_core.grid_panel_item(1681)",
+									object_id : 122,
+									data :
+									{
+										"layout_settings(6226)" : 
+										{
+											class : "float_core.grid_panel_item_layout_settings(1694)",
+											object_id : 123,
+											data :
+											{
+												"width(6217)" : 5,
+												"height(6218)" : 31,
+												"x(6215)" : 47,
+												"y(6216)" : 4
+											}
+										},
+										"is_visible(6309)" : true,
+										"is_enabled(6310)" : true,
+										"tooltip_text(6867)" : "",
+										"items(6221)" : 
+										[
+											{
+												class : "float_core.slider_panel_item(1685)",
+												object_id : 124,
+												data :
+												{
+													"layout_settings(6226)" : 
+													{
+														class : "float_core.grid_panel_item_layout_settings(1694)",
+														object_id : 125,
+														data :
+														{
+															"width(6217)" : 3,
+															"height(6218)" : 29,
+															"x(6215)" : 1,
+															"y(6216)" : 1
+														}
+													},
+													"is_visible(6309)" : true,
+													"is_enabled(6310)" : true,
+													"tooltip_text(6867)" : "",
+													"data_model(6220)" : { object_ref : 72 },
+													"is_horizontal(6244)" : false,
+													"style(6263)" : 1
+												}
+											}
+										],
+										"border_style(6228)" : 1,
+										"title(6242)" : "",
+										"show_title(6243)" : false,
+										"title_color(6522)" : 6,
+										"brightness(6245)" : 1
+									}
+								},
+								{
+									class : "float_core.image_panel_item(1719)",
+									object_id : 126,
+									data :
+									{
+										"layout_settings(6226)" : 
+										{
+											class : "float_core.grid_panel_item_layout_settings(1694)",
+											object_id : 127,
+											data :
+											{
+												"width(6217)" : 5,
+												"height(6218)" : 4,
+												"x(6215)" : 47,
+												"y(6216)" : 30
+											}
+										},
+										"is_visible(6309)" : true,
+										"is_enabled(6310)" : true,
+										"tooltip_text(6867)" : "",
+										"horizontal_alignment(6400)" : 1,
+										"vertical_alignment(6401)" : 1,
+										"filename(6258)" : "scale_vertical.svg",
+										"svg_data(6259)" : "",
+										"color(6521)" : 6,
+										"scale(6767)" : 1.0,
+										"opacity(6768)" : 1.0
+									}
+								},
+								{
+									class : "float_core.display_panel_item(1804)",
+									object_id : 128,
+									data :
+									{
+										"layout_settings(6226)" : 
+										{
+											class : "float_core.grid_panel_item_layout_settings(1694)",
+											object_id : 129,
+											data :
+											{
+												"width(6217)" : 47,
+												"height(6218)" : 31,
+												"x(6215)" : 0,
+												"y(6216)" : 4
+											}
+										},
+										"is_visible(6309)" : true,
+										"is_enabled(6310)" : true,
+										"tooltip_text(6867)" : "",
+										"items(6221)" : 
+										[
+											{
+												class : "float_core.display_axes_panel_item(1805)",
+												object_id : 130,
+												data :
+												{
+													"layout_settings(6226)" : 
+													{
+														class : "float_core.stack_panel_item_layout_settings(1803)",
+														object_id : 131,
+														data :
+														{
+															"width(6217)" : 1,
+															"height(6218)" : 1
+														}
+													},
+													"is_visible(6309)" : true,
+													"is_enabled(6310)" : true,
+													"tooltip_text(6867)" : "",
+													"show_x_axis(6888)" : false,
+													"show_y_axis(6889)" : true,
+													"clip_x_axis_lines(6890)" : true,
+													"clip_y_axis_lines(6891)" : true,
+													"show_x_axis_label(6516)" : false,
+													"show_y_axis_label(6517)" : true,
+													"show_info_on_hover(6714)" : false
+												}
+											},
+											{
+												class : "float_core.display_line_painting_container(1817)",
+												object_id : 132,
+												data :
+												{
+													"layout_settings(6226)" : 
+													{
+														class : "float_core.stack_panel_item_layout_settings(1803)",
+														object_id : 133,
+														data :
+														{
+															"width(6217)" : 1,
+															"height(6218)" : 1
+														}
+													},
+													"is_visible(6309)" : true,
+													"is_enabled(6310)" : true,
+													"tooltip_text(6867)" : "",
+													"items(6221)" : 
+													[
+														{
+															class : "float_core.display_point_panel_item(1806)",
+															object_id : 134,
+															data :
+															{
+																"layout_settings(6226)" : 
+																{
+																	class : "float_core.stack_panel_item_layout_settings(1803)",
+																	object_id : 135,
+																	data :
+																	{
+																		"width(6217)" : 1,
+																		"height(6218)" : 1
+																	}
+																},
+																"is_visible(6309)" : true,
+																"is_enabled(6310)" : true,
+																"tooltip_text(6867)" : "",
+																"is_interactive(6499)" : false,
+																"color(6518)" : 2,
+																"label(6496)" : "",
+																"offset_x(6500)" : 0.0,
+																"offset_y(6501)" : 0.0,
+																"component_x(6512)" : null,
+																"component_y(6513)" : null,
+																"show_modulated_value(6730)" : true,
+																"interpolation(6893)" : 0,
+																"interpolation_parameter(6894)" : 0.0,
+																"gain_x(6991)" : 1.0,
+																"gain_y(6992)" : 1.0
+															}
+														},
+														{
+															class : "float_core.display_point_panel_item(1806)",
+															object_id : 136,
+															data :
+															{
+																"layout_settings(6226)" : 
+																{
+																	class : "float_core.stack_panel_item_layout_settings(1803)",
+																	object_id : 137,
+																	data :
+																	{
+																		"width(6217)" : 1,
+																		"height(6218)" : 1
+																	}
+																},
+																"is_visible(6309)" : true,
+																"is_enabled(6310)" : true,
+																"tooltip_text(6867)" : "",
+																"is_interactive(6499)" : true,
+																"color(6518)" : 2,
+																"label(6496)" : "A",
+																"offset_x(6500)" : 0.0,
+																"offset_y(6501)" : 1.0,
+																"component_x(6512)" : { object_ref : 24 },
+																"component_y(6513)" : null,
+																"show_modulated_value(6730)" : true,
+																"interpolation(6893)" : 2,
+																"interpolation_parameter(6894)" : 0.0,
+																"gain_x(6991)" : 1.0,
+																"gain_y(6992)" : 1.0
+															}
+														},
+														{
+															class : "float_core.display_point_panel_item(1806)",
+															object_id : 138,
+															data :
+															{
+																"layout_settings(6226)" : 
+																{
+																	class : "float_core.stack_panel_item_layout_settings(1803)",
+																	object_id : 139,
+																	data :
+																	{
+																		"width(6217)" : 1,
+																		"height(6218)" : 1
+																	}
+																},
+																"is_visible(6309)" : true,
+																"is_enabled(6310)" : true,
+																"tooltip_text(6867)" : "",
+																"is_interactive(6499)" : true,
+																"color(6518)" : 2,
+																"label(6496)" : "H",
+																"offset_x(6500)" : 0.0,
+																"offset_y(6501)" : 1.0,
+																"component_x(6512)" : { object_ref : 36 },
+																"component_y(6513)" : null,
+																"show_modulated_value(6730)" : true,
+																"interpolation(6893)" : 0,
+																"interpolation_parameter(6894)" : 0.0,
+																"gain_x(6991)" : 1.0,
+																"gain_y(6992)" : 1.0
+															}
+														},
+														{
+															class : "float_core.display_point_panel_item(1806)",
+															object_id : 140,
+															data :
+															{
+																"layout_settings(6226)" : 
+																{
+																	class : "float_core.stack_panel_item_layout_settings(1803)",
+																	object_id : 141,
+																	data :
+																	{
+																		"width(6217)" : 1,
+																		"height(6218)" : 1
+																	}
+																},
+																"is_visible(6309)" : true,
+																"is_enabled(6310)" : true,
+																"tooltip_text(6867)" : "",
+																"is_interactive(6499)" : true,
+																"color(6518)" : 2,
+																"label(6496)" : "D",
+																"offset_x(6500)" : 0.0,
+																"offset_y(6501)" : 0.0,
+																"component_x(6512)" : { object_ref : 42 },
+																"component_y(6513)" : { object_ref : 54 },
+																"show_modulated_value(6730)" : true,
+																"interpolation(6893)" : 2,
+																"interpolation_parameter(6894)" : 0.0,
+																"gain_x(6991)" : 1.0,
+																"gain_y(6992)" : 1.0
+															}
+														},
+														{
+															class : "float_core.display_point_panel_item(1806)",
+															object_id : 142,
+															data :
+															{
+																"layout_settings(6226)" : 
+																{
+																	class : "float_core.stack_panel_item_layout_settings(1803)",
+																	object_id : 143,
+																	data :
+																	{
+																		"width(6217)" : 1,
+																		"height(6218)" : 1
+																	}
+																},
+																"is_visible(6309)" : true,
+																"is_enabled(6310)" : true,
+																"tooltip_text(6867)" : "",
+																"is_interactive(6499)" : true,
+																"color(6518)" : 2,
+																"label(6496)" : "S",
+																"offset_x(6500)" : 0.0,
+																"offset_y(6501)" : 0.0,
+																"component_x(6512)" : null,
+																"component_y(6513)" : { object_ref : 54 },
+																"show_modulated_value(6730)" : true,
+																"interpolation(6893)" : 0,
+																"interpolation_parameter(6894)" : 0.0,
+																"gain_x(6991)" : 1.0,
+																"gain_y(6992)" : 1.0
+															}
+														},
+														{
+															class : "float_core.display_point_panel_item(1806)",
+															object_id : 144,
+															data :
+															{
+																"layout_settings(6226)" : 
+																{
+																	class : "float_core.stack_panel_item_layout_settings(1803)",
+																	object_id : 145,
+																	data :
+																	{
+																		"width(6217)" : 1,
+																		"height(6218)" : 1
+																	}
+																},
+																"is_visible(6309)" : true,
+																"is_enabled(6310)" : true,
+																"tooltip_text(6867)" : "",
+																"is_interactive(6499)" : true,
+																"color(6518)" : 2,
+																"label(6496)" : "R",
+																"offset_x(6500)" : 0.0,
+																"offset_y(6501)" : 0.0,
+																"component_x(6512)" : { object_ref : 60 },
+																"component_y(6513)" : null,
+																"show_modulated_value(6730)" : true,
+																"interpolation(6893)" : 2,
+																"interpolation_parameter(6894)" : 0.0,
+																"gain_x(6991)" : 1.0,
+																"gain_y(6992)" : 1.0
+															}
+														}
+													],
+													"border_style(6228)" : 0,
+													"title(6242)" : "",
+													"show_title(6243)" : false,
+													"title_color(6522)" : 6,
+													"brightness(6245)" : 1,
+													"color(6537)" : 2,
+													"show_modulated_value(6731)" : true
+												}
+											}
+										],
+										"border_style(6228)" : 0,
+										"title(6242)" : "",
+										"show_title(6243)" : false,
+										"title_color(6522)" : 6,
+										"brightness(6245)" : 3,
+										"x_min(6504)" : 0.0,
+										"x_max(6505)" : 10.0,
+										"x_domain(6506)" : 3,
+										"x_unit(6507)" : 2,
+										"y_min(6508)" : 0.0,
+										"y_max(6509)" : 1.0,
+										"y_domain(6510)" : 0,
+										"y_unit(6511)" : 1,
+										"use_meter_mode(6737)" : false
+									}
+								},
+								{
+									class : "float_core.curve_panel_item(1722)",
+									object_id : 146,
+									data :
+									{
+										"layout_settings(6226)" : 
+										{
+											class : "float_core.grid_panel_item_layout_settings(1694)",
+											object_id : 147,
+											data :
+											{
+												"width(6217)" : 12,
+												"height(6218)" : 4,
+												"x(6215)" : 40,
+												"y(6216)" : 48
+											}
+										},
+										"is_visible(6309)" : true,
+										"is_enabled(6310)" : true,
+										"tooltip_text(6867)" : "",
+										"data_model(6220)" : { object_ref : 66 },
+										"is_downward(6265)" : true
+									}
+								},
+								{
+									class : "float_core.curve_panel_item(1722)",
+									object_id : 148,
+									data :
+									{
+										"layout_settings(6226)" : 
+										{
+											class : "float_core.grid_panel_item_layout_settings(1694)",
+											object_id : 149,
+											data :
+											{
+												"width(6217)" : 12,
+												"height(6218)" : 4,
+												"x(6215)" : 27,
+												"y(6216)" : 48
+											}
+										},
+										"is_visible(6309)" : true,
+										"is_enabled(6310)" : true,
+										"tooltip_text(6867)" : "",
+										"data_model(6220)" : { object_ref : 48 },
+										"is_downward(6265)" : true
+									}
+								},
+								{
+									class : "float_core.curve_panel_item(1722)",
+									object_id : 150,
+									data :
+									{
+										"layout_settings(6226)" : 
+										{
+											class : "float_core.grid_panel_item_layout_settings(1694)",
+											object_id : 151,
+											data :
+											{
+												"width(6217)" : 12,
+												"height(6218)" : 4,
+												"x(6215)" : 1,
+												"y(6216)" : 48
+											}
+										},
+										"is_visible(6309)" : true,
+										"is_enabled(6310)" : true,
+										"tooltip_text(6867)" : "",
+										"data_model(6220)" : { object_ref : 30 },
+										"is_downward(6265)" : false
+									}
+								},
+								{
+									class : "float_core.number_field_panel_item(1713)",
+									object_id : 152,
+									data :
+									{
+										"layout_settings(6226)" : 
+										{
+											class : "float_core.grid_panel_item_layout_settings(1694)",
+											object_id : 153,
+											data :
+											{
+												"width(6217)" : 12,
+												"height(6218)" : 5,
+												"x(6215)" : 1,
+												"y(6216)" : 42
+											}
+										},
+										"is_visible(6309)" : true,
+										"is_enabled(6310)" : true,
+										"tooltip_text(6867)" : "",
+										"data_model(6220)" : { object_ref : 24 },
+										"style(6540)" : 2,
+										"show_value_bar(6581)" : false
+									}
+								},
+								{
+									class : "float_core.number_field_panel_item(1713)",
+									object_id : 154,
+									data :
+									{
+										"layout_settings(6226)" : 
+										{
+											class : "float_core.grid_panel_item_layout_settings(1694)",
+											object_id : 155,
+											data :
+											{
+												"width(6217)" : 12,
+												"height(6218)" : 5,
+												"x(6215)" : 14,
+												"y(6216)" : 42
+											}
+										},
+										"is_visible(6309)" : true,
+										"is_enabled(6310)" : true,
+										"tooltip_text(6867)" : "",
+										"data_model(6220)" : { object_ref : 36 },
+										"style(6540)" : 2,
+										"show_value_bar(6581)" : false
+									}
+								},
+								{
+									class : "float_core.number_field_panel_item(1713)",
+									object_id : 156,
+									data :
+									{
+										"layout_settings(6226)" : 
+										{
+											class : "float_core.grid_panel_item_layout_settings(1694)",
+											object_id : 157,
+											data :
+											{
+												"width(6217)" : 12,
+												"height(6218)" : 5,
+												"x(6215)" : 27,
+												"y(6216)" : 42
+											}
+										},
+										"is_visible(6309)" : true,
+										"is_enabled(6310)" : true,
+										"tooltip_text(6867)" : "",
+										"data_model(6220)" : { object_ref : 42 },
+										"style(6540)" : 2,
+										"show_value_bar(6581)" : false
+									}
+								},
+								{
+									class : "float_core.number_field_panel_item(1713)",
+									object_id : 158,
+									data :
+									{
+										"layout_settings(6226)" : 
+										{
+											class : "float_core.grid_panel_item_layout_settings(1694)",
+											object_id : 159,
+											data :
+											{
+												"width(6217)" : 12,
+												"height(6218)" : 5,
+												"x(6215)" : 40,
+												"y(6216)" : 42
+											}
+										},
+										"is_visible(6309)" : true,
+										"is_enabled(6310)" : true,
+										"tooltip_text(6867)" : "",
+										"data_model(6220)" : { object_ref : 60 },
+										"style(6540)" : 2,
+										"show_value_bar(6581)" : false
+									}
+								},
+								{
+									class : "float_core.number_field_panel_item(1713)",
+									object_id : 160,
+									data :
+									{
+										"layout_settings(6226)" : 
+										{
+											class : "float_core.grid_panel_item_layout_settings(1694)",
+											object_id : 161,
+											data :
+											{
+												"width(6217)" : 12,
+												"height(6218)" : 5,
+												"x(6215)" : 27,
+												"y(6216)" : 36
+											}
+										},
+										"is_visible(6309)" : true,
+										"is_enabled(6310)" : true,
+										"tooltip_text(6867)" : "",
+										"data_model(6220)" : { object_ref : 54 },
+										"style(6540)" : 2,
+										"show_value_bar(6581)" : false
+									}
+								},
+								{
+									class : "float_core.label_panel_item(1683)",
+									object_id : 162,
+									data :
+									{
+										"layout_settings(6226)" : 
+										{
+											class : "float_core.grid_panel_item_layout_settings(1694)",
+											object_id : 163,
+											data :
+											{
+												"width(6217)" : 12,
+												"height(6218)" : 5,
+												"x(6215)" : 1,
+												"y(6216)" : 36
+											}
+										},
+										"is_visible(6309)" : true,
+										"is_enabled(6310)" : false,
+										"tooltip_text(6867)" : "",
+										"horizontal_alignment(6400)" : 1,
+										"vertical_alignment(6401)" : 1,
+										"text(6219)" : "Attack",
+										"color(6520)" : 6
+									}
+								},
+								{
+									class : "float_core.label_panel_item(1683)",
+									object_id : 164,
+									data :
+									{
+										"layout_settings(6226)" : 
+										{
+											class : "float_core.grid_panel_item_layout_settings(1694)",
+											object_id : 165,
+											data :
+											{
+												"width(6217)" : 12,
+												"height(6218)" : 5,
+												"x(6215)" : 14,
+												"y(6216)" : 36
+											}
+										},
+										"is_visible(6309)" : true,
+										"is_enabled(6310)" : false,
+										"tooltip_text(6867)" : "",
+										"horizontal_alignment(6400)" : 1,
+										"vertical_alignment(6401)" : 1,
+										"text(6219)" : "Hold",
+										"color(6520)" : 6
+									}
+								},
+								{
+									class : "float_core.label_panel_item(1683)",
+									object_id : 166,
+									data :
+									{
+										"layout_settings(6226)" : 
+										{
+											class : "float_core.grid_panel_item_layout_settings(1694)",
+											object_id : 167,
+											data :
+											{
+												"width(6217)" : 12,
+												"height(6218)" : 5,
+												"x(6215)" : 40,
+												"y(6216)" : 36
+											}
+										},
+										"is_visible(6309)" : true,
+										"is_enabled(6310)" : false,
+										"tooltip_text(6867)" : "",
+										"horizontal_alignment(6400)" : 1,
+										"vertical_alignment(6401)" : 1,
+										"text(6219)" : "Release",
+										"color(6520)" : 6
+									}
+								}
+							],
+							"border_style(6228)" : 1,
+							"title(6242)" : "AHDSR",
+							"show_title(6243)" : true,
+							"title_color(6522)" : 2,
+							"brightness(6245)" : 0
+						}
+					},
+					"width(6232)" : 53,
+					"height(6233)" : 53,
+					"expressions(6277)" : 
+					[
+						{
+							class : "float_core.panel_expression(1728)",
+							object_id : 168,
+							data :
+							{
+								"expression(6274)" : "ATTACK_TIME+6",
+								"panel_item(6275)" : { object_ref : 138 },
+								"attribute_id(6316)" : 6500
+							}
+						},
+						{
+							class : "float_core.panel_expression(1728)",
+							object_id : 169,
+							data :
+							{
+								"expression(6274)" : "8 + ATTACK_TIME + HOLD_TIME",
+								"panel_item(6275)" : { object_ref : 140 },
+								"attribute_id(6316)" : 6500
+							}
+						},
+						{
+							class : "float_core.panel_expression(1728)",
+							object_id : 170,
+							data :
+							{
+								"expression(6274)" : "10 + DECAY_TIME + ATTACK_TIME + HOLD_TIME",
+								"panel_item(6275)" : { object_ref : 142 },
+								"attribute_id(6316)" : 6500
+							}
+						},
+						{
+							class : "float_core.panel_expression(1728)",
+							object_id : 171,
+							data :
+							{
+								"expression(6274)" : "12 + DECAY_TIME + ATTACK_TIME + HOLD_TIME",
+								"panel_item(6275)" : { object_ref : 144 },
+								"attribute_id(6316)" : 6500
+							}
+						},
+						{
+							class : "float_core.panel_expression(1728)",
+							object_id : 172,
+							data :
+							{
+								"expression(6274)" : "3",
+								"panel_item(6275)" : { object_ref : 136 },
+								"attribute_id(6316)" : 6500
+							}
+						},
+						{
+							class : "float_core.panel_expression(1728)",
+							object_id : 173,
+							data :
+							{
+								"expression(6274)" : "ATTACK_SHAPE*-1",
+								"panel_item(6275)" : { object_ref : 136 },
+								"attribute_id(6316)" : 6894
+							}
+						},
+						{
+							class : "float_core.panel_expression(1728)",
+							object_id : 174,
+							data :
+							{
+								"expression(6274)" : "DECAY_SHAPE",
+								"panel_item(6275)" : { object_ref : 140 },
+								"attribute_id(6316)" : 6894
+							}
+						},
+						{
+							class : "float_core.panel_expression(1728)",
+							object_id : 175,
+							data :
+							{
+								"expression(6274)" : "RELEASE_SHAPE",
+								"panel_item(6275)" : { object_ref : 144 },
+								"attribute_id(6316)" : 6894
+							}
+						},
+						{
+							class : "float_core.panel_expression(1728)",
+							object_id : 176,
+							data :
+							{
+								"expression(6274)" : "DEVICE_NAME.uppercase",
+								"panel_item(6275)" : { object_ref : 121 },
+								"attribute_id(6316)" : 6242
+							}
+						}
+					]
+				}
+			}
+		],
+		"panel_width(175)" : 257,
+		"proxy_in_ports(177)" : 
+		[
+			{
+				class : "float_core.proxy_in_port_component(154)",
+				object_id : 177,
+				data :
+				{
+					"settings(6194)" : 
+					{
+						class : "float_core.component_settings(236)",
+						object_id : 178,
+						data :
+						{
+							"desktop_settings(612)" : 
+							{
+								class : "float_core.desktop_settings(17)",
+								object_id : 179,
+								data :
+								{
+									"x(17)" : 0,
+									"y(18)" : 0,
+									"color(19)" : 
+									{
+										type : "color",
+										data : [0.5, 0.5, 0.5]
+									}
+								}
+							},
+							"panel_settings(613)" : null,
+							"inport_connections(614)" : 
+							[
+							],
+							"is_polyphonic(615)" : true
+						}
+					},
+					"port(301)" : 
+					{
+						class : "float_core.audio_port(242)",
+						object_id : 180,
+						data :
+						{
+							"name(498)" : "",
+							"description(4741)" : "",
+							"decorated_name(499)" : " Audio out (PARENT)",
+							"is_inport(500)" : false,
+							"is_optional(1384)" : false,
+							"channel_count(372)" : 3
+						}
+					}
+				}
+			},{ object_ref : 19 }
+		],
+		"proxy_out_ports(178)" : 
+		[
+		],
+		"fft_order(6566)" : 0,
+		"context_menu_panel(6834)" : null,
+		"device_UUID(6369)" : "aaf4f8c0-0847-4331-9cb2-cdd764c86602",
+		"device_name(6370)" : "AHDSR",
+		"description(6371)" : "AHDSR envelope with ADR curve control",
+		"creator(6372)" : "Bitwig",
+		"comment(6373)" : "",
+		"keywords(6374)" : "",
+		"category(6375)" : "Envelope",
+		"has_been_modified(6376)" : true,
+		"detail_panel(6695)" : { object_ref : 120 },
+		"can_be_polyphonic(6707)" : true,
+		"should_be_polyphonic_by_default(6724)" : true,
+		"should_enable_perform_mode_by_default(6725)" : false
+	}
+}

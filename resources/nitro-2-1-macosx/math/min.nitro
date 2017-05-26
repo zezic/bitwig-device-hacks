@@ -1,0 +1,11 @@
+component min
+{
+   audio_inport a;
+   audio_inport b;
+   audio_outport out;
+
+   process
+   {
+      out = fmin(a,b);
+   }
+}
