@@ -1,4 +1,8 @@
-def read(path):
+import os
+
+def read(path, relative_to = None):
+    if relative_to != None:
+        path = os.path.dirname(os.path.realpath(relative_to)) + '/' + path
     with open(path, 'r') as file:
         return file.read()
 

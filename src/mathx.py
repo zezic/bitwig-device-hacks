@@ -1,78 +1,6 @@
 from lib import atoms
 from lib import util
-
-nitro_source = '''
-component math2000 {
-    audio_inport f32 a;
-    audio_inport f32 b;
-    value_inport i32 op;
-    audio_outport f32 out;
-
-    process {
-        if (op == 0) {
-            out = a + b;
-        }
-        else if (op == 1) {
-            out = a - b;
-        }
-        else if (op == 2) {
-            out = a * b;
-        }
-        else if (op == 3) {
-            out = a / b;
-        }
-        else if (op == 4) {
-            out = fabs(a);
-        }
-        else if (op == 5) {
-            out = copysign(1.0, a);
-        }
-        else if (op == 6) {
-            out = fmin(a, b);
-        }
-        else if (op == 7) {
-            out = fmax(a, b);
-        }
-        else if (op == 8) {
-            out = a * a;
-        }
-        else if (op == 9) {
-            out = pow(a, b);
-        }
-        else if (op == 10) {
-            out = sqrt(a);
-        }
-        else if (op == 11) {
-            out = exp(a) * b;
-        }
-        else if (op == 12) {
-            out = log(a) / log(b);
-        }
-        else if (op == 13) {
-            out = log2(a);
-        }
-        else if (op == 14) {
-            out = log10(a);
-        }
-        else if (op == 15) {
-            out = log(a);
-        }
-        else if (op == 16) {
-            out = b * sin(a);
-        }
-        else if (op == 17) {
-            out = b * cos(a);
-        }
-        else if (op == 18) {
-            out = b * sin(a) / cos(a);
-        }
-        else if (op == 19) {
-            f32 bb = 20 * fmax(fabs(b), 0.00001);
-            out = copysign(1.0, b) * trunc(a * bb) / bb;
-        }
-    }
-}
-'''.strip()
+from lib import fs
 
 device_tooltip = '''
 ADD - A + B
@@ -105,10 +33,11 @@ modes = [
     'SIN', 'COS', 'TAN', 'QUA',
 ]
 
-value_a = atoms.DecimalValue('A', default = 0, min = -100, max = 100, step = 0.01)
-value_b = atoms.DecimalValue('B', default = 0, min = -100, max = 100, step = 0.01)
-value_mode = atoms.IndexedValue('MODE', default = 0, items = modes)
+value_a = atoms.DecimalValue('A', min = -100, max = 100, step = 0.01)
+value_b = atoms.DecimalValue('B', min = -100, max = 100, step = 0.01)
+value_mode = atoms.IndexedValue('Mode', items = modes)
 
+nitro_source = fs.read('mathx.nitro', __file__)
 nitro = (atoms.Nitro()
     .add_inport(value_a)
     .add_inport(value_b)
