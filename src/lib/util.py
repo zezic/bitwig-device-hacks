@@ -9,6 +9,9 @@ def json_decode(x):
     except:
         return json.loads(fix_lazy_json(x))
 
+def json_print(x):
+    print(json_encode(x))
+
 def find_top_level_json(text):
     nesting = 0
     start_index = None
@@ -85,3 +88,26 @@ def uuid_from_text(text):
     hasher.update(text.encode('utf-8'))
     digest = hasher.digest()
     return str(uuid.UUID(bytes = digest[:16]))
+
+def parse_bitwig_device(device_data):
+    ## Extract top level JSON objects
+    objects = util.find_top_level_json(device_data)
+    if len(objects) != 2:
+        raise Exception('Invalid or non-plaintext Bitwig device')
+
+    ## Construct an object
+    device = {
+        'header': device_data[:40],
+        'meta': objects[0],
+        'contents': objects[1],
+    }
+
+    ## Remove all hashes from keys
+    device['meta'] = util.remove_bracketed_hashes(device['meta'])
+    device['contents'] = util.remove_bracketed_hashes(device['contents'])
+    return device
+
+def serialize_bitwig_device(device):
+    return (device['header'] + '\n\n'
+        + util.json_encode(device['meta']) + '\n\n'
+        + util.json_encode(device['contents']) + '\n')

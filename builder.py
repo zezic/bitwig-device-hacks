@@ -26,28 +26,10 @@ args = parser.parse_args()
 if args.cleanup:
     ## Read device data
     device_data = fs.read(args.device)
-
-    ## Extract top level JSON objects
-    objects = util.find_top_level_json(device_data)
-    if len(objects) != 2:
-        raise Exception('Invalid or non-plaintext Bitwig device')
-
-    ## Construct an object
-    device = {
-        'header': device_data[:40],
-        'meta': objects[0],
-        'contents': objects[1],
-    }
-
-    ## Remove all hashes from keys
-    device['meta'] = util.remove_bracketed_hashes(device['meta'])
-    device['contents'] = util.remove_bracketed_hashes(device['contents'])
+    device = util.parse_bitwig_device(device_data)
 
     ## Serialize everything back
-    device_data = (device['header'] + '\n\n'
-        + util.json_encode(device['meta']) + '\n\n'
-        + util.json_encode(device['contents']) + '\n')
-
+    device_data = util.serialize_bitwig_device(device)
     fs.write(args.device, device_data)
     print("Cleaned up '%s' successfully!" % args.device)
     sys.exit()
