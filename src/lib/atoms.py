@@ -10,11 +10,10 @@ def serialize(obj, state = None):
                 'object_ref': state.index(obj) + 1,
             }
         state.append(obj)
-        data = serialize(obj.fields, state)
         return {
             'class': obj.classname,
             'object_id': state.index(obj) + 1,
-            'data': data,
+            'data': serialize(obj.fields, state),
         }
     if isinstance(obj, list):
         return [serialize(x, state) for x in obj]
@@ -177,10 +176,6 @@ class DecimalValue(AbstractValue):
 
     def use_smoothing(self, smoothing = True):
         self.fields['value_type'].fields['parameter_smoothing'] = smoothing
-        return self
-
-    def set_decimal_digit_count(self, decimal_digit_count):
-        self.fields['value_type'].fields['decimal_digit_count'] = decimal_digit_count
         return self
 
     def set_decimal_digit_count(self, decimal_digit_count):
