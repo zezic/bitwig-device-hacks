@@ -177,6 +177,7 @@ class DecimalValue(AbstractValue):
 
     def use_smoothing(self, smoothing = True):
         self.fields['value_type'].fields['parameter_smoothing'] = smoothing
+        return self
 
     def set_decimal_digit_count(self, decimal_digit_count):
         self.fields['value_type'].fields['decimal_digit_count'] = decimal_digit_count
